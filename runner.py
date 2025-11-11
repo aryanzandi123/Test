@@ -261,6 +261,50 @@ def deep_merge_interactors(
     return list(interactor_map.values())
 
 
+def merge_payload_update(
+    current_payload: Optional[Dict[str, Any]],
+    payload_update: Optional[Dict[str, Any]],
+) -> Optional[Dict[str, Any]]:
+    """Merge a payload update into the current payload without losing data."""
+
+    if not payload_update:
+        return current_payload
+
+    if current_payload is None:
+        return deepcopy(payload_update)
+
+    merged_payload: Dict[str, Any] = deepcopy(current_payload)
+
+    update_ctx = payload_update.get("ctx_json")
+    if update_ctx is not None:
+        existing_ctx = merged_payload.get("ctx_json")
+        if existing_ctx is None:
+            merged_payload["ctx_json"] = deepcopy(update_ctx)
+        else:
+            if isinstance(update_ctx, dict):
+                if "interactors" in update_ctx:
+                    existing_interactors = existing_ctx.get("interactors", [])
+                    new_interactors = update_ctx.get("interactors", [])
+                    existing_ctx["interactors"] = deep_merge_interactors(
+                        existing_interactors,
+                        new_interactors,
+                    )
+
+                for key, value in update_ctx.items():
+                    if key == "interactors":
+                        continue
+                    existing_ctx[key] = value
+            else:
+                merged_payload["ctx_json"] = update_ctx
+
+    for key, value in payload_update.items():
+        if key == "ctx_json":
+            continue
+        merged_payload[key] = value
+
+    return merged_payload
+
+
 def aggregate_function_arrows(interactor: Dict[str, Any]) -> Dict[str, Any]:
     """
     Aggregate function-level arrows into interaction-level arrows field.
@@ -1687,7 +1731,7 @@ def _run_main_pipeline_for_web(
                 # Merge all arrow determination results into current_payload
                 for result in arrow_results:
                     if result.get('payload_update'):
-                        current_payload = result['payload_update']
+                        current_payload = merge_payload_update(current_payload, result['payload_update'])
                     else:
                         # Apply default arrow assignment
                         interactor_name = result['interactor_name']
