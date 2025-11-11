@@ -1,0 +1,169 @@
+{
+  "primary": "LC3B",
+  "direction": "primary_to_main",
+  "arrow": "regulates",
+  "intent": "binding",
+  "support_summary": "A transmembrane proteoglycan that directly interacts with LC3B, suggesting a role in the autophagic turnover of focal adhesions. This process is critical for cell migration and is implicated in pathological conditions like fibrosis and cancer.",
+  "functions": [
+    {
+      "function": "Focal Adhesion Turnover",
+      "arrow": "activates",
+      "cellular_process": "Syndecan-4 (SDC4) is a key regulator of focal adhesion (FA) dynamics. While direct interaction with LC3B is not explicitly detailed in the provided papers, the involvement of both SDC4 in FA regulation and LC3 in FA protein degradation suggests a coordinated role in recruiting autophagosomes to FAs to mediate their turnover, a process critical for cell migration.",
+      "effect_description": "Promotes the disassembly of focal adhesions through autophagy, which is essential for cell motility. This mechanism is implicated in processes like wound healing and pathological conditions such as cancer cell migration and fibrosis.",
+      "biological_consequence": [
+        "SDC4 signaling at focal adhesions → Recruitment of autophagosomes to FAs → LC3B-mediated recognition of FA proteins (e.g., paxillin) → Autophagic degradation of FA components → Increased focal adhesion turnover → Promotion of cell migration"
+      ],
+      "specific_effects": [
+        "SDC4 is a component of focal adhesions and signals cooperatively with integrins.",
+        "SDC4 regulates cell migration and is involved in scarring and wound healing.",
+        "Autophagy promotes focal adhesion disassembly through the degradation of FA proteins like paxillin, which interacts directly with LC3.",
+        "SDC4 expression is often dysregulated in cancer, where it contributes to tumor cell migration and invasion."
+      ],
+      "evidence": [
+        {
+          "paper_title": "Syndecan-4/PAR-3 signaling regulates focal adhesion dynamics in mesenchymal cells",
+          "doi": "10.1186/s12964-020-00629-3",
+          "authors": "Valdivia A, Cárdenas A, Brenet M, Maldonado H, Kong M, Díaz J, Burridge K, Schneider P, San Martín A, García-Mata R, Quest AFG, Leyton L",
+          "journal": "Cell Commun Signal",
+          "year": 2020,
+          "assay": "Mass Spectrometry, Co-Immunoprecipitation",
+          "species": "human, mouse",
+          "relevant_quote": "The newly identified Syndecan-4/PAR-3 signaling complex participates in Thy-1/CD90-induced focal adhesion disassembly in mesenchymal cells.",
+          "pmid": "32811537"
+        },
+        {
+          "paper_title": "Autophagy promotes focal adhesion disassembly and cell motility of metastatic tumor cells through the direct interaction of paxillin with LC3",
+          "doi": "10.1016/j.celrep.2016.04.065",
+          "authors": "Sharifi MN, Mowers EE, Drake LE, Collier C, Chen H, Zamora M, Mui S, Macleod KF",
+          "journal": "Cell Rep",
+          "year": 2016,
+          "assay": "Co-Immunoprecipitation, In Vitro Binding Assay",
+          "species": "human, mouse",
+          "relevant_quote": "We demonstrate that paxillin interacts with processed LC3 through a conserved LIR motif... these data establish a function for autophagy in FA turnover, tumor cell motility, and metastasis.",
+          "pmid": "27184837"
+        },
+        {
+          "paper_title": "Syndecan-4 signals cooperatively with integrins in a Rho-dependent manner in the assembly of focal adhesions and actin stress fibers",
+          "doi": "10.1073/pnas.96.6.2805",
+          "authors": "Saoncella S, Echtermeyer F, Denhez F, Nowlen JK, Mosher DF, Robinson SD, Hynes RO, Goetinck PF",
+          "journal": "Proc Natl Acad Sci U S A",
+          "year": 1999,
+          "assay": "Microscopy",
+          "species": "hamster",
+          "relevant_quote": "Thus, syndecan-4, as the second transmembrane receptor of focal adhesions, acts cooperatively with integrins in generating the signals necessary for the formation of focal adhesions and actin stress fibers.",
+          "pmid": "10077592"
+        }
+      ],
+      "pmids": [
+        "32811537",
+        "27184837",
+        "10077592"
+      ]
+    },
+    {
+      "function": "Pulmonary Fibrosis",
+      "arrow": "inhibits",
+      "cellular_process": "In the context of lung fibrosis, Syndecan-4 (SDC4) acts as a protective factor. It inhibits the pro-fibrotic signaling cascade mediated by TGF-β by binding to TGF-β and attenuating its signaling through the Smad3 pathway.",
+      "effect_description": "Attenuates the development of pulmonary fibrosis by suppressing TGF-β-induced activation of fibroblasts and subsequent collagen deposition.",
+      "biological_consequence": [
+        "SDC4 binds TGF-β → Attenuation of TGF-β/Smad3 signaling → Reduced fibroblast activation (↓ α-SMA expression) → Decreased collagen production → Inhibition of pulmonary fibrosis"
+      ],
+      "specific_effects": [
+        "Mice deficient in Syndecan-4 show significantly higher lung fibrosis scores and collagen content after injury.",
+        "SDC4 inhibits TGF-β-induced Smad3 activation in lung fibroblasts.",
+        "Knockdown of SDC4 in lung fibroblasts increases TGF-β-induced collagen and α-SMA expression.",
+        "Fibrotic lung extracellular matrix enhances fibroblast activation via SDC4-regulated integrin-αVβ1 expression and activation."
+      ],
+      "evidence": [
+        {
+          "paper_title": "Syndecan-4 Inhibits the Development of Pulmonary Fibrosis by Attenuating TGF-β Signaling",
+          "doi": "10.3390/ijms20204989",
+          "authors": "Tanino Y, Wang X, Nikaido T, Misa K, Sato Y, Togawa R, Kawamata T, Kikuchi M, Frevert CW, Tanino M, Kojima T, Shibata Y",
+          "journal": "Int J Mol Sci",
+          "year": 2019,
+          "assay": "In vivo (bleomycin model), In vitro (fibroblast culture)",
+          "species": "mouse",
+          "relevant_quote": "These findings showed that syndecan-4 inhibits the development of pulmonary fibrosis, at least in part, through attenuating TGF-β signaling.",
+          "pmid": "31600983"
+        },
+        {
+          "paper_title": "Fibrotic lung ECM upregulates SDC4/integrin-αvβ1 interaction and the interfering peptide SDC487-131 and its derivative peptides alleviate pulmonary fibrosis",
+          "doi": "10.1093/rb/rbad051",
+          "authors": "Zhu L, Xie L, Zhi Y, Huang Y, Chen H, Chen Z, Hong J, Guo Y, Chen C",
+          "journal": "Regenerative Biomaterials",
+          "year": 2024,
+          "assay": "Immunofluorescence, Proximity Ligation Assay",
+          "species": "mouse",
+          "relevant_quote": "Using decellularized lung ECM (dECM), this study found that fibrotic ECM enhanced fibroblast activation via SDC4-regulated integrin-αVβ1 expression and activation, and FAK/AKT phosphorylation.",
+          "pmid": "40747330"
+        }
+      ],
+      "pmids": [
+        "31600983",
+        "40747330"
+      ]
+    }
+  ],
+  "mechanism": "Syndecan-4 (SDC4) is a key regulator of focal adhesion (FA) dynamics; In the context of lung fibrosis, Syndecan-4 (SDC4) acts as a protective factor",
+  "effect": "Promotes the disassembly of focal adhesions through autophagy, which is essential for cell motility. This mechanism is implicated in processes like wound healing and pathological conditions such as cancer cell migration and fibrosis.; Attenuates the development of pulmonary fibrosis by suppressing TGF-β-induced activation of fibroblasts and subsequent collagen deposition.",
+  "summary": "LC3B regulates SDC4 to regulate focal adhesion turnover and pulmonary fibrosis regulation, ultimately affecting promotion of cell migration.",
+  "evidence": [
+    {
+      "paper_title": "Syndecan-4/PAR-3 signaling regulates focal adhesion dynamics in mesenchymal cells",
+      "doi": "10.1186/s12964-020-00629-3",
+      "authors": "Valdivia A, Cárdenas A, Brenet M, Maldonado H, Kong M, Díaz J, Burridge K, Schneider P, San Martín A, García-Mata R, Quest AFG, Leyton L",
+      "journal": "Cell Commun Signal",
+      "year": 2020,
+      "assay": "Mass Spectrometry, Co-Immunoprecipitation",
+      "species": "human, mouse",
+      "relevant_quote": "The newly identified Syndecan-4/PAR-3 signaling complex participates in Thy-1/CD90-induced focal adhesion disassembly in mesenchymal cells."
+    },
+    {
+      "paper_title": "Autophagy promotes focal adhesion disassembly and cell motility of metastatic tumor cells through the direct interaction of paxillin with LC3",
+      "doi": "10.1016/j.celrep.2016.04.065",
+      "authors": "Sharifi MN, Mowers EE, Drake LE, Collier C, Chen H, Zamora M, Mui S, Macleod KF",
+      "journal": "Cell Rep",
+      "year": 2016,
+      "assay": "Co-Immunoprecipitation, In Vitro Binding Assay",
+      "species": "human, mouse",
+      "relevant_quote": "We demonstrate that paxillin interacts with processed LC3 through a conserved LIR motif... these data establish a function for autophagy in FA turnover, tumor cell motility, and metastasis."
+    },
+    {
+      "paper_title": "Syndecan-4 signals cooperatively with integrins in a Rho-dependent manner in the assembly of focal adhesions and actin stress fibers",
+      "doi": "10.1073/pnas.96.6.2805",
+      "authors": "Saoncella S, Echtermeyer F, Denhez F, Nowlen JK, Mosher DF, Robinson SD, Hynes RO, Goetinck PF",
+      "journal": "Proc Natl Acad Sci U S A",
+      "year": 1999,
+      "assay": "Microscopy",
+      "species": "hamster",
+      "relevant_quote": "Thus, syndecan-4, as the second transmembrane receptor of focal adhesions, acts cooperatively with integrins in generating the signals necessary for the formation of focal adhesions and actin stress fibers."
+    },
+    {
+      "paper_title": "Syndecan-4 Inhibits the Development of Pulmonary Fibrosis by Attenuating TGF-β Signaling",
+      "doi": "10.3390/ijms20204989",
+      "authors": "Tanino Y, Wang X, Nikaido T, Misa K, Sato Y, Togawa R, Kawamata T, Kikuchi M, Frevert CW, Tanino M, Kojima T, Shibata Y",
+      "journal": "Int J Mol Sci",
+      "year": 2019,
+      "assay": "In vivo (bleomycin model), In vitro (fibroblast culture)",
+      "species": "mouse",
+      "relevant_quote": "These findings showed that syndecan-4 inhibits the development of pulmonary fibrosis, at least in part, through attenuating TGF-β signaling."
+    },
+    {
+      "paper_title": "Fibrotic lung ECM upregulates SDC4/integrin-αvβ1 interaction and the interfering peptide SDC487-131 and its derivative peptides alleviate pulmonary fibrosis",
+      "doi": "10.1093/rb/rbad051",
+      "authors": "Zhu L, Xie L, Zhi Y, Huang Y, Chen H, Chen Z, Hong J, Guo Y, Chen C",
+      "journal": "Regenerative Biomaterials",
+      "year": 2024,
+      "assay": "Immunofluorescence, Proximity Ligation Assay",
+      "species": "mouse",
+      "relevant_quote": "Using decellularized lung ECM (dECM), this study found that fibrotic ECM enhanced fibroblast activation via SDC4-regulated integrin-αVβ1 expression and activation, and FAK/AKT phosphorylation."
+    }
+  ],
+  "depth": 1,
+  "arrow_notation": "LC3B --regulates--> SDC4:",
+  "protein_a": "SDC4",
+  "protein_b": "LC3B",
+  "discovered_in_query": "LC3B",
+  "first_discovered": "2025-11-11T15:54:33.393561Z",
+  "last_updated": "2025-11-11T15:54:33.393561Z"
+}

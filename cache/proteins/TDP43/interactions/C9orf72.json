@@ -1,0 +1,111 @@
+{
+  "primary": "C9orf72",
+  "interaction_type": "indirect",
+  "upstream_interactor": null,
+  "mediator_chain": [],
+  "depth": 2,
+  "support_summary": "The hexanucleotide repeat expansion in the C9orf72 gene produces toxic dipeptide repeat proteins, such as poly(GR) and poly(GA), which directly interact with and promote the aggregation of TDP-43. This indicates an indirect, functional link between the C9orf72 gene mutation and TDP-43 pathology.",
+  "functions": [
+    {
+      "function": "TDP-43 Aggregation",
+      "arrow": "activates",
+      "cellular_process": "The hexanucleotide repeat expansion in the C9orf72 gene is translated into toxic dipeptide repeat (DPR) proteins, such as poly(GA) and poly(GR). These DPRs directly promote the pathological aggregation of TDP-43.",
+      "effect_description": "Toxic dipeptide repeat proteins, translated from the mutated C9orf72 gene, directly induce the pathological aggregation and cytoplasmic mislocalization of TDP-43.",
+      "biological_consequence": [
+        "C9orf72 hexanucleotide repeat expansion → Translation of poly(GA) dipeptide repeats → Direct binding and seeding of TDP-43 aggregation → Formation of phosphorylated TDP-43 inclusions → Cellular toxicity.",
+        "C9orf72 hexanucleotide repeat expansion → Translation of poly(GR) dipeptide repeats → Interference with nucleocytoplasmic transport machinery → Impaired nuclear import of TDP-43 → Cytoplasmic TDP-43 accumulation and aggregation → Neurodegeneration."
+      ],
+      "specific_effects": [
+        "The formation of poly-GA protein inclusions induces the intracellular aggregation of phosphorylated TDP-43.",
+        "Poly(GR) aggregates can drive TDP-43 aggregation by directly binding its low-complexity domain and by blocking its nuclear import.",
+        "Dipeptide repeat proteins are sufficient to promote the aggregation of endogenous TDP-43.",
+        "The accumulation of DPRs often precedes the aggregation of TDP-43, suggesting the DPRs initiate the pathological cascade."
+      ],
+      "evidence": [
+        {
+          "paper_title": "C9ORF72 dipeptide repeat poly-GA inclusions promote intracellular aggregation of phosphorylated TDP-43",
+          "doi": "10.1093/hmg/ddy174",
+          "authors": "Nonaka T, Masuda-Suzukake M, Hosokawa M, Shimozawa A, Hirai S, Okado H, Hasegawa M",
+          "journal": "Hum Mol Genet",
+          "year": 2018,
+          "assay": "Immunofluorescence, Immunoblotting",
+          "species": "Human",
+          "relevant_quote": "Here, we show that the formation of poly-GA protein inclusions induced intracellular aggregation of endogenous and exogenous TDP-43 in cultured cells.",
+          "pmid": "29750243"
+        },
+        {
+          "paper_title": "C9orf72 poly(GR) aggregation induces TDP-43 proteinopathy",
+          "doi": "10.1126/scitranslmed.abb3774",
+          "authors": "Cook CN, Wu Y, Odeh HM, Gendron TF, Jansen-West K, Del Rosso G, Yue M, Jiang P, Gomes E, Tong J, Daughrity LM, Avendano NM, Castanedes-Casey M, Shao W, Oskarsson B, Tomassy GS, McCampbell A, Rigo F, Dickson DW, Shorter J, Zhang YJ, Petrucelli L",
+          "journal": "Sci Transl Med",
+          "year": 2020,
+          "assay": "Immunofluorescence, Protein Aggregation Assay",
+          "species": "Mouse, Human",
+          "relevant_quote": "...we demonstrated that a glycine-arginine repeat protein [poly(GR)] translated from expanded G4C2 repeats was sufficient to promote aggregation of endogenous TDP-43.",
+          "pmid": "32878979"
+        },
+        {
+          "paper_title": "A feedback loop between dipeptide-repeat protein, TDP-43 and karyopherin-α mediates C9orf72-related neurodegeneration",
+          "doi": "10.1093/brain/awy241",
+          "authors": "Solomon DA, Stepto A, Au WH, Adachi Y, Diaper DC, Hall R, Rekhi A, Boudi A, Tziortzouda P, Lee YB, Smith B, Bridi JC, Spinelli G, Dearlove J, Humphrey DM, Gallo JM, Troakes C, Fanto M, Soller M, Rogelj B, Parsons RB, Shaw CE, Hortobágyi T, Hirth F",
+          "journal": "Brain",
+          "year": 2018,
+          "assay": "Immunohistochemistry, Genetic Models",
+          "species": "Drosophila, Human",
+          "relevant_quote": "We found G4C2-derived dipeptide-repeat protein but not G4C2-RNA accumulation caused TDP-43 proteinopathy that triggered onset and progression of disease in Drosophila models of C9ALS/FTD.",
+          "pmid": "30239641"
+        }
+      ],
+      "pmids": [
+        "29750243",
+        "32878979",
+        "30239641"
+      ]
+    }
+  ],
+  "arrow": "activates",
+  "direction": "primary_to_main",
+  "intent": "protein aggregation",
+  "mechanism": "The hexanucleotide repeat expansion in the C9orf72 gene is translated into toxic dipeptide repeat (DPR) proteins, such as poly(GA) and poly(GR). These DPRs directly promote the pathological aggregation of TDP-43.",
+  "effect": "Toxic dipeptide repeat proteins, translated from the mutated C9orf72 gene, directly induce the pathological aggregation and cytoplasmic mislocalization of TDP-43.",
+  "summary": "TDP43 activates C9orf72 to modulate tdp-43 aggregation, ultimately affecting cellular toxicity.",
+  "evidence": [
+    {
+      "paper_title": "C9ORF72 dipeptide repeat poly-GA inclusions promote intracellular aggregation of phosphorylated TDP-43",
+      "doi": "10.1093/hmg/ddy174",
+      "authors": "Nonaka T, Masuda-Suzukake M, Hosokawa M, Shimozawa A, Hirai S, Okado H, Hasegawa M",
+      "journal": "Hum Mol Genet",
+      "year": 2018,
+      "assay": "Immunofluorescence, Immunoblotting",
+      "species": "Human",
+      "relevant_quote": "Here, we show that the formation of poly-GA protein inclusions induced intracellular aggregation of endogenous and exogenous TDP-43 in cultured cells."
+    },
+    {
+      "paper_title": "C9orf72 poly(GR) aggregation induces TDP-43 proteinopathy",
+      "doi": "10.1126/scitranslmed.abb3774",
+      "authors": "Cook CN, Wu Y, Odeh HM, Gendron TF, Jansen-West K, Del Rosso G, Yue M, Jiang P, Gomes E, Tong J, Daughrity LM, Avendano NM, Castanedes-Casey M, Shao W, Oskarsson B, Tomassy GS, McCampbell A, Rigo F, Dickson DW, Shorter J, Zhang YJ, Petrucelli L",
+      "journal": "Sci Transl Med",
+      "year": 2020,
+      "assay": "Immunofluorescence, Protein Aggregation Assay",
+      "species": "Mouse, Human",
+      "relevant_quote": "...we demonstrated that a glycine-arginine repeat protein [poly(GR)] translated from expanded G4C2 repeats was sufficient to promote aggregation of endogenous TDP-43."
+    },
+    {
+      "paper_title": "A feedback loop between dipeptide-repeat protein, TDP-43 and karyopherin-α mediates C9orf72-related neurodegeneration",
+      "doi": "10.1093/brain/awy241",
+      "authors": "Solomon DA, Stepto A, Au WH, Adachi Y, Diaper DC, Hall R, Rekhi A, Boudi A, Tziortzouda P, Lee YB, Smith B, Bridi JC, Spinelli G, Dearlove J, Humphrey DM, Gallo JM, Troakes C, Fanto M, Soller M, Rogelj B, Parsons RB, Shaw CE, Hortobágyi T, Hirth F",
+      "journal": "Brain",
+      "year": 2018,
+      "assay": "Immunohistochemistry, Genetic Models",
+      "species": "Drosophila, Human",
+      "relevant_quote": "We found G4C2-derived dipeptide-repeat protein but not G4C2-RNA accumulation caused TDP-43 proteinopathy that triggered onset and progression of disease in Drosophila models of C9ALS/FTD."
+    }
+  ],
+  "_chain_inferred": true,
+  "arrow_notation": "TDP43 <--activates-- C9orf72:",
+  "protein_a": "TDP43",
+  "protein_b": "C9orf72",
+  "discovered_in_query": "TDP43",
+  "first_discovered": "2025-11-11T16:36:28.324238Z",
+  "last_updated": "2025-11-11T16:36:28.324238Z"
+}

@@ -1,0 +1,101 @@
+{
+  "primary": "TDP43",
+  "interaction_type": "indirect",
+  "upstream_interactor": "CHMP2B",
+  "mediator_chain": [
+    "CHMP2B"
+  ],
+  "depth": 2,
+  "support_summary": "TDP-43's neurotoxicity is modified by CHMP2B, which regulates the protein stability of Casein Kinase 1 (CK1). CHMP2B inhibits the ubiquitination and proteasomal degradation of CK1, leading to increased CK1 levels. This, in turn, promotes the hyperphosphorylation of TDP-43 at disease-associated sites, enhancing its aggregation and toxicity.",
+  "functions": [
+    {
+      "function": "TDP-43 Phosphorylation",
+      "arrow": "activates",
+      "cellular_process": "TDP-43's phosphorylation state is indirectly regulated through its interaction with CHMP2B. CHMP2B stabilizes Casein Kinase 1 (CK1) by negatively regulating its ubiquitination and subsequent proteasomal degradation. The resulting increase in CK1 abundance leads to hyperphosphorylation of TDP-43 at serines 409/410, which is a hallmark of TDP-43 proteinopathies.",
+      "effect_description": "TDP-43 indirectly promotes its own hyperphosphorylation and aggregation by interacting with CHMP2B, which stabilizes the kinase CK1.",
+      "biological_consequence": [
+        "CHMP2B binds Casein Kinase 1 (CK1) → CHMP2B inhibits ubiquitination of CK1 → Proteasomal degradation of CK1 is blocked → CK1 protein levels are stabilized → Basal phosphorylation of TDP-43 at S409/S410",
+        "FTD-causing CHMP2B(Intron5) mutation → Increased stabilization of Casein Kinase 1 (CK1) → Elevated CK1 protein levels → Hyperphosphorylation of TDP-43 at S409/S410 → Pathological TDP-43 aggregation and insolubility"
+      ],
+      "specific_effects": [
+        "CHMP2B modulates CK1 protein levels by negatively regulating its ubiquitination and proteasome-mediated turnover.",
+        "CK1δ and CK1ε are primary kinases that phosphorylate TDP-43 at disease-relevant sites, particularly serines 409/410.",
+        "Down-regulation of CHMP2B reduces TDP-43 phosphorylation and toxicity by decreasing CK1 abundance.",
+        "The FTD-causing mutation CHMP2B(Intron5) promotes hyperphosphorylation and insolubility of TDP-43 by increasing CK1 levels.",
+        "This regulatory mechanism is independent of CHMP2B's role in autophagy."
+      ],
+      "evidence": [
+        {
+          "paper_title": "CHMP2B regulates TDP-43 phosphorylation and cytotoxicity independent of autophagy via CK1",
+          "doi": "10.1083/jcb.202103033",
+          "authors": "Deng X, Sun X, Yue W, Duan Y, Hu R, Zhang K, Ni J, Cui J, Wang Q, Chen Y, Li A, Fang Y",
+          "journal": "Journal of Cell Biology",
+          "year": 2022,
+          "assay": "Genetic screen (Drosophila), Western blot, Co-IP",
+          "species": "Drosophila, Human cell lines",
+          "relevant_quote": "...we uncover that CHMP2B modulates CK1 protein levels by negatively regulating ubiquitination and the proteasome-mediated turnover of CK1.",
+          "pmid": "34726688"
+        },
+        {
+          "paper_title": "TDP-43 Phosphorylation by Casein Kinase Iε Promotes Oligomerization and Enhances Toxicity In Vivo",
+          "doi": "10.1093/hmg/ddt499",
+          "authors": "Liachko NF, McMillan PJ, Strovas TJ, Loomis E, Greenup L, Murrell JR, Ghetti B, Kraemer BC",
+          "journal": "Human Molecular Genetics",
+          "year": 2014,
+          "assay": "In vitro kinase assay, Western blot",
+          "species": "C. elegans, Human",
+          "relevant_quote": "These results suggest CK1ε is a TDP-43 kinase and that TDP-43 phosphorylation by CK1ε at S409/410 promotes TDP-43 oligomerization and enhances toxicity.",
+          "pmid": "24105464"
+        }
+      ],
+      "pmids": [
+        "34726688",
+        "24105464"
+      ]
+    }
+  ],
+  "arrow": "activates",
+  "direction": "bidirectional",
+  "intent": "phosphorylation",
+  "mechanism": "TDP-43's phosphorylation state is indirectly regulated through its interaction with CHMP2B. CHMP2B stabilizes Casein Kinase 1 (CK1) by negatively regulating its ubiquitination and subsequent proteasomal degradation. The resulting increase in CK1 abundance leads to hyperphosphorylation of TDP-43 at serines 409/410, which is a hallmark of TDP-43 proteinopathies.",
+  "effect": "TDP-43 indirectly promotes its own hyperphosphorylation and aggregation by interacting with CHMP2B, which stabilizes the kinase CK1.",
+  "summary": "TDP43 activates Casein Kinase 1 to modulate tdp-43 phosphorylation, ultimately affecting basal phosphorylation of tdp-43 at s409/s410.",
+  "evidence": [
+    {
+      "paper_title": "CHMP2B regulates TDP-43 phosphorylation and cytotoxicity independent of autophagy via CK1",
+      "doi": "10.1083/jcb.202103033",
+      "authors": "Deng X, Sun X, Yue W, Duan Y, Hu R, Zhang K, Ni J, Cui J, Wang Q, Chen Y, Li A, Fang Y",
+      "journal": "Journal of Cell Biology",
+      "year": 2022,
+      "assay": "Genetic screen (Drosophila), Western blot, Co-IP",
+      "species": "Drosophila, Human cell lines",
+      "relevant_quote": "...we uncover that CHMP2B modulates CK1 protein levels by negatively regulating ubiquitination and the proteasome-mediated turnover of CK1."
+    },
+    {
+      "paper_title": "CHMP2B regulates TDP-43 phosphorylation and proteotoxicity via modulating CK1 turnover independent of the autophagy-lysosomal pathway",
+      "doi": "10.1101/2020.06.04.133546",
+      "authors": "Sun X, Deng X, Hu R, Duan Y, Zhang K, Cui J, Ni J, Wang Q, Chen Y, Li A, Fang Y",
+      "journal": "bioRxiv",
+      "year": 2020,
+      "assay": "Genetic screen (Drosophila), Western blot",
+      "species": "Drosophila, Human cell lines",
+      "relevant_quote": "the kinase CK1 tightly regulated TDP-43 phosphorylation level in cells, and CHMP2B OE or CHMP2BIntron5 significantly decreased ubiquitination and the turnover of CK1..."
+    },
+    {
+      "paper_title": "TDP-43 Phosphorylation by Casein Kinase Iε Promotes Oligomerization and Enhances Toxicity In Vivo",
+      "doi": "10.1093/hmg/ddt499",
+      "authors": "Liachko NF, McMillan PJ, Strovas TJ, Loomis E, Greenup L, Murrell JR, Ghetti B, Kraemer BC",
+      "journal": "Human Molecular Genetics",
+      "year": 2014,
+      "assay": "In vitro kinase assay, Western blot",
+      "species": "C. elegans, Human",
+      "relevant_quote": "These results suggest CK1ε is a TDP-43 kinase and that TDP-43 phosphorylation by CK1ε at S409/410 promotes TDP-43 oligomerization and enhances toxicity."
+    }
+  ],
+  "arrow_notation": "CHMP2B <--activates--> Casein Kinase 1:",
+  "protein_a": "Casein Kinase 1",
+  "protein_b": "TDP43",
+  "discovered_in_query": "TDP43",
+  "first_discovered": "2025-11-11T16:36:28.270077Z",
+  "last_updated": "2025-11-11T16:36:28.270077Z"
+}

@@ -1,0 +1,149 @@
+{
+  "primary": "TDP43",
+  "interaction_type": "indirect",
+  "upstream_interactor": null,
+  "mediator_chain": [],
+  "depth": 2,
+  "support_summary": "TDP-43 and HDAC6 have a complex, bidirectional regulatory relationship. TDP-43 binds to and upregulates HDAC6 mRNA. In turn, HDAC6 facilitates the clearance of misfolded and aggregated TDP-43 via the autophagy pathway, representing a key component of the cellular stress response.",
+  "arrow": "activates",
+  "direction": "bidirectional",
+  "intent": "regulation of protein quality control and autophagy",
+  "functions": [
+    {
+      "function": "TDP-43 Aggregate Clearance",
+      "arrow": "activates",
+      "cellular_process": "HDAC6 facilitates the clearance of misfolded and aggregated proteins, including TDP-43, via the autophagy-lysosome pathway. It recognizes ubiquitinated protein aggregates and transports them to the aggresome for degradation.",
+      "effect_description": "HDAC6 activity promotes the autophagic degradation of cytoplasmic and insoluble TDP-43, thereby reducing its aggregation and associated cellular toxicity.",
+      "biological_consequence": [
+        "HDAC6 recognizes ubiquitinated cytoplasmic TDP-43 aggregates → Aggregates are transported to the aggresome → Autophagic flux is enhanced → Clearance of toxic TDP-43 species increases → Cellular toxicity is reduced, promoting neuroprotection"
+      ],
+      "specific_effects": [
+        "HDAC6 overexpression significantly decreases the levels of insoluble and cytosolic TDP-43 in cell models.",
+        "Overexpression of HDAC6 rescued neurotoxicity and motor defects in a Drosophila model of TDP-43 proteinopathy.",
+        "Pharmacological inhibition of HDAC6 restores mitochondrial transport defects and reduces TDP-43 pathology in motor neurons with TARDBP mutations."
+      ],
+      "evidence": [
+        {
+          "paper_title": "The Role of HDAC6 in TDP-43-Induced Neurotoxicity and UPS Impairment",
+          "doi": "10.3389/fcell.2020.581942",
+          "authors": "Lee S, Kwon Y, Kim S, Jo M, Jeon YM, Cheon M, Lee S, Kim SR, Kim K, Kim HJ",
+          "journal": "Frontiers in Cell and Developmental Biology",
+          "year": 2020,
+          "assay": "Western blot, Subcellular fractionation, Fly models",
+          "species": "mouse, drosophila",
+          "relevant_quote": "In this study, we found that HDAC6 overexpression decreased the levels of insoluble and cytosolic TDP-43 protein in TDP-43-overexpressing N2a cells.",
+          "pmid": "33282865"
+        },
+        {
+          "paper_title": "HDAC6 inhibition restores TDP-43 pathology and axonal transport defects in human motor neurons with TARDBP mutations",
+          "doi": "10.15252/embj.2020106177",
+          "authors": "Fazal R, Boeynaems S, Swijsen A, De Decker M, Fumagalli L, Moisse M, Vanneste J, Guo W, Boon R, Vercruysse T, Eggermont K, Swinnen B, Beckers J, Pakravan D, Vandoorne T, Vanden Berghe P, Verfaillie C, Van Den Bosch L, Van Damme P",
+          "journal": "The EMBO Journal",
+          "year": 2021,
+          "assay": "iPSC-derived motor neurons, Pharmacological inhibition",
+          "species": "human",
+          "relevant_quote": "Lastly, we show that pharmacological inhibition of histone deacetylase 6 (HDAC6) restores the observed TDP-43 pathologies and the axonal mitochondrial motility...",
+          "pmid": "33694180"
+        }
+      ],
+      "pmids": [
+        "33282865",
+        "33694180"
+      ]
+    },
+    {
+      "function": "Autophagy Activation (Stress Response)",
+      "arrow": "activates",
+      "cellular_process": "In response to cellular stress, such as nutrient deprivation, TDP-43 binds to the 3' UTR of HDAC6 mRNA, stabilizing it and increasing HDAC6 protein expression. This upregulation of HDAC6 then promotes the activation of autophagy as a pro-survival mechanism.",
+      "effect_description": "The TDP-43-mediated upregulation of HDAC6 activates a pro-survival autophagic response, which protects cells from stress-induced apoptosis.",
+      "biological_consequence": [
+        "Cellular stress (e.g., nutrient deprivation) is induced → TDP-43 binds to the 3' UTR of HDAC6 mRNA → HDAC6 mRNA transcript is stabilized → HDAC6 protein expression is upregulated → Autophagy is activated as a pro-survival mechanism → Apoptosis is suppressed, enhancing cancer cell survival"
+      ],
+      "specific_effects": [
+        "TDP-43 binds to HDAC6 mRNA and upregulates its expression.",
+        "In glioblastoma cells, the TDP-43-HDAC6 axis functions as a stress responsive pathway that promotes tumorigenesis by activating autophagy.",
+        "Inhibition of HDAC6 in this context can overcome the pro-survival effect and increase apoptosis."
+      ],
+      "evidence": [
+        {
+          "paper_title": "TDP-43/HDAC6 axis promoted tumor progression and regulated nutrient deprivation-induced autophagy in glioblastoma",
+          "doi": "10.18632/oncotarget.17979",
+          "authors": "Lin TW, Chen MT, Lin LT, Huang PI, Lo WL, Yang YP, Lu KH, Chen YW, Chiou SH, Wu CW",
+          "journal": "Oncotarget",
+          "year": 2017,
+          "assay": "Immunohistochemistry, Western blot, Cell viability assays",
+          "species": "human",
+          "relevant_quote": "our results suggest that the TDP-43-HDAC6 signaling axis functions as a stress responsive pathway in GBM tumorigenesis and combats nutrient deprivation stress via activating autophagy...",
+          "pmid": "28915616"
+        },
+        {
+          "paper_title": "HDAC6 and TDP-43 promote autophagy impairment in amyotrophic lateral sclerosis",
+          "doi": "10.1016/j.nbd.2025.107079",
+          "authors": "Bordoni M, Scarian E, Jacchetti E, Viola C, Diamanti L, Dragoni F, Di Gerlando R, Rizzo B, Raimondi MT, Gagliardi S, Pansarasa O",
+          "journal": "Neurobiology of Disease",
+          "year": 2025,
+          "assay": "RNA Immunoprecipitation, Western blot",
+          "species": "human",
+          "relevant_quote": "Our work suggests for the first time that TDP-43 influences autophagy by binding and modulating HDAC6 mRNA.",
+          "pmid": "40912409"
+        }
+      ],
+      "pmids": [
+        "28915616",
+        "40912409"
+      ]
+    }
+  ],
+  "mechanism": "HDAC6 facilitates the clearance of misfolded and aggregated proteins, including TDP-43, via the autophagy-lysosome pathway. It recognizes ubiquitinated protein aggregates and transports them to the aggresome for degradation. In response to cellular stress, such as nutrient deprivation, TDP-43 binds to the 3' UTR of HDAC6 mRNA, stabilizing it and increasing HDAC6 protein expression. This upregulation of HDAC6 then promotes the activation of autophagy as a pro-survival mechanism.",
+  "effect": "HDAC6 activity promotes the autophagic degradation of cytoplasmic and insoluble TDP-43, thereby reducing its aggregation and associated cellular toxicity.; The TDP-43-mediated upregulation of HDAC6 activates a pro-survival autophagic response, which protects cells from stress-induced apoptosis.",
+  "summary": "TDP43 activates HDAC6 to regulate tdp-43 aggregate clearance and autophagy activation (stress response), ultimately affecting cellular toxicity is reduced, promoting neuroprotection.",
+  "evidence": [
+    {
+      "paper_title": "The Role of HDAC6 in TDP-43-Induced Neurotoxicity and UPS Impairment",
+      "doi": "10.3389/fcell.2020.581942",
+      "authors": "Lee S, Kwon Y, Kim S, Jo M, Jeon YM, Cheon M, Lee S, Kim SR, Kim K, Kim HJ",
+      "journal": "Frontiers in Cell and Developmental Biology",
+      "year": 2020,
+      "assay": "Western blot, Subcellular fractionation, Fly models",
+      "species": "mouse, drosophila",
+      "relevant_quote": "In this study, we found that HDAC6 overexpression decreased the levels of insoluble and cytosolic TDP-43 protein in TDP-43-overexpressing N2a cells."
+    },
+    {
+      "paper_title": "HDAC6 inhibition restores TDP-43 pathology and axonal transport defects in human motor neurons with TARDBP mutations",
+      "doi": "10.15252/embj.2020106177",
+      "authors": "Fazal R, Boeynaems S, Swijsen A, De Decker M, Fumagalli L, Moisse M, Vanneste J, Guo W, Boon R, Vercruysse T, Eggermont K, Swinnen B, Beckers J, Pakravan D, Vandoorne T, Vanden Berghe P, Verfaillie C, Van Den Bosch L, Van Damme P",
+      "journal": "The EMBO Journal",
+      "year": 2021,
+      "assay": "iPSC-derived motor neurons, Pharmacological inhibition",
+      "species": "human",
+      "relevant_quote": "Lastly, we show that pharmacological inhibition of histone deacetylase 6 (HDAC6) restores the observed TDP-43 pathologies and the axonal mitochondrial motility..."
+    },
+    {
+      "paper_title": "TDP-43/HDAC6 axis promoted tumor progression and regulated nutrient deprivation-induced autophagy in glioblastoma",
+      "doi": "10.18632/oncotarget.17979",
+      "authors": "Lin TW, Chen MT, Lin LT, Huang PI, Lo WL, Yang YP, Lu KH, Chen YW, Chiou SH, Wu CW",
+      "journal": "Oncotarget",
+      "year": 2017,
+      "assay": "Immunohistochemistry, Western blot, Cell viability assays",
+      "species": "human",
+      "relevant_quote": "our results suggest that the TDP-43-HDAC6 signaling axis functions as a stress responsive pathway in GBM tumorigenesis and combats nutrient deprivation stress via activating autophagy..."
+    },
+    {
+      "paper_title": "HDAC6 and TDP-43 promote autophagy impairment in amyotrophic lateral sclerosis",
+      "doi": "10.1016/j.nbd.2025.107079",
+      "authors": "Bordoni M, Scarian E, Jacchetti E, Viola C, Diamanti L, Dragoni F, Di Gerlando R, Rizzo B, Raimondi MT, Gagliardi S, Pansarasa O",
+      "journal": "Neurobiology of Disease",
+      "year": 2025,
+      "assay": "RNA Immunoprecipitation, Western blot",
+      "species": "human",
+      "relevant_quote": "Our work suggests for the first time that TDP-43 influences autophagy by binding and modulating HDAC6 mRNA."
+    }
+  ],
+  "_chain_inferred": true,
+  "arrow_notation": "TDP43 <--activates--> HDAC6:",
+  "protein_a": "HDAC6",
+  "protein_b": "TDP43",
+  "discovered_in_query": "TDP43",
+  "first_discovered": "2025-11-11T16:36:28.262864Z",
+  "last_updated": "2025-11-11T16:36:28.262864Z"
+}

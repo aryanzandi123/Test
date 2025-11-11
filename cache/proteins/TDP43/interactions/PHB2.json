@@ -1,0 +1,71 @@
+{
+  "primary": "PHB2",
+  "interaction_type": "direct",
+  "upstream_interactor": null,
+  "mediator_chain": [],
+  "depth": 1,
+  "support_summary": "A proteomics screen identified the inner mitochondrial membrane protein Prohibitin 2 (PHB2), a crucial mitophagy receptor, as a direct interaction partner of TDP-43. TDP-43 expression levels regulate PHB2 abundance, indicating a role for TDP-43 in mitochondrial quality control via mitophagy.",
+  "functions": [
+    {
+      "function": "Mitophagy",
+      "arrow": "activates",
+      "cellular_process": "TDP-43 interacts with Prohibitin 2 (PHB2), a key receptor for mitophagy. TDP-43 regulates the levels of PHB2, particularly under conditions of mitochondrial stress, thereby influencing the selective degradation of damaged mitochondria by autophagy.",
+      "effect_description": "TDP-43 regulates the expression of the mitophagy receptor PHB2, which is essential for the clearance of damaged mitochondria.",
+      "biological_consequence": [
+        "Mitochondrial stress induction (e.g., via CCCP) → TDP-43-dependent regulation of PHB2 protein levels → PHB2 acts as a mitophagy receptor on damaged mitochondria → Recruitment of the autophagosome → Selective clearance of damaged mitochondria.",
+        "Pathological TDP-43 aggregation → Defective interaction with or sequestration of PHB2 → Impaired recognition of damaged mitochondria → Failure of Parkin-mediated mitophagy → Accumulation of dysfunctional mitochondria and increased oxidative stress → Neuronal death."
+      ],
+      "specific_effects": [
+        "A proteomics screen identified PHB2 as a mitochondrial interaction partner of TDP-43.",
+        "Overexpression of TDP-43 increased PHB2 levels.",
+        "TDP-43 knockdown decreased PHB2 expression in cells where mitophagy was induced with CCCP.",
+        "TDP-43 expression is required for the full activation of CCCP-induced mitophagy."
+      ],
+      "evidence": [
+        {
+          "paper_title": "TDP-43 Interacts With Mitochondrial Proteins Critical for Mitophagy and Mitochondrial Dynamics",
+          "doi": "10.1016/j.neulet.2018.04.053",
+          "authors": "Davis SA, Itaman S, Khalid-Janney CM, Sherard JA, Dowell JA, Cairns NJ, Gitcho MA",
+          "journal": "Neuroscience Letters",
+          "year": 2018,
+          "assay": "Proteomics screen, Western Blot",
+          "species": "human, mouse",
+          "relevant_quote": "Overexpression of TDP-43 led to an increase in PHB2 whereas TDP-43 knockdown reduced PHB2 expression in cells treated with carbonyl cyanide m-chlorophenylhydrazone (CCCP), an inducer of mitophagy.",
+          "pmid": "29715546"
+        }
+      ],
+      "_context": {
+        "type": "direct",
+        "query_protein": null,
+        "chain": null
+      },
+      "pmids": [
+        "29715546"
+      ]
+    }
+  ],
+  "arrow": "activates",
+  "direction": "main_to_primary",
+  "intent": "regulation of protein expression",
+  "mechanism": "TDP-43 interacts with Prohibitin 2 (PHB2), a key receptor for mitophagy. TDP-43 regulates the levels of PHB2, particularly under conditions of mitochondrial stress, thereby influencing the selective degradation of damaged mitochondria by autophagy.",
+  "effect": "TDP-43 regulates the expression of the mitophagy receptor PHB2, which is essential for the clearance of damaged mitochondria.",
+  "summary": "TDP43 activates PHB2 to modulate regulation of mitophagy, ultimately affecting selective clearance of damaged mitochondria.",
+  "evidence": [
+    {
+      "paper_title": "TDP-43 Interacts With Mitochondrial Proteins Critical for Mitophagy and Mitochondrial Dynamics",
+      "doi": "10.1016/j.neulet.2018.04.053",
+      "authors": "Davis SA, Itaman S, Khalid-Janney CM, Sherard JA, Dowell JA, Cairns NJ, Gitcho MA",
+      "journal": "Neuroscience Letters",
+      "year": 2018,
+      "assay": "Proteomics screen, Western Blot",
+      "species": "human, mouse",
+      "relevant_quote": "Overexpression of TDP-43 led to an increase in PHB2 whereas TDP-43 knockdown reduced PHB2 expression in cells treated with carbonyl cyanide m-chlorophenylhydrazone (CCCP), an inducer of mitophagy."
+    }
+  ],
+  "arrow_notation": "TDP43 --activates--> PHB2:",
+  "protein_a": "TDP43",
+  "protein_b": "PHB2",
+  "discovered_in_query": "TDP43",
+  "first_discovered": "2025-11-11T16:36:28.328789Z",
+  "last_updated": "2025-11-11T16:36:28.328789Z"
+}

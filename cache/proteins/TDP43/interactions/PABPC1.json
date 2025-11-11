@@ -1,0 +1,93 @@
+{
+  "primary": "PABPC1",
+  "direction": "bidirectional",
+  "arrow": "activates",
+  "intent": "regulation of stress granule assembly",
+  "support_summary": "Co-immunoprecipitation experiments have confirmed a physical interaction between TDP-43 and Poly(A)-binding protein cytoplasmic 1 (PABPC1). This interaction is part of a larger complex involving Ataxin-2, which is crucial for the assembly of stress granules.",
+  "functions": [
+    {
+      "function": "Stress Granule Assembly",
+      "arrow": "activates",
+      "cellular_process": "TDP-43, Ataxin-2, and PABPC1 form a tripartite complex that is critical for the formation of stress granules. The interaction between TDP-43 and Ataxin-2 is dependent on the PABP-interacting motif (PAM2) of Ataxin-2.",
+      "effect_description": "The formation of the TDP-43/Ataxin-2/PABPC1 complex facilitates the recruitment of TDP-43 into stress granules, which can seed the formation of pathological aggregates under chronic stress.",
+      "biological_consequence": [
+        "Cellular stress → Ataxin-2 (via PAM2 motif) binds PABPC1 on poly(A) mRNA → Complex recruits TDP-43 → Nucleation of stress granules → Sequestration and aggregation of TDP-43 → Enhanced neurotoxicity"
+      ],
+      "specific_effects": [
+        "The interaction between TDP-43 and ataxin-2 is mediated through the polyA-binding protein motif of ataxin-2.",
+        "Ataxin-2, PABPC1, and the mRNA poly(A) tail act in concert to promote the formation of stress granules.",
+        "Down-regulation of Ataxin-2 has been shown to mitigate TDP-43 proteinopathy in ALS models."
+      ],
+      "evidence": [
+        {
+          "paper_title": "Global analysis of TDP-43 interacting proteins reveals strong association with RNA splicing and translation machinery",
+          "doi": "10.1074/jbc.M110.130032",
+          "authors": "Freibaum BD, Chitta RK, High AA, Taylor JP",
+          "journal": "Journal of Biological Chemistry",
+          "year": 2010,
+          "assay": "Co-immunoprecipitation, Mass spectrometry",
+          "species": "human, mouse",
+          "relevant_quote": "Co-immunoprecipitation experiments were also performed in HeLa cells, confirming the interaction between PABPC1 and hnRNP H with TDP-43 and associated mutants...",
+          "pmid": "20020773"
+        },
+        {
+          "paper_title": "Concerted action of ataxin-2 and PABPC1-bound mRNA poly(A) tail in the formation of stress granules",
+          "doi": "10.1038/s41467-020-19855-1",
+          "authors": "Kato M, Kurian L, Ito D, Suzuki N",
+          "journal": "Nature Communications",
+          "year": 2020,
+          "assay": "Microscopy, Complementation analysis",
+          "species": "human",
+          "relevant_quote": "These findings underscore the critical roles of mRNA PAT, PABPC1 and ataxin-2 in SG formation and provide mechanistic insights into this process.",
+          "pmid": "38869059"
+        }
+      ],
+      "pmids": [
+        "20020773",
+        "38869059"
+      ]
+    }
+  ],
+  "mechanism": "TDP-43, Ataxin-2, and PABPC1 form a tripartite complex that is critical for the formation of stress granules. The interaction between TDP-43 and Ataxin-2 is dependent on the PABP-interacting motif (PAM2) of Ataxin-2.",
+  "effect": "The formation of the TDP-43/Ataxin-2/PABPC1 complex facilitates the recruitment of TDP-43 into stress granules, which can seed the formation of pathological aggregates under chronic stress.",
+  "summary": "TDP43 activates PABPC1 to modulate stress granule assembly, ultimately affecting enhanced neurotoxicity.",
+  "evidence": [
+    {
+      "paper_title": "The interaction between TDP-43 and ataxin-2 is mediated through the polyA-binding protein motif of ataxin-2",
+      "doi": "10.1038/ncomms3813",
+      "authors": "Elden AC, Kim HJ, Hart MP, Chen-Plotkin AS, Johnson BS, Fang X, Armakola M, Geser F, Greene R, Lu MM, Padmanabhan A, Doms D, Lee VM, Trojanowski JQ, Van Deerlin VM, Bonini NM, Gitler AD",
+      "journal": "Nature Communications",
+      "year": 2013,
+      "assay": "Co-immunoprecipitation",
+      "species": "drosophila, human",
+      "relevant_quote": "...the shared interaction of TDP-43 and ataxin-2 with PABP might represent a critical axis in stress granule formation and the biological effects of TDP-43."
+    },
+    {
+      "paper_title": "Global analysis of TDP-43 interacting proteins reveals strong association with RNA splicing and translation machinery",
+      "doi": "10.1074/jbc.M110.130032",
+      "authors": "Freibaum BD, Chitta RK, High AA, Taylor JP",
+      "journal": "Journal of Biological Chemistry",
+      "year": 2010,
+      "assay": "Co-immunoprecipitation, Mass spectrometry",
+      "species": "human, mouse",
+      "relevant_quote": "Co-immunoprecipitation experiments were also performed in HeLa cells, confirming the interaction between PABPC1 and hnRNP H with TDP-43 and associated mutants..."
+    },
+    {
+      "paper_title": "Concerted action of ataxin-2 and PABPC1-bound mRNA poly(A) tail in the formation of stress granules",
+      "doi": "10.1038/s41467-020-19855-1",
+      "authors": "Kato M, Kurian L, Ito D, Suzuki N",
+      "journal": "Nature Communications",
+      "year": 2020,
+      "assay": "Microscopy, Complementation analysis",
+      "species": "human",
+      "relevant_quote": "These findings underscore the critical roles of mRNA PAT, PABPC1 and ataxin-2 in SG formation and provide mechanistic insights into this process."
+    }
+  ],
+  "depth": 1,
+  "arrow_notation": "TDP43 <--activates--> PABPC1:",
+  "protein_a": "TDP43",
+  "protein_b": "PABPC1",
+  "discovered_in_query": "TDP43",
+  "first_discovered": "2025-11-11T16:36:28.236074Z",
+  "last_updated": "2025-11-11T16:36:28.236074Z"
+}

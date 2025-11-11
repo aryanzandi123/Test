@@ -1,0 +1,89 @@
+{
+  "primary": "mTOR",
+  "interaction_type": "indirect",
+  "upstream_interactor": "POLDIP3",
+  "mediator_chain": [
+    "POLDIP3"
+  ],
+  "depth": 2,
+  "support_summary": "Loss of nuclear TDP-43 function alters the alternative splicing of POLDIP3 pre-mRNA. This leads to an increased production of POLDIP3 variant-2, which is less effective at promoting the mTOR/S6K1 signaling pathway, ultimately resulting in decreased mRNA translation and reduced cell size in neuronal cells.",
+  "functions": [
+    {
+      "function": "mRNA Translation & Cell Size",
+      "arrow": "inhibits",
+      "cellular_process": "Nuclear TDP-43 promotes the inclusion of exon 3 in POLDIP3 pre-mRNA, leading to the production of POLDIP3 variant-1. When nuclear TDP-43 function is lost, exon 3 is skipped, increasing the ratio of POLDIP3 variant-2. This isoform shift downregulates the mTOR/S6K1 signaling pathway, which is critical for mRNA translation and cell growth.",
+      "effect_description": "Loss of nuclear TDP-43 function indirectly downregulates mTOR-dependent mRNA translation and reduces cell size by altering the splicing of the upstream regulator POLDIP3.",
+      "biological_consequence": [
+        "Loss of nuclear TDP-43 function → POLDIP3 pre-mRNA splicing is altered, causing exon 3 skipping → Ratio of POLDIP3 variant-2 to variant-1 increases → mTORC1 pathway signaling is attenuated → S6K1-mediated mRNA translation is downregulated → Neuronal cell size is reduced"
+      ],
+      "specific_effects": [
+        "Depletion of nuclear TDP-43 decreases wild-type POLDIP3 (variant-1) and increases the POLDIP3 isoform lacking exon 3 (variant-2).",
+        "POLDIP3 enhances mTOR/S6K1-mediated translation efficiency.",
+        "The POLDIP3 variant-2 is less effective than variant-1 at maintaining cell size in neuronal cells depleted of TDP-43.",
+        "Depletion of TDP-43 in the SH-SY5Y neuronal cell line leads to a significant decrease in cell size, an effect comparable to POLDIP3 depletion."
+      ],
+      "evidence": [
+        {
+          "paper_title": "Alteration of POLDIP3 Splicing Associated with Loss of Function of TDP-43 in Tissues Affected with ALS",
+          "doi": "10.1371/journal.pone.0043120",
+          "authors": "Shiga A, Ishihara T, Miyashita A, Kuwabara M, Kato T, Watanabe N, Yamahira A, Kondo C, Yokoseki A, Takahashi M, Kuwano R, Kakita A, Nishizawa M, Takahashi H, Onodera O",
+          "journal": "PLoS One",
+          "year": 2012,
+          "assay": "Exon array analysis, siRNA knockdown, qRT-PCR",
+          "species": "Human cell lines (HeLa, SH-SY5Y), Human tissues",
+          "relevant_quote": "loss of function of TDP-43 may induce decreased function of POLDIP3 due to alteration of POLDIP3 splicing, which could result in down-regulation of mTOR/S6K1-dependent translation of mRNA...",
+          "pmid": "22900096"
+        },
+        {
+          "paper_title": "Altered TDP-43 Structure and Function: Key Insights into Aberrant RNA, Mitochondrial, and Cellular and Systemic Metabolism in Amyotrophic Lateral Sclerosis",
+          "doi": "10.3390/metabo12080709",
+          "authors": "Jiang L, Ngo ST",
+          "journal": "Metabolites",
+          "year": 2022,
+          "assay": "Review",
+          "species": "Review",
+          "relevant_quote": "With regard to RNA metabolism, the depletion of TDP-43 is correlated with the increase in POLDIP3 mRNA variant 2, a splicing regulator for the mTOR/S6K1 cascade.",
+          "pmid": "36005581"
+        }
+      ],
+      "pmids": [
+        "22900096",
+        "36005581"
+      ]
+    }
+  ],
+  "arrow": "inhibits",
+  "direction": "main_to_primary",
+  "intent": "regulation of splicing",
+  "mechanism": "Nuclear TDP-43 promotes the inclusion of exon 3 in POLDIP3 pre-mRNA, leading to the production of POLDIP3 variant-1. When nuclear TDP-43 function is lost, exon 3 is skipped, increasing the ratio of POLDIP3 variant-2. This isoform shift downregulates the mTOR/S6K1 signaling pathway, which is critical for mRNA translation and cell growth.",
+  "effect": "Loss of nuclear TDP-43 function indirectly downregulates mTOR-dependent mRNA translation and reduces cell size by altering the splicing of the upstream regulator POLDIP3.",
+  "summary": "TDP43 inhibits mTOR to modulate mrna translation & cell size regulation, ultimately affecting neuronal cell size is reduced.",
+  "evidence": [
+    {
+      "paper_title": "Alteration of POLDIP3 Splicing Associated with Loss of Function of TDP-43 in Tissues Affected with ALS",
+      "doi": "10.1371/journal.pone.0043120",
+      "authors": "Shiga A, Ishihara T, Miyashita A, Kuwabara M, Kato T, Watanabe N, Yamahira A, Kondo C, Yokoseki A, Takahashi M, Kuwano R, Kakita A, Nishizawa M, Takahashi H, Onodera O",
+      "journal": "PLoS One",
+      "year": 2012,
+      "assay": "Exon array analysis, siRNA knockdown, qRT-PCR",
+      "species": "Human cell lines (HeLa, SH-SY5Y), Human tissues",
+      "relevant_quote": "loss of function of TDP-43 may induce decreased function of POLDIP3 due to alteration of POLDIP3 splicing, which could result in down-regulation of mTOR/S6K1-dependent translation of mRNA..."
+    },
+    {
+      "paper_title": "Altered TDP-43 Structure and Function: Key Insights into Aberrant RNA, Mitochondrial, and Cellular and Systemic Metabolism in Amyotrophic Lateral Sclerosis",
+      "doi": "10.3390/metabo12080709",
+      "authors": "Jiang L, Ngo ST",
+      "journal": "Metabolites",
+      "year": 2022,
+      "assay": "Review",
+      "species": "Review",
+      "relevant_quote": "With regard to RNA metabolism, the depletion of TDP-43 is correlated with the increase in POLDIP3 mRNA variant 2, a splicing regulator for the mTOR/S6K1 cascade."
+    }
+  ],
+  "arrow_notation": "POLDIP3 --inhibits--> mTOR:",
+  "protein_a": "TDP43",
+  "protein_b": "mTOR",
+  "discovered_in_query": "TDP43",
+  "first_discovered": "2025-11-11T16:36:28.265246Z",
+  "last_updated": "2025-11-11T16:36:28.265246Z"
+}

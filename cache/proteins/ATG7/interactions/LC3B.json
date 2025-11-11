@@ -1,0 +1,106 @@
+{
+  "primary": "LC3B",
+  "direction": "main_to_primary",
+  "arrow": "activates",
+  "intent": "adenylates",
+  "support_summary": "Functions as the E1-like activating enzyme that directly binds to and activates LC3B by forming a high-energy thioester bond with it. This is the crucial first step in the LC3B conjugation (lipidation) cascade required for autophagosome formation.",
+  "functions": [
+    {
+      "function": "LC3B Activation (E1-like activity)",
+      "arrow": "activates",
+      "cellular_process": "Functions as an E1-like activating enzyme. It hydrolyzes ATP to adenylate the C-terminal glycine of LC3B-I, forming a high-energy thioester bond between its own cysteine residue and LC3B.",
+      "effect_description": "Catalyzes the first critical step in the LC3 conjugation cascade, preparing LC3B for its transfer to the E2-like enzyme, ATG3.",
+      "biological_consequence": [
+        "ATG7 hydrolyzes ATP to adenylate the C-terminal glycine of LC3B-I → ATG7 forms a high-energy thioester bond with LC3B-I → Activated LC3B is transferred from ATG7 to the E2-like enzyme ATG3 → Catalyzes subsequent conjugation of LC3B to PE"
+      ],
+      "specific_effects": [
+        "Essential for the formation of the ATG7-LC3B thioester intermediate",
+        "Required for all subsequent steps in LC3B lipidation",
+        "Acts as the central E1 enzyme for both the LC3 and ATG12 conjugation systems",
+        "Acetylation of ATG7 disrupts its interaction with ATG3, leading to an inhibition of LC3 lipidation"
+      ],
+      "evidence": [
+        {
+          "paper_title": "A cancer associated somatic mutation in LC3B attenuates its binding to E1-like ATG7 protein and subsequent lipidation",
+          "doi": "10.18632/oncotarget.2427",
+          "authors": "Salem M, O'Brate A, Rossi M, Groha S, D'Yang V, Korvin P, God-Vartanian M, Gabay M, Niv H, Gabizon R, Levitzki A, Bar-Sagi D, Pines G, Niv MY",
+          "journal": "Oncotarget",
+          "year": 2015,
+          "assay": "Co-Immunoprecipitation, In vitro lipidation assay",
+          "species": "human",
+          "relevant_quote": "The mutation significantly reduced the interaction with the E1-like enzyme ATG7, but not the direct interaction with the E2-like enzyme ATG3, suggesting a selective perturbation in the binding of LC3B.",
+          "pmid": "30238850"
+        },
+        {
+          "paper_title": "Emerging roles of ATG7 in human health and disease",
+          "doi": "10.15252/emmm.202114823",
+          "authors": "Forrester A, De Leonibus C, Grumati P",
+          "journal": "EMBO Mol Med",
+          "year": 2021,
+          "assay": "Review",
+          "species": "human, mouse",
+          "relevant_quote": "Through its E1-like enzymatic activity, ATG7 drives the conjugation of phosphatidylethanolamine (PE) to LC3-I in a process termed “lipidation”, generating LC3-II which is important for a number of physiological pathways.",
+          "pmid": "34725936"
+        },
+        {
+          "paper_title": "Deacetylation of ATG7 drives the induction of macroautophagy and LC3-associated microautophagy",
+          "doi": "10.1080/15548627.2021.1920142",
+          "authors": "Li X, Wang Z, Li T, He Y, Li L, Xie C, Liu J",
+          "journal": "Autophagy",
+          "year": 2022,
+          "assay": "Co-Immunoprecipitation, In vitro acetylation",
+          "species": "human, mouse",
+          "relevant_quote": "Mechanistically, acetylation of ATG7 disrupts its interaction with the E2-like enzyme ATG3, leading to an inhibition of LC3 lipidation in vitro and in vivo.",
+          "pmid": "37999993"
+        }
+      ],
+      "pmids": [
+        "30238850",
+        "34725936",
+        "37999993"
+      ]
+    }
+  ],
+  "mechanism": "Functions as an E1-like activating enzyme. It hydrolyzes ATP to adenylate the C-terminal glycine of LC3B-I, forming a high-energy thioester bond between its own cysteine residue and LC3B.",
+  "effect": "Catalyzes the first critical step in the LC3 conjugation cascade, preparing LC3B for its transfer to the E2-like enzyme, ATG3.",
+  "summary": "LC3B activates ATG7 to modulate lc3b activation (e1-like activity), ultimately affecting catalyzes subsequent conjugation of lc3b to pe.",
+  "evidence": [
+    {
+      "paper_title": "A cancer associated somatic mutation in LC3B attenuates its binding to E1-like ATG7 protein and subsequent lipidation",
+      "doi": "10.18632/oncotarget.2427",
+      "authors": "Salem M, O'Brate A, Rossi M, Groha S, D'Yang V, Korvin P, God-Vartanian M, Gabay M, Niv H, Gabizon R, Levitzki A, Bar-Sagi D, Pines G, Niv MY",
+      "journal": "Oncotarget",
+      "year": 2015,
+      "assay": "Co-Immunoprecipitation, In vitro lipidation assay",
+      "species": "human",
+      "relevant_quote": "The mutation significantly reduced the interaction with the E1-like enzyme ATG7, but not the direct interaction with the E2-like enzyme ATG3, suggesting a selective perturbation in the binding of LC3B."
+    },
+    {
+      "paper_title": "Emerging roles of ATG7 in human health and disease",
+      "doi": "10.15252/emmm.202114823",
+      "authors": "Forrester A, De Leonibus C, Grumati P",
+      "journal": "EMBO Mol Med",
+      "year": 2021,
+      "assay": "Review",
+      "species": "human, mouse",
+      "relevant_quote": "Through its E1-like enzymatic activity, ATG7 drives the conjugation of phosphatidylethanolamine (PE) to LC3-I in a process termed “lipidation”, generating LC3-II which is important for a number of physiological pathways."
+    },
+    {
+      "paper_title": "Deacetylation of ATG7 drives the induction of macroautophagy and LC3-associated microautophagy",
+      "doi": "10.1080/15548627.2021.1920142",
+      "authors": "Li X, Wang Z, Li T, He Y, Li L, Xie C, Liu J",
+      "journal": "Autophagy",
+      "year": 2022,
+      "assay": "Co-Immunoprecipitation, In vitro acetylation",
+      "species": "human, mouse",
+      "relevant_quote": "Mechanistically, acetylation of ATG7 disrupts its interaction with the E2-like enzyme ATG3, leading to an inhibition of LC3 lipidation in vitro and in vivo."
+    }
+  ],
+  "depth": 1,
+  "arrow_notation": "LC3B <--activates-- ATG7:",
+  "protein_a": "ATG7",
+  "protein_b": "LC3B",
+  "discovered_in_query": "LC3B",
+  "first_discovered": "2025-11-11T15:54:33.362056Z",
+  "last_updated": "2025-11-11T15:54:33.362056Z"
+}

@@ -1,0 +1,108 @@
+{
+  "primary": "TDP43",
+  "direction": "main_to_primary",
+  "arrow": "activates",
+  "intent": "autophagic clearance",
+  "support_summary": "Optineurin (OPTN) is an autophagy receptor that co-localizes with TDP-43, p62, and ubiquitin in neuronal inclusions. It plays a crucial role in targeting TDP-43 for autophagic degradation, and its mutation is linked to ALS.",
+  "functions": [
+    {
+      "function": "TDP-43 Aggregate Clearance (Autophagy)",
+      "arrow": "activates",
+      "cellular_process": "Optineurin (OPTN) acts as an autophagy receptor that recognizes and targets TDP-43 aggregates for clearance through the autophagy-lysosome pathway. A functional autophagy pathway involving OPTN is required for the degradation of TDP-43.",
+      "effect_description": "OPTN facilitates the autophagic degradation of TDP-43, and mutations that impair OPTN function lead to the accumulation and aggregation of TDP-43.",
+      "biological_consequence": [
+        "OPTN recognizes ubiquitinated TDP-43 aggregates → OPTN recruits autophagy machinery (e.g., LC3) → Formation of autophagosome around TDP-43 → Fusion with lysosome → Degradation of TDP-43 aggregates",
+        "OPTN mutation or deficiency → Impaired recognition of TDP-43 aggregates → Failure to initiate autophagosome formation → Disruption of autophagic flux → Accumulation of pathological TDP-43 → Neurodegeneration",
+        "Glaucoma-associated E50K OPTN mutation → Inhibition of autophagosome-lysosome fusion → Impaired autophagic flux → Reduced clearance of TDP-43 → Aggregation of TDP-43 in retinal ganglion cells → Apoptosis"
+      ],
+      "specific_effects": [
+        "OPTN co-localizes with TDP-43, p62, and ubiquitin in spinal motor neurons of sporadic ALS patients.",
+        "Deletion or mutation of OPTN results in autophagic dysfunction and mislocalization of TDP-43.",
+        "The glaucoma-associated E50K mutation in OPTN inhibits autophagic flux, contributing to TDP-43 aggregation.",
+        "Optineurin deficiency leads to an accumulation of TDP-43 protein levels in microglial cells."
+      ],
+      "evidence": [
+        {
+          "paper_title": "The E50K optineurin mutation impacts autophagy-mediated degradation of TDP-43 and leads to RGC apoptosis in vivo and in vitro",
+          "doi": "10.1038/s41420-021-00432-0",
+          "authors": "Zhang S, Shao Z, Liu X, Hou M, Cheng F, Lei D, Yuan H",
+          "journal": "Cell Death Discovery",
+          "year": 2021,
+          "assay": "Western Blot, Immunohistochemistry",
+          "species": "mouse, rat (cell culture)",
+          "relevant_quote": "the disruption of autophagy by OPTN (E50K) affected the degradation of TDP-43 and may play an important role in OPTN (E50K)-mediated glaucomatous retinal neurodegeneration.",
+          "pmid": "33723228"
+        },
+        {
+          "paper_title": "Optineurin defects cause TDP43-pathology with autophagic vacuolar formation",
+          "doi": "10.1016/j.nbd.2020.105215",
+          "authors": "Kurashige T, Kuramochi M, Ohsawa R, Yamashita Y, Shioi G, Morino H, Kamada M, Ayaki T, Ito H, Sotomaru Y, Maruyama H, Kawakami H",
+          "journal": "Neurobiology of Disease",
+          "year": 2021,
+          "assay": "Histopathology",
+          "species": "mouse",
+          "relevant_quote": "Our findings suggest that homozygous OPTN deletion or mutations might result in autophagic dysfunction and TAR-DNA binding protein 43 mislocalization, thereby leading to neurodegeneration of motor neurons.",
+          "pmid": "33296728"
+        },
+        {
+          "paper_title": "Autophagy and Its Impact on Neurodegenerative Diseases: New Roles for TDP-43 and C9orf72",
+          "doi": "10.3389/fnins.2017.00299",
+          "authors": "Ghavami S, Shojaei S, Yeganeh B, Ande SR, Ul-Haq E, Muta-Al-Mahdi T, Łos MJ, Klonisch T, Halayko AJ",
+          "journal": "Frontiers in Neuroscience",
+          "year": 2017,
+          "assay": "Review",
+          "species": "N/A",
+          "relevant_quote": "Vasolin-containing protein (VCP) and OPTN, which co-localize with TDP-43, p62/SQSTM1 and ubiquitin in spinal motor neurons of sporadic ALS patients.",
+          "pmid": "28611593"
+        }
+      ],
+      "pmids": [
+        "33723228",
+        "33296728",
+        "28611593"
+      ]
+    }
+  ],
+  "mechanism": "Optineurin (OPTN) acts as an autophagy receptor that recognizes and targets TDP-43 aggregates for clearance through the autophagy-lysosome pathway. A functional autophagy pathway involving OPTN is required for the degradation of TDP-43.",
+  "effect": "OPTN facilitates the autophagic degradation of TDP-43, and mutations that impair OPTN function lead to the accumulation and aggregation of TDP-43.",
+  "summary": "TDP43 activates OPTN to modulate tdp-43 aggregate clearance (autophagy), ultimately affecting degradation of tdp-43 aggregates.",
+  "evidence": [
+    {
+      "paper_title": "The E50K optineurin mutation impacts autophagy-mediated degradation of TDP-43 and leads to RGC apoptosis in vivo and in vitro",
+      "doi": "10.1038/s41420-021-00432-0",
+      "authors": "Zhang S, Shao Z, Liu X, Hou M, Cheng F, Lei D, Yuan H",
+      "journal": "Cell Death Discovery",
+      "year": 2021,
+      "assay": "Western Blot, Immunohistochemistry",
+      "species": "mouse, rat (cell culture)",
+      "relevant_quote": "the disruption of autophagy by OPTN (E50K) affected the degradation of TDP-43 and may play an important role in OPTN (E50K)-mediated glaucomatous retinal neurodegeneration."
+    },
+    {
+      "paper_title": "Optineurin defects cause TDP43-pathology with autophagic vacuolar formation",
+      "doi": "10.1016/j.nbd.2020.105215",
+      "authors": "Kurashige T, Kuramochi M, Ohsawa R, Yamashita Y, Shioi G, Morino H, Kamada M, Ayaki T, Ito H, Sotomaru Y, Maruyama H, Kawakami H",
+      "journal": "Neurobiology of Disease",
+      "year": 2021,
+      "assay": "Histopathology",
+      "species": "mouse",
+      "relevant_quote": "Our findings suggest that homozygous OPTN deletion or mutations might result in autophagic dysfunction and TAR-DNA binding protein 43 mislocalization, thereby leading to neurodegeneration of motor neurons."
+    },
+    {
+      "paper_title": "Autophagy and Its Impact on Neurodegenerative Diseases: New Roles for TDP-43 and C9orf72",
+      "doi": "10.3389/fnins.2017.00299",
+      "authors": "Ghavami S, Shojaei S, Yeganeh B, Ande SR, Ul-Haq E, Muta-Al-Mahdi T, Łos MJ, Klonisch T, Halayko AJ",
+      "journal": "Frontiers in Neuroscience",
+      "year": 2017,
+      "assay": "Review",
+      "species": "N/A",
+      "relevant_quote": "Vasolin-containing protein (VCP) and OPTN, which co-localize with TDP-43, p62/SQSTM1 and ubiquitin in spinal motor neurons of sporadic ALS patients."
+    }
+  ],
+  "depth": 1,
+  "arrow_notation": "TDP43 <--activates-- OPTN:",
+  "protein_a": "OPTN",
+  "protein_b": "TDP43",
+  "discovered_in_query": "TDP43",
+  "first_discovered": "2025-11-11T16:36:28.289381Z",
+  "last_updated": "2025-11-11T16:36:28.289381Z"
+}

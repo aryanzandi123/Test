@@ -1,0 +1,107 @@
+{
+  "primary": "LC3B",
+  "direction": "main_to_primary",
+  "arrow": "activates",
+  "intent": "binding",
+  "support_summary": "TEX264 is a crucial ER-resident receptor for selective autophagy (ER-phagy). It contains a C-terminal LIR motif that directly binds to LC3B, recruiting the autophagic machinery to remodel the endoplasmic reticulum, particularly at three-way ER junctions, for degradation.",
+  "functions": [
+    {
+      "function": "Selective Autophagy of Endoplasmic Reticulum (ER-phagy)",
+      "arrow": "activates",
+      "cellular_process": "TEX264 is an ER-resident transmembrane protein that acts as a primary receptor for ER-phagy. Its cytosolic C-terminal region contains a LIR motif that directly binds to lipidated LC3B on the phagophore, anchoring the autophagic machinery to specific ER domains to initiate engulfment.",
+      "effect_description": "The direct binding of TEX264 to LC3B initiates the sequestration of ER fragments into autophagosomes, leading to their lysosomal degradation and thereby maintaining ER homeostasis.",
+      "biological_consequence": [
+        "Nutrient stress induces ER-phagy → TEX264 acts as a receptor at ER three-way junctions → The TEX264 LIR motif directly binds lipidated LC3B on the phagophore → Autophagosome formation is initiated at ER-phagophore contact sites → A portion of the ER is engulfed by the growing autophagosome → Lysosomal fusion and degradation of ER components → ER turnover maintains cellular homeostasis.",
+        "Nutrient stress signaling activates Casein Kinase 2 (CK2) → CK2 phosphorylates serine residues adjacent to the TEX264 LIR motif → Phosphorylation enhances the binding affinity of TEX264 for ATG8 proteins → ER-phagy flux is increased."
+      ],
+      "specific_effects": [
+        "Recognized as a major and ubiquitously expressed receptor for ER-phagy.",
+        "Interaction with LC3B is critical for remodeling the ER during nutrient stress.",
+        "Phosphorylation of serine residues upstream of the LIR motif by casein kinase 2 (CK2) enhances binding affinity to ATG8 proteins.",
+        "Localizes to ER sheets and tubules, and initiates autophagosome formation from ER junctions."
+      ],
+      "evidence": [
+        {
+          "paper_title": "TEX264 Is an Endoplasmic Reticulum-Resident ATG8-Interacting Protein Critical for ER Remodeling during Nutrient Stress",
+          "doi": "10.1016/j.molcel.2019.03.034",
+          "authors": "Heeseon An, Alban Ordureau, Joao A Paulo, Christopher J Shoemaker, Vladimir Denic, J Wade Harper",
+          "journal": "Molecular Cell",
+          "year": 2019,
+          "assay": "Co-Immunoprecipitation, Proximity Biotinylation (BioID), In vitro binding assay",
+          "species": "human",
+          "relevant_quote": "TEX264 uses an LC3-interacting region (LIR) to traffic into ATG8-positive puncta that often initiate from three-way ER tubule junctions and subsequently fuse with lysosomes.",
+          "pmid": "31006537"
+        },
+        {
+          "paper_title": "Intrinsically Disordered Protein TEX264 Mediates ER-phagy",
+          "doi": "10.1016/j.molcel.2019.03.033",
+          "authors": "Haruka Chino, Tomohisa Hatta, Tohru Natsume, Noboru Mizushima",
+          "journal": "Molecular Cell",
+          "year": 2019,
+          "assay": "Immunoprecipitation, GST pull-down assay",
+          "species": "human, mouse",
+          "relevant_quote": "Here, we performed a differential interactome screen using wild-type LC3B and a LIR recognition-deficient mutant and identified TEX264 as a receptor for autophagic degradation of the endoplasmic reticulum.",
+          "pmid": "31006538"
+        },
+        {
+          "paper_title": "Phosphorylation by casein kinase 2 enhances the interaction between ER-phagy receptor TEX264 and ATG8 proteins",
+          "doi": "10.15252/embr.202154442",
+          "authors": "Haruka Chino, Kenta Mizushima, Hitoshi Nakatogawa, Noboru Mizushima",
+          "journal": "EMBO reports",
+          "year": 2022,
+          "assay": "Isothermal titration calorimetry (ITC), GST pull-down, Phos-tag SDS-PAGE",
+          "species": "human",
+          "relevant_quote": "Phosphorylation of the LIR was required for the interaction of TEX264 with ATG8s, autophagosomal localization, and ER-phagy receptor function.",
+          "pmid": "35417087"
+        }
+      ],
+      "pmids": [
+        "31006537",
+        "31006538",
+        "35417087"
+      ]
+    }
+  ],
+  "mechanism": "TEX264 is an ER-resident transmembrane protein that acts as a primary receptor for ER-phagy. Its cytosolic C-terminal region contains a LIR motif that directly binds to lipidated LC3B on the phagophore, anchoring the autophagic machinery to specific ER domains to initiate engulfment.",
+  "effect": "The direct binding of TEX264 to LC3B initiates the sequestration of ER fragments into autophagosomes, leading to their lysosomal degradation and thereby maintaining ER homeostasis.",
+  "summary": "LC3B activates TEX264 to modulate selective autophagy of endoplasmic reticulum (er-phagy), ultimately affecting er turnover maintains cellular homeostasis.",
+  "evidence": [
+    {
+      "paper_title": "TEX264 Is an Endoplasmic Reticulum-Resident ATG8-Interacting Protein Critical for ER Remodeling during Nutrient Stress",
+      "doi": "10.1016/j.molcel.2019.03.034",
+      "authors": "Heeseon An, Alban Ordureau, Joao A Paulo, Christopher J Shoemaker, Vladimir Denic, J Wade Harper",
+      "journal": "Molecular Cell",
+      "year": 2019,
+      "assay": "Co-Immunoprecipitation, Proximity Biotinylation (BioID), In vitro binding assay",
+      "species": "human",
+      "relevant_quote": "TEX264 uses an LC3-interacting region (LIR) to traffic into ATG8-positive puncta that often initiate from three-way ER tubule junctions and subsequently fuse with lysosomes."
+    },
+    {
+      "paper_title": "Intrinsically Disordered Protein TEX264 Mediates ER-phagy",
+      "doi": "10.1016/j.molcel.2019.03.033",
+      "authors": "Haruka Chino, Tomohisa Hatta, Tohru Natsume, Noboru Mizushima",
+      "journal": "Molecular Cell",
+      "year": 2019,
+      "assay": "Immunoprecipitation, GST pull-down assay",
+      "species": "human, mouse",
+      "relevant_quote": "Here, we performed a differential interactome screen using wild-type LC3B and a LIR recognition-deficient mutant and identified TEX264 as a receptor for autophagic degradation of the endoplasmic reticulum."
+    },
+    {
+      "paper_title": "Phosphorylation by casein kinase 2 enhances the interaction between ER-phagy receptor TEX264 and ATG8 proteins",
+      "doi": "10.15252/embr.202154442",
+      "authors": "Haruka Chino, Kenta Mizushima, Hitoshi Nakatogawa, Noboru Mizushima",
+      "journal": "EMBO reports",
+      "year": 2022,
+      "assay": "Isothermal titration calorimetry (ITC), GST pull-down, Phos-tag SDS-PAGE",
+      "species": "human",
+      "relevant_quote": "Phosphorylation of the LIR was required for the interaction of TEX264 with ATG8s, autophagosomal localization, and ER-phagy receptor function."
+    }
+  ],
+  "depth": 1,
+  "arrow_notation": "LC3B <--activates-- TEX264:",
+  "protein_a": "TEX264",
+  "protein_b": "LC3B",
+  "discovered_in_query": "LC3B",
+  "first_discovered": "2025-11-11T15:54:33.428091Z",
+  "last_updated": "2025-11-11T15:54:33.428091Z"
+}

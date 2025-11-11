@@ -1,0 +1,83 @@
+{
+  "primary": "LC3B",
+  "direction": "main_to_primary",
+  "arrow": "inhibits",
+  "intent": "indirect inhibition of lipidation",
+  "support_summary": "RUBCN is a negative regulator of autophagy. It associates with the Beclin1-Vps34 PI3K complex and directly inhibits the lipid kinase activity of Vps34. This suppression of PI3P production at the phagophore prevents the recruitment of downstream effectors, thereby blocking the lipidation of LC3B and halting autophagosome formation.",
+  "functions": [
+    {
+      "function": "LC3B Lipidation",
+      "arrow": "inhibits",
+      "cellular_process": "Rubicon (RUBCN) is a component of a subset of Beclin-1-VPS34 PI3K complexes. It directly inhibits the lipid kinase activity of VPS34 within this complex.",
+      "effect_description": "Suppresses the production of PI3P at the phagophore, thereby preventing the recruitment of downstream effectors like WIPI2 and the ATG16L1 complex, which blocks the lipidation of LC3B and halts autophagosome formation.",
+      "biological_consequence": [
+        "RUBCN binds to the Beclin-1-VPS34 complex → VPS34 lipid kinase activity is inhibited → PI3P production on the phagophore is reduced → Recruitment of PI3P-effectors (e.g., WIPI2) fails → ATG16L1 complex is not recruited → LC3B lipidation is blocked → Autophagy is suppressed"
+      ],
+      "specific_effects": [
+        "Acts as a key negative regulator of the autophagic PI3K complex",
+        "Plays a role in regulating endosomal trafficking",
+        "RUBCN expression levels increase with age, potentially causing an age-associated decrease in autophagy"
+      ],
+      "evidence": [
+        {
+          "paper_title": "Distinct regulation of autophagic activity by Atg14L and Rubicon associated with Beclin 1-phosphatidylinositol 3-kinase complex",
+          "doi": "10.1038/ncb1854",
+          "authors": "K Matsunaga, T Saitoh, K Hatakeyama, T Nakamura, J Nishino, T Yoshimori, S Akira",
+          "journal": "Nature Cell Biology",
+          "year": 2009,
+          "assay": "In vitro kinase assay, Immunoprecipitation",
+          "species": "human",
+          "relevant_quote": "Characterization of these novel proteins reveals that Atg14L enhances Vps34 lipid kinase activity and up-regulates autophagy, whereas Rubicon reduces Vps34 activity and down-regulates autophagy.",
+          "pmid": "19270693"
+        },
+        {
+          "paper_title": "The RUN Domain of Rubicon Is Important for hVps34 Binding, Lipid Kinase Inhibition, and Autophagy Suppression",
+          "doi": "10.1074/jbc.M110.154122",
+          "authors": "Xiao-Huan Sun, Hong-Wei Wang, Quan Chen",
+          "journal": "Journal of Biological Chemistry",
+          "year": 2010,
+          "assay": "Co-immunoprecipitation, in vitro kinase assay",
+          "species": "human",
+          "relevant_quote": "Here, we demonstrate that Rubicon interacts with the PI3KC3 catalytic subunit hVps34 via its RUN domain. The RUN domain contributes to the efficient inhibition of PI3KC3 lipid kinase activity by Rubicon.",
+          "pmid": "21062745"
+        }
+      ],
+      "pmids": [
+        "19270693",
+        "21062745"
+      ]
+    }
+  ],
+  "mechanism": "Rubicon (RUBCN) is a component of a subset of Beclin-1-VPS34 PI3K complexes. It directly inhibits the lipid kinase activity of VPS34 within this complex.",
+  "effect": "Suppresses the production of PI3P at the phagophore, thereby preventing the recruitment of downstream effectors like WIPI2 and the ATG16L1 complex, which blocks the lipidation of LC3B and halts autophagosome formation.",
+  "summary": "LC3B inhibits RUBCN to modulate lc3b lipidation, ultimately affecting autophagy is suppressed.",
+  "evidence": [
+    {
+      "paper_title": "Distinct regulation of autophagic activity by Atg14L and Rubicon associated with Beclin 1-phosphatidylinositol 3-kinase complex",
+      "doi": "10.1038/ncb1854",
+      "authors": "K Matsunaga, T Saitoh, K Hatakeyama, T Nakamura, J Nishino, T Yoshimori, S Akira",
+      "journal": "Nature Cell Biology",
+      "year": 2009,
+      "assay": "In vitro kinase assay, Immunoprecipitation",
+      "species": "human",
+      "relevant_quote": "Characterization of these novel proteins reveals that Atg14L enhances Vps34 lipid kinase activity and up-regulates autophagy, whereas Rubicon reduces Vps34 activity and down-regulates autophagy."
+    },
+    {
+      "paper_title": "The RUN Domain of Rubicon Is Important for hVps34 Binding, Lipid Kinase Inhibition, and Autophagy Suppression",
+      "doi": "10.1074/jbc.M110.154122",
+      "authors": "Xiao-Huan Sun, Hong-Wei Wang, Quan Chen",
+      "journal": "Journal of Biological Chemistry",
+      "year": 2010,
+      "assay": "Co-immunoprecipitation, in vitro kinase assay",
+      "species": "human",
+      "relevant_quote": "Here, we demonstrate that Rubicon interacts with the PI3KC3 catalytic subunit hVps34 via its RUN domain. The RUN domain contributes to the efficient inhibition of PI3KC3 lipid kinase activity by Rubicon."
+    }
+  ],
+  "depth": 1,
+  "arrow_notation": "LC3B <--inhibits-- RUBCN:",
+  "protein_a": "RUBCN",
+  "protein_b": "LC3B",
+  "discovered_in_query": "LC3B",
+  "first_discovered": "2025-11-11T15:54:33.422593Z",
+  "last_updated": "2025-11-11T15:54:33.422593Z"
+}

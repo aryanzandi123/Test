@@ -1,0 +1,94 @@
+{
+  "primary": "OPTN",
+  "direction": "primary_to_main",
+  "arrow": "activates",
+  "intent": "phosphorylation",
+  "support_summary": "Optineurin (OPTN) is a selective autophagy receptor that directly binds LC3B through its LIR motif. This interaction is significantly enhanced by TBK1-mediated phosphorylation of OPTN, activating the targeted degradation of specific cargo like damaged mitochondria (mitophagy) and intracellular bacteria (xenophagy).",
+  "functions": [
+    {
+      "function": "Selective Autophagy Cargo Recognition",
+      "arrow": "activates",
+      "cellular_process": "Functions as a selective autophagy receptor that recognizes and binds to ubiquitinated cargo (e.g., damaged mitochondria, intracellular bacteria) and links it to the autophagosome by binding LC3B via its LIR motif.",
+      "effect_description": "Mediates the targeted degradation of specific substrates through autophagy. Its binding affinity for LC3B is significantly enhanced by TBK1-mediated phosphorylation, which promotes the clearance of cargo.",
+      "biological_consequence": [
+        "Cargo (e.g., mitochondria, bacteria) is tagged with Ubiquitin → TBK1 phosphorylates OPTN, increasing affinity for LC3B → Phospho-OPTN binds ubiquitinated cargo → OPTN uses its LIR motif to bind LC3B on the phagophore → Cargo is selectively tethered for autophagic degradation",
+        "PINK1/Parkin pathway ubiquitinates damaged mitochondria → Phospho-OPTN links mitochondria to the LC3B-positive phagophore → Selective engulfment of mitochondria (mitophagy) → Maintenance of mitochondrial quality control"
+      ],
+      "specific_effects": [
+        "A key receptor in PINK1/Parkin-mediated mitophagy",
+        "Phosphorylation by the kinase TBK1 enhances its LC3B binding and autophagic activity",
+        "Mutations in OPTN are linked to neurodegenerative diseases like glaucoma and amyotrophic lateral sclerosis (ALS)"
+      ],
+      "evidence": [
+        {
+          "paper_title": "Phosphorylation of the Autophagy Receptor Optineurin restricts Salmonella growth",
+          "doi": "10.1126/science.1205405",
+          "authors": "Wild P, Farhan H, McEwan DG, Wagner S, Rogov VV, Brady NR, Richter B, Korac J, Waidmann O, Choudhary C, Dötsch V, Bumann D, Dikic I",
+          "journal": "Science",
+          "year": 2011,
+          "assay": "GST pull-down, Isothermal titration calorimetry",
+          "species": "human, mouse",
+          "relevant_quote": "We found that phosphorylation of optineurin (OPTN), a ubiquitin-binding adaptor, by the kinase TANK-binding kinase 1 (TBK1) enhances its binding to ubiquitin and its interaction with the autophagic machinery.",
+          "pmid": "21617041"
+        },
+        {
+          "paper_title": "Optineurin is an autophagy receptor for damaged mitochondria in parkin-mediated mitophagy that is disrupted by an ALS-linked mutation",
+          "doi": "10.1038/ncb2574",
+          "authors": "Wong YC, Holzbaur EL",
+          "journal": "Nat Cell Biol",
+          "year": 2014,
+          "assay": "Co-IP, Immunofluorescence",
+          "species": "human, mouse",
+          "relevant_quote": "Here we show that optineurin (OPTN) is a newly identified autophagy receptor that is recruited to damaged mitochondria and induces mitophagy.",
+          "pmid": "25294927"
+        }
+      ],
+      "pmids": [
+        "21617041",
+        "25294927"
+      ]
+    }
+  ],
+  "mechanism": "Functions as a selective autophagy receptor that recognizes and binds to ubiquitinated cargo (e.g., damaged mitochondria, intracellular bacteria) and links it to the autophagosome by binding LC3B via its LIR motif.",
+  "effect": "Mediates the targeted degradation of specific substrates through autophagy. Its binding affinity for LC3B is significantly enhanced by TBK1-mediated phosphorylation, which promotes the clearance of cargo.",
+  "summary": "LC3B activates OPTN to modulate selective autophagy cargo recognition, ultimately affecting cargo is selectively tethered for autophagic degradation.",
+  "evidence": [
+    {
+      "paper_title": "Phosphorylation of the Autophagy Receptor Optineurin restricts Salmonella growth",
+      "doi": "10.1126/science.1205405",
+      "authors": "Wild P, Farhan H, McEwan DG, Wagner S, Rogov VV, Brady NR, Richter B, Korac J, Waidmann O, Choudhary C, Dötsch V, Bumann D, Dikic I",
+      "journal": "Science",
+      "year": 2011,
+      "assay": "GST pull-down, Isothermal titration calorimetry",
+      "species": "human, mouse",
+      "relevant_quote": "We found that phosphorylation of optineurin (OPTN), a ubiquitin-binding adaptor, by the kinase TANK-binding kinase 1 (TBK1) enhances its binding to ubiquitin and its interaction with the autophagic machinery."
+    },
+    {
+      "paper_title": "Optineurin is an autophagy receptor for damaged mitochondria in parkin-mediated mitophagy that is disrupted by an ALS-linked mutation",
+      "doi": "10.1038/ncb2574",
+      "authors": "Wong YC, Holzbaur EL",
+      "journal": "Nat Cell Biol",
+      "year": 2014,
+      "assay": "Co-IP, Immunofluorescence",
+      "species": "human, mouse",
+      "relevant_quote": "Here we show that optineurin (OPTN) is a newly identified autophagy receptor that is recruited to damaged mitochondria and induces mitophagy."
+    },
+    {
+      "paper_title": "TBK1-mediated phosphorylation of Optineurin promotes its binding to LC3/GABARAP and subsequent autophagy",
+      "doi": "10.1038/srep05673",
+      "authors": "Tsuchiya K, Nakajima H, Tanaka K, Ohtake F, Saeki Y",
+      "journal": "Sci Rep",
+      "year": 2014,
+      "assay": "Pull-down assay, ITC",
+      "species": "human",
+      "relevant_quote": "Here, we show that phosphorylation of the LIR of optineurin by TBK1 enhances its affinity for the LC3/GABARAP family, and promotes autophagy."
+    }
+  ],
+  "depth": 1,
+  "arrow_notation": "LC3B <--activates-- OPTN:",
+  "protein_a": "LC3B",
+  "protein_b": "OPTN",
+  "discovered_in_query": "LC3B",
+  "first_discovered": "2025-11-11T15:54:33.381915Z",
+  "last_updated": "2025-11-11T15:54:33.381915Z"
+}

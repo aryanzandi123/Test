@@ -1,0 +1,10 @@
+.env
+/__pycache__/*
+/pycache/*
+*.pyc
+*.DS_Store
+.vscode/
+.idea/
+.claude/
+/beta/
+CLAUDE.md

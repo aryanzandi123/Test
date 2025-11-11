@@ -1,0 +1,112 @@
+{
+  "primary": "LC3B",
+  "interaction_type": "direct",
+  "upstream_interactor": null,
+  "mediator_chain": [],
+  "depth": 1,
+  "support_summary": "An innate immune signaling protein that directly binds to LC3B via a conserved LIR motif. This interaction leads to STING's sequestration into autophagosomes and subsequent degradation, which serves as a negative feedback mechanism to terminate the immune signal and prevent excessive inflammation.",
+  "functions": [
+    {
+      "function": "Innate Immune Signaling Termination",
+      "arrow": "inhibits",
+      "cellular_process": "Upon activation by cyclic dinucleotides, the innate immune adaptor STING translocates from the ER and activates downstream signaling. To terminate this signal, STING is targeted for autophagic degradation through a direct interaction with LC3B, functioning as an autophagy receptor.",
+      "effect_description": "Direct binding of LC3B to STING facilitates its delivery to the autophagosome for lysosomal degradation, thereby downregulating the STING-dependent antiviral response and preventing prolonged inflammation.",
+      "biological_consequence": [
+        "STING activation by cyclic dinucleotides → Direct binding of STING to LC3B via its LIR motif → Sequestration of STING into autophagosomes → Autophagosome-lysosome fusion → Lysosomal degradation of STING → Termination of Type I interferon signaling"
+      ],
+      "specific_effects": [
+        "Contains a conserved LC3-interacting region (LIR) motif that mediates the direct interaction with LC3B.",
+        "Autophagy-mediated degradation of STING is a key negative feedback mechanism to control the innate immune response.",
+        "STING degradation via this pathway is independent of canonical autophagy regulators like BECLIN1 and ULK1 but requires ATG5."
+      ],
+      "evidence": [
+        {
+          "paper_title": "STING directly activates autophagy to tune the innate immune response",
+          "year": 2018,
+          "authors": "Gui X, Yang H, Li T, Tan X, Shi P, Li M, Du F, Chen ZJ",
+          "journal": "Cell Host & Microbe",
+          "doi": "10.1016/j.chom.2018.11.001",
+          "assay": "Co-immunoprecipitation",
+          "species": "human, mouse",
+          "relevant_quote": "Here we report that STING harbors classic LC-3 interacting regions (LIRs) and mediates autophagy through its direct interaction with LC3.",
+          "pmid": "30568238"
+        },
+        {
+          "paper_title": "Attenuation of cGAS-STING signaling is mediated by a p62/SQSTM1-dependent autophagy pathway activated by TBK1",
+          "year": 2016,
+          "authors": "Prabakaran T, Bodda C, Krapp C, Zhang BC, Christensen MH, Sun C, Reinert LS, Cai Y, Jensen SB, Dybkjær L, Fitzgerald KA, Paludan SR",
+          "journal": "The EMBO Journal",
+          "doi": "10.15252/embj.201593258",
+          "assay": "Immunoblotting",
+          "species": "mouse",
+          "relevant_quote": "Here, we report that STING degradation following activation of the pathway occurs through autophagy and is mediated by p62/SQSTM1, which is phosphorylated by TBK1 to direct ubiquitinated STING to autophagosomes.",
+          "pmid": "29496741"
+        },
+        {
+          "paper_title": "STING induces LC3B lipidation onto single-membrane vesicles via the V-ATPase and ATG16L1-WD40 domain",
+          "year": 2020,
+          "authors": "Fischer TD, Tanimomo-Sakamoto T, Das T, Tanimomo-Sakamoto H, Valenzuela G, Bas-Cáceres C, Kim YS, Weiner A, Peace G, Yasuda T, Mizumura K, Choi AMK, Ryter SW, Nakahira K",
+          "journal": "The Journal of Cell Biology",
+          "doi": "10.1083/jcb.202009162",
+          "assay": "Confocal microscopy",
+          "species": "human",
+          "relevant_quote": "We report that STING activation induces LC3B lipidation onto single-membrane perinuclear vesicles mediated by ATG16L1 via its WD40 domain, bypassing the requirement of canonical upstream autophagy machinery.",
+          "pmid": "33201170"
+        }
+      ],
+      "_context": {
+        "type": "direct",
+        "query_protein": null,
+        "chain": null
+      },
+      "pmids": [
+        "30568238",
+        "29496741",
+        "33201170"
+      ]
+    }
+  ],
+  "arrow": "inhibits",
+  "intent": "regulation",
+  "mechanism": "Upon activation by cyclic dinucleotides, the innate immune adaptor STING translocates from the ER and activates downstream signaling. To terminate this signal, STING is targeted for autophagic degradation through a direct interaction with LC3B, functioning as an autophagy receptor.",
+  "effect": "Direct binding of LC3B to STING facilitates its delivery to the autophagosome for lysosomal degradation, thereby downregulating the STING-dependent antiviral response and preventing prolonged inflammation.",
+  "summary": "LC3B inhibits STING to modulate innate immune signaling termination, ultimately affecting termination of type i interferon signaling.",
+  "evidence": [
+    {
+      "paper_title": "STING directly activates autophagy to tune the innate immune response",
+      "year": 2018,
+      "authors": "Gui X, Yang H, Li T, Tan X, Shi P, Li M, Du F, Chen ZJ",
+      "journal": "Cell Host & Microbe",
+      "doi": "10.1016/j.chom.2018.11.001",
+      "assay": "Co-immunoprecipitation",
+      "species": "human, mouse",
+      "relevant_quote": "Here we report that STING harbors classic LC-3 interacting regions (LIRs) and mediates autophagy through its direct interaction with LC3."
+    },
+    {
+      "paper_title": "Attenuation of cGAS-STING signaling is mediated by a p62/SQSTM1-dependent autophagy pathway activated by TBK1",
+      "year": 2016,
+      "authors": "Prabakaran T, Bodda C, Krapp C, Zhang BC, Christensen MH, Sun C, Reinert LS, Cai Y, Jensen SB, Dybkjær L, Fitzgerald KA, Paludan SR",
+      "journal": "The EMBO Journal",
+      "doi": "10.15252/embj.201593258",
+      "assay": "Immunoblotting",
+      "species": "mouse",
+      "relevant_quote": "Here, we report that STING degradation following activation of the pathway occurs through autophagy and is mediated by p62/SQSTM1, which is phosphorylated by TBK1 to direct ubiquitinated STING to autophagosomes."
+    },
+    {
+      "paper_title": "STING induces LC3B lipidation onto single-membrane vesicles via the V-ATPase and ATG16L1-WD40 domain",
+      "year": 2020,
+      "authors": "Fischer TD, Tanimomo-Sakamoto T, Das T, Tanimomo-Sakamoto H, Valenzuela G, Bas-Cáceres C, Kim YS, Weiner A, Peace G, Yasuda T, Mizumura K, Choi AMK, Ryter SW, Nakahira K",
+      "journal": "The Journal of Cell Biology",
+      "doi": "10.1083/jcb.202009162",
+      "assay": "Confocal microscopy",
+      "species": "human",
+      "relevant_quote": "We report that STING activation induces LC3B lipidation onto single-membrane perinuclear vesicles mediated by ATG16L1 via its WD40 domain, bypassing the requirement of canonical upstream autophagy machinery."
+    }
+  ],
+  "arrow_notation": "LC3B --inhibits--> STING:",
+  "protein_a": "STING",
+  "protein_b": "LC3B",
+  "discovered_in_query": "LC3B",
+  "first_discovered": "2025-11-11T15:54:33.416834Z",
+  "last_updated": "2025-11-11T15:54:33.416834Z"
+}

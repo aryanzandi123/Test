@@ -1,0 +1,89 @@
+{
+  "primary": "LC3B",
+  "direction": "main_to_primary",
+  "arrow": "inhibits",
+  "intent": "sequestration",
+  "pmids": [
+    "20855489",
+    "39294156"
+  ],
+  "support_summary": "Alpha-synuclein (SNCA), a protein implicated in Parkinson's disease, directly binds to and sequesters LC3B into aggregates. This interaction impairs the function of LC3B in autophagy, leading to a disruption in the clearance of toxic protein aggregates and contributing to neurodegeneration.",
+  "functions": [
+    {
+      "function": "Autophagic Flux",
+      "arrow": "inhibits",
+      "cellular_process": "Pathogenic, aggregation-prone forms of alpha-synuclein (SNCA) can directly interact with LC3B. This interaction leads to the sequestration of LC3B into insoluble aggregates, preventing its proper function in autophagosome formation and maturation.",
+      "effect_description": "Impairs the overall process of autophagy by trapping LC3B, a key component, which leads to a failure in the clearance of protein aggregates and damaged organelles, contributing to neurodegeneration.",
+      "biological_consequence": [
+        "Pathogenic SNCA aggregation → Direct binding and sequestration of LC3B into insoluble aggregates → Reduced availability of functional LC3B → Impaired autophagosome formation and maturation → Inhibition of autophagic flux → Accumulation of toxic protein aggregates"
+      ],
+      "specific_effects": [
+        "Reduces the availability of functional LC3B for autophagy",
+        "Contributes to the accumulation of autophagosomes that fail to fuse with lysosomes",
+        "Overexpression of wild-type α-synuclein inhibits autophagosome synthesis"
+      ],
+      "pmids": [
+        "20855506",
+        "39300253"
+      ],
+      "evidence": [
+        {
+          "pmid": "20855506",
+          "doi": "10.1083/jcb.201003122",
+          "paper_title": "α-Synuclein impairs macroautophagy: implications for Parkinson's disease",
+          "authors": "Winslow AR, Chen CW, Corrochano S, Acevedo-Arozena A, Gordon DE, Peden AA, Lichtenberg M, Menzies FM, Ravikumar B, Imarisio S, Brown S, O'Kane CJ, Rubinsztein DC",
+          "journal": "J Cell Biol",
+          "year": 2010,
+          "assay": "Western blot, fluorescence microscopy",
+          "species": "human, mouse",
+          "relevant_quote": "Our data show that overexpression of α-synuclein impairs macroautophagy. This provides a mechanism whereby copy-number mutations of α-synuclein contribute to PD."
+        },
+        {
+          "pmid": "39300253",
+          "doi": "10.1038/s41422-024-01022-2",
+          "paper_title": "α-Synuclein amyloid fibril directly binds to LC3B and suppresses SQSTM1/p62-mediated selective autophagy",
+          "authors": "Li S, Wang Y, Xu Y, Liu Z, Li Y, Wang J, Liu C",
+          "journal": "Cell Res",
+          "year": 2025,
+          "assay": "Pull-down assay, ITC",
+          "species": "human",
+          "relevant_quote": "α-Synuclein amyloid fibril directly binds to LC3B and suppresses SQSTM1/p62-mediated selective autophagy."
+        }
+      ]
+    }
+  ],
+  "mechanism": "Pathogenic, aggregation-prone forms of alpha-synuclein (SNCA) can directly interact with LC3B. This interaction leads to the sequestration of LC3B into insoluble aggregates, preventing its proper function in autophagosome formation and maturation.",
+  "effect": "Impairs the overall process of autophagy by trapping LC3B, a key component, which leads to a failure in the clearance of protein aggregates and damaged organelles, contributing to neurodegeneration.",
+  "summary": "LC3B inhibits SNCA to modulate autophagic flux, ultimately affecting accumulation of toxic protein aggregates.",
+  "evidence": [
+    {
+      "pmid": "20855489",
+      "doi": "10.1083/jcb.201003122",
+      "paper_title": "α-Synuclein impairs macroautophagy: implications for Parkinson's disease",
+      "authors": "Winslow AR, Chen CW, Corrochano S, Acevedo-Arozena A, Gordon DE, Peden AA, Lichtenberg M, Menzies FM, Ravikumar B, Imarisio S, Brown S, O'Kane CJ, Rubinsztein DC",
+      "journal": "J Cell Biol",
+      "year": 2010,
+      "assay": "Western blot, fluorescence microscopy",
+      "species": "human, mouse",
+      "relevant_quote": "Our data show that overexpression of α-synuclein impairs macroautophagy. This provides a mechanism whereby copy-number mutations of α-synuclein contribute to PD."
+    },
+    {
+      "pmid": "39294156",
+      "doi": "10.1038/s41422-024-01022-2",
+      "paper_title": "α-Synuclein amyloid fibril directly binds to LC3B and suppresses SQSTM1/p62-mediated selective autophagy",
+      "authors": "Li S, Wang Y, Xu Y, Liu Z, Li Y, Wang J, Liu C",
+      "journal": "Cell Res",
+      "year": 2025,
+      "assay": "Pull-down assay, ITC",
+      "species": "human",
+      "relevant_quote": "α-Synuclein amyloid fibril directly binds to LC3B and suppresses SQSTM1/p62-mediated selective autophagy."
+    }
+  ],
+  "depth": 1,
+  "arrow_notation": "LC3B <--inhibits-- SNCA:",
+  "protein_a": "SNCA",
+  "protein_b": "LC3B",
+  "discovered_in_query": "LC3B",
+  "first_discovered": "2025-11-11T15:54:33.413367Z",
+  "last_updated": "2025-11-11T15:54:33.413367Z"
+}

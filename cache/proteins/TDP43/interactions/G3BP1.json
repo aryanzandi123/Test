@@ -1,0 +1,114 @@
+{
+  "primary": "G3BP1",
+  "interaction_type": "direct",
+  "upstream_interactor": null,
+  "mediator_chain": [],
+  "depth": 1,
+  "support_summary": "TDP-43 directly interacts with and regulates the stability of G3BP1 mRNA. As G3BP1 is a critical nucleating factor for stress granules, this interaction places TDP-43 as an upstream regulator of stress granule assembly. Loss of nuclear TDP-43 function impairs this process, highlighting a key mechanism in ALS/FTD pathology.",
+  "functions": [
+    {
+      "function": "Stress Granule Assembly",
+      "arrow": "activates",
+      "cellular_process": "TDP-43 regulates the expression of G3BP1, a critical stress granule (SG) nucleating factor. Specifically, TDP-43 binds to and stabilizes G3BP1 mRNA transcripts.",
+      "effect_description": "Loss of nuclear TDP-43 function leads to reduced G3BP1 mRNA stability and lower G3BP1 protein levels, which compromises the cell's ability to form stress granules efficiently in response to stress.",
+      "biological_consequence": [
+        "Nuclear TDP-43 depletion → Loss of binding to G3BP1 mRNA 3' UTR → Decreased G3BP1 mRNA stability → Reduced G3BP1 protein synthesis → Defective stress granule nucleation and assembly → Increased cellular susceptibility to stressors"
+      ],
+      "specific_effects": [
+        "TDP-43 binds directly to a conserved element in the 3' UTR of G3BP1 mRNA, stabilizing the transcript. [5, 31]",
+        "Depletion of TDP-43 leads to downregulation of G3BP1, which is linked to increased susceptibility of neuronal-like cells to oxidative stress.",
+        "Reduced levels of TDP-43 result in delayed and defective stress granule assembly, a phenotype that can be rescued by the reintroduction of G3BP1. [31]",
+        "G3BP1 mRNA levels are decreased in neurons from ALS/FTD patients who exhibit TDP-43 nuclear depletion. [5, 31]"
+      ],
+      "evidence": [
+        {
+          "paper_title": "TDP-43 stabilizes G3BP1 mRNA: relevance to amyotrophic lateral sclerosis/frontotemporal dementia",
+          "doi": "10.1093/brain/awab217",
+          "authors": "Sidibé H, Khalfallah Y, Xiao S, Gómez NB, Fakim H, Tank EM, Di Tomasso G, Bareke E, Aulas A, McKeever PM, Melamed Z, Destroismaisons L, Deshaies JE, Zinman L, Parker JA, Legault P, Tétreault M, Barmada SJ, Robertson J, Vande Velde C",
+          "journal": "Brain",
+          "year": 2021,
+          "assay": "RNA immunoprecipitation, Western blot, Patient tissue analysis",
+          "species": "Human, Mouse",
+          "relevant_quote": "Here, we define that TDP-43 stabilizes G3BP1 transcripts via direct binding of a highly conserved cis regulatory element within the 3' untranslated region. [5]",
+          "pmid": "34115105"
+        },
+        {
+          "paper_title": "TAR DNA-binding protein 43 (TDP-43) regulates stress granule dynamics via differential regulation of G3BP and TIA-1",
+          "doi": "10.1093/hmg/ddr004",
+          "authors": "McDonald KK, Aulas A, Destroismaisons L, Pickles S, Beleac E, Camu W, Rouleau GA, Vande Velde C",
+          "journal": "Human Molecular Genetics",
+          "year": 2011,
+          "assay": "siRNA knockdown, Immunofluorescence",
+          "species": "Human",
+          "relevant_quote": "Furthermore, G3BP can rescue defective SG assembly in cells depleted of endogenous TDP-43.",
+          "pmid": "21257637"
+        },
+        {
+          "paper_title": "G3BP1 promotes stress-induced RNA granule interactions to preserve polyadenylated mRNA",
+          "doi": "10.1083/jcb.201408092",
+          "authors": "Aulas A, Caron G, Gkogkas CG, Mohamed NV, Destroismaisons L, Sonenberg N, Leclerc N, Parker JA, Vande Velde C",
+          "journal": "The Journal of Cell Biology",
+          "year": 2015,
+          "assay": "siRNA knockdown, Microscopy",
+          "species": "Human, Mouse",
+          "relevant_quote": "Collectively, these data demonstrate that the TDP-43 target G3BP1 is essential for a functional interaction between SGs and PBs. [10]",
+          "pmid": "25847539"
+        }
+      ],
+      "_context": {
+        "type": "direct",
+        "query_protein": null,
+        "chain": null
+      },
+      "pmids": [
+        "34115105",
+        "21257637",
+        "25847539"
+      ]
+    }
+  ],
+  "arrow": "activates",
+  "direction": "bidirectional",
+  "intent": "regulation",
+  "mechanism": "TDP-43 regulates the expression of G3BP1, a critical stress granule (SG) nucleating factor. Specifically, TDP-43 binds to and stabilizes G3BP1 mRNA transcripts.",
+  "effect": "Loss of nuclear TDP-43 function leads to reduced G3BP1 mRNA stability and lower G3BP1 protein levels, which compromises the cell's ability to form stress granules efficiently in response to stress.",
+  "summary": "TDP43 activates G3BP1 to modulate stress granule assembly, ultimately affecting increased cellular susceptibility to stressors.",
+  "evidence": [
+    {
+      "paper_title": "TDP-43 stabilizes G3BP1 mRNA: relevance to amyotrophic lateral sclerosis/frontotemporal dementia",
+      "doi": "10.1093/brain/awab217",
+      "authors": "Sidibé H, Khalfallah Y, Xiao S, Gómez NB, Fakim H, Tank EM, Di Tomasso G, Bareke E, Aulas A, McKeever PM, Melamed Z, Destroismaisons L, Deshaies JE, Zinman L, Parker JA, Legault P, Tétreault M, Barmada SJ, Robertson J, Vande Velde C",
+      "journal": "Brain",
+      "year": 2021,
+      "assay": "RNA immunoprecipitation, Western blot, Patient tissue analysis",
+      "species": "Human, Mouse",
+      "relevant_quote": "Here, we define that TDP-43 stabilizes G3BP1 transcripts via direct binding of a highly conserved cis regulatory element within the 3' untranslated region. [5]"
+    },
+    {
+      "paper_title": "TAR DNA-binding protein 43 (TDP-43) regulates stress granule dynamics via differential regulation of G3BP and TIA-1",
+      "doi": "10.1093/hmg/ddr004",
+      "authors": "McDonald KK, Aulas A, Destroismaisons L, Pickles S, Beleac E, Camu W, Rouleau GA, Vande Velde C",
+      "journal": "Human Molecular Genetics",
+      "year": 2011,
+      "assay": "siRNA knockdown, Immunofluorescence",
+      "species": "Human",
+      "relevant_quote": "Furthermore, G3BP can rescue defective SG assembly in cells depleted of endogenous TDP-43."
+    },
+    {
+      "paper_title": "G3BP1 promotes stress-induced RNA granule interactions to preserve polyadenylated mRNA",
+      "doi": "10.1083/jcb.201408092",
+      "authors": "Aulas A, Caron G, Gkogkas CG, Mohamed NV, Destroismaisons L, Sonenberg N, Leclerc N, Parker JA, Vande Velde C",
+      "journal": "The Journal of Cell Biology",
+      "year": 2015,
+      "assay": "siRNA knockdown, Microscopy",
+      "species": "Human, Mouse",
+      "relevant_quote": "Collectively, these data demonstrate that the TDP-43 target G3BP1 is essential for a functional interaction between SGs and PBs. [10]"
+    }
+  ],
+  "arrow_notation": "TDP43 <--activates--> G3BP1:",
+  "protein_a": "TDP43",
+  "protein_b": "G3BP1",
+  "discovered_in_query": "TDP43",
+  "first_discovered": "2025-11-11T16:36:28.282827Z",
+  "last_updated": "2025-11-11T16:36:28.282827Z"
+}

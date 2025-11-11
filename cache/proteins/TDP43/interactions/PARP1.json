@@ -1,0 +1,91 @@
+{
+  "primary": "PARP1",
+  "interaction_type": "direct",
+  "upstream_interactor": null,
+  "mediator_chain": [],
+  "depth": 1,
+  "support_summary": "In response to DNA damage, PARP1 becomes activated and synthesizes Poly(ADP-ribose) (PAR) polymers. TDP-43 is recruited to sites of DNA damage and directly binds to these PAR polymers, which triggers its translocation to the cytoplasm.",
+  "functions": [
+    {
+      "function": "TDP-43 Cytoplasmic Translocation (Stress-Induced)",
+      "arrow": "activates",
+      "cellular_process": "In response to cellular stress such as oxidative damage, the DNA damage sensor Poly (ADP-ribose) polymerase 1 (PARP1) becomes hyperactivated. This leads to the synthesis of Poly(ADP-ribose) (PAR) polymers, which can bind directly to TDP-43.",
+      "effect_description": "Stress-induced PARP1 activation triggers the cytoplasmic translocation of TDP-43 from the nucleus, a key step in the formation of pathological cytoplasmic aggregates.",
+      "biological_consequence": [
+        "Cellular stress (e.g., oxidative damage) → PARP1 hyperactivation at DNA damage sites → Synthesis of Poly(ADP-ribose) (PAR) polymers → PAR polymers bind nuclear TDP-43 → TDP-43 translocation to the cytoplasm → Formation of cytoplasmic aggregates & neurotoxicity."
+      ],
+      "specific_effects": [
+        "Oxidative stress-induced translocation of TDP-43 to the cytoplasm is dependent on PARP-1 activation. [2]",
+        "Pharmacological inhibition of PARP-1 blocked the cytosolic translocation of TDP-43 in response to stressors like MNNG and oxygen-glucose deprivation. [2, 14]",
+        "TDP-43 is recruited to sites of DNA double-strand breaks as a component of the nonhomologous end joining (NHEJ) repair pathway. [18, 22]"
+      ],
+      "evidence": [
+        {
+          "paper_title": "PARP-1 activation leads to cytosolic accumulation of TDP-43 in neurons",
+          "doi": "10.1016/j.neuint.2021.105077",
+          "authors": "Joshua M Marcus, Mohammed I Hossain, Jean-Philippe Gagné, Guy G Poirier, Lori L McMahon, Rita M Cowell, Shaida A Andrabi",
+          "journal": "Neurochemistry International",
+          "year": 2021,
+          "assay": "Immunocytochemistry, Western blot",
+          "species": "mouse",
+          "relevant_quote": "...we used N-methyl-N-nitroso-N'-nitroguanidine (MNNG) and oxygen-glucose deprivation (OGD) in mouse neuronal cultures to activate PARP-1 and observed that pharmacological inhibition of PARP-1 blocked the cytosolic translocation of TDP-43.",
+          "pmid": "34082062"
+        },
+        {
+          "paper_title": "Motor neuron disease-associated loss of nuclear TDP-43 is linked to DNA double-strand break repair defects",
+          "doi": "10.1073/pnas.1807277116",
+          "authors": "Jayalakshmi Mitra, Dibyadeep Datta, Anwesha Sanyal, Anindyajit Banerjee, Souvik Ghosh, Subhasis Das, Goutam Chandra, Subhamita Roy, Suman Kumar Das, Atanu Duttaroy, Nitai P Bhattacharyya, Hemanta K Majumder",
+          "journal": "Proceedings of the National Academy of Sciences of the United States of America",
+          "year": 2019,
+          "assay": "Co-IP, Immunoblotting",
+          "species": "human",
+          "relevant_quote": "Here, we have documented TDP-43's involvement in DDR as a key component of nonhomologous end joining (NHEJ), the major pathway for repair of DNA double-strand breaks (DSBs) in the postmitotic neurons.",
+          "pmid": "30770445"
+        }
+      ],
+      "_context": {
+        "type": "direct",
+        "query_protein": null,
+        "chain": null
+      },
+      "pmids": [
+        "34082062",
+        "30770445"
+      ]
+    }
+  ],
+  "arrow": "activates",
+  "direction": "primary_to_main",
+  "intent": "stress response",
+  "mechanism": "In response to cellular stress such as oxidative damage, the DNA damage sensor Poly (ADP-ribose) polymerase 1 (PARP1) becomes hyperactivated. This leads to the synthesis of Poly(ADP-ribose) (PAR) polymers, which can bind directly to TDP-43.",
+  "effect": "Stress-induced PARP1 activation triggers the cytoplasmic translocation of TDP-43 from the nucleus, a key step in the formation of pathological cytoplasmic aggregates.",
+  "summary": "TDP43 activates PARP1 to modulate tdp-43 cytoplasmic translocation (stress-induced), ultimately affecting formation of cytoplasmic aggregates & neurotoxicity.",
+  "evidence": [
+    {
+      "paper_title": "PARP-1 activation leads to cytosolic accumulation of TDP-43 in neurons",
+      "doi": "10.1016/j.neuint.2021.105077",
+      "authors": "Joshua M Marcus, Mohammed I Hossain, Jean-Philippe Gagné, Guy G Poirier, Lori L McMahon, Rita M Cowell, Shaida A Andrabi",
+      "journal": "Neurochemistry International",
+      "year": 2021,
+      "assay": "Immunocytochemistry, Western blot",
+      "species": "mouse",
+      "relevant_quote": "...we used N-methyl-N-nitroso-N'-nitroguanidine (MNNG) and oxygen-glucose deprivation (OGD) in mouse neuronal cultures to activate PARP-1 and observed that pharmacological inhibition of PARP-1 blocked the cytosolic translocation of TDP-43."
+    },
+    {
+      "paper_title": "Motor neuron disease-associated loss of nuclear TDP-43 is linked to DNA double-strand break repair defects",
+      "doi": "10.1073/pnas.1807277116",
+      "authors": "Jayalakshmi Mitra, Dibyadeep Datta, Anwesha Sanyal, Anindyajit Banerjee, Souvik Ghosh, Subhasis Das, Goutam Chandra, Subhamita Roy, Suman Kumar Das, Atanu Duttaroy, Nitai P Bhattacharyya, Hemanta K Majumder",
+      "journal": "Proceedings of the National Academy of Sciences of the United States of America",
+      "year": 2019,
+      "assay": "Co-IP, Immunoblotting",
+      "species": "human",
+      "relevant_quote": "Here, we have documented TDP-43's involvement in DDR as a key component of nonhomologous end joining (NHEJ), the major pathway for repair of DNA double-strand breaks (DSBs) in the postmitotic neurons."
+    }
+  ],
+  "arrow_notation": "TDP43 <--activates-- PARP1:",
+  "protein_a": "TDP43",
+  "protein_b": "PARP1",
+  "discovered_in_query": "TDP43",
+  "first_discovered": "2025-11-11T16:36:28.317195Z",
+  "last_updated": "2025-11-11T16:36:28.317195Z"
+}

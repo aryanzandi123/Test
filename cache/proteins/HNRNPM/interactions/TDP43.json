@@ -1,0 +1,86 @@
+{
+  "primary": "TDP43",
+  "interaction_type": "direct",
+  "upstream_interactor": null,
+  "mediator_chain": [],
+  "depth": 1,
+  "support_summary": "Proteomic analysis of TDP-43 interacting proteins identified HNRNPM as a core component of a nuclear/splicing protein cluster that associates with TDP-43. This interaction is crucial for the co-regulation of alternative splicing for a subset of pre-mRNAs.",
+  "arrow": "activates",
+  "direction": "bidirectional",
+  "intent": "regulation of alternative splicing",
+  "functions": [
+    {
+      "function": "Alternative Splicing",
+      "arrow": "activates",
+      "cellular_process": "TDP-43 and HNRNPM are both components of the heterogeneous nuclear ribonucleoprotein (hnRNP) complex. They physically associate and collaboratively regulate the alternative splicing of target pre-mRNAs by influencing splice site selection.",
+      "effect_description": "The interaction between TDP-43 and HNRNPM modulates the assembly and activity of the spliceosome on specific RNA targets, influencing the final mRNA isoform that is produced.",
+      "biological_consequence": [
+        "TDP-43 binds HNRNPM forming a ribonucleoprotein complex → Complex co-regulates splice site selection on target pre-mRNAs → Alternative splicing generates specific mRNA variants → Altered protein isoform expression → Dysregulation of neuronal homeostasis"
+      ],
+      "specific_effects": [
+        "Proteomic screens identified HNRNPM as a direct interactor of TDP-43, clustering with other nuclear proteins that regulate RNA splicing.",
+        "TDP-43 functions cooperatively with other hnRNP proteins, including HNRNPM, to control splicing events.",
+        "Depletion of TDP-43 alters the splicing of numerous pre-mRNAs, a phenotype that can be modulated by the levels of other hnRNPs."
+      ],
+      "evidence": [
+        {
+          "paper_title": "Global analysis of TDP-43 interacting proteins reveals strong association with RNA splicing and translation machinery",
+          "doi": "10.1021/pr901076y",
+          "authors": "Freibaum BD, Chitta R, High AA, Taylor JP",
+          "journal": "Journal of Proteome Research",
+          "year": 2010,
+          "assay": "Co-immunoprecipitation, Mass Spectrometry",
+          "species": "human",
+          "relevant_quote": "TDP-43 interacting proteins largely cluster into two distinct interaction networks, a nuclear/splicing cluster and a cytoplasmic/translation cluster...",
+          "pmid": "20020773"
+        },
+        {
+          "paper_title": "Major hnRNP proteins act as general TDP-43 functional modifiers both in Drosophila and human neuronal cells",
+          "doi": "10.1093/nar/gkx477",
+          "authors": "Appocher C, Mohagheghi F, Cappelli S, Stuani C, Romano M, Feiguin F, Buratti E",
+          "journal": "Nucleic Acids Research",
+          "year": 2017,
+          "assay": "Genetic interaction screen, RNA sequencing",
+          "species": "human, drosophila",
+          "relevant_quote": "Our results suggest that changes in hnRNP expression levels can significantly modulate TDP-43 functions and affect pathological outcomes.",
+          "pmid": "28575377"
+        }
+      ],
+      "pmids": [
+        "20020773",
+        "28575377"
+      ]
+    }
+  ],
+  "mechanism": "TDP-43 and HNRNPM are both components of the heterogeneous nuclear ribonucleoprotein (hnRNP) complex. They physically associate and collaboratively regulate the alternative splicing of target pre-mRNAs by influencing splice site selection.",
+  "effect": "The interaction between TDP-43 and HNRNPM modulates the assembly and activity of the spliceosome on specific RNA targets, influencing the final mRNA isoform that is produced.",
+  "summary": "TDP43 activates HNRNPM to modulate alternative splicing regulation, ultimately affecting dysregulation of neuronal homeostasis.",
+  "evidence": [
+    {
+      "paper_title": "Global analysis of TDP-43 interacting proteins reveals strong association with RNA splicing and translation machinery",
+      "doi": "10.1021/pr901076y",
+      "authors": "Freibaum BD, Chitta R, High AA, Taylor JP",
+      "journal": "Journal of Proteome Research",
+      "year": 2010,
+      "assay": "Co-immunoprecipitation, Mass Spectrometry",
+      "species": "human",
+      "relevant_quote": "TDP-43 interacting proteins largely cluster into two distinct interaction networks, a nuclear/splicing cluster and a cytoplasmic/translation cluster..."
+    },
+    {
+      "paper_title": "Major hnRNP proteins act as general TDP-43 functional modifiers both in Drosophila and human neuronal cells",
+      "doi": "10.1093/nar/gkx477",
+      "authors": "Appocher C, Mohagheghi F, Cappelli S, Stuani C, Romano M, Feiguin F, Buratti E",
+      "journal": "Nucleic Acids Research",
+      "year": 2017,
+      "assay": "Genetic interaction screen, RNA sequencing",
+      "species": "human, drosophila",
+      "relevant_quote": "Our results suggest that changes in hnRNP expression levels can significantly modulate TDP-43 functions and affect pathological outcomes."
+    }
+  ],
+  "arrow_notation": "TDP43 <--activates--> HNRNPM:",
+  "protein_a": "HNRNPM",
+  "protein_b": "TDP43",
+  "discovered_in_query": "TDP43",
+  "first_discovered": "2025-11-11T16:36:28.258732Z",
+  "last_updated": "2025-11-11T16:36:28.258732Z"
+}

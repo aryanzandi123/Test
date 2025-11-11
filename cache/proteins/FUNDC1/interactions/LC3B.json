@@ -1,0 +1,110 @@
+{
+  "primary": "LC3B",
+  "interaction_type": "direct",
+  "upstream_interactor": null,
+  "mediator_chain": [],
+  "depth": 1,
+  "support_summary": "A mitochondrial outer membrane protein and well-characterized mitophagy receptor that directly binds LC3 proteins via a LIR motif to mediate hypoxia-induced mitophagy.",
+  "functions": [
+    {
+      "function": "Selective Autophagy of Mitochondria (Mitophagy)",
+      "arrow": "activates",
+      "cellular_process": "FUNDC1 is an outer mitochondrial membrane protein that functions as a receptor for hypoxia-induced mitophagy. It contains a classical LIR motif (YxxL) that directly interacts with LC3B, tethering the mitochondrion to the autophagosome.",
+      "effect_description": "Mediates the selective clearance of damaged or superfluous mitochondria in response to hypoxic conditions by directly linking them to the core autophagy machinery.",
+      "biological_consequence": [
+        "Hypoxia → PGAM5-mediated dephosphorylation of FUNDC1 at Ser13/Tyr18 → Enhanced FUNDC1 LIR motif interaction with LC3B → Selective recruitment of mitochondria to phagophore → Mitophagosome formation and engulfment → Mitochondrial quality control.",
+        "Autophagy induction → ULK1-mediated phosphorylation of FUNDC1 at Ser17 → Enhanced FUNDC1-LC3B interaction → Recruitment of damaged mitochondria to phagophore → Mitophagy induction.",
+        "Basal conditions → CK2/Src-mediated phosphorylation of FUNDC1 at Ser13/Tyr18 → Inhibition of FUNDC1 LIR motif binding to LC3B → Suppression of mitophagy → Damaged mitochondria accumulate."
+      ],
+      "specific_effects": [
+        "A key receptor for hypoxia-induced mitophagy.",
+        "Dephosphorylation at Ser13 and Tyr18 enhances LC3B interaction, while phosphorylation by CK2 and Src, respectively, inhibits it.",
+        "Phosphorylation at Ser17 by ULK1 can promote mitophagy.",
+        "Its activity is regulated by the phosphatase PGAM5."
+      ],
+      "evidence": [
+        {
+          "paper_title": "Mitochondrial outer-membrane protein FUNDC1 mediates hypoxia-induced mitophagy in mammalian cells",
+          "doi": "10.1038/ncb2422",
+          "authors": "Liu L, Feng D, Chen G, Chen M, Zheng Q, Song P, Ma Q, Zhu C, Wang R, Qi W, Huang L, Xue P, Li B, Wang X, Jin H, Wang J, Yang F, Liu P, Zhu Y, Sui S, Chen Q",
+          "journal": "Nat Cell Biol",
+          "year": 2012,
+          "assay": "Co-immunoprecipitation, GST pulldown",
+          "species": "Human, Mouse",
+          "relevant_quote": "FUNDC1 interacted with LC3 through its typical LC3-binding motif Y(18)xxL(21), and mutation of the LC3-interaction region impaired its interaction with LC3 and the subsequent induction of mitophagy.",
+          "pmid": "22267086"
+        },
+        {
+          "paper_title": "Structural insights into the recognition of phosphorylated FUNDC1 by LC3B in mitophagy",
+          "doi": "10.1007/s13238-016-0328-8",
+          "authors": "Lv M, Wang C, Li F, Peng J, Wen B, Gong Q, Shi Y, Tang Y",
+          "journal": "Protein Cell",
+          "year": 2017,
+          "assay": "X-ray crystallography, Isothermal titration calorimetry (ITC)",
+          "species": "Human",
+          "relevant_quote": "our structural and biochemical results reveal a working model for the specific recognition of FUNDC1 by LC3B and imply that the reversible phosphorylation modification of mitophagy receptors may be a switch for selective mitophagy.",
+          "pmid": "27757847"
+        },
+        {
+          "paper_title": "FUNDC1: A Promising Mitophagy Regulator at the Mitochondria-Associated Membrane for Cardiovascular Diseases",
+          "doi": "10.3389/fcell.2021.788634",
+          "authors": "Li G, Li J, Shao R, Chen M",
+          "journal": "Front Cell Dev Biol",
+          "year": 2021,
+          "assay": "Review",
+          "species": "Human",
+          "relevant_quote": "Various upstream phosphorylases or phosphatases change the phosphorylation states at different FUNDC1 sites to affect the binding affinity of its LIR motif to LC3, thereby promoting or inhibiting mitophagy.",
+          "pmid": "35096821"
+        }
+      ],
+      "pmids": [
+        "22267086",
+        "27757847",
+        "35096821"
+      ]
+    }
+  ],
+  "arrow": "activates",
+  "intent": "regulation",
+  "mechanism": "FUNDC1 is an outer mitochondrial membrane protein that functions as a receptor for hypoxia-induced mitophagy. It contains a classical LIR motif (YxxL) that directly interacts with LC3B, tethering the mitochondrion to the autophagosome.",
+  "effect": "Mediates the selective clearance of damaged or superfluous mitochondria in response to hypoxic conditions by directly linking them to the core autophagy machinery.",
+  "summary": "LC3B activates FUNDC1 to modulate selective autophagy of mitochondria (mitophagy), ultimately affecting mitochondrial quality control.",
+  "evidence": [
+    {
+      "paper_title": "Mitochondrial outer-membrane protein FUNDC1 mediates hypoxia-induced mitophagy in mammalian cells",
+      "doi": "10.1038/ncb2422",
+      "authors": "Liu L, Feng D, Chen G, Chen M, Zheng Q, Song P, Ma Q, Zhu C, Wang R, Qi W, Huang L, Xue P, Li B, Wang X, Jin H, Wang J, Yang F, Liu P, Zhu Y, Sui S, Chen Q",
+      "journal": "Nat Cell Biol",
+      "year": 2012,
+      "assay": "Co-immunoprecipitation, GST pulldown",
+      "species": "Human, Mouse",
+      "relevant_quote": "FUNDC1 interacted with LC3 through its typical LC3-binding motif Y(18)xxL(21), and mutation of the LC3-interaction region impaired its interaction with LC3 and the subsequent induction of mitophagy."
+    },
+    {
+      "paper_title": "Structural insights into the recognition of phosphorylated FUNDC1 by LC3B in mitophagy",
+      "doi": "10.1007/s13238-016-0328-8",
+      "authors": "Lv M, Wang C, Li F, Peng J, Wen B, Gong Q, Shi Y, Tang Y",
+      "journal": "Protein Cell",
+      "year": 2017,
+      "assay": "X-ray crystallography, Isothermal titration calorimetry (ITC)",
+      "species": "Human",
+      "relevant_quote": "our structural and biochemical results reveal a working model for the specific recognition of FUNDC1 by LC3B and imply that the reversible phosphorylation modification of mitophagy receptors may be a switch for selective mitophagy."
+    },
+    {
+      "paper_title": "FUNDC1: A Promising Mitophagy Regulator at the Mitochondria-Associated Membrane for Cardiovascular Diseases",
+      "doi": "10.3389/fcell.2021.788634",
+      "authors": "Li G, Li J, Shao R, Chen M",
+      "journal": "Front Cell Dev Biol",
+      "year": 2021,
+      "assay": "Review",
+      "species": "Human",
+      "relevant_quote": "Various upstream phosphorylases or phosphatases change the phosphorylation states at different FUNDC1 sites to affect the binding affinity of its LIR motif to LC3, thereby promoting or inhibiting mitophagy."
+    }
+  ],
+  "arrow_notation": "LC3B --activates--> FUNDC1:",
+  "protein_a": "FUNDC1",
+  "protein_b": "LC3B",
+  "discovered_in_query": "LC3B",
+  "first_discovered": "2025-11-11T15:54:33.444510Z",
+  "last_updated": "2025-11-11T15:54:33.444510Z"
+}

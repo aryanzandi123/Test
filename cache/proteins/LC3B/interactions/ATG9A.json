@@ -1,0 +1,125 @@
+{
+  "primary": "ATG9A",
+  "direction": "primary_to_main",
+  "arrow": "activates",
+  "intent": "binding",
+  "pmids": [
+    "30914491",
+    "39787789",
+    "36347259",
+    "33168936"
+  ],
+  "support_summary": "ATG9A is a multi-spanning transmembrane protein crucial for autophagosome formation. It is thought to deliver lipids to the phagophore, the precursor to the autophagosome, a process essential for its expansion. This provides the membrane platform for the subsequent lipidation and attachment of LC3B.",
+  "functions": [
+    {
+      "function": "Phagophore Membrane Expansion",
+      "arrow": "activates",
+      "cellular_process": "ATG9A is a transmembrane protein that cycles between the Golgi, endosomes, and the forming autophagosome (phagophore). It is thought to deliver lipids to the phagophore, a process essential for its expansion, which is a prerequisite for the engulfment of cargo and the subsequent lipidation and attachment of LC3B.",
+      "effect_description": "Promotes the growth of the autophagosomal membrane by acting as a lipid scramblase, which facilitates the expansion of the phagophore and provides a platform for LC3B lipidation.",
+      "biological_consequence": [
+        "ULK1 complex regulates ATG9A trafficking to the phagophore → ATG9A delivers lipids to the nascent autophagosome → ATG9A's lipid scramblase activity promotes phagophore membrane expansion → Expanded membrane provides a platform for LC3B lipidation → LC3B is conjugated to PE and incorporated into the autophagosome membrane → Autophagosome matures and engulfs cargo"
+      ],
+      "specific_effects": [
+        "Essential for the formation of the initial isolation membrane",
+        "Its trafficking is regulated by the ULK1 complex",
+        "Functions as a lipid scramblase to promote autophagosome growth"
+      ],
+      "pmids": [
+        "30917996",
+        "39787789",
+        "36347259"
+      ],
+      "evidence": [
+        {
+          "pmid": "30917996",
+          "doi": "10.1083/jcb.201807037",
+          "paper_title": "ATG9A shapes the forming autophagosome through Arfaptin 2 and phosphatidylinositol 4-kinase IIIβ",
+          "authors": "Imai K, Hao F, Fujita N, Noda T",
+          "journal": "J Cell Biol",
+          "year": 2019,
+          "assay": "Co-immunoprecipitation, Live-cell imaging",
+          "species": "human",
+          "relevant_quote": "ATG9A is a multispanning membrane protein essential for autophagy. Normally resident in Golgi membranes and endosomes, during amino acid starvation, ATG9A traffics to sites of autophagosome formation."
+        },
+        {
+          "pmid": "39787789",
+          "doi": "10.1016/j.bbrc.2024.151254",
+          "paper_title": "ATG9 promotes autophagosome formation through interaction with LC3",
+          "authors": "Yang Y, Wang Y, Liu N, Yang Y",
+          "journal": "Biochem Biophys Res Commun",
+          "year": 2025,
+          "assay": "Co-immunoprecipitation, GST pull-down",
+          "species": "human",
+          "relevant_quote": "Herein, we report that ATG9 binds to LC3, an essential membrane component of the autophagosome, thereby allowing ATG9 to incorporate into the autophagosome membrane."
+        },
+        {
+          "pmid": "36347259",
+          "doi": "10.1016/j.molcel.2022.10.017",
+          "paper_title": "ATG9A and ATG2A form a heteromeric complex essential for autophagosome formation",
+          "authors": "Guardia CM, Goren-Murshudova M, Goul CCC, Zhang Y, Sborgi L, Covarrubias-Pinto A, Sgrignani J, Laba JK, Scaramuzza S, Paparoditis P, Gönczy P, Picco A, Backer JM, Riezman H, De Camilli P, Ulbrich MH, Melia TJ, Baur D, Reggiori F, Martens S, Mattei S, Sgrignani J, Laba JK, Scaramuzza S, Paparoditis P, Gönczy P, Picco A, Backer JM, Riezman H, De Camilli P, Ulbrich MH, Melia TJ, Baur D, Reggiori F, Martens S, Mattei S",
+          "journal": "Mol Cell",
+          "year": 2022,
+          "assay": "Crosslinking, cryo-EM",
+          "species": "human",
+          "relevant_quote": "ATG9A and ATG2A are essential core members of the autophagy machinery. ATG9A is a lipid scramblase that allows equilibration of lipids across a membrane bilayer, whereas ATG2A facilitates lipid flow between tethered membranes."
+        }
+      ]
+    }
+  ],
+  "mechanism": "ATG9A is a transmembrane protein that cycles between the Golgi, endosomes, and the forming autophagosome (phagophore). It is thought to deliver lipids to the phagophore, a process essential for its expansion, which is a prerequisite for the engulfment of cargo and the subsequent lipidation and attachment of LC3B.",
+  "effect": "Promotes the growth of the autophagosomal membrane by acting as a lipid scramblase, which facilitates the expansion of the phagophore and provides a platform for LC3B lipidation.",
+  "summary": "LC3B activates ATG9A to modulate phagophore membrane expansion, ultimately affecting autophagosome matures and engulfs cargo.",
+  "evidence": [
+    {
+      "pmid": "30914491",
+      "doi": "10.1083/jcb.201807037",
+      "paper_title": "ATG9A shapes the forming autophagosome through Arfaptin 2 and phosphatidylinositol 4-kinase IIIβ",
+      "authors": "Imai K, Hao F, Fujita N, Noda T",
+      "journal": "J Cell Biol",
+      "year": 2019,
+      "assay": "Co-immunoprecipitation, Live-cell imaging",
+      "species": "human",
+      "relevant_quote": "ATG9A is a multispanning membrane protein essential for autophagy. Normally resident in Golgi membranes and endosomes, during amino acid starvation, ATG9A traffics to sites of autophagosome formation."
+    },
+    {
+      "pmid": "39787789",
+      "doi": "10.1016/j.bbrc.2024.151254",
+      "paper_title": "ATG9 promotes autophagosome formation through interaction with LC3",
+      "authors": "Yang Y, Wang Y, Liu N, Yang Y",
+      "journal": "Biochem Biophys Res Commun",
+      "year": 2025,
+      "assay": "Co-immunoprecipitation, GST pull-down",
+      "species": "human",
+      "relevant_quote": "Herein, we report that ATG9 binds to LC3, an essential membrane component of the autophagosome, thereby allowing ATG9 to incorporate into the autophagosome membrane."
+    },
+    {
+      "pmid": "36347259",
+      "doi": "10.1016/j.molcel.2022.10.017",
+      "paper_title": "ATG9A and ATG2A form a heteromeric complex essential for autophagosome formation",
+      "authors": "Guardia CM, Goren-Murshudova M, Goul CCC, Zhang Y, Sborgi L, Covarrubias-Pinto A, Sgrignani J, Laba JK, Scaramuzza S, Paparoditis P, Gönczy P, Picco A, Backer JM, Riezman H, De Camilli P, Ulbrich MH, Melia TJ, Baur D, Reggiori F, Martens S, Mattei S, Sgrignani J, Laba JK, Scaramuzza S, Paparoditis P, Gönczy P, Picco A, Backer JM, Riezman H, De Camilli P, Ulbrich MH, Melia TJ, Baur D, Reggiori F, Martens S, Mattei S",
+      "journal": "Mol Cell",
+      "year": 2022,
+      "assay": "Crosslinking, cryo-EM",
+      "species": "human",
+      "relevant_quote": "ATG9A and ATG2A are essential core members of the autophagy machinery. ATG9A is a lipid scramblase that allows equilibration of lipids across a membrane bilayer, whereas ATG2A facilitates lipid flow between tethered membranes."
+    },
+    {
+      "pmid": "33168936",
+      "doi": "10.1038/s41594-020-00520-2",
+      "paper_title": "Structural insight into the membrane-remodeling mechanism of the human ATG9A scramblase",
+      "authors": "Maeda S, Otomo C, Otomo T",
+      "journal": "Nat Struct Mol Biol",
+      "year": 2020,
+      "assay": "Cryo-EM",
+      "species": "human",
+      "relevant_quote": "Our results define the architecture of the human ATG9A complex and provide a framework for understanding its scramblase activity and role in autophagosome formation."
+    }
+  ],
+  "depth": 1,
+  "arrow_notation": "LC3B <--activates-- ATG9A:",
+  "protein_a": "LC3B",
+  "protein_b": "ATG9A",
+  "discovered_in_query": "LC3B",
+  "first_discovered": "2025-11-11T15:54:33.411620Z",
+  "last_updated": "2025-11-11T15:54:33.411620Z"
+}

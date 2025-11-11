@@ -1,0 +1,101 @@
+{
+  "primary": "TDP43",
+  "interaction_type": "indirect",
+  "upstream_interactor": null,
+  "mediator_chain": [],
+  "depth": 2,
+  "support_summary": "TBK1 and TDP-43 are genetically and functionally linked in ALS. Loss-of-function mutations in TBK1 lead to the pathological accumulation of TDP-43 by impairing clearance pathways such as the endo-lysosomal and immunoproteasome systems. Conversely, TDP-43 can regulate TBK1 levels, indicating a bidirectional regulatory relationship.",
+  "functions": [
+    {
+      "function": "TDP-43 Homeostasis",
+      "arrow": "activates",
+      "cellular_process": "TBK1 is essential for maintaining cellular homeostasis of TDP-43, primarily by ensuring the proper function of the endo-lysosomal pathway. It is required for normal endosomal maturation and subsequent lysosomal acidification, which are critical for protein degradation and clearance.",
+      "effect_description": "Deficiency or loss-of-function mutations in TBK1 impair the endo-lysosomal pathway, leading to a disruption in TDP-43 clearance and resulting in the pathological accumulation of cytoplasmic, insoluble, and phosphorylated TDP-43.",
+      "biological_consequence": [
+        "Loss of TBK1 function → Impaired endosomal maturation → Failure of lysosomal acidification → Defective protein clearance via endo-lysosomal pathway → Pathological accumulation of TDP-43 → Motor neuron degeneration"
+      ],
+      "specific_effects": [
+        "Loss-of-function mutations in TBK1 are sufficient to cause TDP-43 pathology in human-induced motor neurons. [18, 22]",
+        "The TDP-43 pathology resulting from TBK1 deficiency is driven more by dysfunctional endo-lysosomal pathways than by impaired autophagy. [18]",
+        "Restoring TBK1 levels can rescue endo-lysosomal function and restore TDP-43 homeostasis. [18, 22]",
+        "The relationship between TBK1, the endosomal pathway, and TDP-43 pathology is a key convergence point for ALS-FTD research. [6]"
+      ],
+      "evidence": [
+        {
+          "paper_title": "Two FTD-ALS genes converge on the endosomal pathway to induce TDP-43 pathology and degeneration",
+          "doi": "10.1126/science.abq6932",
+          "authors": "Shao W, Todd TW, Wu Y, Jones CY, Tong J, Jansen-West K, Daughrity L, Park J, Mitsuhashi Y, Funke A, Cannon A, DeTure M, Dickson DW, Petrucelli L, Cook C, Gendron TF",
+          "journal": "Science",
+          "year": 2022,
+          "assay": "Mouse models, Immunofluorescence",
+          "species": "Mouse, Human",
+          "relevant_quote": "Using mouse models of poly(GA) and reduced TBK1, they discovered that this relationship led to defective and enlarged endosomes and subsequent TDP43 pathology. [6]",
+          "pmid": "36201573"
+        }
+      ],
+      "_context": {
+        "type": "indirect",
+        "query_protein": null,
+        "chain": null
+      },
+      "pmids": [
+        "36201573"
+      ]
+    }
+  ],
+  "arrow": "regulates",
+  "direction": "bidirectional",
+  "intent": "regulation",
+  "mechanism": "TBK1 is essential for maintaining cellular homeostasis of TDP-43, primarily by ensuring the proper f; TDP-43 can negatively regulate the innate immune signaling pathway by promoting the autophagic degra; TBK1 can promote the clearance of aggregation-prone TDP-43 through the innate immune system by induc",
+  "effect": "Deficiency or loss-of-function mutations in TBK1 impair the endo-lysosomal pathway, leading to a disruption in TDP-43 clearance and resulting in the pathological accumulation of cytoplasmic, insoluble, and phosphorylated TDP-43.; By facilitating the degradation of TBK1, TDP-43 leads to reduced phosphorylation of TBK1 and its downstream targets, thereby suppressing the TBK1-mediated production of type I interferons and associated pro-inflammatory cytokines.; ...",
+  "summary": "TDP43 regulates TBK1 to control multiple cellular processes including tdp-43 homeostasis, tbk1 degradation, and tdp-43 degradation (immunoproteasome), ultimately affecting motor neuron degeneration.",
+  "evidence": [
+    {
+      "paper_title": "Loss of TBK1 activity leads to TDP-43 proteinopathy through lysosomal dysfunction in human motor neurons",
+      "doi": "10.1101/2021.10.11.464011",
+      "authors": "Hao J, Wells MF, Niu G, San Juan IG, Limone F, Fukuda A, Leyton-Jaimes MF, Joseph B, Qian M, Mordes DA, Budnik B, Dou Z, Eggan K",
+      "journal": "bioRxiv",
+      "year": 2021,
+      "assay": "CRISPR-Cas9 gene editing, Immunocytochemistry, Western blot",
+      "species": "Human",
+      "relevant_quote": "Here, we generated a human cellular model harboring loss-of-function mutations of TBK1 by gene editing and found that TBK1 deficiency was sufficient to cause TDP-43 pathology in human motor neurons. [18]"
+    },
+    {
+      "paper_title": "Two FTD-ALS genes converge on the endosomal pathway to induce TDP-43 pathology and degeneration",
+      "doi": "10.1126/science.abq6932",
+      "authors": "Shao W, Todd TW, Wu Y, Jones CY, Tong J, Jansen-West K, Daughrity L, Park J, Mitsuhashi Y, Funke A, Cannon A, DeTure M, Dickson DW, Petrucelli L, Cook C, Gendron TF",
+      "journal": "Science",
+      "year": 2022,
+      "assay": "Mouse models, Immunofluorescence",
+      "species": "Mouse, Human",
+      "relevant_quote": "Using mouse models of poly(GA) and reduced TBK1, they discovered that this relationship led to defective and enlarged endosomes and subsequent TDP43 pathology. [6]"
+    },
+    {
+      "paper_title": "TDP43 negatively regulates TBK1-mediated IFN1 production through IRF7 pathway in neurodegenerative diseases",
+      "doi": "10.1080/15548627.2023.2299820",
+      "authors": "Wang Y, Gao Y, Li Y, Wang L, Zhang T",
+      "journal": "Autophagy",
+      "year": 2024,
+      "assay": "Co-immunoprecipitation, Western blot",
+      "species": "Human, Mouse",
+      "relevant_quote": "Our study reveals that TDP43 interacts with TBK1 and promotes its autophagic degradation, thereby inhibiting TBK1-IRF7 signaling and IFN1 production."
+    },
+    {
+      "paper_title": "TBK1 eliminates aggregation-prone monomeric TDP-43 through the IFNβ-immunoproteasome pathway",
+      "doi": "10.1101/2022.05.03.490525",
+      "authors": "Sakai S, Oiwa K, Iguchi Y, Watanabe S, Komine O, Horiuchi M, Katsuno M, Yamanaka K",
+      "journal": "bioRxiv",
+      "year": 2022,
+      "assay": "Cell culture, Western blot, Immunofluorescence",
+      "species": "Mouse, Human",
+      "relevant_quote": "Here, we found that TBK1 alleviates TDP-43 pathology in neuronal cells via induction of interferon-beta (IFNβ)... We further demonstrated that IFNβ induces the immunoproteasome...promoting the degradation of aggregation-prone monomeric TDP-43. [8, 11]"
+    }
+  ],
+  "_chain_inferred": true,
+  "arrow_notation": "TDP43 <--regulates--> TBK1:",
+  "protein_a": "TBK1",
+  "protein_b": "TDP43",
+  "discovered_in_query": "TDP43",
+  "first_discovered": "2025-11-11T16:36:28.272336Z",
+  "last_updated": "2025-11-11T16:36:28.272336Z"
+}

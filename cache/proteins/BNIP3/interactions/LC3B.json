@@ -1,0 +1,107 @@
+{
+  "primary": "LC3B",
+  "direction": "main_to_primary",
+  "arrow": "activates",
+  "intent": "binding",
+  "support_summary": "A mitochondrial outer membrane protein that functions as a mitophagy receptor, directly binding LC3B through its LIR motif to mediate the autophagic clearance of mitochondria.",
+  "functions": [
+    {
+      "function": "Selective Autophagy of Mitochondria (Mitophagy)",
+      "arrow": "activates",
+      "cellular_process": "Acts as a receptor on the outer mitochondrial membrane that directly binds to LC3 proteins on the phagophore via a conserved LIR motif. This interaction tethers the mitochondrion to the forming autophagosome for degradation.",
+      "effect_description": "BNIP3 binding to LC3B activates the selective engulfment of mitochondria by the autophagosome, particularly in response to stimuli like hypoxia, to maintain mitochondrial quality control.",
+      "biological_consequence": [
+        "Mitochondrial stress or damage → BNIP3 on the outer mitochondrial membrane binds to LC3B on the phagophore → The mitochondrion is tethered to the forming autophagosome → Engulfment and lysosomal degradation (mitophagy) → Maintenance of mitochondrial quality control",
+        "Cellular hypoxia → Stabilization of the HIF-1α transcription factor → HIF-1α-mediated upregulation of BNIP3 expression → Increased BNIP3 levels on mitochondria trigger mitophagy → Cellular adaptation to low-oxygen conditions",
+        "Ischemia-reperfusion injury (e.g., stroke) → Pathological upregulation of BNIP3 → Excessive and widespread mitophagy → Depletion of functional mitochondria → Contribution to delayed neuronal cell death"
+      ],
+      "specific_effects": [
+        "Functions as a hypoxia-inducible mitophagy receptor",
+        "Direct interaction with LC3B via a LIR motif is required for its mitophagic activity",
+        "Can also induce selective removal of the endoplasmic reticulum (ER-phagy)"
+      ],
+      "evidence": [
+        {
+          "paper_title": "BNIP3-dependent mitophagy promotes cytosolic localization of LC3B and metabolic homeostasis in the liver",
+          "doi": "10.1080/15548627.2021.1877469",
+          "authors": "Springer DA, L'hermine-Coulomb A, Boland ML, Bock-Hughes A, Giera S, Hart J, Liu I, Chandel NS, Brady MJ",
+          "journal": "Autophagy",
+          "year": 2021,
+          "assay": "Co-IP, Western Blot",
+          "species": "mouse",
+          "relevant_quote": "Here we show that BNIP3 is required for GCG-induced mitophagy in the liver through interaction with processed LC3B; an interaction that is also necessary to localize LC3B out of the nucleus...",
+          "pmid": "33459136"
+        },
+        {
+          "paper_title": "Microtubule-associated protein 1 light chain 3 (LC3) interacts with Bnip3 protein to selectively remove endoplasmic reticulum and mitochondria via autophagy",
+          "doi": "10.1074/jbc.M111.322933",
+          "authors": "Hanna RA, Quinsay MN, Orogo AM, Giang K, Rikka S, Gustafsson ÅB",
+          "journal": "The Journal of Biological Chemistry",
+          "year": 2012,
+          "assay": "Co-IP, Mutagenesis",
+          "species": "mouse",
+          "relevant_quote": "The clearance of these organelles was mediated in part via binding of Bnip3 to LC3 on the autophagosome. Although ablation of the Bnip3-LC3 interaction...significantly reduced both mitophagy and ERphagy.",
+          "pmid": "22505714"
+        },
+        {
+          "paper_title": "BNIP3 interacting with LC3 triggers excessive mitophagy in delayed neuronal death in stroke",
+          "doi": "10.1111/cns.12325",
+          "authors": "Shi R, Weng J, Zhao L, Li XM, Gao TM, Kong J",
+          "journal": "CNS Neuroscience & Therapeutics",
+          "year": 2014,
+          "assay": "Co-IP, ELISA",
+          "species": "mouse",
+          "relevant_quote": "The mitochondria-localized BNIP3 interacts with the autophagosome-localized LC3, suggesting that BNIP3, similar to NIX, functions as a LC3-binding receptor on mitochondria.",
+          "pmid": "25230377"
+        }
+      ],
+      "pmids": [
+        "33459136",
+        "22505714",
+        "25230377"
+      ]
+    }
+  ],
+  "mechanism": "Acts as a receptor on the outer mitochondrial membrane that directly binds to LC3 proteins on the phagophore via a conserved LIR motif. This interaction tethers the mitochondrion to the forming autophagosome for degradation.",
+  "effect": "BNIP3 binding to LC3B activates the selective engulfment of mitochondria by the autophagosome, particularly in response to stimuli like hypoxia, to maintain mitochondrial quality control.",
+  "summary": "LC3B activates BNIP3 to modulate selective autophagy of mitochondria (mitophagy), ultimately affecting maintenance of mitochondrial quality control.",
+  "evidence": [
+    {
+      "paper_title": "BNIP3-dependent mitophagy promotes cytosolic localization of LC3B and metabolic homeostasis in the liver",
+      "doi": "10.1080/15548627.2021.1877469",
+      "authors": "Springer DA, L'hermine-Coulomb A, Boland ML, Bock-Hughes A, Giera S, Hart J, Liu I, Chandel NS, Brady MJ",
+      "journal": "Autophagy",
+      "year": 2021,
+      "assay": "Co-IP, Western Blot",
+      "species": "mouse",
+      "relevant_quote": "Here we show that BNIP3 is required for GCG-induced mitophagy in the liver through interaction with processed LC3B; an interaction that is also necessary to localize LC3B out of the nucleus..."
+    },
+    {
+      "paper_title": "Microtubule-associated protein 1 light chain 3 (LC3) interacts with Bnip3 protein to selectively remove endoplasmic reticulum and mitochondria via autophagy",
+      "doi": "10.1074/jbc.M111.322933",
+      "authors": "Hanna RA, Quinsay MN, Orogo AM, Giang K, Rikka S, Gustafsson ÅB",
+      "journal": "The Journal of Biological Chemistry",
+      "year": 2012,
+      "assay": "Co-IP, Mutagenesis",
+      "species": "mouse",
+      "relevant_quote": "The clearance of these organelles was mediated in part via binding of Bnip3 to LC3 on the autophagosome. Although ablation of the Bnip3-LC3 interaction...significantly reduced both mitophagy and ERphagy."
+    },
+    {
+      "paper_title": "BNIP3 interacting with LC3 triggers excessive mitophagy in delayed neuronal death in stroke",
+      "doi": "10.1111/cns.12325",
+      "authors": "Shi R, Weng J, Zhao L, Li XM, Gao TM, Kong J",
+      "journal": "CNS Neuroscience & Therapeutics",
+      "year": 2014,
+      "assay": "Co-IP, ELISA",
+      "species": "mouse",
+      "relevant_quote": "The mitochondria-localized BNIP3 interacts with the autophagosome-localized LC3, suggesting that BNIP3, similar to NIX, functions as a LC3-binding receptor on mitochondria."
+    }
+  ],
+  "depth": 1,
+  "arrow_notation": "LC3B <--activates-- BNIP3:",
+  "protein_a": "BNIP3",
+  "protein_b": "LC3B",
+  "discovered_in_query": "LC3B",
+  "first_discovered": "2025-11-11T15:54:33.404119Z",
+  "last_updated": "2025-11-11T15:54:33.404119Z"
+}

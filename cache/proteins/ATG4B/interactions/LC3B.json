@@ -1,0 +1,178 @@
+{
+  "primary": "LC3B",
+  "direction": "main_to_primary",
+  "arrow": "activates",
+  "intent": "cleaves",
+  "support_summary": "A cysteine protease that directly interacts with LC3B to perform two essential, opposing functions: it proteolytically cleaves pro-LC3B to its active form (LC3-I) and later deconjugates LC3B-II from the autophagosome membrane to recycle it.",
+  "functions": [
+    {
+      "function": "Pro-LC3B Cleavage",
+      "arrow": "activates",
+      "cellular_process": "Acts as a cysteine protease that recognizes and cleaves the C-terminal portion of newly synthesized pro-LC3B, exposing the glycine residue required for subsequent lipidation.",
+      "effect_description": "Generates the cytosolic, soluble form of LC3B (LC3-I), making it a viable substrate for the ATG7 activating enzyme.",
+      "biological_consequence": [
+        "ATG4B protease binds and cleaves newly synthesized pro-LC3B → C-terminal peptide is removed, exposing Glycine-120 → Cytosolic LC3B-I is generated → LC3B-I becomes a substrate for the ATG7-mediated conjugation system → Enables autophagosome formation"
+      ],
+      "specific_effects": [
+        "Exposes the C-terminal glycine of LC3B, which is an absolute prerequisite for lipidation",
+        "Processes all mammalian LC3/GABARAP family members",
+        "ATG4B contains a C-terminal LIR motif important for efficient binding and cleavage of LC3 proteins"
+      ],
+      "evidence": [
+        {
+          "paper_title": "The structure of Atg4B-LC3 complex reveals the mechanism of LC3 processing and delipidation during autophagy",
+          "doi": "10.1038/emboj.2009.32",
+          "authors": "Satoo K, Noda NN, Kumeta H, Fujioka Y, Mizushima N, Inagaki F",
+          "journal": "EMBO J",
+          "year": 2009,
+          "assay": "X-ray crystallography",
+          "species": "human",
+          "relevant_quote": "Atg4 has a critical function by both processing Atg8 precursors and deconjugating Atg8-PE. Here, we report the crystal structures of...HsAtg4B in complex with processed and unprocessed forms of LC3.",
+          "pmid": "19322194"
+        },
+        {
+          "paper_title": "LC3B Binds to the Autophagy Protease ATG4b with High Affinity Using a Bipartite Interface",
+          "doi": "10.1021/acs.biochem.2c00482",
+          "authors": "Fraser GL, Chojnacki M, Larsen DJ, Machleidt T, Schulte M, Roschitzki-Voser H, Zerbe O, Robers MB, Jeganathan S, Varelas X, Gsponer J, Moffat J, Kay LE, Plückthun A",
+          "journal": "Biochemistry",
+          "year": 2022,
+          "assay": "SPR, Mass Spectrometry",
+          "species": "human",
+          "relevant_quote": "Human pro-LC3B contains 125 residues... ATG4b cleaves the last 5 residues of pro-LC3B to expose Gly120 for further lipidation.",
+          "pmid": "36264309"
+        }
+      ],
+      "pmids": [
+        "19322194",
+        "36264309"
+      ]
+    },
+    {
+      "function": "LC3B-II Delipidation",
+      "arrow": "activates",
+      "cellular_process": "Removes LC3B-II from autophagosomal membranes by cleaving the amide bond between the C-terminal glycine of LC3B and the head group of phosphatidylethanolamine (PE).",
+      "effect_description": "Recycles LC3B from autophagosome membranes, allowing the protein to be reused for subsequent rounds of autophagosome formation and sustaining autophagic flux.",
+      "biological_consequence": [
+        "ATG4B cleaves the amide bond between LC3B and PE on the autophagosome membrane → LC3B-II is deconjugated from the membrane → LC3B-I is released into the cytosol → Replenishment of the cytosolic LC3B-I pool → Allows for recycling of LC3B for sustained autophagic flux"
+      ],
+      "specific_effects": [
+        "Deconjugates LC3B-PE, releasing LC3B back into the cytosol",
+        "Regulates the amount of LC3-II on the autophagosome",
+        "Crucial for autophagosome maturation and fusion with lysosomes",
+        "Excess ATG4B can inhibit LC3 lipidation and autophagosome formation"
+      ],
+      "evidence": [
+        {
+          "paper_title": "The protease activity of human ATG4B is regulated by reversible oxidative modification",
+          "doi": "10.1038/s41467-017-01124-3",
+          "authors": "Pérez-Pérez ME, Zaffagnini M, Pérez-Martín M, Lemaire SD, Crespo JL",
+          "journal": "Nat Commun",
+          "year": 2017,
+          "assay": "In vitro cleavage assay, Western Blot",
+          "species": "human",
+          "relevant_quote": "Upon fusion with lysosomes, ATG4B can, in turn, deconjugate LC3-PE to release LC3-I to the cytoplasm for reuse.",
+          "pmid": "31880198"
+        },
+        {
+          "paper_title": "Classical autophagy proteins LC3B and ATG4B facilitate melanosome movement on cytoskeletal tracks",
+          "doi": "10.1091/mbc.E19-09-0518",
+          "authors": "Ramkumar S, Tatin F, Gangar A, Yadav S, Gokhale RS, Natarajan K, Rath S, Hema A",
+          "journal": "Mol Biol Cell",
+          "year": 2017,
+          "assay": "In vitro delipidation assay",
+          "species": "mouse, human",
+          "relevant_quote": "Conversion of LC3-II form (16 kDa) to the nonlipidated LC3-I form (18 kDa) was observed, suggesting the role of ATG4B in LC3B delipidation on melanosomes.",
+          "pmid": "28598240"
+        },
+        {
+          "paper_title": "An Atg4B Mutant Hampers the Lipidation of LC3 Paralogues and Causes Defects in Autophagosome Closure",
+          "doi": "10.1091/mbc.e09-08-0713",
+          "authors": "Fujita N, Itoh T, Omori H, Fukuda M, Noda T, Yoshimori T",
+          "journal": "Mol Biol Cell",
+          "year": 2009,
+          "assay": "Western Blot, Fluorescence Microscopy",
+          "species": "human, rat",
+          "relevant_quote": "One possible mechanism underlying this negative effect is that excess Atg4B efficiently deconjugates the LC3 from PE and decreases membrane localized LC3.",
+          "pmid": "18768752"
+        }
+      ],
+      "pmids": [
+        "31880198",
+        "28598240",
+        "18768752"
+      ]
+    }
+  ],
+  "mechanism": "Acts as a cysteine protease that recognizes and cleaves the C-terminal portion of newly synthesized pro-LC3B, exposing the glycine residue required for subsequent lipidation. Removes LC3B-II from autophagosomal membranes by cleaving the amide bond between the C-terminal glycine of LC3B and the head group of phosphatidylethanolamine (PE).",
+  "effect": "Generates the cytosolic, soluble form of LC3B (LC3-I), making it a viable substrate for the ATG7 activating enzyme.; Recycles LC3B from autophagosome membranes, allowing the protein to be reused for subsequent rounds of autophagosome formation and sustaining autophagic flux.",
+  "summary": "LC3B activates ATG4B to regulate pro-lc3b cleavage and lc3b-ii delipidation, ultimately affecting enables autophagosome formation.",
+  "evidence": [
+    {
+      "paper_title": "The structure of Atg4B-LC3 complex reveals the mechanism of LC3 processing and delipidation during autophagy",
+      "doi": "10.1038/emboj.2009.32",
+      "authors": "Satoo K, Noda NN, Kumeta H, Fujioka Y, Mizushima N, Inagaki F",
+      "journal": "EMBO J",
+      "year": 2009,
+      "assay": "X-ray crystallography",
+      "species": "human",
+      "relevant_quote": "Atg4 has a critical function by both processing Atg8 precursors and deconjugating Atg8-PE. Here, we report the crystal structures of...HsAtg4B in complex with processed and unprocessed forms of LC3."
+    },
+    {
+      "paper_title": "Crystal structure of human Atg4B, a cysteine protease essential for autophagy",
+      "doi": "10.1016/j.jmb.2006.01.019",
+      "authors": "Sugawara K, Suzuki NN, Fujioka Y, Mizushima N, Inagaki F, Noda NN",
+      "journal": "J Mol Biol",
+      "year": 2006,
+      "assay": "X-ray crystallography",
+      "species": "human",
+      "relevant_quote": "Human Atg4B is a cysteine protease essential for autophagy, which processes the C terminus of the ubiquitin-like modifiers, the LC3/GABARAP/GATE-16 family."
+    },
+    {
+      "paper_title": "LC3B Binds to the Autophagy Protease ATG4b with High Affinity Using a Bipartite Interface",
+      "doi": "10.1021/acs.biochem.2c00482",
+      "authors": "Fraser GL, Chojnacki M, Larsen DJ, Machleidt T, Schulte M, Roschitzki-Voser H, Zerbe O, Robers MB, Jeganathan S, Varelas X, Gsponer J, Moffat J, Kay LE, Plückthun A",
+      "journal": "Biochemistry",
+      "year": 2022,
+      "assay": "SPR, Mass Spectrometry",
+      "species": "human",
+      "relevant_quote": "Human pro-LC3B contains 125 residues... ATG4b cleaves the last 5 residues of pro-LC3B to expose Gly120 for further lipidation."
+    },
+    {
+      "paper_title": "The protease activity of human ATG4B is regulated by reversible oxidative modification",
+      "doi": "10.1038/s41467-017-01124-3",
+      "authors": "Pérez-Pérez ME, Zaffagnini M, Pérez-Martín M, Lemaire SD, Crespo JL",
+      "journal": "Nat Commun",
+      "year": 2017,
+      "assay": "In vitro cleavage assay, Western Blot",
+      "species": "human",
+      "relevant_quote": "Upon fusion with lysosomes, ATG4B can, in turn, deconjugate LC3-PE to release LC3-I to the cytoplasm for reuse."
+    },
+    {
+      "paper_title": "Classical autophagy proteins LC3B and ATG4B facilitate melanosome movement on cytoskeletal tracks",
+      "doi": "10.1091/mbc.E19-09-0518",
+      "authors": "Ramkumar S, Tatin F, Gangar A, Yadav S, Gokhale RS, Natarajan K, Rath S, Hema A",
+      "journal": "Mol Biol Cell",
+      "year": 2017,
+      "assay": "In vitro delipidation assay",
+      "species": "mouse, human",
+      "relevant_quote": "Conversion of LC3-II form (16 kDa) to the nonlipidated LC3-I form (18 kDa) was observed, suggesting the role of ATG4B in LC3B delipidation on melanosomes."
+    },
+    {
+      "paper_title": "An Atg4B Mutant Hampers the Lipidation of LC3 Paralogues and Causes Defects in Autophagosome Closure",
+      "doi": "10.1091/mbc.e09-08-0713",
+      "authors": "Fujita N, Itoh T, Omori H, Fukuda M, Noda T, Yoshimori T",
+      "journal": "Mol Biol Cell",
+      "year": 2009,
+      "assay": "Western Blot, Fluorescence Microscopy",
+      "species": "human, rat",
+      "relevant_quote": "One possible mechanism underlying this negative effect is that excess Atg4B efficiently deconjugates the LC3 from PE and decreases membrane localized LC3."
+    }
+  ],
+  "depth": 1,
+  "arrow_notation": "LC3B <--activates-- ATG4B:",
+  "protein_a": "ATG4B",
+  "protein_b": "LC3B",
+  "discovered_in_query": "LC3B",
+  "first_discovered": "2025-11-11T15:54:33.364060Z",
+  "last_updated": "2025-11-11T15:54:33.364060Z"
+}

@@ -1,0 +1,116 @@
+{
+  "primary": "MAP1LC3B",
+  "interaction_type": "indirect",
+  "upstream_interactor": "SQSTM1",
+  "mediator_chain": [
+    "SQSTM1"
+  ],
+  "depth": 2,
+  "support_summary": "The autophagy protein LC3, particularly its lipidated form LC3-II, is essential for the clearance of TDP-43 aggregates. The autophagy receptor p62/SQSTM1 acts as a bridge, binding to ubiquitinated TDP-43 aggregates and simultaneously to LC3-II on the autophagosome membrane, thereby targeting the aggregates for degradation.",
+  "functions": [
+    {
+      "function": "TDP-43 Aggregate Clearance (Autophagy)",
+      "arrow": "activates",
+      "cellular_process": "The autophagy receptor p62/SQSTM1 recognizes and binds to ubiquitinated TDP-43 aggregates via its UBA domain. Subsequently, p62/SQSTM1 interacts with lipidated LC3 (LC3-II) on the autophagosome membrane through its LIR domain. This interaction tethers the TDP-43 aggregate to the autophagosome, targeting it for degradation upon fusion with the lysosome.",
+      "effect_description": "The interaction between p62/SQSTM1 and LC3 is the critical link that mediates the selective autophagic clearance of toxic, ubiquitinated TDP-43 protein aggregates.",
+      "biological_consequence": [
+        "Ubiquitinated TDP-43 aggregates form → p62/SQSTM1 binds aggregates via its UBA domain → p62/SQSTM1 LIR domain binds to LC3-II on the autophagosome membrane → TDP-43 cargo is tethered to the autophagosome → Autophagosome fuses with lysosome → Lysosomal degradation of TDP-43 aggregates."
+      ],
+      "specific_effects": [
+        "p62/SQSTM1 delivers ubiquitinated cargoes to the autophagosome via its interaction with LC3. [23]",
+        "TDP-43 aggregates colocalize with autophagy markers and the adaptor protein p62/SQSTM1. [4]",
+        "Autophagy is required for the clearance of aggregated TDP-43. [5, 26]",
+        "Autophagy receptors like p62/SQSTM1 bind both ubiquitin and LC3 family proteins, providing a molecular link between ubiquitination and autophagy."
+      ],
+      "evidence": [
+        {
+          "paper_title": "Regulation of TDP-43 aggregation by phosphorylation and p62/SQSTM1",
+          "doi": "10.1111/j.1471-4159.2010.07098.x",
+          "authors": "Owen A Brady, Peter Meng, Yanqiu Zheng, Yuxin Mao, Min-Hao Kuo, Yijuang Chern, Jeffrey L Brodsky, Charleen T Chu",
+          "journal": "Journal of Neurochemistry",
+          "year": 2011,
+          "assay": "Co-IP, Western Blot",
+          "species": "human",
+          "relevant_quote": "Furthermore, TDP-43 aggregates colocalize with markers of autophagy and the adaptor protein p62/SQSTM1. Over-expression of p62/SQSTM1 reduces TDP-43 aggregation in an autophagy and proteasome-dependent manner.",
+          "pmid": "21062285"
+        },
+        {
+          "paper_title": "Selective Autophagy Receptor p62/SQSTM1, a Pivotal Player in Stress and Aging",
+          "doi": "10.3389/fcell.2022.793328",
+          "authors": "Anita V Kumar, Joslyn Mills, Louis R Lapierre",
+          "journal": "Frontiers in Cell and Developmental Biology",
+          "year": 2022,
+          "assay": "Review",
+          "species": "human",
+          "relevant_quote": "The protein Sequestosome 1 (p62/SQSTM1) is a classical selective autophagy receptor, but it also has roles in the ubiquitin-proteasome system, cellular metabolism, signaling, and apoptosis.",
+          "pmid": "35237597"
+        },
+        {
+          "paper_title": "Differential roles of the ubiquitin proteasome system and autophagy in the clearance of soluble and aggregated TDP-43 species",
+          "doi": "10.1242/jcs.140087",
+          "authors": "Emma L Scotter, Caroline Vance, Agnes L Nishimura, Youn-Bok Lee, Han-Jou Chen, Hazel Urwin, Valentina Sardone, Jacqueline C Mitchell, Boris Rogelj, David C Rubinsztein, Christopher E Shaw",
+          "journal": "Journal of Cell Science",
+          "year": 2014,
+          "assay": "Cell culture studies",
+          "species": "human",
+          "relevant_quote": "We find that soluble TDP-43 is degraded primarily by the UPS, whereas the clearance of aggregated TDP-43 requires autophagy.",
+          "pmid": "24424030"
+        }
+      ],
+      "_context": {
+        "type": "indirect",
+        "query_protein": null,
+        "chain": "TDP43 -> SQSTM1 -> MAP1LC3B"
+      },
+      "pmids": [
+        "21062285",
+        "35237597",
+        "24424030"
+      ]
+    }
+  ],
+  "arrow": "activates",
+  "direction": "primary_to_main",
+  "intent": "autophagic clearance",
+  "mechanism": "The autophagy receptor p62/SQSTM1 recognizes and binds to ubiquitinated TDP-43 aggregates via its UBA domain. Subsequently, p62/SQSTM1 interacts with lipidated LC3 (LC3-II) on the autophagosome membrane through its LIR domain. This interaction tethers the TDP-43 aggregate to the autophagosome, targeting it for degradation upon fusion with the lysosome.",
+  "effect": "The interaction between p62/SQSTM1 and LC3 is the critical link that mediates the selective autophagic clearance of toxic, ubiquitinated TDP-43 protein aggregates.",
+  "summary": "TDP43 activates MAP1LC3B to modulate tdp-43 aggregate clearance (autophagy), ultimately affecting lysosomal degradation of tdp-43 aggregates.",
+  "evidence": [
+    {
+      "paper_title": "Regulation of TDP-43 aggregation by phosphorylation and p62/SQSTM1",
+      "doi": "10.1111/j.1471-4159.2010.07098.x",
+      "authors": "Owen A Brady, Peter Meng, Yanqiu Zheng, Yuxin Mao, Min-Hao Kuo, Yijuang Chern, Jeffrey L Brodsky, Charleen T Chu",
+      "journal": "Journal of Neurochemistry",
+      "year": 2011,
+      "assay": "Co-IP, Western Blot",
+      "species": "human",
+      "relevant_quote": "Furthermore, TDP-43 aggregates colocalize with markers of autophagy and the adaptor protein p62/SQSTM1. Over-expression of p62/SQSTM1 reduces TDP-43 aggregation in an autophagy and proteasome-dependent manner."
+    },
+    {
+      "paper_title": "Selective Autophagy Receptor p62/SQSTM1, a Pivotal Player in Stress and Aging",
+      "doi": "10.3389/fcell.2022.793328",
+      "authors": "Anita V Kumar, Joslyn Mills, Louis R Lapierre",
+      "journal": "Frontiers in Cell and Developmental Biology",
+      "year": 2022,
+      "assay": "Review",
+      "species": "human",
+      "relevant_quote": "The protein Sequestosome 1 (p62/SQSTM1) is a classical selective autophagy receptor, but it also has roles in the ubiquitin-proteasome system, cellular metabolism, signaling, and apoptosis."
+    },
+    {
+      "paper_title": "Differential roles of the ubiquitin proteasome system and autophagy in the clearance of soluble and aggregated TDP-43 species",
+      "doi": "10.1242/jcs.140087",
+      "authors": "Emma L Scotter, Caroline Vance, Agnes L Nishimura, Youn-Bok Lee, Han-Jou Chen, Hazel Urwin, Valentina Sardone, Jacqueline C Mitchell, Boris Rogelj, David C Rubinsztein, Christopher E Shaw",
+      "journal": "Journal of Cell Science",
+      "year": 2014,
+      "assay": "Cell culture studies",
+      "species": "human",
+      "relevant_quote": "We find that soluble TDP-43 is degraded primarily by the UPS, whereas the clearance of aggregated TDP-43 requires autophagy."
+    }
+  ],
+  "arrow_notation": "SQSTM1 <--activates-- MAP1LC3B:",
+  "protein_a": "TDP43",
+  "protein_b": "MAP1LC3B",
+  "discovered_in_query": "TDP43",
+  "first_discovered": "2025-11-11T16:36:28.301130Z",
+  "last_updated": "2025-11-11T16:36:28.301130Z"
+}

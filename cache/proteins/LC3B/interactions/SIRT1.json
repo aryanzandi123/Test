@@ -1,0 +1,134 @@
+{
+  "primary": "SIRT1",
+  "interaction_type": "indirect",
+  "upstream_interactor": null,
+  "mediator_chain": [],
+  "depth": 2,
+  "support_summary": "SIRT1 is a crucial upstream activator of autophagy that impacts LC3B both directly and indirectly. It deacetylates nuclear LC3B, promoting its translocation to the cytoplasm where it can participate in autophagosome formation. SIRT1 also deacetylates other core autophagy proteins (ATG5, ATG7) and regulates autosome-lysosome fusion via the FOXO1-Rab7 axis.",
+  "functions": [
+    {
+      "function": "Deacetylation of Core Autophagy Machinery",
+      "arrow": "activates",
+      "cellular_process": "In response to nutrient starvation, SIRT1 directly deacetylates core components of the ubiquitin-like conjugation systems, including ATG5 and ATG7.",
+      "effect_description": "SIRT1 deacetylates core autophagy proteins ATG5 and ATG7, which promotes the formation of the ATG12-ATG5-ATG16L1 complex and facilitates the elongation of the phagophore membrane.",
+      "biological_consequence": [
+        "Nutrient starvation → SIRT1 activation → SIRT1-mediated deacetylation of ATG5 and ATG7 → Enhanced formation of ATG12-ATG5-ATG16L1 E3-like ligase complex → Increased LC3B lipidation → Phagophore elongation"
+      ],
+      "specific_effects": [
+        "Forms a molecular complex with ATG5 and ATG7",
+        "Deacetylates multiple core ATG proteins to promote autophagic flux"
+      ],
+      "evidence": [
+        {
+          "paper_title": "A role for the NAD-dependent deacetylase Sirt1 in the regulation of autophagy",
+          "doi": "10.1073/pnas.0712145105",
+          "authors": "In Hye Lee, Liu Cao, Raul Mostoslavsky, David B Lombard, Jie Liu, Nicholas E Bruns, Maria Tsokos, Frederick W Alt, Toren Finkel",
+          "journal": "Proc Natl Acad Sci U S A",
+          "year": 2008,
+          "assay": "Co-Immunoprecipitation",
+          "species": "mouse",
+          "relevant_quote": "We further demonstrate that Sirt1 can form a molecular complex with several essential components of the autophagy machinery, including autophagy genes (Atg)5, Atg7, and Atg8.",
+          "pmid": "18296641"
+        },
+        {
+          "paper_title": "SIRT1 and Autophagy: Implications in Endocrine Disorders",
+          "doi": "10.3389/fendo.2022.930919",
+          "authors": "Ji Yong Kim, David Mondaca-Ruff, Sandeep Singh, Yu Wang",
+          "journal": "Front Endocrinol (Lausanne)",
+          "year": 2022,
+          "assay": "Review",
+          "species": "human",
+          "relevant_quote": "Under nutrient starvation, SIRT1 facilitates the formation of ATG16-ATG5-ATG12 complex by directly deacetylating ATG5, ATG7, and ATG12, aiding elongation of the autophagic vesicle.",
+          "pmid": "35909524"
+        }
+      ],
+      "pmids": [
+        "18296641",
+        "35909524"
+      ]
+    },
+    {
+      "function": "Autophagosome-Lysosome Fusion",
+      "arrow": "activates",
+      "cellular_process": "Under starvation conditions, SIRT1 deacetylates the transcription factor FOXO1. Deacetylated FOXO1 then increases the expression of Rab7.",
+      "effect_description": "SIRT1 activation promotes the final maturation step of autophagy by upregulating Rab7, a small GTPase essential for the trafficking of mature autophagosomes and their fusion with lysosomes.",
+      "biological_consequence": [
+        "Nutrient starvation → SIRT1 activation → Deacetylation of transcription factor FOXO1 → FOXO1-mediated upregulation of Rab7 expression → Increased Rab7 on autophagosomes and lysosomes → Enhanced autophagosome-lysosome fusion → Autolysosome formation and cargo degradation."
+      ],
+      "specific_effects": [
+        "Regulates the expression of Rab7 via FOXO1 deacetylation",
+        "Plays a role in both early (elongation) and late (fusion) stages of autophagy"
+      ],
+      "evidence": [
+        {
+          "paper_title": "Deacetylation of FoxO by Sirt1 Plays an Essential Role in Mediating Starvation-Induced Autophagy in Cardiac Myocytes",
+          "doi": "10.1161/CIRCRESAHA.110.227371",
+          "authors": "Nirmala Hariharan, Yoshinori Maejima, Jun-ichi Nakae, J. Paik, Ronald A. DePinho, Junichi Sadoshima",
+          "journal": "Circ Res",
+          "year": 2010,
+          "assay": "Western Blot, Adenovirus transfection",
+          "species": "mouse",
+          "relevant_quote": "These results suggest that Sirt1-mediated deacetylation of FoxO1 and upregulation of Rab7 play an important role in mediating starvation-induced increases in autophagic flux...",
+          "pmid": "20947830"
+        }
+      ],
+      "pmids": [
+        "20947830"
+      ]
+    }
+  ],
+  "arrow": "activates",
+  "intent": "acetylation",
+  "mechanism": "SIRT1 is a deacetylase that acts on various autophagy proteins; In response to nutrient starvation, SIRT1 directly deacetylates core components of the ubiquitin-lik; Under starvation conditions, SIRT1 deacetylates the transcription factor FOXO1",
+  "effect": "SIRT1-mediated deacetylation of LC3B promotes its translocation from the nucleus to the cytoplasm, making it available to the core autophagy machinery for lipidation and autophagosome formation.; SIRT1 deacetylates core autophagy proteins ATG5 and ATG7, which promotes the formation of the ATG12-ATG5-ATG16L1 complex and facilitates the elongation of the phagophore membrane.; ...",
+  "summary": "LC3B activates SIRT1 to control multiple cellular processes including lc3b deacetylation and cytoplasmic translocation, deacetylation of core autophagy machinery, and autophagosome-lysosome fusion, ultimately affecting autophagosome formation.",
+  "evidence": [
+    {
+      "paper_title": "SIRT1-dependent deacetylation of LC3 directs autophagy initiation",
+      "doi": "10.1038/celldisc.2016.16",
+      "authors": "Y-H Huang, S-J Chen, C-Y Chen, C-Y Lin, W-W Lin, W-T Jia, C-H Chen, Y-J Chen, Y-H Wei, C-C Chen",
+      "journal": "Cell Discovery",
+      "year": 2016,
+      "assay": "Immunoprecipitation, Mass Spectrometry",
+      "species": "human",
+      "relevant_quote": "Here we show that SIRT1, a NAD+-dependent deacetylase, regulates autophagy by deacetylating LC3. We identified that lysines 49 and 51 of LC3 are acetylated, and SIRT1 deacetylates these two sites."
+    },
+    {
+      "paper_title": "A role for the NAD-dependent deacetylase Sirt1 in the regulation of autophagy",
+      "doi": "10.1073/pnas.0712145105",
+      "authors": "In Hye Lee, Liu Cao, Raul Mostoslavsky, David B Lombard, Jie Liu, Nicholas E Bruns, Maria Tsokos, Frederick W Alt, Toren Finkel",
+      "journal": "Proc Natl Acad Sci U S A",
+      "year": 2008,
+      "assay": "Co-Immunoprecipitation",
+      "species": "mouse",
+      "relevant_quote": "We further demonstrate that Sirt1 can form a molecular complex with several essential components of the autophagy machinery, including autophagy genes (Atg)5, Atg7, and Atg8."
+    },
+    {
+      "paper_title": "SIRT1 and Autophagy: Implications in Endocrine Disorders",
+      "doi": "10.3389/fendo.2022.930919",
+      "authors": "Ji Yong Kim, David Mondaca-Ruff, Sandeep Singh, Yu Wang",
+      "journal": "Front Endocrinol (Lausanne)",
+      "year": 2022,
+      "assay": "Review",
+      "species": "human",
+      "relevant_quote": "Under nutrient starvation, SIRT1 facilitates the formation of ATG16-ATG5-ATG12 complex by directly deacetylating ATG5, ATG7, and ATG12, aiding elongation of the autophagic vesicle."
+    },
+    {
+      "paper_title": "Deacetylation of FoxO by Sirt1 Plays an Essential Role in Mediating Starvation-Induced Autophagy in Cardiac Myocytes",
+      "doi": "10.1161/CIRCRESAHA.110.227371",
+      "authors": "Nirmala Hariharan, Yoshinori Maejima, Jun-ichi Nakae, J. Paik, Ronald A. DePinho, Junichi Sadoshima",
+      "journal": "Circ Res",
+      "year": 2010,
+      "assay": "Western Blot, Adenovirus transfection",
+      "species": "mouse",
+      "relevant_quote": "These results suggest that Sirt1-mediated deacetylation of FoxO1 and upregulation of Rab7 play an important role in mediating starvation-induced increases in autophagic flux..."
+    }
+  ],
+  "_chain_inferred": true,
+  "arrow_notation": "LC3B --activates--> SIRT1:",
+  "protein_a": "LC3B",
+  "protein_b": "SIRT1",
+  "discovered_in_query": "LC3B",
+  "first_discovered": "2025-11-11T15:54:33.441058Z",
+  "last_updated": "2025-11-11T15:54:33.441058Z"
+}

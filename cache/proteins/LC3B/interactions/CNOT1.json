@@ -1,0 +1,84 @@
+{
+  "primary": "CNOT1",
+  "direction": "main_to_primary",
+  "arrow": "activates",
+  "intent": "recruitment",
+  "support_summary": "LC3B directly binds to specific mRNAs and recruits the CCR4-NOT deadenylase complex via its core scaffold component, CNOT1. This interaction is essential for LC3-dependent mRNA degradation (LMD) to promote an efficient autophagic response.",
+  "functions": [
+    {
+      "function": "LC3-Dependent mRNA Decay (LMD)",
+      "arrow": "activates",
+      "cellular_process": "Upon autophagic activation, LC3B acts as an RNA-binding protein. It recruits the CCR4-NOT deadenylase complex by directly associating with the CNOT1 scaffold protein. This brings the complex to target mRNAs, facilitating their rapid deadenylation and subsequent degradation in a process known as LMD.",
+      "effect_description": "Recruitment of the CCR4-NOT complex by LC3B to specific mRNAs initiates their rapid degradation, which is critical for an efficient autophagic response.",
+      "biological_consequence": [
+        "Autophagic activation → LC3B binds target mRNAs → LC3B recruits the CCR4-NOT complex via CNOT1 → Deadenylation and decay of target mRNAs → Downregulation of autophagy inhibitors → Enhanced autophagic flux"
+      ],
+      "specific_effects": [
+        "LC3B acts as an RNA-binding protein that recruits the CCR4-NOT complex",
+        "CNOT1 serves as the scaffold for the CCR4-NOT deadenylase complex",
+        "The association between LC3B and CNOT1 increases upon autophagic activation",
+        "LMD provides a mechanism to rapidly downregulate proteins that inhibit autophagy"
+      ],
+      "evidence": [
+        {
+          "paper_title": "LC3B is an RNA-binding protein to trigger rapid mRNA degradation during autophagy",
+          "doi": "10.1038/s41467-022-29139-1",
+          "authors": "Hwang HJ, Ha H, Lee BS, Kim BH, Song HK, Kim YK",
+          "journal": "Nature Communications",
+          "year": 2022,
+          "assay": "Co-Immunoprecipitation, Proximity Ligation Assay (PLA)",
+          "species": "human",
+          "relevant_quote": "CNOT1, which is the largest component of the CCR4-NOT deadenylase complex and functions as a scaffold protein, coimmunopurified with endogenous LC3B.",
+          "pmid": "35302060"
+        },
+        {
+          "paper_title": "The role of LC3B in autophagy as an RNA-binding protein",
+          "doi": "10.1080/15548627.2022.2111083",
+          "authors": "Hwang HJ, Kim YK",
+          "journal": "Autophagy",
+          "year": 2022,
+          "assay": "Review",
+          "species": "human",
+          "relevant_quote": "Our recent study revealed that LC3B binds to RNAs with a preference for the consensus AAUAAA motif and recruits the CCR4-NOT deadenylase complex.",
+          "pmid": "35968566"
+        }
+      ],
+      "pmids": [
+        "35302060",
+        "35968566"
+      ]
+    }
+  ],
+  "mechanism": "Upon autophagic activation, LC3B acts as an RNA-binding protein. It recruits the CCR4-NOT deadenylase complex by directly associating with the CNOT1 scaffold protein. This brings the complex to target mRNAs, facilitating their rapid deadenylation and subsequent degradation in a process known as LMD.",
+  "effect": "Recruitment of the CCR4-NOT complex by LC3B to specific mRNAs initiates their rapid degradation, which is critical for an efficient autophagic response.",
+  "summary": "LC3B activates CNOT1 to modulate lc3-dependent mrna decay (lmd), ultimately affecting enhanced autophagic flux.",
+  "evidence": [
+    {
+      "paper_title": "LC3B is an RNA-binding protein to trigger rapid mRNA degradation during autophagy",
+      "doi": "10.1038/s41467-022-29139-1",
+      "authors": "Hwang HJ, Ha H, Lee BS, Kim BH, Song HK, Kim YK",
+      "journal": "Nature Communications",
+      "year": 2022,
+      "assay": "Co-Immunoprecipitation, Proximity Ligation Assay (PLA)",
+      "species": "human",
+      "relevant_quote": "CNOT1, which is the largest component of the CCR4-NOT deadenylase complex and functions as a scaffold protein, coimmunopurified with endogenous LC3B."
+    },
+    {
+      "paper_title": "The role of LC3B in autophagy as an RNA-binding protein",
+      "doi": "10.1080/15548627.2022.2111083",
+      "authors": "Hwang HJ, Kim YK",
+      "journal": "Autophagy",
+      "year": 2022,
+      "assay": "Review",
+      "species": "human",
+      "relevant_quote": "Our recent study revealed that LC3B binds to RNAs with a preference for the consensus AAUAAA motif and recruits the CCR4-NOT deadenylase complex."
+    }
+  ],
+  "depth": 1,
+  "arrow_notation": "LC3B --activates--> CNOT1:",
+  "protein_a": "LC3B",
+  "protein_b": "CNOT1",
+  "discovered_in_query": "LC3B",
+  "first_discovered": "2025-11-11T15:54:33.397053Z",
+  "last_updated": "2025-11-11T15:54:33.397053Z"
+}

@@ -1,0 +1,83 @@
+{
+  "primary": "SEC22B",
+  "direction": "primary_to_main",
+  "arrow": "activates",
+  "intent": "vesicle fusion for secretion",
+  "support_summary": "SEC22B is an R-SNARE protein essential for secretory autophagy. It is recruited by the cargo receptor TRIM16 to LC3B-positive vesicles, mediating their fusion with the plasma membrane to enable the unconventional secretion of cytosolic cargo, such as IL-1β.",
+  "functions": [
+    {
+      "function": "Unconventional Protein Secretion (Secretory Autophagy)",
+      "arrow": "activates",
+      "cellular_process": "SEC22B, an R-SNARE protein, is recruited by the cargo receptor TRIM16 to LC3-positive vesicles. It forms a SNARE complex with plasma membrane syntaxins (STX3/4) and SNAPs (SNAP23/29) to drive vesicle fusion.",
+      "effect_description": "Mediates the final fusion step of secretory autophagy, enabling the release of cytosolic cargo from LC3-positive vesicles into the extracellular space.",
+      "biological_consequence": [
+        "TRIM16 recruits cargo (e.g., IL-1β) to an LC3-positive vesicle → SEC22B is recruited to the cargo-loaded vesicle → Vesicle traffics to and docks at the plasma membrane → SEC22B forms a SNARE complex with STX3/4 and SNAP23/29 → Vesicle fuses with the plasma membrane → Unconventional secretion of cytosolic cargo → Pro-inflammatory signaling is activated."
+      ],
+      "specific_effects": [
+        "Required for the secretion of IL-1β via the secretory autophagy pathway",
+        "Its knockdown blocks the secretion step but does not affect the formation of LC3 puncta",
+        "Functions in a complex with TRIM16 to deliver cargo to LC3-II positive membranes"
+      ],
+      "evidence": [
+        {
+          "paper_title": "Dedicated SNAREs and specialized TRIM cargo receptors mediate secretory autophagy",
+          "doi": "10.15252/embj.201695081",
+          "authors": "Tomonori Kimura, Jingyue Jia, Suresh Kumar, Seong Won Choi, Yuexi Gu, Michal Mudd, Nicolas Dupont, Shanya Jiang, Ryan Peters, Farzin Farzam, Ashish Jain, Keith A Lidke, Christopher M Adams, Terje Johansen, Vojo Deretic",
+          "journal": "The EMBO Journal",
+          "year": 2017,
+          "assay": "Co-immunoprecipitation, Confocal microscopy",
+          "species": "human",
+          "relevant_quote": "...the prototypical cytosolic secretory autophagy cargo IL-1β is recognized by specialized secretory autophagy cargo receptor TRIM16 and that this receptor interacts with the R-SNARE Sec22b to recruit cargo to the LC3-II+ sequestration membranes.",
+          "pmid": "27932448"
+        },
+        {
+          "paper_title": "Through the back door: Unconventional protein secretion",
+          "doi": "10.1016/j.tcsw.2020.100045",
+          "authors": "Michael J Cohen, William J Chirico, Peter N Lipke",
+          "journal": "Cell Surface",
+          "year": 2020,
+          "assay": "Review",
+          "species": "human, yeast",
+          "relevant_quote": "Mature IL-1β binds membranes containing Sec22b through TRIM, a specialized cargo receptor. This complex is recruited to LC3-II positive membranes, which subsequently mature into autophagosomes.",
+          "pmid": "33225116"
+        }
+      ],
+      "pmids": [
+        "27932448",
+        "33225116"
+      ]
+    }
+  ],
+  "mechanism": "SEC22B, an R-SNARE protein, is recruited by the cargo receptor TRIM16 to LC3-positive vesicles. It forms a SNARE complex with plasma membrane syntaxins (STX3/4) and SNAPs (SNAP23/29) to drive vesicle fusion.",
+  "effect": "Mediates the final fusion step of secretory autophagy, enabling the release of cytosolic cargo from LC3-positive vesicles into the extracellular space.",
+  "summary": "LC3B activates SEC22B to modulate unconventional protein secretion (secretory autophagy), ultimately affecting pro-inflammatory signaling is activated.",
+  "evidence": [
+    {
+      "paper_title": "Dedicated SNAREs and specialized TRIM cargo receptors mediate secretory autophagy",
+      "doi": "10.15252/embj.201695081",
+      "authors": "Tomonori Kimura, Jingyue Jia, Suresh Kumar, Seong Won Choi, Yuexi Gu, Michal Mudd, Nicolas Dupont, Shanya Jiang, Ryan Peters, Farzin Farzam, Ashish Jain, Keith A Lidke, Christopher M Adams, Terje Johansen, Vojo Deretic",
+      "journal": "The EMBO Journal",
+      "year": 2017,
+      "assay": "Co-immunoprecipitation, Confocal microscopy",
+      "species": "human",
+      "relevant_quote": "...the prototypical cytosolic secretory autophagy cargo IL-1β is recognized by specialized secretory autophagy cargo receptor TRIM16 and that this receptor interacts with the R-SNARE Sec22b to recruit cargo to the LC3-II+ sequestration membranes."
+    },
+    {
+      "paper_title": "Through the back door: Unconventional protein secretion",
+      "doi": "10.1016/j.tcsw.2020.100045",
+      "authors": "Michael J Cohen, William J Chirico, Peter N Lipke",
+      "journal": "Cell Surface",
+      "year": 2020,
+      "assay": "Review",
+      "species": "human, yeast",
+      "relevant_quote": "Mature IL-1β binds membranes containing Sec22b through TRIM, a specialized cargo receptor. This complex is recruited to LC3-II positive membranes, which subsequently mature into autophagosomes."
+    }
+  ],
+  "depth": 1,
+  "arrow_notation": "LC3B <--activates-- SEC22B:",
+  "protein_a": "LC3B",
+  "protein_b": "SEC22B",
+  "discovered_in_query": "LC3B",
+  "first_discovered": "2025-11-11T15:54:33.424289Z",
+  "last_updated": "2025-11-11T15:54:33.424289Z"
+}

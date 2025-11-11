@@ -1,0 +1,77 @@
+{
+  "primary": "TDP43",
+  "interaction_type": "direct",
+  "upstream_interactor": null,
+  "mediator_chain": [],
+  "depth": 1,
+  "support_summary": "Proximity-dependent biotin identification (BioID) and co-immunoprecipitation experiments show that the nuclear protein SFPQ, a core component of paraspeckles, interacts with TDP-43. This interaction is central to the regulation of paraspeckle assembly via the lncRNA NEAT1.",
+  "arrow": "inhibits",
+  "direction": "bidirectional",
+  "intent": "regulation",
+  "functions": [
+    {
+      "function": "Paraspeckle Assembly",
+      "arrow": "inhibits",
+      "cellular_process": "TDP-43 binds to GU-rich motifs in the NEAT1 pre-lncRNA, promoting the selection of a proximal polyadenylation site. This leads to the production of the short NEAT1_1 isoform and prevents the transcription of the long, paraspeckle-scaffolding NEAT1_2 isoform, of which SFPQ is a core architectural component.",
+      "effect_description": "TDP-43-mediated promotion of the short NEAT1_1 isoform actively inhibits the assembly of SFPQ-containing paraspeckle nuclear bodies.",
+      "biological_consequence": [
+        "Nuclear TDP-43 binds NEAT1 pre-lncRNA → Promotes proximal polyadenylation → Increases NEAT1_1 isoform production → Suppresses NEAT1_2 isoform transcription → Prevents SFPQ recruitment and paraspeckle assembly",
+        "Loss of nuclear TDP-43 → Decreased NEAT1 proximal polyadenylation → Upregulation of NEAT1_2 lncRNA isoform → Hyper-assembly of SFPQ-containing paraspeckles → Sequestration of RBPs (e.g., SFPQ, TDP-43) → Widespread gene dysregulation"
+      ],
+      "specific_effects": [
+        "TDP-43 directly binds the NEAT1 transcript to promote production of the short NEAT1_1 isoform, suppressing the long NEAT1_2 isoform required for paraspeckle scaffolding. [15]",
+        "SFPQ is an essential core protein component of paraspeckles, recruited by the NEAT1_2 lncRNA. [20]",
+        "Loss of TDP-43 function leads to NEAT1_2 upregulation and a subsequent increase in paraspeckle formation. [13]",
+        "Assembled paraspeckles can sequester TDP-43, creating a cross-regulatory loop that modulates TDP-43's availability for other mRNA targets. [13, 15]",
+        "TDP-43 acts to prevent FUS-mediated condensation of paraspeckle precursors into mature bodies, localizing to the paraspeckle shell. [16]"
+      ],
+      "evidence": [
+        {
+          "paper_title": "Cross-Regulation between TDP-43 and Paraspeckles Promotes Pluripotency-Differentiation Transition",
+          "doi": "10.1016/j.molcel.2019.03.041",
+          "authors": "Modic M, Grosch M, Rot G, Schirge S, Lepko T, Yamazaki T, Lee FCY, Rusha E, Shaposhnikov D, Palo M, Merl-Pham J, Cacchiarelli D, Rogelj B, Hauck SM, von Mering C, Meissner A, Lickert H, Hirose T, Ule J, Drukker M",
+          "journal": "Molecular Cell",
+          "year": 2019,
+          "assay": "iCLIP, RNA-Seq, Western Blot",
+          "species": "human, mouse",
+          "relevant_quote": "In pluripotent cells, TDP-43 represses the formation of paraspeckles by enhancing the polyadenylated short isoform of Neat1. [13, 15]",
+          "pmid": "31047794"
+        }
+      ],
+      "pmids": [
+        "31047794"
+      ]
+    }
+  ],
+  "mechanism": "TDP-43 binds to GU-rich motifs in the NEAT1 pre-lncRNA, promoting the selection of a proximal polyadenylation site. This leads to the production of the short NEAT1_1 isoform and prevents the transcription of the long, paraspeckle-scaffolding NEAT1_2 isoform, of which SFPQ is a core architectural component.",
+  "effect": "TDP-43-mediated promotion of the short NEAT1_1 isoform actively inhibits the assembly of SFPQ-containing paraspeckle nuclear bodies.",
+  "summary": "TDP43 inhibits SFPQ to modulate paraspeckle assembly, ultimately affecting prevents sfpq recruitment and paraspeckle assembly.",
+  "evidence": [
+    {
+      "paper_title": "Cross-Regulation between TDP-43 and Paraspeckles Promotes Pluripotency-Differentiation Transition",
+      "doi": "10.1016/j.molcel.2019.03.041",
+      "authors": "Modic M, Grosch M, Rot G, Schirge S, Lepko T, Yamazaki T, Lee FCY, Rusha E, Shaposhnikov D, Palo M, Merl-Pham J, Cacchiarelli D, Rogelj B, Hauck SM, von Mering C, Meissner A, Lickert H, Hirose T, Ule J, Drukker M",
+      "journal": "Molecular Cell",
+      "year": 2019,
+      "assay": "iCLIP, RNA-Seq, Western Blot",
+      "species": "human, mouse",
+      "relevant_quote": "In pluripotent cells, TDP-43 represses the formation of paraspeckles by enhancing the polyadenylated short isoform of Neat1. [13, 15]"
+    },
+    {
+      "paper_title": "TDP-43 is a master regulator of paraspeckle condensation",
+      "doi": "10.2139/ssrn.4721338",
+      "authors": "Hodgson R, Huang WP, Kumar V, Shelkovnikova TA",
+      "journal": "bioRxiv (preprint)",
+      "year": 2024,
+      "assay": "Super-resolution microscopy, in vitro condensation assays",
+      "species": "human",
+      "relevant_quote": "TDP-43 has been found to act in preventing FUS-mediated condensation of paraspeckle precursors into the mature spheroid. [16]"
+    }
+  ],
+  "arrow_notation": "TDP43 <--inhibits--> SFPQ:",
+  "protein_a": "SFPQ",
+  "protein_b": "TDP43",
+  "discovered_in_query": "TDP43",
+  "first_discovered": "2025-11-11T16:36:28.252160Z",
+  "last_updated": "2025-11-11T16:36:28.252160Z"
+}

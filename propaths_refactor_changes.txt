@@ -1,0 +1,799 @@
+diff --git a/__pycache__/runner.cpython-313.pyc b/__pycache__/runner.cpython-313.pyc
+index 60bfef4..28033df 100644
+Binary files a/__pycache__/runner.cpython-313.pyc and b/__pycache__/runner.cpython-313.pyc differ
+diff --git a/__pycache__/visualizer.cpython-313.pyc b/__pycache__/visualizer.cpython-313.pyc
+index 8e537d3..7b9137c 100644
+Binary files a/__pycache__/visualizer.cpython-313.pyc and b/__pycache__/visualizer.cpython-313.pyc differ
+diff --git a/app.py b/app.py
+index 21e3ac2..3a0b53f 100644
+--- a/app.py
++++ b/app.py
+@@ -91,6 +91,56 @@ def index():
+     """Serves the main HTML page."""
+     return render_template('index.html')
+ 
++@app.route('/api/search/<protein>')
++def search_protein(protein):
++    """
++    Search for a protein in the database (no querying/research).
++
++    Returns:
++        JSON: {
++            "status": "found" | "not_found",
++            "protein": str,
++            "has_interactions": bool (if found)
++        }
++    """
++    # Validate protein name
++    if not re.match(r'^[a-zA-Z0-9_-]+$', protein):
++        return jsonify({
++            "error": "Invalid protein name format. Please use only letters, numbers, hyphens, and underscores."
++        }), 400
++
++    try:
++        from models import Protein, Interaction
++
++        # Check if protein exists in database
++        protein_obj = Protein.query.filter_by(symbol=protein).first()
++
++        if not protein_obj:
++            return jsonify({
++                "status": "not_found",
++                "protein": protein
++            })
++
++        # Count interactions (bidirectional due to canonical ordering)
++        interaction_count = db.session.query(Interaction).filter(
++            (Interaction.protein_a_id == protein_obj.id) |
++            (Interaction.protein_b_id == protein_obj.id)
++        ).count()
++
++        return jsonify({
++            "status": "found",
++            "protein": protein,
++            "has_interactions": interaction_count > 0,
++            "interaction_count": interaction_count,
++            "last_queried": protein_obj.last_queried.isoformat() if protein_obj.last_queried else None,
++            "query_count": protein_obj.query_count
++        })
++
++    except Exception as e:
++        print(f"⚠️  Search failed: {e}", file=sys.stderr)
++        return jsonify({"error": "Database search failed"}), 500
++
++
+ @app.route('/api/query', methods=['POST'])
+ def start_query():
+     """Starts a new pipeline job in the background."""
+@@ -127,30 +177,12 @@ def start_query():
+     # Extract skip_deduplicator option (default: False)
+     skip_deduplicator = bool(data.get('skip_deduplicator', False))
+ 
+-    # 1. Check if protein exists in NEW PostgreSQL database (instant load!)
+-    try:
+-        from models import Protein
+-        protein_in_db = Protein.query.filter_by(symbol=protein_name).first()
+-        if protein_in_db and protein_in_db.total_interactions > 0:
+-            # Has data in database - return instantly!
+-            print(f"[DB INSTANT] {protein_name} found in PostgreSQL with {protein_in_db.total_interactions} interactions - instant load!", file=sys.stderr)
+-            return jsonify({
+-                "status": "complete",
+-                "protein": protein_name,
+-                "source": "database",
+-                "count": protein_in_db.total_interactions
+-            })
+-    except Exception as e:
+-        print(f"⚠️  Database check failed: {e}", file=sys.stderr)
+-
+-    # 2. Fallback: Check old file cache (during transition period)
+-    cache_path = os.path.join(CACHE_DIR, f"{protein_name}.json")
+-    if os.path.exists(cache_path):
+-        print(f"[CACHE INSTANT] {protein_name} found in file cache - instant load!", file=sys.stderr)
+-        return jsonify({"status": "complete", "protein": protein_name, "source": "cache"})
++    # No instant returns - always run pipeline
++    # This allows finding NEW interactions for existing proteins
++    # The pipeline has built-in history awareness via known_interactions context
+ 
+     with jobs_lock:
+-        # 3. Check if a job for this protein is already running
++        # Check if a job for this protein is already running
+         current_job = jobs.get(protein_name)
+         if current_job:
+             # Only prevent starting a new job if one is actively processing
+@@ -166,7 +198,7 @@ def start_query():
+                     # Job is actively running
+                     return jsonify({"status": "processing", "message": "Job already in progress."})
+ 
+-        # 4. Start a new job with configuration and cancellation event
++        # Start a new job with configuration and cancellation event
+         cancel_event = threading.Event()
+         jobs[protein_name] = {
+             "status": "processing",
+@@ -185,7 +217,13 @@ def start_query():
+ 
+ @app.route('/api/requery', methods=['POST'])
+ def start_requery():
+-    """Re-queries a protein with context from previous results to find NEW interactors/functions."""
++    """
++    DEPRECATED: Use /api/query instead (which now handles both new and existing proteins).
++
++    This endpoint is kept for backward compatibility only.
++    Re-queries a protein with context from previous results to find NEW interactors/functions.
++    """
++    print("⚠️  DEPRECATED: /api/requery called. Use /api/query instead.", file=sys.stderr)
+     data = request.json
+     protein_name = data.get('protein')
+     if not protein_name:
+@@ -731,45 +769,37 @@ def build_expansion_json_from_db(protein_symbol: str, visible_proteins: list = N
+ @app.route('/api/results/<protein>')
+ def get_results(protein):
+     """
+-    Serves complete JSON data for a protein.
+-
+-    NEW: Builds from PostgreSQL database (full snapshot_json + ctx_json).
+-    Fallback: Old file cache if database doesn't have data.
++    Serves complete JSON data for a protein from PostgreSQL database.
+ 
+     Returns:
+         JSON: {snapshot_json: {...}, ctx_json: {...}}
+     """
+-    # Try to build from NEW PostgreSQL database first
++    # Build from PostgreSQL database (no file cache fallback)
+     try:
+         result = build_full_json_from_db(protein)
+         if result:
+             return jsonify(result)
++        else:
++            return jsonify({"error": "Protein not found in database"}), 404
+     except Exception as e:
+         print(f"⚠️  Database query failed: {e}", file=sys.stderr)
+-
+-    # Fallback to old file cache
+-    cache_file = os.path.join(CACHE_DIR, f"{protein}.json")
+-    if os.path.exists(cache_file):
+-        return send_from_directory(CACHE_DIR, f"{protein}.json")
+-
+-    return jsonify({"error": "Protein not found"}), 404
++        import traceback
++        traceback.print_exc()
++        return jsonify({"error": "Database query failed"}), 500
+ 
+ @app.route('/api/visualize/<protein>')
+ def get_visualization(protein):
+     """
+-    Generates and serves HTML visualization.
+-
+-    NEW: Builds from PostgreSQL database, passes dict to visualizer.
+-    Fallback: Old file cache if database doesn't have data.
++    Generates and serves HTML visualization from PostgreSQL database.
+ 
+     Returns:
+         HTML string
+     """
+-    # Try to build from NEW PostgreSQL database first
++    # Build from PostgreSQL database (no file cache fallback)
+     try:
+         result = build_full_json_from_db(protein)
+         if result:
+-            # Pass dict to visualizer (will be updated in next step)
++            # Pass dict to visualizer
+             from visualizer import create_visualization_from_dict
+             html = create_visualization_from_dict(result)
+ 
+@@ -780,25 +810,13 @@ def get_visualization(protein):
+             response.headers['Pragma'] = 'no-cache'
+             response.headers['Expires'] = '0'
+             return response
++        else:
++            return "Protein not found in database.", 404
+     except Exception as e:
+         print(f"⚠️  Database visualization failed: {e}", file=sys.stderr)
+-
+-    # Fallback to old file cache
+-    json_path = os.path.join(CACHE_DIR, f"{protein}.json")
+-    if os.path.exists(json_path):
+-        # Use old visualizer method (file-based)
+-        # Pass json_path as first arg (loads from file), no output_path (returns HTML)
+-        html = create_visualization(json_path, output_path=None)
+-
+-        from flask import make_response
+-        response = make_response(html)
+-        response.headers['Cache-Control'] = 'no-cache, no-store, must-revalidate'
+-        response.headers['Pragma'] = 'no-cache'
+-        response.headers['Expires'] = '0'
+-        return response
+-
+-    # Protein not found in database or cache
+-    return "Protein not found.", 404
++        import traceback
++        traceback.print_exc()
++        return "Visualization failed. Check server logs.", 500
+ 
+ 
+ # ---------------------------
+diff --git a/runner.py b/runner.py
+index 6fc48e4..3ff2958 100644
+--- a/runner.py
++++ b/runner.py
+@@ -1203,14 +1203,49 @@ def run_full_job(
+     print(f"[PROGRESS] Total steps calculated: {total_steps} (pipeline: {pipeline_step_count}, post: {post_steps})", file=sys.stderr)
+ 
+     try:
+-        # --- STAGE 0: Load known interactions from database ---
++        # --- STAGE 0: Load known interactions from PostgreSQL database ---
+         update_status("Loading known interactions from database...")
+-        known_interactions = pdb.get_all_interactions(user_query)
+ 
+-        if known_interactions:
+-            print(f"[DB] Found {len(known_interactions)} known interactions for {user_query}", file=sys.stderr)
+-        else:
+-            print(f"[DB] No known interactions found for {user_query} - first query", file=sys.stderr)
++        # Use PostgreSQL instead of file-based protein_database
++        known_interactions = []
++        try:
++            if flask_app is not None:
++                with flask_app.app_context():
++                    from models import Protein, Interaction
++                    from app import db
++
++                    # Query for existing protein
++                    protein_obj = Protein.query.filter_by(symbol=user_query).first()
++
++                    if protein_obj:
++                        # Get all interactions (bidirectional due to canonical ordering)
++                        db_interactions = db.session.query(Interaction).filter(
++                            (Interaction.protein_a_id == protein_obj.id) |
++                            (Interaction.protein_b_id == protein_obj.id)
++                        ).all()
++
++                        # Convert to interactor format for exclusion context
++                        for interaction in db_interactions:
++                            # Determine partner
++                            if interaction.protein_a_id == protein_obj.id:
++                                partner = interaction.protein_b
++                            else:
++                                partner = interaction.protein_a
++
++                            # Extract minimal data needed for exclusion
++                            known_interactions.append({
++                                "primary": partner.symbol,
++                                "confidence": interaction.confidence or 0.5,
++                                "arrow": interaction.arrow or "binds"
++                            })
++
++            if known_interactions:
++                print(f"[DB] Found {len(known_interactions)} known interactions for {user_query}", file=sys.stderr)
++            else:
++                print(f"[DB] No known interactions found for {user_query} - first query", file=sys.stderr)
++        except Exception as e:
++            print(f"⚠️  Failed to load known interactions: {e}", file=sys.stderr)
++            known_interactions = []
+ 
+         # --- STAGE 1: Run the main pipeline with known interactions context ---
+         pipeline_payload = _run_main_pipeline_for_web(
+diff --git a/static/script.js b/static/script.js
+index cffb611..c4473fd 100644
+--- a/static/script.js
++++ b/static/script.js
+@@ -77,10 +77,64 @@ document.addEventListener('DOMContentLoaded', () => {
+                 return;
+             }
+ 
+-            startQuery(proteinName);
++            // NEW: Search first, then show query prompt if not found
++            searchProtein(proteinName);
+         });
+     }
+ 
++    // NEW: Search protein in database first
++    const searchProtein = async (proteinName) => {
++        updateStatus({ text: `Searching for ${proteinName}...` });
++
++        try {
++            const response = await fetch(`/api/search/${encodeURIComponent(proteinName)}`);
++
++            if (!response.ok) {
++                const errorData = await response.json();
++                updateStatus({ text: errorData.error || 'Search failed' });
++                return;
++            }
++
++            const data = await response.json();
++            console.log('[DEBUG] Search result:', data);
++
++            if (data.status === 'found') {
++                // Protein exists in database - navigate immediately
++                updateStatus({ text: `Found! Loading visualization for ${proteinName}...` });
++                window.location.href = `/api/visualize/${encodeURIComponent(proteinName)}?t=${Date.now()}`;
++            } else {
++                // Protein not in database - show query prompt
++                showQueryPrompt(proteinName);
++            }
++        } catch (error) {
++            console.error('[ERROR] Search failed:', error);
++            updateStatus({ text: 'Failed to search database.' });
++        }
++    };
++
++    // Show "not found" message with "Start Query" button
++    const showQueryPrompt = (proteinName) => {
++        const message = `
++            <div style="text-align: center; padding: 20px;">
++                <p style="font-size: 16px; color: #6b7280; margin-bottom: 16px;">
++                    Protein <strong>${proteinName}</strong> not found in database.
++                </p>
++                <button onclick="window.startQueryFromPrompt('${proteinName}')"
++                        style="padding: 10px 20px; background: #3b82f6; color: white; border: none; border-radius: 6px; font-weight: 500; cursor: pointer; font-size: 14px;">
++                    Start Research Query
++                </button>
++            </div>
++        `;
++        statusMessage.style.display = 'block';
++        progressWrapper.style.display = 'none';
++        statusMessage.innerHTML = message;
++    };
++
++    // Make startQuery available globally for the button onclick
++    window.startQueryFromPrompt = (proteinName) => {
++        startQuery(proteinName);
++    };
++
+     const startQuery = async (proteinName) => {
+         // Stop any existing polling before starting a new query
+         if (pollingIntervalId) {
+@@ -122,7 +176,7 @@ document.addEventListener('DOMContentLoaded', () => {
+         localStorage.setItem('skip_validation', skipValidation);
+         localStorage.setItem('skip_deduplicator', skipDeduplicator);
+ 
+-        updateStatus({ text: `Checking for ${proteinName}...` });
++        updateStatus({ text: `Starting research query...` });
+         try {
+             console.log(`[DEBUG] Starting query for: ${proteinName}`);
+             console.log(`[DEBUG] Config: interactor=${interactorRounds}, function=${functionRounds}, skip=${skipValidation}`);
+@@ -147,11 +201,7 @@ document.addEventListener('DOMContentLoaded', () => {
+ 
+             console.log(`[DEBUG] Response data:`, data);
+ 
+-            if (data.status === 'complete') {
+-                updateStatus({ text: `Cached result found! Loading visualization for ${proteinName}...` });
+-                // Add timestamp to force refresh even for cached results
+-                window.location.href = `/api/visualize/${proteinName}?t=${Date.now()}`;
+-            } else if (data.status === 'processing') {
++            if (data.status === 'processing') {
+                 pollStatus(proteinName);
+             } else {
+                 updateStatus({ text: `Error: ${data.message || 'Unknown error'}` });
+diff --git a/utils/db_sync.py b/utils/db_sync.py
+index 9a70204..a87cd25 100644
+--- a/utils/db_sync.py
++++ b/utils/db_sync.py
+@@ -114,6 +114,12 @@ class DatabaseSyncLayer:
+                     else:
+                         stats["interactions_updated"] += 1
+ 
++                    # Update partner protein's total_interactions count (bidirectional)
++                    partner_protein.total_interactions = db.session.query(Interaction).filter(
++                        (Interaction.protein_a_id == partner_protein.id) |
++                        (Interaction.protein_b_id == partner_protein.id)
++                    ).count()
++
+                     # Process chain relationships for indirect interactions
+                     if interactor_data.get("interaction_type") == "indirect":
+                         chain_stats = self.sync_chain_relationships(
+@@ -126,7 +132,13 @@ class DatabaseSyncLayer:
+                 # Step 4: Update main protein metadata
+                 main_protein.last_queried = datetime.utcnow()
+                 main_protein.query_count += 1
+-                main_protein.total_interactions = len(interactors)
++
++                # CRITICAL: Count ALL interactions (bidirectional due to canonical ordering)
++                # This includes reverse links where protein was discovered as someone else's interactor
++                main_protein.total_interactions = db.session.query(Interaction).filter(
++                    (Interaction.protein_a_id == main_protein.id) |
++                    (Interaction.protein_b_id == main_protein.id)
++                ).count()
+ 
+             # Commit transaction
+             db.session.commit()
+diff --git a/visualizer.py b/visualizer.py
+index 4dc03ae..55c77d2 100644
+--- a/visualizer.py
++++ b/visualizer.py
+@@ -1443,6 +1443,7 @@ HTML = r"""<!DOCTYPE html>
+       flex: 1;
+       display: flex;
+       flex-direction: column;
++      font-family: var(--font-sans);
+     }
+ 
+     /* Modal Footer - Sticky at bottom */
+@@ -4703,7 +4704,7 @@ function createSimulation(){
+         .attr('class','node main-node')
+         .attr('r', mainNodeRadius)
+         .style('cursor','pointer')
+-        .on('click', (ev)=>{ ev.stopPropagation(); requeryMainProtein(); });
++        .on('click', (ev)=>{ ev.stopPropagation(); handleNodeClick(d); });
+       group.append('text').attr('class','node-label').attr('dy',5).text(d.label);
+     } else if (d.type==='interactor'){
+       // Check if this interactor has been expanded (is a cluster center)
+@@ -5322,28 +5323,65 @@ function showInteractionModal(link, clickedNode = null){
+     const proteinLabel = clickedProteinId;
+     const isExpanded = expanded.has(clickedProteinId);
+     const canExpand = (depthMap.get(clickedProteinId) ?? 1) < MAX_DEPTH;
+-
+-    footerHTML = `
+-      <div class="modal-footer">
+-        <div style="display: flex; gap: 10px; align-items: center;">
+-          ${canExpand && !isExpanded ? `
+-            <button onclick="handleExpandFromModal('${clickedProteinId}')" class="btn-primary" style="padding: 8px 16px; background: #3b82f6; color: white; border: none; border-radius: 6px; font-weight: 500; cursor: pointer; font-size: 14px; transition: background 0.2s;">
+-              Expand ${escapeHtml(proteinLabel)}
+-            </button>
+-          ` : ''}
+-          ${isExpanded ? `
+-            <button onclick="handleCollapseFromModal('${clickedProteinId}')" class="btn-secondary" style="padding: 8px 16px; background: #ef4444; color: white; border: none; border-radius: 6px; font-weight: 500; cursor: pointer; font-size: 14px; transition: background 0.2s;">
+-              Collapse ${escapeHtml(proteinLabel)}
++    const isMainProtein = clickedProteinId === SNAP.main;
++    const hasInteractions = true; // Always true for showInteractionModal (single link exists)
++
++    if (isMainProtein) {
++      // Main protein: Only show "Find New Interactions" button
++      footerHTML = `
++        <div class="modal-footer" style="border-top: 1px solid var(--color-border); padding: 16px; background: var(--color-bg-secondary);">
++          <button onclick="handleQueryFromModal('${clickedProteinId}')"
++                  class="btn-primary"
++                  style="padding: 8px 20px; background: #10b981; color: white; border: none; border-radius: 6px; font-weight: 500; cursor: pointer; font-size: 14px; transition: background 0.2s; font-family: var(--font-sans);">
++            Find New Interactions
++          </button>
++          <p style="font-size: 12px; color: #6b7280; margin-top: 8px; margin-bottom: 0; font-family: var(--font-sans);">
++            Research new interactors for ${escapeHtml(proteinLabel)}
++          </p>
++        </div>
++      `;
++    } else {
++      // Interactor: Show Expand (conditional) + Query buttons
++      footerHTML = `
++        <div class="modal-footer" style="border-top: 1px solid var(--color-border); padding: 16px; background: var(--color-bg-secondary);">
++          <div style="display: flex; gap: 12px; margin-bottom: 8px;">
++            ${canExpand && !isExpanded && hasInteractions ? `
++              <button onclick="handleExpandFromModal('${clickedProteinId}')"
++                      class="btn-primary"
++                      style="padding: 8px 20px; background: #3b82f6; color: white; border: none; border-radius: 6px; font-weight: 500; cursor: pointer; font-size: 14px; transition: background 0.2s; font-family: var(--font-sans);">
++                Expand
++              </button>
++            ` : ''}
++            ${canExpand && !isExpanded && !hasInteractions ? `
++              <button disabled
++                      style="padding: 8px 20px; background: #d1d5db; color: #6b7280; border: none; border-radius: 6px; font-weight: 500; font-size: 14px; cursor: not-allowed; font-family: var(--font-sans);">
++                Expand (No data)
++              </button>
++            ` : ''}
++            ${isExpanded ? `
++              <button onclick="handleCollapseFromModal('${clickedProteinId}')"
++                      class="btn-secondary"
++                      style="padding: 8px 20px; background: #ef4444; color: white; border: none; border-radius: 6px; font-weight: 500; cursor: pointer; font-size: 14px; transition: background 0.2s; font-family: var(--font-sans);">
++                Collapse
++              </button>
++            ` : ''}
++            ${!canExpand && !isExpanded ? `
++              <div style="padding: 8px 20px; background: #f3f4f6; color: #6b7280; border-radius: 6px; font-size: 13px; font-style: italic; font-family: var(--font-sans);">
++                Max depth reached
++              </div>
++            ` : ''}
++            <button onclick="handleQueryFromModal('${clickedProteinId}')"
++                    class="btn-query"
++                    style="padding: 8px 20px; background: #10b981; color: white; border: none; border-radius: 6px; font-weight: 500; cursor: pointer; font-size: 14px; transition: background 0.2s; font-family: var(--font-sans);">
++              Query
+             </button>
+-          ` : ''}
+-          ${!canExpand && !isExpanded ? `
+-            <div style="padding: 8px 16px; background: #f3f4f6; color: #6b7280; border-radius: 6px; font-size: 13px; font-style: italic;">
+-              Max depth reached (${MAX_DEPTH})
+-            </div>
+-          ` : ''}
++          </div>
++          <p style="font-size: 12px; color: #6b7280; margin: 0; font-family: var(--font-sans);">
++            Expand uses existing data • Query finds new interactions
++          </p>
+         </div>
+-      </div>
+-    `;
++      `;
++    }
+   }
+ 
+   // === BUILD MODAL TITLE WITH TYPE BADGE ===
+@@ -5578,29 +5616,70 @@ function showAggregatedInteractionsModal(nodeLinks, clickedNode) {
+     });
+   }
+ 
+-  // Expand/collapse footer
++  // Expand/collapse footer with Query button
+   const isExpanded = expanded.has(nodeId);
+   const canExpand = (depthMap.get(nodeId) ?? 1) < MAX_DEPTH;
++  const isMainProtein = nodeId === SNAP.main;
++  const hasInteractions = nodeLinks.length > 0;
+ 
+-  const footerHTML = `
+-    <div class="modal-footer" style="border-top: 1px solid var(--color-border); padding: 16px; background: var(--color-bg-secondary); display: flex; gap: 10px; align-items: center;">
+-      ${canExpand && !isExpanded ? `
+-        <button onclick="handleExpandFromModal('${nodeId}')" class="btn-primary" style="padding: 8px 16px; background: #3b82f6; color: white; border: none; border-radius: 6px; font-weight: 500; cursor: pointer; font-size: 14px; transition: background 0.2s;">
+-          Expand ${escapeHtml(nodeLabel)}
+-        </button>
+-      ` : ''}
+-      ${isExpanded ? `
+-        <button onclick="handleCollapseFromModal('${nodeId}')" class="btn-secondary" style="padding: 8px 16px; background: #ef4444; color: white; border: none; border-radius: 6px; font-weight: 500; cursor: pointer; font-size: 14px; transition: background 0.2s;">
+-          Collapse ${escapeHtml(nodeLabel)}
++  let footerHTML = '';
++
++  if (isMainProtein) {
++    // Main protein: Only show "Find New Interactions" button
++    footerHTML = `
++      <div class="modal-footer" style="border-top: 1px solid var(--color-border); padding: 16px; background: var(--color-bg-secondary);">
++        <button onclick="handleQueryFromModal('${nodeId}')"
++                class="btn-primary"
++                style="padding: 8px 20px; background: #10b981; color: white; border: none; border-radius: 6px; font-weight: 500; cursor: pointer; font-size: 14px; transition: background 0.2s; font-family: var(--font-sans);">
++          Find New Interactions
+         </button>
+-      ` : ''}
+-      ${!canExpand && !isExpanded ? `
+-        <div style="padding: 8px 16px; background: #f3f4f6; color: #6b7280; border-radius: 6px; font-size: 13px; font-style: italic;">
+-          Max depth reached (${MAX_DEPTH})
++        <p style="font-size: 12px; color: #6b7280; margin-top: 8px; margin-bottom: 0; font-family: var(--font-sans);">
++          Research new interactors for ${escapeHtml(nodeLabel)}
++        </p>
++      </div>
++    `;
++  } else {
++    // Interactor: Show Expand (conditional) + Query buttons
++    footerHTML = `
++      <div class="modal-footer" style="border-top: 1px solid var(--color-border); padding: 16px; background: var(--color-bg-secondary);">
++        <div style="display: flex; gap: 12px; margin-bottom: 8px;">
++          ${canExpand && !isExpanded && hasInteractions ? `
++            <button onclick="handleExpandFromModal('${nodeId}')"
++                    class="btn-primary"
++                    style="padding: 8px 20px; background: #3b82f6; color: white; border: none; border-radius: 6px; font-weight: 500; cursor: pointer; font-size: 14px; transition: background 0.2s; font-family: var(--font-sans);">
++              Expand
++            </button>
++          ` : ''}
++          ${canExpand && !isExpanded && !hasInteractions ? `
++            <button disabled
++                    style="padding: 8px 20px; background: #d1d5db; color: #6b7280; border: none; border-radius: 6px; font-weight: 500; font-size: 14px; cursor: not-allowed; font-family: var(--font-sans);">
++              Expand (No data)
++            </button>
++          ` : ''}
++          ${isExpanded ? `
++            <button onclick="handleCollapseFromModal('${nodeId}')"
++                    class="btn-secondary"
++                    style="padding: 8px 20px; background: #ef4444; color: white; border: none; border-radius: 6px; font-weight: 500; cursor: pointer; font-size: 14px; transition: background 0.2s; font-family: var(--font-sans);">
++              Collapse
++            </button>
++          ` : ''}
++          ${!canExpand && !isExpanded ? `
++            <div style="padding: 8px 20px; background: #f3f4f6; color: #6b7280; border-radius: 6px; font-size: 13px; font-style: italic; font-family: var(--font-sans);">
++              Max depth reached
++            </div>
++          ` : ''}
++          <button onclick="handleQueryFromModal('${nodeId}')"
++                  class="btn-query"
++                  style="padding: 8px 20px; background: #10b981; color: white; border: none; border-radius: 6px; font-weight: 500; cursor: pointer; font-size: 14px; transition: background 0.2s; font-family: var(--font-sans);">
++            Query
++          </button>
+         </div>
+-      ` : ''}
+-    </div>
+-  `;
++        <p style="font-size: 12px; color: #6b7280; margin: 0; font-family: var(--font-sans);">
++          Expand uses existing data • Query finds new interactions
++        </p>
++      </div>
++    `;
++  }
+ 
+   const modalTitle = `${escapeHtml(nodeLabel)} - All Interactions (${nodeLinks.length})`;
+   const modalContent = `
+@@ -5622,6 +5701,53 @@ function handleExpandFromModal(proteinId){
+   }
+ }
+ 
++async function handleQueryFromModal(proteinId) {
++  closeModal();
++
++  // Get config from localStorage
++  const config = {
++    protein: proteinId,
++    interactor_rounds: parseInt(localStorage.getItem('interactor_rounds')) || 3,
++    function_rounds: parseInt(localStorage.getItem('function_rounds')) || 3,
++    max_depth: parseInt(localStorage.getItem('max_depth')) || 3,
++    skip_validation: localStorage.getItem('skip_validation') === 'true',
++    skip_deduplicator: localStorage.getItem('skip_deduplicator') === 'true'
++  };
++
++  // Show progress in mini progress bar
++  miniProgress(`Querying ${proteinId}...`, null, null, proteinId);
++
++  try {
++    // Start query
++    const response = await fetch('/api/query', {
++      method: 'POST',
++      headers: { 'Content-Type': 'application/json' },
++      body: JSON.stringify(config)
++    });
++
++    if (!response.ok) throw new Error('Failed to start query');
++    const data = await response.json();
++
++    if (data.status === 'processing') {
++      // Poll for completion
++      await pollUntilComplete(proteinId, ({ current, total, text }) => {
++        miniProgress(text || 'Processing', current, total, proteinId);
++      });
++
++      // Reload page to show updated data
++      miniDone(`<span>Query complete for <b>${proteinId}</b>! Reloading...</span>`);
++      setTimeout(() => {
++        window.location.reload();
++      }, 1000);
++    } else {
++      miniDone(`<span style="color:#dc2626;">Query failed: ${data.message || 'Unknown error'}</span>`);
++    }
++  } catch (error) {
++    console.error('[ERROR] Query from modal failed:', error);
++    miniDone(`<span style="color:#dc2626;">Query failed: ${error.message}</span>`);
++  }
++}
++
+ function handleCollapseFromModal(proteinId){
+   closeModal();
+   collapseInteractor(proteinId);
+@@ -5933,6 +6059,91 @@ async function pollUntilComplete(p, onUpdate){
+   }
+ }
+ 
++// === Search and Query Functions for Visualizer ===
++async function searchProteinFromVisualizer(proteinName) {
++  if (!proteinName || !/^[a-zA-Z0-9_-]+$/.test(proteinName)) {
++    miniDone('<span style="color:#dc2626;">Invalid protein name format</span>');
++    return;
++  }
++
++  miniProgress('Searching...', null, null, proteinName);
++
++  try {
++    const response = await fetch(`/api/search/${encodeURIComponent(proteinName)}`);
++    if (!response.ok) {
++      miniDone('<span style="color:#dc2626;">Search failed</span>');
++      return;
++    }
++
++    const data = await response.json();
++    console.log('[DEBUG] Search result:', data);
++
++    if (data.status === 'found') {
++      // Navigate to that protein's page
++      miniDone(`<span>Found! Loading <b>${proteinName}</b>...</span>`);
++      window.location.href = `/api/visualize/${encodeURIComponent(proteinName)}?t=${Date.now()}`;
++    } else {
++      // Show query prompt in notification area
++      const msg = document.getElementById('notification-message');
++      if (msg) {
++        msg.innerHTML = `
++          <span style="color: #6b7280;">
++            Protein <strong>${escapeHtml(proteinName)}</strong> not in database.
++            <button onclick="startQueryFromVisualizer('${escapeHtml(proteinName)}')"
++                    style="margin-left:8px; padding:6px 12px; background:#10b981; color:white; border:none; border-radius:4px; cursor:pointer; font-weight:500;">
++              Start Query
++            </button>
++          </span>
++        `;
++      }
++    }
++  } catch (error) {
++    console.error('[ERROR] Search failed:', error);
++    miniDone('<span style="color:#dc2626;">Failed to search database</span>');
++  }
++}
++
++async function startQueryFromVisualizer(proteinName) {
++  // Get config from localStorage (set by index page)
++  const config = {
++    protein: proteinName,
++    interactor_rounds: parseInt(localStorage.getItem('interactor_rounds')) || 3,
++    function_rounds: parseInt(localStorage.getItem('function_rounds')) || 3,
++    max_depth: parseInt(localStorage.getItem('max_depth')) || 3,
++    skip_validation: localStorage.getItem('skip_validation') === 'true',
++    skip_deduplicator: localStorage.getItem('skip_deduplicator') === 'true'
++  };
++
++  miniProgress('Starting query...', null, null, proteinName);
++
++  try {
++    const response = await fetch('/api/query', {
++      method: 'POST',
++      headers: { 'Content-Type': 'application/json' },
++      body: JSON.stringify(config)
++    });
++
++    if (!response.ok) throw new Error('Query failed');
++    const data = await response.json();
++
++    if (data.status === 'processing') {
++      await pollUntilComplete(proteinName, ({ current, total, text }) =>
++        miniProgress(text || 'Processing', current, total, proteinName)
++      );
++      // Navigate to the new protein's page
++      miniDone(`<span>Query complete! Loading <b>${proteinName}</b>...</span>`);
++      setTimeout(() => {
++        window.location.href = `/api/visualize/${encodeURIComponent(proteinName)}?t=${Date.now()}`;
++      }, 1000);
++    } else {
++      miniDone(`<span style="color:#dc2626;">Query failed: ${data.message || 'Unknown error'}</span>`);
++    }
++  } catch (error) {
++    console.error('[ERROR] Query failed:', error);
++    miniDone(`<span style="color:#dc2626;">Query failed: ${error.message}</span>`);
++  }
++}
++
+ // === Pruned expansion (client prefers prune, falls back to full) ===
+ const PRUNE_KEEP = 20;  // (#2) client cap; backend will enforce its own hard cap
+ 
+@@ -6013,8 +6224,17 @@ async function tryPrunedExpand(interNode) {
+   const jobId = j.job_id;
+ 
+   if (j.status === 'needs_full') {
+-    await queueAndWaitFull(interNode.id);
+-    return await tryPrunedExpand(interNode); // re-enter prune after full is built
++    // DON'T auto-queue - show message instead
++    miniDone(`
++      <span style="color: #6b7280;">
++        No data for <b>${escapeHtml(interNode.id)}</b>.
++        <button onclick="handleQueryFromModal('${escapeHtml(interNode.id)}')"
++                style="margin-left:8px; padding:4px 8px; background:#10b981; color:white; border:none; border-radius:4px; cursor:pointer; font-size:12px; font-weight:500;">
++          Query Now
++        </button>
++      </span>
++    `);
++    return; // Exit early
+   }
+ 
+   if (j.status === 'queued' || j.status === 'processing') {
+@@ -6047,20 +6267,16 @@ async function expandViaFullFlow(interNode) {
+     return;
+   }
+   if (res.status === 404) {
+-    try {
+-      await queueAndWaitFull(id);
+-    } catch (e) {
+-      // Re-throw cancellation errors
+-      if (e instanceof CancellationError || e.name === 'CancellationError') {
+-        throw e;
+-      }
+-      throw e;
+-    }
+-    const r2 = await fetch(`/api/results/${encodeURIComponent(id)}`);
+-    if (!r2.ok) { miniDone(`<span>No results for ${id} after job.</span>`); return; }
+-    const raw2 = await r2.json();
+-    await mergeSubgraph(raw2, interNode);
+-    miniDone(`<span>Added subgraph for <b>${id}</b>.</span>`);
++    // DON'T auto-query - show message instead
++    miniDone(`
++      <span style="color: #6b7280;">
++        No data for <b>${escapeHtml(id)}</b>.
++        <button onclick="handleQueryFromModal('${escapeHtml(id)}')"
++                style="margin-left:8px; padding:4px 8px; background:#10b981; color:white; border:none; border-radius:4px; cursor:pointer; font-size:12px; font-weight:500;">
++          Query Now
++        </button>
++      </span>
++    `);
+     return;
+   }
+   miniDone(`<span>Error loading ${id}: ${res.status}</span>`);
+@@ -6616,7 +6832,7 @@ function updateGraphWithTransitions(){
+         .attr('class','node main-node')
+         .attr('r', mainNodeRadius)
+         .style('cursor','pointer')
+-        .on('click', (ev)=>{ ev.stopPropagation(); requeryMainProtein(); });
++        .on('click', (ev)=>{ ev.stopPropagation(); handleNodeClick(d); });
+       group.append('text').attr('class','node-label').attr('dy',5).text(d.label);
+     } else if (d.type==='interactor'){
+       // Check if this interactor has been expanded (is a cluster center)

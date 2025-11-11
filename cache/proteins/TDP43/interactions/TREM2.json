@@ -1,0 +1,93 @@
+{
+  "primary": "TREM2",
+  "interaction_type": "direct",
+  "upstream_interactor": null,
+  "mediator_chain": [],
+  "depth": 1,
+  "support_summary": "Mass spectrometry, surface plasmon resonance, and co-immunoprecipitation have confirmed a direct molecular interaction between TDP-43 and the Triggering receptor expressed on myeloid cells 2 (TREM2). TDP-43 acts as a ligand for TREM2, which is expressed on microglia. This interaction activates a neuroprotective response, mediating the phagocytic clearance of pathological TDP-43.",
+  "functions": [
+    {
+      "function": "Microglial Clearance of TDP-43",
+      "arrow": "activates",
+      "cellular_process": "TREM2, a receptor expressed on microglia, recognizes and binds to pathological TDP-43. This interaction activates TREM2 signaling, which is crucial for mediating the phagocytic clearance of TDP-43 aggregates by microglia, thereby protecting neurons from TDP-43 toxicity.",
+      "effect_description": "The binding of TDP-43 to TREM2 on microglia activates a phagocytic response, leading to the clearance of pathological TDP-43.",
+      "biological_consequence": [
+        "Extracellular TDP-43 aggregates bind to microglial TREM2 receptor → Activation of TREM2 signaling via the DAP12 adaptor protein → Upregulation of phagocytic pathways in microglia → Enhanced clearance of pathological TDP-43 → Neuroprotection.",
+        "TREM2 deficiency or mutation → Failure of microglia to recognize and bind extracellular TDP-43 → Impaired microglial phagocytic response → Accumulation of toxic TDP-43 aggregates → Exacerbated neuroinflammation and neuronal loss."
+      ],
+      "specific_effects": [
+        "TDP-43 is a potential ligand for microglial TREM2, and their interaction has been demonstrated in vitro, in vivo, and in human ALS tissues.",
+        "TREM2 deficiency impairs the phagocytic clearance of pathological TDP-43 by microglia.",
+        "Loss of TREM2 function enhances neuronal damage and motor impairments in TDP-43 mouse models.",
+        "Expression of TDP-43 induces a TREM2-dependent subpopulation of microglia with high phagocytic ability."
+      ],
+      "evidence": [
+        {
+          "paper_title": "TREM2 interacts with TDP-43 and mediates microglial neuroprotection against TDP-43-related neurodegeneration",
+          "doi": "10.1038/s41593-021-00975-6",
+          "authors": "Xie M, Liu YU, Zhao L, Zhang L, Fu Q, Zhu M, Jiang P, Li Y, Lin W, Dickson DW, Petrucelli L, Bu G, Wu L",
+          "journal": "Nature Neuroscience",
+          "year": 2022,
+          "assay": "Mass Spectrometry, Surface Plasmon Resonance (SPR), Co-Immunoprecipitation",
+          "species": "human, mouse",
+          "relevant_quote": "Our data highlight that TDP-43 is a possible ligand for microglial TREM2 and that this interaction mediates neuroprotection of microglia in TDP-43-related neurodegeneration.",
+          "pmid": "34916658"
+        },
+        {
+          "paper_title": "TREMble Before TREM2: The Mighty Microglial Receptor Conferring Neuroprotective Properties in TDP-43 Mediated Neurodegeneration",
+          "doi": "10.1007/s12264-022-00961-z",
+          "authors": "Mills WA 3rd, Eyo UB",
+          "journal": "Neuroscience Bulletin",
+          "year": 2023,
+          "assay": "Review",
+          "species": "human, mouse",
+          "relevant_quote": "Taken together, this is the first study to show that TDP-43 can serve as a ligand for TREM2 in human spinal cord and mouse cortex.",
+          "pmid": "35978262"
+        }
+      ],
+      "_context": {
+        "type": "direct",
+        "query_protein": null,
+        "chain": null
+      },
+      "pmids": [
+        "34916658",
+        "35978262"
+      ]
+    }
+  ],
+  "arrow": "activates",
+  "direction": "main_to_primary",
+  "intent": "receptor binding",
+  "mechanism": "TREM2, a receptor expressed on microglia, recognizes and binds to pathological TDP-43. This interaction activates TREM2 signaling, which is crucial for mediating the phagocytic clearance of TDP-43 aggregates by microglia, thereby protecting neurons from TDP-43 toxicity.",
+  "effect": "The binding of TDP-43 to TREM2 on microglia activates a phagocytic response, leading to the clearance of pathological TDP-43.",
+  "summary": "TDP43 activates TREM2 to modulate microglial clearance of tdp-43, ultimately affecting neuroprotection.",
+  "evidence": [
+    {
+      "paper_title": "TREM2 interacts with TDP-43 and mediates microglial neuroprotection against TDP-43-related neurodegeneration",
+      "doi": "10.1038/s41593-021-00975-6",
+      "authors": "Xie M, Liu YU, Zhao L, Zhang L, Fu Q, Zhu M, Jiang P, Li Y, Lin W, Dickson DW, Petrucelli L, Bu G, Wu L",
+      "journal": "Nature Neuroscience",
+      "year": 2022,
+      "assay": "Mass Spectrometry, Surface Plasmon Resonance (SPR), Co-Immunoprecipitation",
+      "species": "human, mouse",
+      "relevant_quote": "Our data highlight that TDP-43 is a possible ligand for microglial TREM2 and that this interaction mediates neuroprotection of microglia in TDP-43-related neurodegeneration."
+    },
+    {
+      "paper_title": "TREMble Before TREM2: The Mighty Microglial Receptor Conferring Neuroprotective Properties in TDP-43 Mediated Neurodegeneration",
+      "doi": "10.1007/s12264-022-00961-z",
+      "authors": "Mills WA 3rd, Eyo UB",
+      "journal": "Neuroscience Bulletin",
+      "year": 2023,
+      "assay": "Review",
+      "species": "human, mouse",
+      "relevant_quote": "Taken together, this is the first study to show that TDP-43 can serve as a ligand for TREM2 in human spinal cord and mouse cortex."
+    }
+  ],
+  "arrow_notation": "TDP43 --activates--> TREM2:",
+  "protein_a": "TDP43",
+  "protein_b": "TREM2",
+  "discovered_in_query": "TDP43",
+  "first_discovered": "2025-11-11T16:36:28.326787Z",
+  "last_updated": "2025-11-11T16:36:28.326787Z"
+}

@@ -1,0 +1,95 @@
+{
+  "primary": "LC3B",
+  "direction": "main_to_primary",
+  "arrow": "activates",
+  "intent": "binding",
+  "support_summary": "A selective autophagy receptor for ferritinophagy that directly interacts with LC3/GABARAP proteins to facilitate the degradation of ferritin and regulate iron homeostasis.",
+  "functions": [
+    {
+      "function": "Selective Autophagy of Ferritin (Ferritinophagy)",
+      "arrow": "activates",
+      "cellular_process": "Acts as a selective cargo receptor that binds to the iron-storage protein complex, ferritin, and simultaneously interacts with ATG8 proteins (LC3/GABARAP) on the autophagosome membrane to mediate its degradation.",
+      "effect_description": "NCOA4 binding to both ferritin and LC3/GABARAP proteins activates the delivery of ferritin to the lysosome, releasing stored iron into the cytosol to maintain cellular iron homeostasis.",
+      "biological_consequence": [
+        "Intracellular iron depletion → NCOA4 protein is stabilized and avoids degradation → NCOA4 binds to the FTH1 subunit of ferritin cages → NCOA4-ferritin complex interacts with LC3B on the phagophore → Autophagosome engulfs ferritin (ferritinophagy) → Lysosomal degradation releases stored iron",
+        "NCOA4-mediated ferritinophagy → Mobilization of iron from cellular stores → Increased cytosolic iron pool for metabolic use → Iron is supplied for heme synthesis in erythroblasts → Support of erythropoiesis and red blood cell formation",
+        "Dysregulation of NCOA4-mediated ferritinophagy → Impaired iron mobilization and ferritin accumulation → Cellular iron dyshomeostasis and oxidative stress → Contributes to the pathogenesis of neurodegenerative diseases and cancer"
+      ],
+      "specific_effects": [
+        "Essential for the degradation of ferritin under iron-depleted conditions",
+        "Regulates systemic iron levels and erythropoiesis",
+        "Identified as a specific cargo receptor for ferritinophagy"
+      ],
+      "evidence": [
+        {
+          "paper_title": "NCOA4-Mediated Ferritinophagy: A Potential Link to Neurodegeneration",
+          "doi": "10.3389/fnins.2019.00238",
+          "authors": "Quiles Del Rey M, Mancias JD",
+          "journal": "Frontiers in Neuroscience",
+          "year": 2019,
+          "assay": "Review",
+          "species": "human, mouse",
+          "relevant_quote": "NCOA4 (Nuclear receptor coactivator 4) mediates the selective autophagic degradation of ferritin, the cellular cytosolic iron storage complex, thereby playing a critical role in intracellular and systemic iron homeostasis.",
+          "pmid": "30930742"
+        },
+        {
+          "paper_title": "NCOA4-Mediated Ferritinophagy Is a Pancreatic Cancer Dependency via Maintenance of Iron Bioavailability for Iron-Sulfur Cluster Proteins",
+          "doi": "10.1158/2159-8290.CD-22-0142",
+          "authors": "Santana-Codina N, Gikandi A, De-Jeoung H, Gikandi A, U-King-Im JM, Mancias JD, Kimmelman AC",
+          "journal": "Cancer Discovery",
+          "year": 2022,
+          "assay": "Immunoblot, CRISPR screen",
+          "species": "human, mouse",
+          "relevant_quote": "NCOA4 (nuclear receptor coactivator 4) is a selective autophagy adapter that targets ferritin, the cellular iron storage complex, via autophagy to the lysosome for degradation and release of iron...",
+          "pmid": "35771492"
+        }
+      ],
+      "pmids": [
+        "30930742",
+        "35771492"
+      ]
+    }
+  ],
+  "mechanism": "Acts as a selective cargo receptor that binds to the iron-storage protein complex, ferritin, and simultaneously interacts with ATG8 proteins (LC3/GABARAP) on the autophagosome membrane to mediate its degradation.",
+  "effect": "NCOA4 binding to both ferritin and LC3/GABARAP proteins activates the delivery of ferritin to the lysosome, releasing stored iron into the cytosol to maintain cellular iron homeostasis.",
+  "summary": "LC3B activates NCOA4 to modulate selective autophagy of ferritin (ferritinophagy), ultimately affecting lysosomal degradation releases stored iron.",
+  "evidence": [
+    {
+      "paper_title": "NCOA4 is a selective autophagy receptor for ferritinophagy",
+      "doi": "10.1038/ncb2962",
+      "authors": "Mancias JD, Wang X, Gygi SP, Harper JW, Kimmelman AC",
+      "journal": "Nature Cell Biology",
+      "year": 2014,
+      "assay": "Quantitative Proteomics, Co-IP",
+      "species": "human",
+      "relevant_quote": "This work identifies NCOA4 as a selective cargo receptor for autophagic turnover of ferritin (ferritinophagy) critical for iron homeostasis..."
+    },
+    {
+      "paper_title": "NCOA4-Mediated Ferritinophagy: A Potential Link to Neurodegeneration",
+      "doi": "10.3389/fnins.2019.00238",
+      "authors": "Quiles Del Rey M, Mancias JD",
+      "journal": "Frontiers in Neuroscience",
+      "year": 2019,
+      "assay": "Review",
+      "species": "human, mouse",
+      "relevant_quote": "NCOA4 (Nuclear receptor coactivator 4) mediates the selective autophagic degradation of ferritin, the cellular cytosolic iron storage complex, thereby playing a critical role in intracellular and systemic iron homeostasis."
+    },
+    {
+      "paper_title": "NCOA4-Mediated Ferritinophagy Is a Pancreatic Cancer Dependency via Maintenance of Iron Bioavailability for Iron-Sulfur Cluster Proteins",
+      "doi": "10.1158/2159-8290.CD-22-0142",
+      "authors": "Santana-Codina N, Gikandi A, De-Jeoung H, Gikandi A, U-King-Im JM, Mancias JD, Kimmelman AC",
+      "journal": "Cancer Discovery",
+      "year": 2022,
+      "assay": "Immunoblot, CRISPR screen",
+      "species": "human, mouse",
+      "relevant_quote": "NCOA4 (nuclear receptor coactivator 4) is a selective autophagy adapter that targets ferritin, the cellular iron storage complex, via autophagy to the lysosome for degradation and release of iron..."
+    }
+  ],
+  "depth": 1,
+  "arrow_notation": "LC3B <--activates-- NCOA4:",
+  "protein_a": "NCOA4",
+  "protein_b": "LC3B",
+  "discovered_in_query": "LC3B",
+  "first_discovered": "2025-11-11T15:54:33.406016Z",
+  "last_updated": "2025-11-11T15:54:33.406016Z"
+}

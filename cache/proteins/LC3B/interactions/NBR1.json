@@ -1,0 +1,177 @@
+{
+  "primary": "NBR1",
+  "interaction_type": "direct",
+  "upstream_interactor": null,
+  "mediator_chain": [],
+  "depth": 1,
+  "direction": "primary_to_main",
+  "arrow": "activates",
+  "intent": "ubiquitination",
+  "support_summary": "Acts as a selective autophagy receptor that contains a LIR motif for direct interaction with LC3B, cooperating with SQSTM1 to target ubiquitinated proteins, peroxisomes, and focal adhesions for autophagic degradation.",
+  "functions": [
+    {
+      "function": "Selective Autophagy Cargo Recognition (Aggrephagy)",
+      "arrow": "activates",
+      "cellular_process": "Acts as a selective autophagy receptor that recognizes and targets ubiquitinated protein aggregates for degradation. It binds to ubiquitin via its UBA domain and to LC3/GABARAP proteins on the phagophore via its LIR motif, often in cooperation with SQSTM1.",
+      "effect_description": "Functions as a cargo receptor to link ubiquitinated substrates to the autophagic machinery, thereby mediating the clearance of misfolded or aggregated proteins.",
+      "biological_consequence": [
+        "NBR1 binds ubiquitinated protein aggregates via its UBA domain → NBR1 simultaneously binds LC3/GABARAP on the phagophore via its LIR motif → The p62-NBR1 complex promotes cargo clustering and sequestration → Cargo is engulfed by the autophagosome → Degradation of aggregates and maintenance of cellular proteostasis"
+      ],
+      "specific_effects": [
+        "Binds both ubiquitin and LC3/GABARAP proteins via UBA and LIR domains, respectively",
+        "Cooperates with p62/SQSTM1 to sequester and degrade ubiquitinated targets",
+        "Accumulates in pathological inclusions when autophagy is inhibited",
+        "Promotes ubiquitin condensate formation by equipping the p62-NBR1 complex with a high-affinity UBA domain"
+      ],
+      "evidence": [
+        {
+          "paper_title": "NBR1 and p62 as cargo receptors for selective autophagy of ubiquitinated targets",
+          "doi": "10.4161/cc.8.13.8892",
+          "authors": "Lamark T, Kirkin V, Dikic I, Johansen T",
+          "journal": "Cell Cycle",
+          "year": 2009,
+          "assay": "Co-Immunoprecipitation",
+          "species": "Human",
+          "relevant_quote": "Via their LIR motifs NBR1 and p62 bind to LC3- and GABARAP family proteins anchored in the double membrane of the forming autophagosome...linking the ubiquitinated susbstrates to the nascent autophagosome.",
+          "pmid": "19502794"
+        },
+        {
+          "paper_title": "Reconstitution defines the roles of p62, NBR1 and TAX1BP1 in ubiquitin condensate formation and autophagy initiation",
+          "doi": "10.1038/s41467-021-25572-w",
+          "authors": "Turco E, Savova A, Gere F, Ferrari L, Romanov J, Schuschnig M, Oi K, Martens S",
+          "journal": "Nature Communications",
+          "year": 2021,
+          "assay": "In vitro reconstitution assays",
+          "species": "Human",
+          "relevant_quote": "NBR1 promotes condensate formation by equipping the p62-NBR1 heterooligomeric complex with a high-affinity UBA domain.",
+          "pmid": "34471133"
+        }
+      ],
+      "pmids": [
+        "19502794",
+        "34471133"
+      ]
+    },
+    {
+      "function": "Selective Autophagy Cargo Recognition (Pexophagy)",
+      "arrow": "activates",
+      "cellular_process": "Functions as a specific autophagy receptor for the degradation of peroxisomes (pexophagy). It recognizes ubiquitinated proteins on the peroxisome surface and links the organelle to the autophagosome via its LC3-interacting region.",
+      "effect_description": "Mediates the selective clearance of excess or damaged peroxisomes, a crucial process for cellular homeostasis.",
+      "biological_consequence": [
+        "Superfluous or damaged peroxisomes are ubiquitinated → NBR1 recognizes and binds ubiquitinated peroxisomal proteins via its UBA domain → NBR1 links the peroxisome to the phagophore via its LIR-LC3 interaction → The peroxisome is engulfed into a pexophagosome → Degradation maintains peroxisome quality and number"
+      ],
+      "specific_effects": [
+        "Recognized as a primary and specific autophagy receptor for pexophagy",
+        "Requires its J domain, UBA domain, and LIR for pexophagy",
+        "Binding of p62 to NBR1 can enhance the efficiency of NBR1-mediated pexophagy"
+      ],
+      "evidence": [
+        {
+          "paper_title": "NBR1 acts as an autophagy receptor for peroxisomes",
+          "doi": "10.1242/jcs.114819",
+          "authors": "Deosaran E, Larsen KB, Hua R, Sargent G, Wang Y, Kim S, Lamark T, Johansen T, Kim PK",
+          "journal": "Journal of Cell Science",
+          "year": 2013,
+          "assay": "siRNA knockdown, Immunofluorescence",
+          "species": "Human",
+          "relevant_quote": "We examined selective autophagic degradation of peroxisomes (pexophagy), and found that NBR1 is necessary and sufficient for pexophagy.",
+          "pmid": "23239026"
+        }
+      ],
+      "pmids": [
+        "23239026"
+      ]
+    },
+    {
+      "function": "Focal Adhesion Turnover",
+      "arrow": "activates",
+      "cellular_process": "Localizes to focal adhesions (FAs) and recruits autophagosomes via its LC3 interaction to mediate their degradation. This process is essential for the disassembly of FAs at the leading edge of migrating cells.",
+      "effect_description": "Promotes the turnover of focal adhesions, which is a critical step for cell migration and adhesion dynamics.",
+      "biological_consequence": [
+        "NBR1 localizes to focal adhesions → NBR1 binds LC3B via LIR motif → Recruitment of autophagosomes to FAs → Autophagic degradation of FA components → Focal adhesion disassembly → Enhanced cell migration"
+      ],
+      "specific_effects": [
+        "Knockdown of NBR1 inhibits cell migration and increases focal adhesion lifetime",
+        "The interaction between NBR1 and LC3 is essential for its role in FA turnover",
+        "Autophagosomes associate with FAs primarily during disassembly"
+      ],
+      "evidence": [
+        {
+          "paper_title": "NBR1 enables autophagy-dependent focal adhesion turnover",
+          "doi": "10.1083/jcb.201503075",
+          "authors": "Kenific CM, Stehbens SJ, Goldsmith J, Leidal AM, Faure N, Ye J, Wittmann T, Debnath J",
+          "journal": "The Journal of Cell Biology",
+          "year": 2016,
+          "assay": "Live-cell imaging, siRNA knockdown",
+          "species": "Human",
+          "relevant_quote": "...we propose a model in which NBR1 facilitates autophagic targeting of FAs, thereby driving FA turnover to optimize migration.",
+          "pmid": "26903539"
+        }
+      ],
+      "pmids": [
+        "26903539"
+      ]
+    }
+  ],
+  "mechanism": "Acts as a selective autophagy receptor that recognizes and targets ubiquitinated protein aggregates ; Functions as a specific autophagy receptor for the degradation of peroxisomes (pexophagy); Localizes to focal adhesions (FAs) and recruits autophagosomes via its LC3 interaction to mediate th",
+  "effect": "Functions as a cargo receptor to link ubiquitinated substrates to the autophagic machinery, thereby mediating the clearance of misfolded or aggregated proteins.; Mediates the selective clearance of excess or damaged peroxisomes, a crucial process for cellular homeostasis.; ...",
+  "summary": "LC3B activates NBR1 to control multiple cellular processes including selective autophagy cargo recognition (aggrephagy), selective autophagy cargo recognition (pexophagy), and focal adhesion turnover, ultimately affecting degradation of aggregates and maintenance of cellular proteostasis.",
+  "evidence": [
+    {
+      "paper_title": "NBR1 and p62 as cargo receptors for selective autophagy of ubiquitinated targets",
+      "doi": "10.4161/cc.8.13.8892",
+      "authors": "Lamark T, Kirkin V, Dikic I, Johansen T",
+      "journal": "Cell Cycle",
+      "year": 2009,
+      "assay": "Co-Immunoprecipitation",
+      "species": "Human",
+      "relevant_quote": "Via their LIR motifs NBR1 and p62 bind to LC3- and GABARAP family proteins anchored in the double membrane of the forming autophagosome...linking the ubiquitinated susbstrates to the nascent autophagosome."
+    },
+    {
+      "paper_title": "Reconstitution defines the roles of p62, NBR1 and TAX1BP1 in ubiquitin condensate formation and autophagy initiation",
+      "doi": "10.1038/s41467-021-25572-w",
+      "authors": "Turco E, Savova A, Gere F, Ferrari L, Romanov J, Schuschnig M, Oi K, Martens S",
+      "journal": "Nature Communications",
+      "year": 2021,
+      "assay": "In vitro reconstitution assays",
+      "species": "Human",
+      "relevant_quote": "NBR1 promotes condensate formation by equipping the p62-NBR1 heterooligomeric complex with a high-affinity UBA domain."
+    },
+    {
+      "paper_title": "NBR1 co-operates with p62 in selective autophagy of ubiquitinated targets",
+      "doi": "10.4161/auto.5.5.8566",
+      "authors": "Kirkin V, Lamark T, Johansen T, Dikic I",
+      "journal": "Autophagy",
+      "year": 2009,
+      "assay": "Yeast two-hybrid",
+      "species": "Human",
+      "relevant_quote": "Looking for proteins that interact with ATG8 family proteins, we identified NBR1 (neighbor of BRCA1 gene 1) as an additional LC3- and Ub-binding protein."
+    },
+    {
+      "paper_title": "NBR1 acts as an autophagy receptor for peroxisomes",
+      "doi": "10.1242/jcs.114819",
+      "authors": "Deosaran E, Larsen KB, Hua R, Sargent G, Wang Y, Kim S, Lamark T, Johansen T, Kim PK",
+      "journal": "Journal of Cell Science",
+      "year": 2013,
+      "assay": "siRNA knockdown, Immunofluorescence",
+      "species": "Human",
+      "relevant_quote": "We examined selective autophagic degradation of peroxisomes (pexophagy), and found that NBR1 is necessary and sufficient for pexophagy."
+    },
+    {
+      "paper_title": "NBR1 enables autophagy-dependent focal adhesion turnover",
+      "doi": "10.1083/jcb.201503075",
+      "authors": "Kenific CM, Stehbens SJ, Goldsmith J, Leidal AM, Faure N, Ye J, Wittmann T, Debnath J",
+      "journal": "The Journal of Cell Biology",
+      "year": 2016,
+      "assay": "Live-cell imaging, siRNA knockdown",
+      "species": "Human",
+      "relevant_quote": "...we propose a model in which NBR1 facilitates autophagic targeting of FAs, thereby driving FA turnover to optimize migration."
+    }
+  ],
+  "arrow_notation": "LC3B <--activates-- NBR1:",
+  "protein_a": "LC3B",
+  "protein_b": "NBR1",
+  "discovered_in_query": "LC3B",
+  "first_discovered": "2025-11-11T15:54:33.385758Z",
+  "last_updated": "2025-11-11T15:54:33.385758Z"
+}

@@ -1,0 +1,116 @@
+{
+  "primary": "FIP200",
+  "interaction_type": "indirect",
+  "upstream_interactor": "ULK1",
+  "mediator_chain": [
+    "ULK1"
+  ],
+  "depth": 2,
+  "support_summary": "A core scaffolding component of the autophagy initiation (ULK1) complex. This complex acts at the earliest step of autophagy, upstream of all other machinery, to recruit and activate downstream components like the Beclin-1/PI3KC3 complex, which is required for LC3B lipidation.",
+  "functions": [
+    {
+      "function": "Autophagy Initiation",
+      "arrow": "activates",
+      "cellular_process": "FIP200 (also known as RB1CC1) is a core scaffold protein of the ULK1 kinase complex, the most upstream complex in the autophagy pathway. Upon activation (e.g., by mTORC1 inhibition), this complex translocates to the phagophore to initiate autophagosome formation.",
+      "effect_description": "As part of the ULK1 complex, FIP200 triggers the entire downstream cascade of autophagy, including the recruitment and activation of the Beclin-1-containing PI3K complex, which ultimately leads to the recruitment and lipidation of LC3B.",
+      "biological_consequence": [
+        "Inhibition of mTORC1 signaling (e.g., by nutrient starvation) → Activation of the ULK1 kinase complex (ULK1/FIP200/ATG13) → ULK1 complex translocates to the phagophore assembly site → Recruitment of the Beclin-1/VPS34 complex (PI3KC3-C1) → Initiation of local PI3P production"
+      ],
+      "specific_effects": [
+        "Acts as a scaffold to bring ULK1 kinase to its substrates.",
+        "Essential for the recruitment of other core ATG proteins to the phagophore assembly site.",
+        "The interaction between FIP200, ULK1, and ATG13 is crucial for the formation of the ULK complex and autophagy initiation."
+      ],
+      "evidence": [
+        {
+          "paper_title": "The triad interaction of ULK1, ATG13, and FIP200 is required for ULK complex formation and autophagy",
+          "year": 2024,
+          "authors": "Jo A, Baba M, Ohsumi Y, Fujioka Y",
+          "journal": "eLife",
+          "doi": "10.7554/eLife.91891.1",
+          "assay": "In vitro reconstitution, mutational analysis",
+          "species": "human",
+          "relevant_quote": "These results indicate that the ULK1–ATG13– FIP200 triadic interaction is crucial for autophagosome formation and provide a structural basis and insights into the regulation mechanism of autophagy initiation in mammals.",
+          "pmid": "40552710"
+        },
+        {
+          "paper_title": "FIP200, a ULK-interacting protein, is required for autophagosome formation in mammalian cells",
+          "year": 2008,
+          "authors": "Hara T, Takamura A, Kishi C, Iemura S, Natsume T, Guan JL, Mizushima N",
+          "journal": "The Journal of Cell Biology",
+          "doi": "10.1083/jcb.200712064",
+          "assay": "Gene knockout, Immunofluorescence",
+          "species": "mouse",
+          "relevant_quote": "These dots were never observed in FIP200−/− MEFs, suggesting that puncta formation of ULK1 and 2 depends on FIP200.",
+          "pmid": "18443221"
+        },
+        {
+          "paper_title": "The mammalian ULK1 complex and autophagy initiation",
+          "year": 2017,
+          "authors": "Zachari M, Ganley IG",
+          "journal": "Essays in Biochemistry",
+          "doi": "10.1042/EBC20170021",
+          "assay": "Review",
+          "species": "mammalian",
+          "relevant_quote": "A key initial event in autophagy is formation of the autophagosome... This step is mediated by the serine/threonine protein kinase ULK1... which functions in a complex with at least three protein partners: FIP200... ATG13... and ATG101.",
+          "pmid": "29233870"
+        }
+      ],
+      "_context": {
+        "type": "indirect",
+        "query_protein": "ULK1",
+        "chain": [
+          "ULK1"
+        ]
+      },
+      "pmids": [
+        "40552710",
+        "18443221",
+        "29233870"
+      ]
+    }
+  ],
+  "arrow": "activates",
+  "intent": "regulation",
+  "mechanism": "FIP200 (also known as RB1CC1) is a core scaffold protein of the ULK1 kinase complex, the most upstream complex in the autophagy pathway. Upon activation (e.g., by mTORC1 inhibition), this complex translocates to the phagophore to initiate autophagosome formation.",
+  "effect": "As part of the ULK1 complex, FIP200 triggers the entire downstream cascade of autophagy, including the recruitment and activation of the Beclin-1-containing PI3K complex, which ultimately leads to the recruitment and lipidation of LC3B.",
+  "summary": "LC3B activates FIP200 to modulate autophagy initiation, ultimately affecting initiation of local pi3p production.",
+  "evidence": [
+    {
+      "paper_title": "The triad interaction of ULK1, ATG13, and FIP200 is required for ULK complex formation and autophagy",
+      "year": 2024,
+      "authors": "Jo A, Baba M, Ohsumi Y, Fujioka Y",
+      "journal": "eLife",
+      "doi": "10.7554/eLife.91891.1",
+      "assay": "In vitro reconstitution, mutational analysis",
+      "species": "human",
+      "relevant_quote": "These results indicate that the ULK1–ATG13– FIP200 triadic interaction is crucial for autophagosome formation and provide a structural basis and insights into the regulation mechanism of autophagy initiation in mammals."
+    },
+    {
+      "paper_title": "FIP200, a ULK-interacting protein, is required for autophagosome formation in mammalian cells",
+      "year": 2008,
+      "authors": "Hara T, Takamura A, Kishi C, Iemura S, Natsume T, Guan JL, Mizushima N",
+      "journal": "The Journal of Cell Biology",
+      "doi": "10.1083/jcb.200712064",
+      "assay": "Gene knockout, Immunofluorescence",
+      "species": "mouse",
+      "relevant_quote": "These dots were never observed in FIP200−/− MEFs, suggesting that puncta formation of ULK1 and 2 depends on FIP200."
+    },
+    {
+      "paper_title": "The mammalian ULK1 complex and autophagy initiation",
+      "year": 2017,
+      "authors": "Zachari M, Ganley IG",
+      "journal": "Essays in Biochemistry",
+      "doi": "10.1042/EBC20170021",
+      "assay": "Review",
+      "species": "mammalian",
+      "relevant_quote": "A key initial event in autophagy is formation of the autophagosome... This step is mediated by the serine/threonine protein kinase ULK1... which functions in a complex with at least three protein partners: FIP200... ATG13... and ATG101."
+    }
+  ],
+  "arrow_notation": "ULK1 --activates--> FIP200:",
+  "protein_a": "LC3B",
+  "protein_b": "FIP200",
+  "discovered_in_query": "LC3B",
+  "first_discovered": "2025-11-11T15:54:33.420857Z",
+  "last_updated": "2025-11-11T15:54:33.420857Z"
+}

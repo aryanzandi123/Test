@@ -1,0 +1,95 @@
+{
+  "primary": "ATG16L1",
+  "direction": "primary_to_main",
+  "arrow": "activates",
+  "intent": "E3-like ligase activity",
+  "support_summary": "As a core component of the ATG12-ATG5-ATG16L1 E3-like ligase complex, ATG16L1 acts as a scaffold to determine the specific site of LC3B lipidation and facilitates its transfer from ATG3 to PE on the phagophore membrane.",
+  "functions": [
+    {
+      "function": "LC3B Lipidation Site Determination",
+      "arrow": "activates",
+      "cellular_process": "Forms a large E3-like ligase complex with ATG5 and the ATG12 conjugate (ATG12-ATG5-ATG16L1). This complex localizes to the phagophore and determines the specific site where the ATG3-LC3B complex will conjugate LC3B to PE.",
+      "effect_description": "Acts as a scaffold to bring the E2 enzyme (ATG3-LC3B) into proximity with the membrane substrate (PE), thereby facilitating and specifying the location of LC3B lipidation.",
+      "biological_consequence": [
+        "WIPI2 recruits ATG12-ATG5-ATG16L1 complex to PI3P on phagophore → ATG16L1 provides E3-like ligase activity → Recruits ATG3-LC3B complex → Site-specific conjugation of LC3B to PE (lipidation) → Phagophore membrane elongation",
+        "Site-specific LC3B lipidation → Efficient autophagosome elongation and curvature → Phagophore closure → Formation of a mature autophagosome"
+      ],
+      "specific_effects": [
+        "Provides E3-like ligase activity for the LC3 conjugation system",
+        "Directs LC3B lipidation to the growing phagophore membrane",
+        "Interacts with WIPI2 to localize to PI3P-rich domains on the phagophore",
+        "Essential for canonical autophagy and LC3-associated phagocytosis"
+      ],
+      "evidence": [
+        {
+          "paper_title": "The Atg16L Complex Specifies the Site of LC3 Lipidation for Membrane Biogenesis in Autophagy",
+          "doi": "10.1091/mbc.e08-05-0482",
+          "authors": "Fujita N, Itoh T, Omori H, Fukuda M, Noda T, Yoshimori T",
+          "journal": "Mol Biol Cell",
+          "year": 2008,
+          "assay": "Immunofluorescence, Co-IP, Cell fractionation",
+          "species": "mouse",
+          "relevant_quote": "We propose that the Atg16L complex is a new type of E3-like enzyme that functions as a scaffold for LC3 lipidation by dynamically localizing to the putative source membranes...",
+          "pmid": "18321988"
+        },
+        {
+          "paper_title": "Effect of ATG12–ATG5-ATG16L1 autophagy E3-like complex on the ability of LC3/GABARAP proteins to induce vesicle tethering and fusion",
+          "doi": "10.1007/s00018-023-04702-x",
+          "authors": "López-Pérez S, Lázaro-Garcimartín A, Rešetár D, Del Cano-Espinel M, Lira-Navarrete E, Ampurdanés C, Gerona-Navarro G, Basáñez G, Hierro A",
+          "journal": "Cell Mol Life Sci",
+          "year": 2023,
+          "assay": "In vitro lipidation assay, Vesicle tethering assay",
+          "species": "human",
+          "relevant_quote": "The ATG12–ATG5-ATG16L1 or E3-like complex (E3 for short) acts as a ubiquitin-like E3 enzyme, promoting LC3/GABARAP proteins anchoring to the AP membrane.",
+          "pmid": "36729310"
+        }
+      ],
+      "pmids": [
+        "18321988",
+        "36729310"
+      ]
+    }
+  ],
+  "mechanism": "Forms a large E3-like ligase complex with ATG5 and the ATG12 conjugate (ATG12-ATG5-ATG16L1). This complex localizes to the phagophore and determines the specific site where the ATG3-LC3B complex will conjugate LC3B to PE.",
+  "effect": "Acts as a scaffold to bring the E2 enzyme (ATG3-LC3B) into proximity with the membrane substrate (PE), thereby facilitating and specifying the location of LC3B lipidation.",
+  "summary": "LC3B activates ATG16L1 to modulate lc3b lipidation site determination, ultimately affecting phagophore membrane elongation.",
+  "evidence": [
+    {
+      "paper_title": "The Atg16L Complex Specifies the Site of LC3 Lipidation for Membrane Biogenesis in Autophagy",
+      "doi": "10.1091/mbc.e08-05-0482",
+      "authors": "Fujita N, Itoh T, Omori H, Fukuda M, Noda T, Yoshimori T",
+      "journal": "Mol Biol Cell",
+      "year": 2008,
+      "assay": "Immunofluorescence, Co-IP, Cell fractionation",
+      "species": "mouse",
+      "relevant_quote": "We propose that the Atg16L complex is a new type of E3-like enzyme that functions as a scaffold for LC3 lipidation by dynamically localizing to the putative source membranes..."
+    },
+    {
+      "paper_title": "Structure of the human ATG12~ATG5/ATG16L1 complex suggests a molecular scaffold for autophagosome formation",
+      "doi": "10.1074/jbc.M115.659428",
+      "authors": "Otomo C, Metlagel Z, Takaesu G, Otomo T",
+      "journal": "J Biol Chem",
+      "year": 2015,
+      "assay": "Crystallography, SAXS",
+      "species": "human",
+      "relevant_quote": "The ATG12~ATG5 conjugate, complexed with ATG16L1, functions as an E3-like enzyme for the lipidation of LC3..."
+    },
+    {
+      "paper_title": "Effect of ATG12–ATG5-ATG16L1 autophagy E3-like complex on the ability of LC3/GABARAP proteins to induce vesicle tethering and fusion",
+      "doi": "10.1007/s00018-023-04702-x",
+      "authors": "López-Pérez S, Lázaro-Garcimartín A, Rešetár D, Del Cano-Espinel M, Lira-Navarrete E, Ampurdanés C, Gerona-Navarro G, Basáñez G, Hierro A",
+      "journal": "Cell Mol Life Sci",
+      "year": 2023,
+      "assay": "In vitro lipidation assay, Vesicle tethering assay",
+      "species": "human",
+      "relevant_quote": "The ATG12–ATG5-ATG16L1 or E3-like complex (E3 for short) acts as a ubiquitin-like E3 enzyme, promoting LC3/GABARAP proteins anchoring to the AP membrane."
+    }
+  ],
+  "depth": 1,
+  "arrow_notation": "LC3B <--activates-- ATG16L1:",
+  "protein_a": "LC3B",
+  "protein_b": "ATG16L1",
+  "discovered_in_query": "LC3B",
+  "first_discovered": "2025-11-11T15:54:33.376101Z",
+  "last_updated": "2025-11-11T15:54:33.376101Z"
+}

@@ -1,0 +1,113 @@
+{
+  "primary": "LC3B",
+  "interaction_type": "indirect",
+  "upstream_interactor": null,
+  "mediator_chain": [],
+  "depth": 2,
+  "support_summary": "A core component of the class III PI3K complex (PI3KC3-C1), which generates PI3P on the phagophore. PI3P serves as a critical docking site for downstream effectors like WIPI2, which in turn recruits the ATG16L1 complex, the E3-like ligase essential for the lipidation of LC3B.",
+  "functions": [
+    {
+      "function": "LC3B Lipidation",
+      "arrow": "activates",
+      "cellular_process": "Beclin-1 is a core component of the Class III PI3K complex (PI3KC3-C1), along with the catalytic subunit VPS34. This complex is recruited to the site of autophagosome nucleation and generates phosphatidylinositol 3-phosphate (PI3P) on the membrane.",
+      "effect_description": "The generation of PI3P by the Beclin-1-containing complex initiates the recruitment of the downstream autophagy machinery, ultimately leading to the conversion of LC3-I to lipidated LC3-II.",
+      "biological_consequence": [
+        "Activation of the Beclin-1/VPS34 complex (PI3KC3-C1) → Local production of PI3P on the phagophore membrane → Recruitment of the PI3P effector protein WIPI2 → WIPI2 recruits the ATG16L1 E3-like complex → Conjugation of PE to LC3B-I (Lipidation) → Formation of membrane-bound LC3B-II"
+      ],
+      "specific_effects": [
+        "Acts upstream of LC3B lipidation as part of the PI3KC3-C1 complex.",
+        "Its activity is essential for the localization of the entire LC3B conjugation system to the correct membrane.",
+        "PI3P production by the Beclin-1 complex is a prerequisite for the recruitment of WIPI proteins."
+      ],
+      "evidence": [
+        {
+          "paper_title": "Beclin 1, an Essential Component and Master Regulator of PI3K-III in Health and Disease",
+          "year": 2012,
+          "authors": "Abdellatif M",
+          "journal": "Journal of Cellular and Molecular Medicine",
+          "doi": "10.1111/j.1582-4934.2012.01532.x",
+          "assay": "Review",
+          "species": "mammalian",
+          "relevant_quote": "Beclin 1 is a core component of the class III phosphatidylinositol 3-kinase (PI3K-III) complex...it modulates the lipid kinase activity of PI3K-III catalytic unit VPS34, which generates phosphatidylinositol 3-phosphate (PI(3)P), enabling the recruitment of a number of autophagy proteins involved in the nucleation of the autophagosome.",
+          "pmid": "24729948"
+        },
+        {
+          "paper_title": "WIPI2B links PtdIns3P to LC3 lipidation through binding ATG16L1",
+          "year": 2015,
+          "authors": "Dooley HC, Wilson MI, Tooze SA",
+          "journal": "Autophagy",
+          "doi": "10.1080/15548627.2014.996029",
+          "assay": "Mass Spectrometry, Co-immunoprecipitation",
+          "species": "human",
+          "relevant_quote": "Our model of WIPI2 function provides an explanation for the PtdIns3P-dependent recruitment of the ATG12–ATG5-ATG16L1 complex during initiation of autophagy.",
+          "pmid": "25629784"
+        },
+        {
+          "paper_title": "Divergent roles of BECN1 in LC3 lipidation and autophagosomal function",
+          "year": 2015,
+          "authors": "Sun T, Li X, Zhang P, Chen J, Bao M, Zhang S, Wang W, Chen Q",
+          "journal": "Autophagy",
+          "doi": "10.1080/15548627.2015.1052003",
+          "assay": "CRISPR/Cas9 knockout, Immunoblotting",
+          "species": "human",
+          "relevant_quote": "These results demonstrated that BECN1 plays an important role in PIK3C3 activity and omegasome formation, also suggesting that the activation of PIK3C3 and omegasome formation are independent of LC3B lipidation, but important for the functional formation of autophagosomes.",
+          "pmid": "25955014"
+        }
+      ],
+      "_context": {
+        "type": "indirect",
+        "query_protein": null,
+        "chain": []
+      },
+      "pmids": [
+        "24729948",
+        "25629784",
+        "25955014"
+      ]
+    }
+  ],
+  "arrow": "activates",
+  "intent": "regulation",
+  "mechanism": "Beclin-1 is a core component of the Class III PI3K complex (PI3KC3-C1), along with the catalytic subunit VPS34. This complex is recruited to the site of autophagosome nucleation and generates phosphatidylinositol 3-phosphate (PI3P) on the membrane.",
+  "effect": "The generation of PI3P by the Beclin-1-containing complex initiates the recruitment of the downstream autophagy machinery, ultimately leading to the conversion of LC3-I to lipidated LC3-II.",
+  "summary": "LC3B activates BECLIN1 to modulate lc3b lipidation, ultimately affecting formation of membrane-bound lc3b-ii.",
+  "evidence": [
+    {
+      "paper_title": "Beclin 1, an Essential Component and Master Regulator of PI3K-III in Health and Disease",
+      "year": 2012,
+      "authors": "Abdellatif M",
+      "journal": "Journal of Cellular and Molecular Medicine",
+      "doi": "10.1111/j.1582-4934.2012.01532.x",
+      "assay": "Review",
+      "species": "mammalian",
+      "relevant_quote": "Beclin 1 is a core component of the class III phosphatidylinositol 3-kinase (PI3K-III) complex...it modulates the lipid kinase activity of PI3K-III catalytic unit VPS34, which generates phosphatidylinositol 3-phosphate (PI(3)P), enabling the recruitment of a number of autophagy proteins involved in the nucleation of the autophagosome."
+    },
+    {
+      "paper_title": "WIPI2B links PtdIns3P to LC3 lipidation through binding ATG16L1",
+      "year": 2015,
+      "authors": "Dooley HC, Wilson MI, Tooze SA",
+      "journal": "Autophagy",
+      "doi": "10.1080/15548627.2014.996029",
+      "assay": "Mass Spectrometry, Co-immunoprecipitation",
+      "species": "human",
+      "relevant_quote": "Our model of WIPI2 function provides an explanation for the PtdIns3P-dependent recruitment of the ATG12–ATG5-ATG16L1 complex during initiation of autophagy."
+    },
+    {
+      "paper_title": "Divergent roles of BECN1 in LC3 lipidation and autophagosomal function",
+      "year": 2015,
+      "authors": "Sun T, Li X, Zhang P, Chen J, Bao M, Zhang S, Wang W, Chen Q",
+      "journal": "Autophagy",
+      "doi": "10.1080/15548627.2015.1052003",
+      "assay": "CRISPR/Cas9 knockout, Immunoblotting",
+      "species": "human",
+      "relevant_quote": "These results demonstrated that BECN1 plays an important role in PIK3C3 activity and omegasome formation, also suggesting that the activation of PIK3C3 and omegasome formation are independent of LC3B lipidation, but important for the functional formation of autophagosomes."
+    }
+  ],
+  "_chain_inferred": true,
+  "arrow_notation": "LC3B --activates--> BECLIN1:",
+  "protein_a": "BECLIN1",
+  "protein_b": "LC3B",
+  "discovered_in_query": "LC3B",
+  "first_discovered": "2025-11-11T15:54:33.418589Z",
+  "last_updated": "2025-11-11T15:54:33.418589Z"
+}

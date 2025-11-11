@@ -1,0 +1,143 @@
+{
+  "primary": "LC3B",
+  "interaction_type": "indirect",
+  "upstream_interactor": null,
+  "mediator_chain": [],
+  "depth": 2,
+  "support_summary": "BAG3, a multi-domain cochaperone, regulates LC3B on multiple levels. It enhances the translation of LC3B mRNA to maintain its basal protein pool. It also functions as a scaffold in Chaperone-Assisted Selective Autophagy (CASA) and can act as a direct autophagy receptor by binding LC3B via its LIR motifs to target cargo for degradation.",
+  "functions": [
+    {
+      "function": "Chaperone-Assisted Selective Autophagy (CASA)",
+      "arrow": "activates",
+      "cellular_process": "Acts as a core scaffold of the Chaperone-Assisted Selective Autophagy (CASA) complex, linking molecular chaperones (HSPA8, HSPB8) to the E3 ubiquitin ligase STUB1. This complex recognizes, ubiquitinates, and delivers misfolded client proteins to the autophagosome via ubiquitin receptors like SQSTM1.",
+      "effect_description": "As a scaffold for the CASA complex, BAG3 mediates a specialized form of selective autophagy that clears damaged or mechanically stressed proteins, which is critical for maintaining proteostasis.",
+      "biological_consequence": [
+        "Mechanical stress induces protein misfolding (e.g., Filamin) → BAG3 scaffolds the CASA complex (HSPB8, HSPA8, STUB1) to recognize cargo → STUB1 E3 ligase ubiquitinates the misfolded protein → SQSTM1/p62 binds the ubiquitinated cargo via its UBA domain → SQSTM1 LIR motif interacts with LC3B on the phagophore → Cargo is delivered to the autophagosome for degradation"
+      ],
+      "specific_effects": [
+        "Essential for the autophagic clearance of damaged filamin from the Z-disk in muscle cells",
+        "Acts as a scaffold linking the chaperone machinery to the autophagy pathway"
+      ],
+      "evidence": [
+        {
+          "paper_title": "BAG3-mediated proteostasis at a glance",
+          "doi": "10.1242/jcs.203679",
+          "authors": "Christina Klimek, Barbara Kathage, Julia Wördehoff, Jörg Höhfeld",
+          "journal": "J Cell Sci",
+          "year": 2017,
+          "assay": "Review",
+          "species": "human",
+          "relevant_quote": "BAG3-mediated autophagy significantly contributes to protein homeostasis in post-mitotic cells, such as differentiated neurons and muscle cells.",
+          "pmid": "28808089"
+        },
+        {
+          "paper_title": "The chaperone-assisted selective autophagy complex dynamics and dysfunctions",
+          "doi": "10.1080/15548627.2022.2160564",
+          "authors": "Barbara Tedesco, Leen Vendredy, Vincent Timmerman, Angelo Poletti",
+          "journal": "Autophagy",
+          "year": 2023,
+          "assay": "Review",
+          "species": "human",
+          "relevant_quote": "A selective autophagic route utilized to remove damaged and misfolded proteins is chaperone-assisted selective autophagy (CASA). CASA relies on the formation of a heteromeric complex...consisting of...HSPA/HSP70...HSPB8...the cochaperone BAG3...and the E3 ubiquitin ligase STUB1/CHIP",
+          "pmid": "36594740"
+        }
+      ],
+      "pmids": [
+        "28808089",
+        "36594740"
+      ]
+    },
+    {
+      "function": "Selective Autophagy Cargo Recognition",
+      "arrow": "activates",
+      "cellular_process": "In addition to its role in the CASA complex, BAG3 contains multiple LC3-interacting regions (LIRs) that allow it to directly bind to LC3B on the phagophore.",
+      "effect_description": "By directly binding to LC3B via its LIR motifs, BAG3 functions as a direct autophagy cargo receptor, enabling the targeting of client proteins to the autophagosome for degradation.",
+      "biological_consequence": [
+        "BAG3-chaperone complex binds a client protein → BAG3 acts as a selective autophagy receptor → Direct interaction of BAG3 LIR motifs with phagophore-associated LC3B → Tethering of the BAG3-cargo complex to the growing autophagosome → Engulfment and lysosomal degradation of cargo → SQSTM1-independent protein quality control"
+      ],
+      "specific_effects": [
+        "Can directly link its cargo to autophagosomes via LIR motifs"
+      ],
+      "evidence": [
+        {
+          "paper_title": "Co-chaperone BAG3 enters autophagic pathway via its interaction with microtubule associated protein 1 light chain 3 beta",
+          "doi": "10.1111/tra.12916",
+          "authors": "Hagen Körschgen, Marius Baeken, Daniel Schmitt, Heike Nagel, Christian Behl",
+          "journal": "Traffic",
+          "year": 2023,
+          "assay": "Pull-down, Proximity Ligation Assay",
+          "species": "human",
+          "relevant_quote": "Based on pull-down experiments, peptide arrays and proximity ligation assays, our results provide evidence of an interaction of BAG3 with LC3B.",
+          "pmid": "37654251"
+        }
+      ],
+      "pmids": [
+        "37654251"
+      ]
+    }
+  ],
+  "arrow": "activates",
+  "intent": "ubiquitination",
+  "mechanism": "The cochaperone BAG3 regulates the basal protein level of LC3B by specifically controlling the trans; Acts as a core scaffold of the Chaperone-Assisted Selective Autophagy (CASA) complex, linking molecu; In addition to its role in the CASA complex, BAG3 contains multiple LC3-interacting regions (LIRs) t",
+  "effect": "BAG3 activity enhances the translation of LC3B mRNA, which maintains the cellular pool of LC3B protein, ensuring that sufficient substrate is available for lipidation upon autophagy induction.; As a scaffold for the CASA complex, BAG3 mediates a specialized form of selective autophagy that clears damaged or mechanically stressed proteins, which is critical for maintaining proteostasis.; ...",
+  "summary": "LC3B activates BAG3 to control multiple cellular processes including lc3b mrna translation, chaperone-assisted selective autophagy (casa), and selective autophagy cargo recognition, ultimately affecting ensures cellular readiness for rapid autophagy induction.",
+  "evidence": [
+    {
+      "paper_title": "BAG3 regulates total MAP1LC3B protein levels through a translational but not transcriptional mechanism",
+      "doi": "10.1080/15548627.2015.1124225",
+      "authors": "Andrea E Rodríguez, Camila López-Crisosto, Daniel Peña-Oyarzún, Daniela Salas, Valentina Parra, Pablo F Quiroga, Alfredo Criollo, Sergio Lavandero, F Jimmy Mas, Vicente A Torres",
+      "journal": "Autophagy",
+      "year": 2016,
+      "assay": "Western Blot, siRNA knockdown",
+      "species": "human",
+      "relevant_quote": "Our results showed that BAG3 regulates the basal amount of total cellular LC3B protein by controlling its mRNA translation."
+    },
+    {
+      "paper_title": "BAG3-mediated proteostasis at a glance",
+      "doi": "10.1242/jcs.203679",
+      "authors": "Christina Klimek, Barbara Kathage, Julia Wördehoff, Jörg Höhfeld",
+      "journal": "J Cell Sci",
+      "year": 2017,
+      "assay": "Review",
+      "species": "human",
+      "relevant_quote": "BAG3-mediated autophagy significantly contributes to protein homeostasis in post-mitotic cells, such as differentiated neurons and muscle cells."
+    },
+    {
+      "paper_title": "The chaperone-assisted selective autophagy complex dynamics and dysfunctions",
+      "doi": "10.1080/15548627.2022.2160564",
+      "authors": "Barbara Tedesco, Leen Vendredy, Vincent Timmerman, Angelo Poletti",
+      "journal": "Autophagy",
+      "year": 2023,
+      "assay": "Review",
+      "species": "human",
+      "relevant_quote": "A selective autophagic route utilized to remove damaged and misfolded proteins is chaperone-assisted selective autophagy (CASA). CASA relies on the formation of a heteromeric complex...consisting of...HSPA/HSP70...HSPB8...the cochaperone BAG3...and the E3 ubiquitin ligase STUB1/CHIP"
+    },
+    {
+      "paper_title": "Co-chaperone BAG3 enters autophagic pathway via its interaction with microtubule associated protein 1 light chain 3 beta",
+      "doi": "10.1111/tra.12916",
+      "authors": "Hagen Körschgen, Marius Baeken, Daniel Schmitt, Heike Nagel, Christian Behl",
+      "journal": "Traffic",
+      "year": 2023,
+      "assay": "Pull-down, Proximity Ligation Assay",
+      "species": "human",
+      "relevant_quote": "Based on pull-down experiments, peptide arrays and proximity ligation assays, our results provide evidence of an interaction of BAG3 with LC3B."
+    },
+    {
+      "paper_title": "Co-chaperone BAG3 directly target autophagic degradation via its LC3-interacting regions",
+      "doi": "10.1101/2023.02.01.526551",
+      "authors": "Hagen Körschgen, Marius Baeken, Daniel Schmitt, Heike Nagel, Christian Behl",
+      "journal": "bioRxiv",
+      "year": 2023,
+      "assay": "Peptide arrays, Co-localization",
+      "species": "human",
+      "relevant_quote": "Phylogenetically, BAG3 comprises several highly conserved predicted LIRs, LC3-interacting regions, which might directly target BAG3 including its cargo to ATG8 proteins and directly drive their autophagic degradation."
+    }
+  ],
+  "_chain_inferred": true,
+  "arrow_notation": "LC3B --activates--> BAG3:",
+  "protein_a": "BAG3",
+  "protein_b": "LC3B",
+  "discovered_in_query": "LC3B",
+  "first_discovered": "2025-11-11T15:54:33.439064Z",
+  "last_updated": "2025-11-11T15:54:33.439064Z"
+}

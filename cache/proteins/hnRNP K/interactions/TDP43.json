@@ -1,0 +1,92 @@
+{
+  "primary": "TDP43",
+  "interaction_type": "direct",
+  "upstream_interactor": null,
+  "mediator_chain": [],
+  "depth": 1,
+  "support_summary": "Heterogeneous nuclear ribonucleoprotein K (hnRNP K) interacts with TDP-43 and is a critical factor for its recruitment to stress granules (SGs) under conditions of cellular stress. This interaction is modulated by phosphorylation, and its disruption prevents TDP-43 accumulation in SGs.",
+  "functions": [
+    {
+      "function": "TDP-43 Recruitment to Stress Granules",
+      "arrow": "activates",
+      "cellular_process": "hnRNP K is a component of stress granules (SGs) that directly interacts with TDP-43. The incorporation of phosphorylated hnRNP K into SGs is a prerequisite for the subsequent recruitment and accumulation of TDP-43 in these structures during cellular stress.",
+      "effect_description": "hnRNP K facilitates the localization of TDP-43 to stress granules; inhibiting hnRNP K's recruitment to SGs prevents TDP-43 from accumulating there.",
+      "biological_consequence": [
+        "Cellular Stress → Activation of CDK2 → Phosphorylation of hnRNP K at Ser284 → Phosphorylated hnRNP K is recruited to Stress Granules (SGs) → TDP-43 interacts with hnRNP K → Accumulation of TDP-43 in SGs → Seeding of pathological TDP-43 aggregates",
+        "hnRNP K knockdown or CDK2 inhibition → Blockade of hnRNP K phosphorylation → hnRNP K fails to localize to Stress Granules (SGs) → TDP-43 recruitment to SGs is prevented → Reduced TDP-43 aggregation under stress"
+      ],
+      "specific_effects": [
+        "hnRNP K and TDP-43 colocalize in stress granules in neurons during stress. [13]",
+        "Inhibition of CDK2-mediated phosphorylation of hnRNP K prevents its incorporation into stress granules, which in turn prevents the accumulation of TDP-43 in SGs. [5, 13]",
+        "siRNA-mediated knockdown of hnRNP K expression leads to a loss of TDP-43 accumulation in stress granules. [5, 13]"
+      ],
+      "evidence": [
+        {
+          "paper_title": "Phosphorylation of hnRNP K by cyclin-dependent kinase 2 controls cytosolic accumulation of TDP-43",
+          "doi": "10.1093/hmg/ddu578",
+          "authors": "Moujalled D, James JL, Yang S, Zhang K, Duncan C, Moujalled DM, Parker SJ, Caragounis A, Lidgerwood G, Turner BJ, Atkin JD, Grubman A, Liddell JR, Proepper C, Boeckers TM, Kanninen KM, Blair I, Crouch PJ, White AR",
+          "journal": "Human Molecular Genetics",
+          "year": 2015,
+          "assay": "siRNA, Immunofluorescence",
+          "species": "human, mouse",
+          "relevant_quote": "Due to interaction between hnRNP K with TDP-43, the loss of hnRNP K from stress granules prevented accumulation of TDP-43. [5]",
+          "pmid": "25410660"
+        },
+        {
+          "paper_title": "C-Jun N-terminal kinase controls TDP-43 accumulation in stress granules induced by oxidative stress",
+          "doi": "10.1186/1750-1326-6-53",
+          "authors": "Meyerowitz J, Parker SJ, Vella LJ, Ng D, Price KA, Liddell JR, Caragounis A, Li QX, Masters CL, Nonaka T, Hasegawa M, Turner BJ, White AR, Crouch PJ",
+          "journal": "Molecular Neurodegeneration",
+          "year": 2011,
+          "assay": "Immunofluorescence",
+          "species": "human",
+          "relevant_quote": "In contrast, paraquat-treated cells revealed significant co-localization of hnRNP K and TDP-43 in SGs. [30]",
+          "pmid": "21819629"
+        }
+      ],
+      "_context": {
+        "type": "direct",
+        "query_protein": null,
+        "chain": null
+      },
+      "pmids": [
+        "25410660",
+        "21819629"
+      ]
+    }
+  ],
+  "arrow": "activates",
+  "direction": "main_to_primary",
+  "intent": "localization",
+  "mechanism": "hnRNP K is a component of stress granules (SGs) that directly interacts with TDP-43. The incorporation of phosphorylated hnRNP K into SGs is a prerequisite for the subsequent recruitment and accumulation of TDP-43 in these structures during cellular stress.",
+  "effect": "hnRNP K facilitates the localization of TDP-43 to stress granules; inhibiting hnRNP K's recruitment to SGs prevents TDP-43 from accumulating there.",
+  "summary": "TDP43 activates hnRNP K to modulate tdp-43 recruitment to stress granules, ultimately affecting seeding of pathological tdp-43 aggregates.",
+  "evidence": [
+    {
+      "paper_title": "Phosphorylation of hnRNP K by cyclin-dependent kinase 2 controls cytosolic accumulation of TDP-43",
+      "doi": "10.1093/hmg/ddu578",
+      "authors": "Moujalled D, James JL, Yang S, Zhang K, Duncan C, Moujalled DM, Parker SJ, Caragounis A, Lidgerwood G, Turner BJ, Atkin JD, Grubman A, Liddell JR, Proepper C, Boeckers TM, Kanninen KM, Blair I, Crouch PJ, White AR",
+      "journal": "Human Molecular Genetics",
+      "year": 2015,
+      "assay": "siRNA, Immunofluorescence",
+      "species": "human, mouse",
+      "relevant_quote": "Due to interaction between hnRNP K with TDP-43, the loss of hnRNP K from stress granules prevented accumulation of TDP-43. [5]"
+    },
+    {
+      "paper_title": "C-Jun N-terminal kinase controls TDP-43 accumulation in stress granules induced by oxidative stress",
+      "doi": "10.1186/1750-1326-6-53",
+      "authors": "Meyerowitz J, Parker SJ, Vella LJ, Ng D, Price KA, Liddell JR, Caragounis A, Li QX, Masters CL, Nonaka T, Hasegawa M, Turner BJ, White AR, Crouch PJ",
+      "journal": "Molecular Neurodegeneration",
+      "year": 2011,
+      "assay": "Immunofluorescence",
+      "species": "human",
+      "relevant_quote": "In contrast, paraquat-treated cells revealed significant co-localization of hnRNP K and TDP-43 in SGs. [30]"
+    }
+  ],
+  "arrow_notation": "TDP43 <--activates-- hnRNP K:",
+  "protein_a": "hnRNP K",
+  "protein_b": "TDP43",
+  "discovered_in_query": "TDP43",
+  "first_discovered": "2025-11-11T16:36:28.296457Z",
+  "last_updated": "2025-11-11T16:36:28.296457Z"
+}

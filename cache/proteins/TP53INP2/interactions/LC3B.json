@@ -1,0 +1,243 @@
+{
+  "primary": "LC3B",
+  "interaction_type": "direct",
+  "upstream_interactor": null,
+  "mediator_chain": [],
+  "depth": 1,
+  "support_summary": "A scaffold protein that directly interacts with LC3B and components of the ULK1 initiation complex, playing a role in linking autophagy initiation to autophagosome formation. It also chaperones nuclear LC3B to the cytoplasm and facilitates the LC3B-ATG7 interaction.",
+  "functions": [
+    {
+      "function": "Autophagosome Formation Scaffolding",
+      "arrow": "activates",
+      "cellular_process": "Acts as a scaffold protein that links the autophagy initiation machinery to the nascent autophagosome. It interacts with components of the ULK1 complex (like FIP200) and simultaneously binds to LC3/GABARAP proteins on the phagophore membrane.",
+      "effect_description": "Facilitates the efficient assembly of the autophagy machinery at the site of autophagosome formation, thereby promoting the progression from initiation to elongation.",
+      "biological_consequence": [
+        "TP53INP2 is recruited to the phagophore → TP53INP2 scaffolds the ULK1 complex (via FIP200) and LC3/GABARAP proteins → ULK1 complex is linked to the nascent autophagosome membrane → Autophagosome biogenesis is initiated → Autophagic flux is activated"
+      ],
+      "specific_effects": [
+        "Interacts with multiple Atg8 family members including LC3",
+        "Plays a crucial role in the early stages of autophagosome formation"
+      ],
+      "evidence": [
+        {
+          "paper_title": "The TP53INP2 Protein Is Required for Autophagy in Mammalian Cells",
+          "doi": "10.1091/mbc.e08-06-0649",
+          "authors": "Nowak J, Archange C, Tardivel-Lacombe J, et al.",
+          "journal": "Molecular Biology of the Cell",
+          "year": 2009,
+          "assay": "Yeast two-hybrid, Co-immunoprecipitation",
+          "species": "human",
+          "relevant_quote": "We suggest that TP53INP2 is a scaffold protein that recruits LC3 and/or LC3-related proteins to the autophagosome membrane by interacting with the transmembrane protein VMP1.",
+          "pmid": "19056683"
+        }
+      ],
+      "_context": {
+        "type": "direct",
+        "query_protein": null,
+        "chain": null
+      },
+      "pmids": [
+        "19056683"
+      ]
+    },
+    {
+      "function": "LC3B-ATG7 Interaction Facilitation",
+      "arrow": "activates",
+      "cellular_process": "In the cytoplasm, after translocating from the nucleus, TP53INP2 forms a ternary complex with LC3B and the E1-like enzyme ATG7. This scaffolding role enhances the interaction between LC3B and ATG7.",
+      "effect_description": "Promotes the efficient transfer of LC3B to ATG7, a critical upstream step in the lipidation cascade, thereby facilitating autophagosome biogenesis.",
+      "biological_consequence": [
+        "TP53INP2 translocates from the nucleus to the cytoplasm → TP53INP2 forms a ternary complex with LC3B and ATG7 → Scaffolding by TP53INP2 enhances LC3B-ATG7 interaction → LC3B is efficiently activated by ATG7 (E1-like enzyme) → LC3B lipidation (conjugation to PE) is increased → Autophagosome formation is promoted"
+      ],
+      "specific_effects": [
+        "Acts as a scaffold for the LC3B-ATG7 interaction",
+        "Required for efficient autophagosome formation upon autophagy induction"
+      ],
+      "evidence": [
+        {
+          "paper_title": "TP53INP2 contributes to autophagosome formation by promoting LC3-ATG7 interaction",
+          "doi": "10.1080/15548627.2019.1580510",
+          "authors": "You Z, Xu Y, Wan W, et al.",
+          "journal": "Autophagy",
+          "year": 2019,
+          "assay": "Co-immunoprecipitation",
+          "species": "human, mouse",
+          "relevant_quote": "TP53INP2 interacted directly with ATG7 to form a LC3B-TP53INP2-ATG7 complex in the cytoplasm. Loss of TP53INP2-LC3 or TP53INP2-ATG7 interaction significantly reduced LC3B-ATG7 binding.",
+          "pmid": "30767704"
+        }
+      ],
+      "_context": {
+        "type": "direct",
+        "query_protein": null,
+        "chain": null
+      },
+      "pmids": [
+        "30767704"
+      ]
+    },
+    {
+      "function": "Nuclear LC3B Shuttling",
+      "arrow": "activates",
+      "cellular_process": "Upon nutrient deprivation, TP53INP2 binds to deacetylated LC3B in the nucleus and, via its nuclear export signal (NES), chaperones it to the cytoplasm.",
+      "effect_description": "Mobilizes the nuclear pool of LC3B, making it available to the cytoplasmic autophagy machinery for lipidation and incorporation into forming autophagosomes.",
+      "biological_consequence": [
+        "Nutrient deprivation signal → SIRT1 deacetylates nuclear LC3B → Deacetylated LC3B binds to TP53INP2 in the nucleus → TP53INP2 chaperones LC3B to the cytoplasm via its Nuclear Export Signal (NES) → Cytoplasmic pool of LC3B for lipidation increases → Autophagosome formation is enhanced"
+      ],
+      "specific_effects": [
+        "Acts as a chaperone for nuclear LC3B export",
+        "Translocates from the nucleus to cytoplasmic autophagic structures upon starvation"
+      ],
+      "evidence": [
+        {
+          "paper_title": "TP53INP2/DOR protein chaperones deacetylated nuclear LC3 to the cytoplasm to promote macroautophagy",
+          "doi": "10.1080/15548627.2015.1074373",
+          "authors": "Liu X, Klionsky DJ.",
+          "journal": "Autophagy",
+          "year": 2015,
+          "assay": "Co-immunoprecipitation",
+          "species": "human",
+          "relevant_quote": "Upon nutrient deprivation, deacetylation of nuclear LC3 by the deacetylase SIRT1 promotes its association with the nuclear factor TP53INP2/DOR, resulting in the redistribution of nuclear LC3 to the cytoplasm.",
+          "pmid": "26213321"
+        },
+        {
+          "paper_title": "The TP53INP2 Protein Is Required for Autophagy in Mammalian Cells",
+          "doi": "10.1091/mbc.e08-06-0649",
+          "authors": "Nowak J, Archange C, Tardivel-Lacombe J, et al.",
+          "journal": "Molecular Biology of the Cell",
+          "year": 2009,
+          "assay": "Microscopy",
+          "species": "human",
+          "relevant_quote": "TP53INP2 translocates from the nucleus to the autophagosome structures after activation of autophagy by rapamycin or starvation.",
+          "pmid": "19056683"
+        }
+      ],
+      "_context": {
+        "type": "direct",
+        "query_protein": null,
+        "chain": null
+      },
+      "pmids": [
+        "26213321",
+        "19056683"
+      ]
+    },
+    {
+      "function": "Ribosomal DNA (rDNA) Transcription",
+      "arrow": "activates",
+      "cellular_process": "Under nutrient-rich conditions, TP53INP2 localizes to the nucleolus, where it associates with ribosomal DNA (rDNA) and facilitates the assembly of the RNA Polymerase I preinitiation complex.",
+      "effect_description": "Promotes the transcription of ribosomal RNA (rRNA), a key anabolic process for ribosome biogenesis and protein synthesis, highlighting a dual role for TP53INP2 in both anabolism (transcription) and catabolism (autophagy).",
+      "biological_consequence": [
+        "Nutrient-rich conditions promote TP53INP2 nucleolar localization → TP53INP2 associates with ribosomal DNA (rDNA) → TP53INP2 facilitates the assembly of the RNA Polymerase I (POLR1) preinitiation complex → Transcription of rRNA is activated → Ribosome biogenesis is promoted"
+      ],
+      "specific_effects": [
+        "Functions as a transcriptional co-activator in the nucleolus",
+        "Switches from anabolic to catabolic functions based on nutrient status and subcellular localization"
+      ],
+      "evidence": [
+        {
+          "paper_title": "TP53INP2/DOR, a mediator of cell autophagy, promotes rDNA transcription via facilitating the assembly of the POLR1/RNA polymerase I preinitiation complex at rDNA promoters",
+          "doi": "10.1080/15548627.2016.1175693",
+          "authors": "Xu Y, Wan W, Shou X, et al.",
+          "journal": "Autophagy",
+          "year": 2016,
+          "assay": "Chromatin Immunoprecipitation (ChIP)",
+          "species": "human",
+          "relevant_quote": "TP53INP2 interacts directly with POLR1 PIC, and is required for the assembly of the complex. These data indicate that TP53INP2 promotes ribosome biogenesis through facilitating rRNA synthesis at the nucleolus...",
+          "pmid": "27172002"
+        },
+        {
+          "paper_title": "The bifunctional role of TP53INP2 in transcription and autophagy",
+          "doi": "10.1080/15548627.2020.1713646",
+          "authors": "Xu Y, Wan W.",
+          "journal": "Autophagy",
+          "year": 2020,
+          "assay": "Review",
+          "species": "human",
+          "relevant_quote": "By acting as a nutrient status sensor, TP53INP2 switches its role between transcription and autophagy by changing its subcellular localization and helps the cell to cope with environmental changes.",
+          "pmid": "31931658"
+        }
+      ],
+      "_context": {
+        "type": "direct",
+        "query_protein": null,
+        "chain": null
+      },
+      "pmids": [
+        "27172002",
+        "31931658"
+      ]
+    }
+  ],
+  "arrow": "activates",
+  "intent": "acetylation",
+  "mechanism": "Acts as a scaffold protein that links the autophagy initiation machinery to the nascent autophagosom; In the cytoplasm, after translocating from the nucleus, TP53INP2 forms a ternary complex with LC3B a; Upon nutrient deprivation, TP53INP2 binds to deacetylated LC3B in the nucleus and, via its nuclear e...",
+  "effect": "Facilitates the efficient assembly of the autophagy machinery at the site of autophagosome formation, thereby promoting the progression from initiation to elongation.; Promotes the efficient transfer of LC3B to ATG7, a critical upstream step in the lipidation cascade, thereby facilitating autophagosome biogenesis.; ...",
+  "summary": "LC3B activates TP53INP2 to control multiple cellular processes including autophagosome formation scaffolding, lc3b-atg7 interaction facilitation, and nuclear lc3b shuttling, ultimately affecting autophagic flux is activated.",
+  "evidence": [
+    {
+      "paper_title": "The TP53INP2 Protein Is Required for Autophagy in Mammalian Cells",
+      "doi": "10.1091/mbc.e08-06-0649",
+      "authors": "Nowak J, Archange C, Tardivel-Lacombe J, et al.",
+      "journal": "Molecular Biology of the Cell",
+      "year": 2009,
+      "assay": "Yeast two-hybrid, Co-immunoprecipitation",
+      "species": "human",
+      "relevant_quote": "We suggest that TP53INP2 is a scaffold protein that recruits LC3 and/or LC3-related proteins to the autophagosome membrane by interacting with the transmembrane protein VMP1."
+    },
+    {
+      "paper_title": "TP53INP2 contributes to autophagosome formation by promoting LC3-ATG7 interaction",
+      "doi": "10.1080/15548627.2019.1580510",
+      "authors": "You Z, Xu Y, Wan W, et al.",
+      "journal": "Autophagy",
+      "year": 2019,
+      "assay": "Co-immunoprecipitation",
+      "species": "human, mouse",
+      "relevant_quote": "TP53INP2 interacted directly with ATG7 to form a LC3B-TP53INP2-ATG7 complex in the cytoplasm. Loss of TP53INP2-LC3 or TP53INP2-ATG7 interaction significantly reduced LC3B-ATG7 binding."
+    },
+    {
+      "paper_title": "TP53INP2/DOR protein chaperones deacetylated nuclear LC3 to the cytoplasm to promote macroautophagy",
+      "doi": "10.1080/15548627.2015.1074373",
+      "authors": "Liu X, Klionsky DJ.",
+      "journal": "Autophagy",
+      "year": 2015,
+      "assay": "Co-immunoprecipitation",
+      "species": "human",
+      "relevant_quote": "Upon nutrient deprivation, deacetylation of nuclear LC3 by the deacetylase SIRT1 promotes its association with the nuclear factor TP53INP2/DOR, resulting in the redistribution of nuclear LC3 to the cytoplasm."
+    },
+    {
+      "paper_title": "The TP53INP2 Protein Is Required for Autophagy in Mammalian Cells",
+      "doi": "10.1091/mbc.e08-06-0649",
+      "authors": "Nowak J, Archange C, Tardivel-Lacombe J, et al.",
+      "journal": "Molecular Biology of the Cell",
+      "year": 2009,
+      "assay": "Microscopy",
+      "species": "human",
+      "relevant_quote": "TP53INP2 translocates from the nucleus to the autophagosome structures after activation of autophagy by rapamycin or starvation."
+    },
+    {
+      "paper_title": "TP53INP2/DOR, a mediator of cell autophagy, promotes rDNA transcription via facilitating the assembly of the POLR1/RNA polymerase I preinitiation complex at rDNA promoters",
+      "doi": "10.1080/15548627.2016.1175693",
+      "authors": "Xu Y, Wan W, Shou X, et al.",
+      "journal": "Autophagy",
+      "year": 2016,
+      "assay": "Chromatin Immunoprecipitation (ChIP)",
+      "species": "human",
+      "relevant_quote": "TP53INP2 interacts directly with POLR1 PIC, and is required for the assembly of the complex. These data indicate that TP53INP2 promotes ribosome biogenesis through facilitating rRNA synthesis at the nucleolus..."
+    },
+    {
+      "paper_title": "The bifunctional role of TP53INP2 in transcription and autophagy",
+      "doi": "10.1080/15548627.2020.1713646",
+      "authors": "Xu Y, Wan W.",
+      "journal": "Autophagy",
+      "year": 2020,
+      "assay": "Review",
+      "species": "human",
+      "relevant_quote": "By acting as a nutrient status sensor, TP53INP2 switches its role between transcription and autophagy by changing its subcellular localization and helps the cell to cope with environmental changes."
+    }
+  ],
+  "arrow_notation": "LC3B --activates--> TP53INP2:",
+  "protein_a": "TP53INP2",
+  "protein_b": "LC3B",
+  "discovered_in_query": "LC3B",
+  "first_discovered": "2025-11-11T15:54:33.409610Z",
+  "last_updated": "2025-11-11T15:54:33.409610Z"
+}

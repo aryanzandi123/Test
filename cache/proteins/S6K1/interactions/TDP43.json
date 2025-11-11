@@ -1,0 +1,76 @@
+{
+  "primary": "TDP43",
+  "interaction_type": "indirect",
+  "upstream_interactor": "POLDIP3",
+  "mediator_chain": [
+    "POLDIP3"
+  ],
+  "depth": 2,
+  "support_summary": "TDP-43 controls the alternative splicing of POLDIP3, a protein that recruits and enhances S6K1 activity to promote mRNA translation. The loss of nuclear TDP-43 function leads to an increase in a POLDIP3 splice variant that is less efficient in activating the mTOR/S6K1 cascade, thereby impairing translation and cell growth in neuronal contexts.",
+  "functions": [
+    {
+      "function": "mRNA Translation & Cell Growth",
+      "arrow": "inhibits",
+      "cellular_process": "TDP-43 regulates the splicing of POLDIP3, which acts as a scaffold to bring S6K1 to newly synthesized mRNAs, enhancing their translation. A loss of nuclear TDP-43 function increases a POLDIP3 splice variant (variant-2) that is less effective at promoting S6K1-mediated translation in neuronal cells, leading to reduced cell size.",
+      "effect_description": "Loss of nuclear TDP-43 function indirectly impairs S6K1-dependent translation and cell growth by altering the isoform ratio of the upstream regulator POLDIP3.",
+      "biological_consequence": [
+        "Loss of nuclear TDP-43 → Increased POLDIP3 exon 3 skipping → POLDIP3 variant-2 fails to recruit S6K1 to mRNA → Downregulation of mTORC1/S6K1-mediated translation → Reduced neuronal cell size"
+      ],
+      "specific_effects": [
+        "Loss of nuclear TDP-43 function results in an increased ratio of POLDIP3 variant-2 to variant-1.",
+        "POLDIP3, also known as SKAR, links pre-mRNA splicing to mTOR/S6K1-mediated enhanced translation efficiency of spliced mRNAs.",
+        "In neuronal cells, the TDP-43-induced shift in POLDIP3 splicing leads to a downregulation of the mTOR/S6K1 pathway."
+      ],
+      "evidence": [
+        {
+          "paper_title": "Alteration of POLDIP3 Splicing Associated with Loss of Function of TDP-43 in Tissues Affected with ALS",
+          "doi": "10.1371/journal.pone.0043120",
+          "authors": "Shiga A, Ishihara T, Miyashita A, Kuwabara M, Kato T, Watanabe N, Yamahira A, Kondo C, Yokoseki A, Takahashi M, Kuwano R, Kakita A, Nishizawa M, Takahashi H, Onodera O",
+          "journal": "PLoS One",
+          "year": 2012,
+          "assay": "siRNA knockdown, Cell size assay",
+          "species": "Human cell lines (SH-SY5Y)",
+          "relevant_quote": "POLDIP3 has been reported to enhance mammalian target of rapamycin (mTOR)/S6 protein kinase 1 (S6K1)-mediated translation efficiency of mRNA.",
+          "pmid": "22900096"
+        }
+      ],
+      "pmids": [
+        "22900096"
+      ]
+    }
+  ],
+  "arrow": "inhibits",
+  "direction": "primary_to_main",
+  "intent": "regulation of splicing",
+  "mechanism": "TDP-43 regulates the splicing of POLDIP3, which acts as a scaffold to bring S6K1 to newly synthesized mRNAs, enhancing their translation. A loss of nuclear TDP-43 function increases a POLDIP3 splice variant (variant-2) that is less effective at promoting S6K1-mediated translation in neuronal cells, leading to reduced cell size.",
+  "effect": "Loss of nuclear TDP-43 function indirectly impairs S6K1-dependent translation and cell growth by altering the isoform ratio of the upstream regulator POLDIP3.",
+  "summary": "TDP43 inhibits S6K1 to modulate mrna translation & cell growth, ultimately affecting reduced neuronal cell size.",
+  "evidence": [
+    {
+      "paper_title": "Alteration of POLDIP3 Splicing Associated with Loss of Function of TDP-43 in Tissues Affected with ALS",
+      "doi": "10.1371/journal.pone.0043120",
+      "authors": "Shiga A, Ishihara T, Miyashita A, Kuwabara M, Kato T, Watanabe N, Yamahira A, Kondo C, Yokoseki A, Takahashi M, Kuwano R, Kakita A, Nishizawa M, Takahashi H, Onodera O",
+      "journal": "PLoS One",
+      "year": 2012,
+      "assay": "siRNA knockdown, Cell size assay",
+      "species": "Human cell lines (SH-SY5Y)",
+      "relevant_quote": "POLDIP3 has been reported to enhance mammalian target of rapamycin (mTOR)/S6 protein kinase 1 (S6K1)-mediated translation efficiency of mRNA."
+    },
+    {
+      "paper_title": "Novel and known transcriptional targets of ALS/FTD protein TDP-43: Meta-analysis and interactive graphical databases",
+      "doi": "10.1101/2021.12.08.471821",
+      "authors": "Melamed Z, López-Erauskin J, Baughn MW, Zhang O, D'Ippolito A, Shin H, Claus L, DeJesus-Hernandez M, Lambert-Dubois L, Sproviero D, Taylor JP, Rigo F, Cleveland DW, Ravits J, Rouleau GA, Barmada SJ, Lagier-Tourenne C",
+      "journal": "bioRxiv",
+      "year": 2021,
+      "assay": "Meta-analysis, RNA-seq",
+      "species": "Human, Mouse",
+      "relevant_quote": "POLDIP3 protein (also known as S6K1 Aly/REF-like target (SKAR)) interacts with exon junctional complexes to increase the translation efficiency of spliced mRNAs."
+    }
+  ],
+  "arrow_notation": "POLDIP3 --inhibits--> S6K1:",
+  "protein_a": "S6K1",
+  "protein_b": "TDP43",
+  "discovered_in_query": "TDP43",
+  "first_discovered": "2025-11-11T16:36:28.267548Z",
+  "last_updated": "2025-11-11T16:36:28.267548Z"
+}

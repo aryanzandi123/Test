@@ -1,0 +1,91 @@
+{
+  "primary": "TDP43",
+  "interaction_type": "direct",
+  "upstream_interactor": null,
+  "mediator_chain": [],
+  "depth": 1,
+  "support_summary": "Exportin 1 (XPO1) is a nuclear export receptor that can directly bind to TDP-43 to mediate its transport out of the nucleus. However, this appears to be a redundant pathway, as inhibition of XPO1 alone is not sufficient to prevent TDP-43 export.",
+  "functions": [
+    {
+      "function": "TDP-43 Nuclear Export",
+      "arrow": "activates",
+      "cellular_process": "Exportin 1 (XPO1), a major nuclear export receptor, recognizes and binds to proteins containing a leucine-rich nuclear export signal (NES), mediating their transport from the nucleus to the cytoplasm.",
+      "effect_description": "The nuclear export of TDP-43 is facilitated, contributing to the cytoplasmic pool of the protein, though this pathway is considered redundant.",
+      "biological_consequence": [
+        "XPO1 overexpression → Enhanced binding to TDP-43 Nuclear Export Signal (NES) → Increased nuclear export of TDP-43 → Cytoplasmic accumulation → Increased risk of aggregation & cellular toxicity."
+      ],
+      "specific_effects": [
+        "Pharmacological inhibition or depletion of XPO1 has little to no effect on the subcellular localization of TDP-43, suggesting it is not the primary exporter. [7]",
+        "Overexpression of XPO1, as well as other exportins like XPO7 and NXF1, is sufficient to promote the nuclear export of TDP-43. [7]",
+        "TDP-43 likely exits the nucleus via redundant pathways and/or passive diffusion through the nuclear pore complex. [3, 20]"
+      ],
+      "evidence": [
+        {
+          "paper_title": "TDP43 nuclear export and neurodegeneration in models of amyotrophic lateral sclerosis and frontotemporal dementia",
+          "doi": "10.1038/s41598-018-22858-w",
+          "authors": "Hilary C Archbold, Katherine L Jackson, An-chi Arora, Katherine Weskamp, Emily M Tank, Xuan Li, Sami J Barmada",
+          "journal": "Scientific Reports",
+          "year": 2018,
+          "assay": "Live-cell imaging, siRNA knockdown",
+          "species": "rat, human",
+          "relevant_quote": "...we find overexpression of XPO1, XPO7 and NXF1 are each sufficient to promote nuclear TDP43 egress. Taken together, our results indicate that redundant pathways regulate TDP43 nuclear export...",
+          "pmid": "29545601"
+        },
+        {
+          "paper_title": "Nuclear RNA binding regulates TDP-43 nuclear localization and passive nuclear export",
+          "doi": "10.1016/j.celrep.2022.111106",
+          "authors": "Lauren Duan, Benjamin L Zaepfel, Vasilisa Aksenova, Mary Dasso, Jeffrey D Rothstein, Petr Kalab, Lindsey R Hayes",
+          "journal": "Cell Reports",
+          "year": 2022,
+          "assay": "Live-cell imaging, Permeabilized cell assays",
+          "species": "human",
+          "relevant_quote": "Here, we show that TDP-43 exits nuclei by passive diffusion, independent of facilitated mRNA export.",
+          "pmid": "35858577"
+        }
+      ],
+      "_context": {
+        "type": "direct",
+        "query_protein": null,
+        "chain": null
+      },
+      "pmids": [
+        "29545601",
+        "35858577"
+      ]
+    }
+  ],
+  "arrow": "activates",
+  "direction": "main_to_primary",
+  "intent": "protein transport",
+  "mechanism": "Exportin 1 (XPO1), a major nuclear export receptor, recognizes and binds to proteins containing a leucine-rich nuclear export signal (NES), mediating their transport from the nucleus to the cytoplasm.",
+  "effect": "The nuclear export of TDP-43 is facilitated, contributing to the cytoplasmic pool of the protein, though this pathway is considered redundant.",
+  "summary": "TDP43 activates XPO1 to modulate tdp-43 nuclear export, ultimately affecting increased risk of aggregation & cellular toxicity.",
+  "evidence": [
+    {
+      "paper_title": "TDP43 nuclear export and neurodegeneration in models of amyotrophic lateral sclerosis and frontotemporal dementia",
+      "doi": "10.1038/s41598-018-22858-w",
+      "authors": "Hilary C Archbold, Katherine L Jackson, An-chi Arora, Katherine Weskamp, Emily M Tank, Xuan Li, Sami J Barmada",
+      "journal": "Scientific Reports",
+      "year": 2018,
+      "assay": "Live-cell imaging, siRNA knockdown",
+      "species": "rat, human",
+      "relevant_quote": "...we find overexpression of XPO1, XPO7 and NXF1 are each sufficient to promote nuclear TDP43 egress. Taken together, our results indicate that redundant pathways regulate TDP43 nuclear export..."
+    },
+    {
+      "paper_title": "Nuclear RNA binding regulates TDP-43 nuclear localization and passive nuclear export",
+      "doi": "10.1016/j.celrep.2022.111106",
+      "authors": "Lauren Duan, Benjamin L Zaepfel, Vasilisa Aksenova, Mary Dasso, Jeffrey D Rothstein, Petr Kalab, Lindsey R Hayes",
+      "journal": "Cell Reports",
+      "year": 2022,
+      "assay": "Live-cell imaging, Permeabilized cell assays",
+      "species": "human",
+      "relevant_quote": "Here, we show that TDP-43 exits nuclei by passive diffusion, independent of facilitated mRNA export."
+    }
+  ],
+  "arrow_notation": "TDP43 <--activates-- XPO1:",
+  "protein_a": "XPO1",
+  "protein_b": "TDP43",
+  "discovered_in_query": "TDP43",
+  "first_discovered": "2025-11-11T16:36:28.314727Z",
+  "last_updated": "2025-11-11T16:36:28.314727Z"
+}

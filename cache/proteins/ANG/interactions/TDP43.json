@@ -1,0 +1,138 @@
+{
+  "primary": "TDP43",
+  "interaction_type": "indirect",
+  "upstream_interactor": null,
+  "mediator_chain": [],
+  "depth": 2,
+  "support_summary": "Under cellular stress, Angiogenin (ANG) cleaves tRNA to produce tRNA-derived stress-induced RNAs (tiRNAs). These tiRNAs promote the assembly of stress granules (SGs), which are cytoplasmic foci where TDP-43 is known to accumulate. This process links ANG's enzymatic activity to the cellular stress response pathway involving TDP-43 sequestration.",
+  "functions": [
+    {
+      "function": "Stress Granule Assembly",
+      "arrow": "activates",
+      "cellular_process": "Angiogenin (ANG) is a stress-inducible ribonuclease that generates tRNA-derived stress-induced RNAs (tiRNAs). These tiRNAs are capable of stimulating the assembly of stress granules (SGs). As TDP-43 is a key component of SGs, ANG's activity functionally links it to the same stress response pathway, promoting the formation of structures where TDP-43 accumulates.",
+      "effect_description": "ANG promotes the formation of stress granules by producing tiRNAs, thereby facilitating the sequestration of TDP-43 into these dynamic, membrane-less organelles during cellular stress.",
+      "biological_consequence": [
+        "Cellular Stress → Activation of Angiogenin (ANG) ribonuclease activity → Cleavage of tRNAs to produce tRNA-derived stress-induced RNAs (tiRNAs) → tiRNAs promote Stress Granule (SG) assembly → TDP-43 is recruited to SGs → Normal stress response",
+        "ALS-associated ANG loss-of-function mutations → Deficient ribonuclease activity → Impaired tiRNA production under stress → Altered Stress Granule dynamics → Dysregulation of TDP-43 cytoplasmic localization → Contribution to neurodegeneration"
+      ],
+      "specific_effects": [
+        "Angiogenin has been linked to stress granule assembly.",
+        "ANG-generated tiRNAs stimulate the formation of stress granules. [42]",
+        "TDP-43 is known to associate with and be recruited to stress granules. [7, 17]",
+        "Loss-of-function mutations in ANG are associated with ALS and result in deficient ribonuclease activity, potentially impairing this stress response pathway."
+      ],
+      "evidence": [
+        {
+          "paper_title": "Molecular Mechanisms in Amyotrophic Lateral Sclerosis: The Role of Angiogenin, a Secreted RNase",
+          "doi": "10.3389/fnins.2012.00167",
+          "authors": "Isabela M Aparicio-Erriu, Jochen H M Prehn",
+          "journal": "Frontiers in Neuroscience",
+          "year": 2012,
+          "assay": "Review",
+          "species": "human",
+          "relevant_quote": null,
+          "pmid": "23181008"
+        },
+        {
+          "paper_title": "Emerging role of angiogenin in stress response and cell survival under adverse conditions",
+          "doi": "10.1002/jcp.23051",
+          "authors": "Shuping Li, Guo-Fu Hu",
+          "journal": "Journal of Cellular Physiology",
+          "year": 2012,
+          "assay": "Review",
+          "species": "human",
+          "relevant_quote": "A potential role of ANG in cell survival was first implicated by the finding that ANG-mediated tiRNA is able to stimulate the formation of stress granules (SGs).",
+          "pmid": "22021078"
+        },
+        {
+          "paper_title": "TDP-43 aggregation in neurodegeneration: are stress granules the key?",
+          "doi": "10.1016/j.brainres.2012.02.032",
+          "authors": "Colleen M Dewey, Basar Cenik, Chantelle F Sephton, Brett A Johnson, Joachim Herz, Gang Yu",
+          "journal": "Brain Research",
+          "year": 2012,
+          "assay": "Review",
+          "species": "human",
+          "relevant_quote": "Several recent studies have documented that cytoplasmic TDP-43 aggregates co-localize with stress granule markers.",
+          "pmid": "22405725"
+        },
+        {
+          "paper_title": "Angiogenin-induced tRNA-derived stress-induced RNAs promote stress-induced stress granule assembly",
+          "doi": "10.1074/jbc.M109.077560",
+          "authors": "My-Linh Emara, Ryohei Yasumura, Paul Ivanov, Thaddeus G G G G Grabarek, Paul Anderson",
+          "journal": "The Journal of Biological Chemistry",
+          "year": 2010,
+          "assay": "Cell culture studies",
+          "species": "human",
+          "relevant_quote": "Here we show that ANG inhibits protein synthesis and promotes arsenite- and pateamine A-induced assembly of stress granules (SGs).",
+          "pmid": "20129916"
+        }
+      ],
+      "_context": {
+        "type": "indirect",
+        "query_protein": null,
+        "chain": null
+      },
+      "pmids": [
+        "23181008",
+        "22021078",
+        "22405725",
+        "20129916"
+      ]
+    }
+  ],
+  "arrow": "activates",
+  "direction": "main_to_primary",
+  "intent": "regulation of stress granule assembly",
+  "mechanism": "Angiogenin (ANG) is a stress-inducible ribonuclease that generates tRNA-derived stress-induced RNAs (tiRNAs). These tiRNAs are capable of stimulating the assembly of stress granules (SGs). As TDP-43 is a key component of SGs, ANG's activity functionally links it to the same stress response pathway, promoting the formation of structures where TDP-43 accumulates.",
+  "effect": "ANG promotes the formation of stress granules by producing tiRNAs, thereby facilitating the sequestration of TDP-43 into these dynamic, membrane-less organelles during cellular stress.",
+  "summary": "TDP43 activates ANG to modulate stress granule assembly, ultimately affecting normal stress response.",
+  "evidence": [
+    {
+      "paper_title": "Molecular Mechanisms in Amyotrophic Lateral Sclerosis: The Role of Angiogenin, a Secreted RNase",
+      "doi": "10.3389/fnins.2012.00167",
+      "authors": "Isabela M Aparicio-Erriu, Jochen H M Prehn",
+      "journal": "Frontiers in Neuroscience",
+      "year": 2012,
+      "assay": "Review",
+      "species": "human",
+      "relevant_quote": null
+    },
+    {
+      "paper_title": "Emerging role of angiogenin in stress response and cell survival under adverse conditions",
+      "doi": "10.1002/jcp.23051",
+      "authors": "Shuping Li, Guo-Fu Hu",
+      "journal": "Journal of Cellular Physiology",
+      "year": 2012,
+      "assay": "Review",
+      "species": "human",
+      "relevant_quote": "A potential role of ANG in cell survival was first implicated by the finding that ANG-mediated tiRNA is able to stimulate the formation of stress granules (SGs)."
+    },
+    {
+      "paper_title": "TDP-43 aggregation in neurodegeneration: are stress granules the key?",
+      "doi": "10.1016/j.brainres.2012.02.032",
+      "authors": "Colleen M Dewey, Basar Cenik, Chantelle F Sephton, Brett A Johnson, Joachim Herz, Gang Yu",
+      "journal": "Brain Research",
+      "year": 2012,
+      "assay": "Review",
+      "species": "human",
+      "relevant_quote": "Several recent studies have documented that cytoplasmic TDP-43 aggregates co-localize with stress granule markers."
+    },
+    {
+      "paper_title": "Angiogenin-induced tRNA-derived stress-induced RNAs promote stress-induced stress granule assembly",
+      "doi": "10.1074/jbc.M109.077560",
+      "authors": "My-Linh Emara, Ryohei Yasumura, Paul Ivanov, Thaddeus G G G G Grabarek, Paul Anderson",
+      "journal": "The Journal of Biological Chemistry",
+      "year": 2010,
+      "assay": "Cell culture studies",
+      "species": "human",
+      "relevant_quote": "Here we show that ANG inhibits protein synthesis and promotes arsenite- and pateamine A-induced assembly of stress granules (SGs)."
+    }
+  ],
+  "_chain_inferred": true,
+  "arrow_notation": "TDP43 <--activates-- ANG:",
+  "protein_a": "ANG",
+  "protein_b": "TDP43",
+  "discovered_in_query": "TDP43",
+  "first_discovered": "2025-11-11T16:36:28.298917Z",
+  "last_updated": "2025-11-11T16:36:28.298917Z"
+}

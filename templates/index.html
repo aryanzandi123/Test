@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProPath</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="title">Query a Protein Pathway</h1>
+            <p class="subtitle">Enter a protein symbol to generate an interactive signaling network.</p>
+            <div class="header-search-container">
+                <div class="input-container">
+                    <input type="text" id="protein-input" placeholder="e.g., ATXN3, TP53...">
+                    <button id="query-button">Generate</button>
+                </div>
+
+                <!-- Research Settings -->
+                <details class="config-details" style="margin-top: 12px;">
+                    <summary class="config-summary">Research Settings</summary>
+                    <div class="config-content">
+                        <div class="config-presets">
+                            <button class="preset-btn" onclick="setPreset(3,3,2)">Quick</button>
+                            <button class="preset-btn" onclick="setPreset(5,5,3)">Standard</button>
+                            <button class="preset-btn" onclick="setPreset(8,8,4)">Thorough</button>
+                        </div>
+                        <div class="config-inputs">
+                            <label class="config-label">
+                                <span class="config-label-text">Interactor Discovery Rounds:</span>
+                                <input type="number" id="interactor-rounds" class="config-input" min="3" max="8" value="3">
+                            </label>
+                            <label class="config-label">
+                                <span class="config-label-text">Function Mapping Rounds:</span>
+                                <input type="number" id="function-rounds" class="config-input" min="3" max="8" value="3">
+                            </label>
+                            <label class="config-label">
+                                <span class="config-label-text">Max Chain Depth:</span>
+                                <select id="max-depth" class="config-input">
+                                    <option value="1">1 (Direct only)</option>
+                                    <option value="2">2 (Direct + 1 level)</option>
+                                    <option value="3" selected>3 (2 levels indirect)</option>
+                                    <option value="4">4 (3 levels indirect)</option>
+                                    <option value="5">5+ (Unlimited)</option>
+                                </select>
+                            </label>
+
+                            <!-- Interactor Discovery Rounds -->
+                            <details class="config-sub-section" style="margin-top: 12px;">
+                                <summary class="config-sub-summary">Skip Interactor Discovery Rounds</summary>
+                                <div class="config-sub-content">
+                                    <label class="config-label" style="margin-top: 4px;">
+                                        <input type="checkbox" id="skip-round-1a" class="config-checkbox">
+                                        <span class="config-label-text">Skip Round 1a: Initial discovery (~90s, 15-25 proteins)</span>
+                                    </label>
+                                    <label class="config-label" style="margin-top: 4px;">
+                                        <input type="checkbox" id="skip-round-1b" class="config-checkbox">
+                                        <span class="config-label-text">Skip Round 1b: Expand network (~75s, 10-15 proteins)</span>
+                                    </label>
+                                    <label class="config-label" style="margin-top: 4px;">
+                                        <input type="checkbox" id="skip-round-1c" class="config-checkbox">
+                                        <span class="config-label-text">Skip Round 1c: Deep mining (~120s, 8-12 proteins)</span>
+                                    </label>
+                                    <label class="config-label" style="margin-top: 4px;">
+                                        <input type="checkbox" id="skip-round-1d" class="config-checkbox">
+                                        <span class="config-label-text">Skip Round 1d: Round 2 discovery (~60s, 5-10 proteins)</span>
+                                    </label>
+                                    <label class="config-label" style="margin-top: 4px;">
+                                        <input type="checkbox" id="skip-round-1e" class="config-checkbox">
+                                        <span class="config-label-text">Skip Round 1e: Round 3 discovery (~50s, 5-8 proteins)</span>
+                                    </label>
+                                    <label class="config-label" style="margin-top: 4px;">
+                                        <input type="checkbox" id="skip-round-1f" class="config-checkbox">
+                                        <span class="config-label-text">Skip Round 1f: Round 4 discovery (~40s, 3-6 proteins)</span>
+                                    </label>
+                                    <label class="config-label" style="margin-top: 4px;">
+                                        <input type="checkbox" id="skip-round-1g" class="config-checkbox">
+                                        <span class="config-label-text">Skip Round 1g: Round 5 final sweep (~30s, 3-5 proteins)</span>
+                                    </label>
+                                </div>
+                            </details>
+
+                            <!-- Function Discovery Rounds -->
+                            <details class="config-sub-section" style="margin-top: 8px;">
+                                <summary class="config-sub-summary">Skip Function Discovery Rounds</summary>
+                                <div class="config-sub-content">
+                                    <label class="config-label" style="margin-top: 4px;">
+                                        <input type="checkbox" id="skip-round-2a" class="config-checkbox">
+                                        <span class="config-label-text">Skip Round 2a: First batch (~120s, 8-10 proteins)</span>
+                                    </label>
+                                    <label class="config-label" style="margin-top: 4px;">
+                                        <input type="checkbox" id="skip-round-2a2" class="config-checkbox">
+                                        <span class="config-label-text">Skip Round 2a2: Second batch (~120s, 8-10 proteins)</span>
+                                    </label>
+                                    <label class="config-label" style="margin-top: 4px;">
+                                        <input type="checkbox" id="skip-round-2a3" class="config-checkbox">
+                                        <span class="config-label-text">Skip Round 2a3: Exhaustive sweep (~180s, all remaining)</span>
+                                    </label>
+                                    <label class="config-label" style="margin-top: 4px;">
+                                        <input type="checkbox" id="skip-round-2a4" class="config-checkbox">
+                                        <span class="config-label-text">Skip Round 2a4: Round 2 additional (~90s)</span>
+                                    </label>
+                                    <label class="config-label" style="margin-top: 4px;">
+                                        <input type="checkbox" id="skip-round-2a5" class="config-checkbox">
+                                        <span class="config-label-text">Skip Round 2a5: Round 3 final (~60s)</span>
+                                    </label>
+                                    <label class="config-label" style="margin-top: 4px;">
+                                        <input type="checkbox" id="skip-round-2b" class="config-checkbox">
+                                        <span class="config-label-text">Skip Round 2b: Deep research (~120s, rare functions)</span>
+                                    </label>
+                                    <label class="config-label" style="margin-top: 4px;">
+                                        <input type="checkbox" id="skip-round-2b2" class="config-checkbox">
+                                        <span class="config-label-text">Skip Round 2b2: Indirect functions (~90s, chain context)</span>
+                                    </label>
+                                    <label class="config-label" style="margin-top: 4px;">
+                                        <input type="checkbox" id="skip-round-2b3" class="config-checkbox">
+                                        <span class="config-label-text">Skip Round 2b3: Rescue direct (~60s, ensure coverage)</span>
+                                    </label>
+                                </div>
+                            </details>
+
+                            <!-- Arrow Determination -->
+                            <label class="config-label" style="margin-top: 12px;">
+                                <input type="checkbox" id="skip-arrow-determination" class="config-checkbox">
+                                <span class="config-label-text">Skip arrow determination (100× faster, uses heuristic)</span>
+                            </label>
+
+                            <!-- Post-Processing Steps -->
+                            <details class="config-sub-section" style="margin-top: 8px;">
+                                <summary class="config-sub-summary">Skip Post-Processing Steps</summary>
+                                <div class="config-sub-content">
+                                    <label class="config-label" style="margin-top: 4px;">
+                                        <input type="checkbox" id="skip-validation" class="config-checkbox">
+                                        <span class="config-label-text">Skip evidence validation (~120s, less thorough quotes)</span>
+                                    </label>
+                                    <label class="config-label" style="margin-top: 4px;">
+                                        <input type="checkbox" id="skip-deduplicator" class="config-checkbox">
+                                        <span class="config-label-text">Skip deduplication (~150s, may have duplicates)</span>
+                                    </label>
+                                    <label class="config-label" style="margin-top: 4px;">
+                                        <input type="checkbox" id="skip-fact-checking" class="config-checkbox">
+                                        <span class="config-label-text">Skip fact-checking (~180s, unverified claims)</span>
+                                    </label>
+                                    <label class="config-label" style="margin-top: 4px;">
+                                        <input type="checkbox" id="skip-pmid-validation" class="config-checkbox">
+                                        <span class="config-label-text">Skip PMID validation (~30s, may have invalid citations)</span>
+                                    </label>
+                                    <label class="config-label" style="margin-top: 4px;">
+                                        <input type="checkbox" id="skip-metadata-generation" class="config-checkbox">
+                                        <span class="config-label-text">Skip metadata generation (~5s, missing interaction patterns)</span>
+                                    </label>
+                                    <label class="config-label" style="margin-top: 4px;">
+                                        <input type="checkbox" id="skip-schema-validation" class="config-checkbox">
+                                        <span class="config-label-text">Skip schema validation (~15s, inconsistent arrows/chains)</span>
+                                    </label>
+                                    <label class="config-label" style="margin-top: 4px;">
+                                        <input type="checkbox" id="skip-function-cleaning" class="config-checkbox">
+                                        <span class="config-label-text">Skip function cleaning (~5s, verbose function names)</span>
+                                    </label>
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+                </details>
+            </div>
+            <div id="job-notification" class="job-notification">
+                <!-- This is where background job notifications will appear on the results page -->
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div id="status-display">
+                <!-- NEW: Progress bar structure -->
+                <div class="progress-wrapper" id="progress-wrapper" style="display: none;">
+                    <div class="progress-tooltip">
+                        <p>Live research can take a few minutes. You can search for other proteins while you wait—cached results load instantly.</p>
+                    </div>
+                    <div class="progress-text-container">
+                        <span id="progress-text">Initializing...</span>
+                        <span id="progress-percent">0%</span>
+                    </div>
+                    <div class="progress-bar-outer">
+                        <div class="progress-bar-inner" id="progress-bar-inner"></div>
+                    </div>
+                    <button id="cancel-btn" class="cancel-btn" onclick="cancelJob()" style="display: none; margin-top: 12px;">Cancel</button>
+                </div>
+                <!-- Fallback for simple messages -->
+                <p id="status-message"></p>
+            </div>
+        </div>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>

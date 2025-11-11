@@ -1,0 +1,114 @@
+{
+  "primary": "LC3B",
+  "direction": "main_to_primary",
+  "arrow": "activates",
+  "intent": "cargo recruitment",
+  "pmids": [
+    "27932448",
+    "35774225",
+    "28368721"
+  ],
+  "support_summary": "TRIM16 is a member of the tripartite motif (TRIM) family that acts as a cargo receptor for secretory autophagy. It directly binds LC3B to recruit cargo, such as the inflammatory cytokine IL-1β, to autophagic membranes for unconventional secretion, bypassing the typical degradative pathway.",
+  "functions": [
+    {
+      "function": "Unconventional Protein Secretion (Secretory Autophagy)",
+      "arrow": "activates",
+      "cellular_process": "TRIM16 acts as a cargo receptor for secretory autophagy. It binds to cytosolic cargo, such as the cytokine IL-1β, and recruits it to LC3-positive membranes. This process bypasses the degradative fate and instead targets the vesicle for fusion with the plasma membrane, releasing the cargo.",
+      "effect_description": "Mediates the secretion of leaderless cytosolic proteins by hijacking components of the autophagy machinery, a process distinct from conventional, degradative autophagy.",
+      "biological_consequence": [
+        "TRIM16 acts as a cargo receptor for IL-1β → TRIM16-IL-1β complex is recruited to LC3B-positive membranes → Formation of a secretory autophagosome → SEC22B-mediated fusion with the plasma membrane → Unconventional secretion of IL-1β → Pro-inflammatory signaling",
+        "TRIM16 acts as a cargo receptor for ferritin → TRIM16-ferritin complex is recruited to LC3B-positive membranes → Formation of a secretory autophagosome → SNARE-mediated fusion with the plasma membrane → Unconventional secretion of ferritin → Regulation of cellular iron homeostasis"
+      ],
+      "specific_effects": [
+        "Acts as a specialized receptor for secretory autophagy of IL-1β and ferritin",
+        "Forms a complex with the R-SNARE protein SEC22B to facilitate vesicle trafficking and fusion",
+        "Colocalizes with LC3B upon lysosomal damage to initiate secretory autophagy"
+      ],
+      "pmids": [
+        "27932448",
+        "35774225",
+        "28368721"
+      ],
+      "evidence": [
+        {
+          "pmid": "27932448",
+          "doi": "10.15252/embj.201695081",
+          "paper_title": "Dedicated SNAREs and specialized TRIM cargo receptors mediate secretory autophagy",
+          "authors": "Kimura T, Jia J, Kumar S, Choi SW, Gu Y, Mudd M, Dupont N, Jiang S, Peters R, Farzam F, Jain A, Lidke KA, Adams CM, Johansen T, Deretic V",
+          "journal": "EMBO J",
+          "year": 2017,
+          "assay": "Co-immunoprecipitation, Microscopy",
+          "species": "human",
+          "relevant_quote": "Here we show that in response to lysosomal damage, the prototypical cytosolic secretory autophagy cargo IL-1β is recognized by specialized secretory autophagy cargo receptor TRIM16..."
+        },
+        {
+          "pmid": "35774225",
+          "doi": "10.3389/fcell.2022.892450",
+          "paper_title": "Autophagy-Related Pathways in Vesicular Unconventional Protein Secretion",
+          "authors": "Noh SH, Kim YJ, Lee MG",
+          "journal": "Front Cell Dev Biol",
+          "year": 2022,
+          "assay": "Review",
+          "species": "human",
+          "relevant_quote": "It has been shown that the secretory autophagy cargo IL-1β is recognized by the autophagy cargo receptor TRIM16 before interacting with the Sec22b to facilitate the delivery of IL-1β to the LC3B-II positive membrane."
+        },
+        {
+          "pmid": "28368721",
+          "doi": "10.1080/15548627.2017.1307486",
+          "paper_title": "Cellular and molecular mechanism for secretory autophagy",
+          "authors": "Kimura T, Jia J, Claude-Taupin A, Kumar S, Choi SW, Gu Y, Mudd M, Dupont N, Jiang S, Peters R, Farzam F, Jain A, Lidke KA, Adams CM, Johansen T, Deretic V",
+          "journal": "Autophagy",
+          "year": 2017,
+          "assay": "Review",
+          "species": "human",
+          "relevant_quote": "We have shown that the prototypical secretory autophagy cargo IL1B/IL-1β...is recognized by TRIM16, and that this...receptor interacts with the R-SNARE SEC22B to jointly deliver cargo to the MAP1LC3B-II-positive sequestration membranes."
+        }
+      ]
+    }
+  ],
+  "mechanism": "TRIM16 acts as a cargo receptor for secretory autophagy. It binds to cytosolic cargo, such as the cytokine IL-1β, and recruits it to LC3-positive membranes. This process bypasses the degradative fate and instead targets the vesicle for fusion with the plasma membrane, releasing the cargo.",
+  "effect": "Mediates the secretion of leaderless cytosolic proteins by hijacking components of the autophagy machinery, a process distinct from conventional, degradative autophagy.",
+  "summary": "LC3B activates TRIM16 to modulate unconventional protein secretion (secretory autophagy), ultimately affecting pro-inflammatory signaling.",
+  "evidence": [
+    {
+      "pmid": "27932448",
+      "doi": "10.15252/embj.201695081",
+      "paper_title": "Dedicated SNAREs and specialized TRIM cargo receptors mediate secretory autophagy",
+      "authors": "Kimura T, Jia J, Kumar S, Choi SW, Gu Y, Mudd M, Dupont N, Jiang S, Peters R, Farzam F, Jain A, Lidke KA, Adams CM, Johansen T, Deretic V",
+      "journal": "EMBO J",
+      "year": 2017,
+      "assay": "Co-immunoprecipitation, Microscopy",
+      "species": "human",
+      "relevant_quote": "Here we show that in response to lysosomal damage, the prototypical cytosolic secretory autophagy cargo IL-1β is recognized by specialized secretory autophagy cargo receptor TRIM16..."
+    },
+    {
+      "pmid": "35774225",
+      "doi": "10.3389/fcell.2022.892450",
+      "paper_title": "Autophagy-Related Pathways in Vesicular Unconventional Protein Secretion",
+      "authors": "Noh SH, Kim YJ, Lee MG",
+      "journal": "Front Cell Dev Biol",
+      "year": 2022,
+      "assay": "Review",
+      "species": "human",
+      "relevant_quote": "It has been shown that the secretory autophagy cargo IL-1β is recognized by the autophagy cargo receptor TRIM16 before interacting with the Sec22b to facilitate the delivery of IL-1β to the LC3B-II positive membrane."
+    },
+    {
+      "pmid": "28368721",
+      "doi": "10.1080/15548627.2017.1307486",
+      "paper_title": "Cellular and molecular mechanism for secretory autophagy",
+      "authors": "Kimura T, Jia J, Claude-Taupin A, Kumar S, Choi SW, Gu Y, Mudd M, Dupont N, Jiang S, Peters R, Farzam F, Jain A, Lidke KA, Adams CM, Johansen T, Deretic V",
+      "journal": "Autophagy",
+      "year": 2017,
+      "assay": "Review",
+      "species": "human",
+      "relevant_quote": "We have shown that the prototypical secretory autophagy cargo IL1B/IL-1β...is recognized by TRIM16, and that this...receptor interacts with the R-SNARE SEC22B to jointly deliver cargo to the MAP1LC3B-II-positive sequestration membranes."
+    }
+  ],
+  "depth": 1,
+  "arrow_notation": "LC3B <--activates-- TRIM16:",
+  "protein_a": "TRIM16",
+  "protein_b": "LC3B",
+  "discovered_in_query": "LC3B",
+  "first_discovered": "2025-11-11T15:54:33.415248Z",
+  "last_updated": "2025-11-11T15:54:33.415248Z"
+}

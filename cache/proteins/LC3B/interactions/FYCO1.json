@@ -1,0 +1,107 @@
+{
+  "primary": "FYCO1",
+  "direction": "primary_to_main",
+  "arrow": "activates",
+  "intent": "binding",
+  "support_summary": "FYCO1 is a microtubule-associated protein that directly binds LC3B via a LIR motif. This interaction acts as a crucial link, connecting LC3B-positive autophagosomes to kinesin motor proteins, thereby activating their anterograde transport along microtubules for maturation.",
+  "functions": [
+    {
+      "function": "Autophagosome Trafficking",
+      "arrow": "activates",
+      "cellular_process": "Acts as a linker protein that connects LC3B-positive autophagosomes to microtubule motor proteins. It binds LC3B/GABARAP via its LIR motif and simultaneously binds to kinesin motors, facilitating the movement of autophagosomes.",
+      "effect_description": "Mediates the plus-end-directed movement of autophagosomes along microtubules, which is essential for their transport from the cell periphery to the perinuclear region for subsequent fusion with lysosomes.",
+      "biological_consequence": [
+        "FYCO1 binds PI3P and LC3B-II on a mature autophagosome → FYCO1 recruits a kinesin motor protein → Autophagosome complex docks onto a microtubule → Anterograde transport toward microtubule plus-ends → Facilitates autophagosome-lysosome fusion",
+        "Efficient autophagosome trafficking and fusion → Increased autophagic flux → Clearance of cellular cargo → Maintenance of cellular homeostasis"
+      ],
+      "specific_effects": [
+        "Facilitates anterograde (plus-end directed) transport of autophagosomes",
+        "Crucial for efficient autophagic flux, particularly in polarized cells like neurons",
+        "Contains a GOLD domain for binding to PI3P on the autophagosome membrane",
+        "Interaction with LC3B is reduced by STK4-mediated phosphorylation of LC3B at Threonine 50"
+      ],
+      "evidence": [
+        {
+          "paper_title": "FYCO1 is a Rab7 effector that binds to LC3 and PI3P to mediate microtubule plus end-directed vesicle transport",
+          "doi": "10.1083/jcb.200907015",
+          "authors": "Pankiv S, Alemu EA, Brech A, Bruun JA, Lamark T, Overvatn A, Bjørkøy G, Johansen T",
+          "journal": "J Cell Biol",
+          "year": 2010,
+          "assay": "Yeast two-hybrid, Co-IP",
+          "species": "human",
+          "relevant_quote": "we have identified an adaptor protein complex, formed by the two autophagic membrane-associated proteins LC3 and Rab7 and the novel...protein FYCO1, that promotes microtubule (MT) plus end-directed transport...",
+          "pmid": "20100911"
+        },
+        {
+          "paper_title": "FYCO1: linking autophagosomes to microtubule plus end-directing molecular motors",
+          "doi": "10.4161/auto.6.4.11670",
+          "authors": "Pankiv S, Johansen T",
+          "journal": "Autophagy",
+          "year": 2010,
+          "assay": "Review",
+          "species": "human",
+          "relevant_quote": "FYCO1 binds to both LC3, PtdIns(3)P and Rab7, and contains a domain responsible for microtubule plus end-dependent transport.",
+          "pmid": "20364109"
+        },
+        {
+          "paper_title": "LC3B phosphorylation regulates FYCO1 binding and directional transport of autophagosomes",
+          "doi": "10.1101/2020.05.15.098223",
+          "authors": "Joachim J, Jeffers M, O'Connell K, Laster K, Schlenner R, Gorski J, Lu Y, Fields S, Reiss T, Gonzalez-Perez I, Tooze S, Fournet G, Seo J, Lee J, Itakura E, Mizushima N, Youle R, Voeltz G, Randow F, Virgin H, Rutter J, Wilson M, Xavier R",
+          "journal": "bioRxiv",
+          "year": 2020,
+          "assay": "Co-IP, Proximity Ligation Assay",
+          "species": "human",
+          "relevant_quote": "Here, we show that LC3B-T50 phosphorylation decreases the interaction between LC3B and FYCO1, which in turn regulates the starvation-induced perinuclear positioning of autophagosomes.",
+          "pmid": "34146484"
+        }
+      ],
+      "pmids": [
+        "20100911",
+        "20364109",
+        "34146484"
+      ]
+    }
+  ],
+  "mechanism": "Acts as a linker protein that connects LC3B-positive autophagosomes to microtubule motor proteins. It binds LC3B/GABARAP via its LIR motif and simultaneously binds to kinesin motors, facilitating the movement of autophagosomes.",
+  "effect": "Mediates the plus-end-directed movement of autophagosomes along microtubules, which is essential for their transport from the cell periphery to the perinuclear region for subsequent fusion with lysosomes.",
+  "summary": "LC3B activates FYCO1 to modulate autophagosome trafficking, ultimately affecting facilitates autophagosome-lysosome fusion.",
+  "evidence": [
+    {
+      "paper_title": "FYCO1 is a Rab7 effector that binds to LC3 and PI3P to mediate microtubule plus end-directed vesicle transport",
+      "doi": "10.1083/jcb.200907015",
+      "authors": "Pankiv S, Alemu EA, Brech A, Bruun JA, Lamark T, Overvatn A, Bjørkøy G, Johansen T",
+      "journal": "J Cell Biol",
+      "year": 2010,
+      "assay": "Yeast two-hybrid, Co-IP",
+      "species": "human",
+      "relevant_quote": "we have identified an adaptor protein complex, formed by the two autophagic membrane-associated proteins LC3 and Rab7 and the novel...protein FYCO1, that promotes microtubule (MT) plus end-directed transport..."
+    },
+    {
+      "paper_title": "FYCO1: linking autophagosomes to microtubule plus end-directing molecular motors",
+      "doi": "10.4161/auto.6.4.11670",
+      "authors": "Pankiv S, Johansen T",
+      "journal": "Autophagy",
+      "year": 2010,
+      "assay": "Review",
+      "species": "human",
+      "relevant_quote": "FYCO1 binds to both LC3, PtdIns(3)P and Rab7, and contains a domain responsible for microtubule plus end-dependent transport."
+    },
+    {
+      "paper_title": "LC3B phosphorylation regulates FYCO1 binding and directional transport of autophagosomes",
+      "doi": "10.1101/2020.05.15.098223",
+      "authors": "Joachim J, Jeffers M, O'Connell K, Laster K, Schlenner R, Gorski J, Lu Y, Fields S, Reiss T, Gonzalez-Perez I, Tooze S, Fournet G, Seo J, Lee J, Itakura E, Mizushima N, Youle R, Voeltz G, Randow F, Virgin H, Rutter J, Wilson M, Xavier R",
+      "journal": "bioRxiv",
+      "year": 2020,
+      "assay": "Co-IP, Proximity Ligation Assay",
+      "species": "human",
+      "relevant_quote": "Here, we show that LC3B-T50 phosphorylation decreases the interaction between LC3B and FYCO1, which in turn regulates the starvation-induced perinuclear positioning of autophagosomes."
+    }
+  ],
+  "depth": 1,
+  "arrow_notation": "LC3B <--activates-- FYCO1:",
+  "protein_a": "LC3B",
+  "protein_b": "FYCO1",
+  "discovered_in_query": "LC3B",
+  "first_discovered": "2025-11-11T15:54:33.380005Z",
+  "last_updated": "2025-11-11T15:54:33.380005Z"
+}

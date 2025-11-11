@@ -1,0 +1,93 @@
+{
+  "primary": "TDP43",
+  "interaction_type": "direct",
+  "upstream_interactor": null,
+  "mediator_chain": [],
+  "depth": 1,
+  "support_summary": "Immunoprecipitation experiments using human brain tissue confirmed that the mitochondrial fusion protein Mitofusin 2 (MFN2) interacts in a complex with TDP-43. Pathological TDP-43 impairs mitochondrial dynamics, and this deficit can be rescued by MFN2 co-expression, indicating TDP-43 pathology directly impacts mitochondrial function through MFN2.",
+  "functions": [
+    {
+      "function": "Mitochondrial Dynamics",
+      "arrow": "inhibits",
+      "cellular_process": "TDP-43 interacts with Mitofusin 2 (MFN2), a key protein on the outer mitochondrial membrane essential for mitochondrial fusion. While normal TDP-43 levels appear to regulate MFN2, pathological or mutant TDP-43 disrupts mitochondrial fusion and transport, leading to mitochondrial dysfunction.",
+      "effect_description": "Pathological TDP-43 disrupts mitochondrial dynamics by impairing MFN2-mediated mitochondrial fusion and transport.",
+      "biological_consequence": [
+        "Pathological or mutant TDP-43 → Dysfunctional interaction with MFN2 on the outer mitochondrial membrane → Inhibition of MFN2-mediated mitochondrial fusion → Mitochondrial fragmentation and network collapse → Impaired cellular bioenergetics → Neurodegeneration.",
+        "Mutant TDP-43 expression → Impaired MFN2-dependent mitochondrial transport along axons → Reduced ATP supply at synapses and neuromuscular junctions → Synaptic dysfunction and distal axonal decay → Motor neuron degeneration."
+      ],
+      "specific_effects": [
+        "The mitochondrial fusion protein MFN2 interacts in a complex with TDP-43 in human brain tissue.",
+        "Overexpression of both wild-type and mutant TDP-43 impairs mitochondrial movement in motor neurons.",
+        "Co-expression of MFN2 can rescue the mitochondrial dynamics abnormalities and mitochondrial dysfunction induced by mutant TDP-43.",
+        "Knocking down TDP-43 in HEK293T cells led to a significant reduction in MFN2 protein."
+      ],
+      "evidence": [
+        {
+          "paper_title": "The ALS disease-associated mutant TDP-43 impairs mitochondrial dynamics and function in motor neurons",
+          "doi": "10.1093/hmg/ddt319",
+          "authors": "Wang W, Li L, Lin WL, Dickson DW, Petrucelli L, Zhang T, Wang X",
+          "journal": "Human Molecular Genetics",
+          "year": 2013,
+          "assay": "Overexpression studies, Microscopy",
+          "species": "mouse (primary motor neurons)",
+          "relevant_quote": "Importantly, co-expression of mitochondrial fusion protein mitofusin 2 (Mfn2) could abolish TDP-43 induced mitochondrial dynamics abnormalities and mitochondrial dysfunction.",
+          "pmid": "23827948"
+        },
+        {
+          "paper_title": "TDP-43 Interacts With Mitochondrial Proteins Critical for Mitophagy and Mitochondrial Dynamics",
+          "doi": "10.1016/j.neulet.2018.04.053",
+          "authors": "Davis SA, Itaman S, Khalid-Janney CM, Sherard JA, Dowell JA, Cairns NJ, Gitcho MA",
+          "journal": "Neuroscience Letters",
+          "year": 2018,
+          "assay": "Immunoprecipitation, Western Blot",
+          "species": "human, mouse",
+          "relevant_quote": "Furthermore, the fusion protein mitofusin 2 (MFN2) interacts in complex with TDP-43...",
+          "pmid": "29715546"
+        }
+      ],
+      "_context": {
+        "type": "direct",
+        "query_protein": null,
+        "chain": null
+      },
+      "pmids": [
+        "23827948",
+        "29715546"
+      ]
+    }
+  ],
+  "arrow": "inhibits",
+  "direction": "bidirectional",
+  "intent": "regulation of mitochondrial dynamics",
+  "mechanism": "TDP-43 interacts with Mitofusin 2 (MFN2), a key protein on the outer mitochondrial membrane essential for mitochondrial fusion. While normal TDP-43 levels appear to regulate MFN2, pathological or mutant TDP-43 disrupts mitochondrial fusion and transport, leading to mitochondrial dysfunction.",
+  "effect": "Pathological TDP-43 disrupts mitochondrial dynamics by impairing MFN2-mediated mitochondrial fusion and transport.",
+  "summary": "TDP43 inhibits MFN2 to modulate regulation of mitochondrial dynamics, ultimately affecting neurodegeneration.",
+  "evidence": [
+    {
+      "paper_title": "The ALS disease-associated mutant TDP-43 impairs mitochondrial dynamics and function in motor neurons",
+      "doi": "10.1093/hmg/ddt319",
+      "authors": "Wang W, Li L, Lin WL, Dickson DW, Petrucelli L, Zhang T, Wang X",
+      "journal": "Human Molecular Genetics",
+      "year": 2013,
+      "assay": "Overexpression studies, Microscopy",
+      "species": "mouse (primary motor neurons)",
+      "relevant_quote": "Importantly, co-expression of mitochondrial fusion protein mitofusin 2 (Mfn2) could abolish TDP-43 induced mitochondrial dynamics abnormalities and mitochondrial dysfunction."
+    },
+    {
+      "paper_title": "TDP-43 Interacts With Mitochondrial Proteins Critical for Mitophagy and Mitochondrial Dynamics",
+      "doi": "10.1016/j.neulet.2018.04.053",
+      "authors": "Davis SA, Itaman S, Khalid-Janney CM, Sherard JA, Dowell JA, Cairns NJ, Gitcho MA",
+      "journal": "Neuroscience Letters",
+      "year": 2018,
+      "assay": "Immunoprecipitation, Western Blot",
+      "species": "human, mouse",
+      "relevant_quote": "Furthermore, the fusion protein mitofusin 2 (MFN2) interacts in complex with TDP-43..."
+    }
+  ],
+  "arrow_notation": "TDP43 <--inhibits--> MFN2:",
+  "protein_a": "MFN2",
+  "protein_b": "TDP43",
+  "discovered_in_query": "TDP43",
+  "first_discovered": "2025-11-11T16:36:28.331118Z",
+  "last_updated": "2025-11-11T16:36:28.331118Z"
+}

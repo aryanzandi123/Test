@@ -1,0 +1,135 @@
+{
+  "primary": "LC3B",
+  "interaction_type": "direct",
+  "upstream_interactor": null,
+  "mediator_chain": [],
+  "depth": 1,
+  "support_summary": "An inner mitochondrial membrane protein that acts as a mitophagy receptor, binding directly to LC3B upon mitochondrial damage to recruit the autophagosome.",
+  "functions": [
+    {
+      "function": "Selective Autophagy of Mitochondria (Mitophagy)",
+      "arrow": "activates",
+      "cellular_process": "Acts as an inner mitochondrial membrane receptor for mitophagy. Upon mitochondrial depolarization and subsequent rupture of the outer membrane (often Parkin-dependent), PHB2 becomes exposed to the cytosol and binds directly to LC3 via its LIR domain.",
+      "effect_description": "Recruits the autophagosome to damaged mitochondria, ensuring their selective clearance. This role is crucial for Parkin-mediated mitophagy and the removal of paternal mitochondria after fertilization.",
+      "biological_consequence": [
+        "Severe mitochondrial damage → PINK1 kinase accumulates on the OMM and recruits Parkin E3 ligase → Parkin-mediated ubiquitination causes OMM rupture → Inner membrane protein PHB2 is exposed to the cytosol → PHB2 binds directly to LC3B on the phagophore → Mitophagosome engulfment and degradation → Clearance of terminally damaged mitochondria"
+      ],
+      "specific_effects": [
+        "Required for Parkin-induced mitophagy in mammalian cells",
+        "Interaction with LC3B is enhanced by Parkin-mediated ubiquitination of PHB2",
+        "Essential for the clearance of paternal mitochondria in C. elegans embryos",
+        "VDAC1 facilitates the efficient exposure of PHB2 during mitophagy"
+      ],
+      "evidence": [
+        {
+          "paper_title": "Prohibitin 2 Is an Inner Mitochondrial Membrane Mitophagy Receptor",
+          "doi": "10.1016/j.cell.2016.11.042",
+          "authors": "Wei Y, Chiang WC, Sumpter R Jr, et al.",
+          "journal": "Cell",
+          "year": 2017,
+          "assay": "Co-immunoprecipitation, GST pulldown",
+          "species": "human, C. elegans",
+          "relevant_quote": "Here, we identify the inner mitochondrial membrane protein, prohibitin 2 (PHB2), as a crucial mitophagy receptor... PHB2 binds the autophagosomal membrane-associated protein LC3 through an LC3-interaction region (LIR) domain.",
+          "pmid": "28017329"
+        },
+        {
+          "paper_title": "The interaction between E3 ubiquitin ligase Parkin and mitophagy receptor PHB2 links inner mitochondrial membrane ubiquitination to efficient mitophagy",
+          "doi": "10.1016/j.jbc.2022.102704",
+          "authors": "Sun S, Hou H, Ma G, et al.",
+          "journal": "The Journal of Biological Chemistry",
+          "year": 2022,
+          "assay": "Co-immunoprecipitation, Proximity Ligation Assay",
+          "species": "human",
+          "relevant_quote": "...we report that prohibitin 2 (PHB2), an essential IMM receptor for mitophagy, is ubiquitinated by Parkin and thereby gains higher affinity to the autophagosome... enhancing the interaction between PHB2 and MAP1LC3B/LC3B.",
+          "pmid": "36379251"
+        },
+        {
+          "paper_title": "Efficient PHB2 (prohibitin 2) exposure during mitophagy depends on VDAC1 (voltage dependent anion channel 1)",
+          "doi": "10.1080/15548627.2024.2426116",
+          "authors": "Puri R, Kumar M, Singh K, et al.",
+          "journal": "Autophagy",
+          "year": 2025,
+          "assay": "Immunoblotting, Co-immunoprecipitation",
+          "species": "human, Drosophila",
+          "relevant_quote": "Exposure of inner mitochondrial membrane resident protein PHB2 (prohibitin 2) during autophagic removal of depolarized mitochondria (mitophagy) depends on the ubiquitin-proteasome system. This uncovering facilitates the PHB2 interaction with phagophore membrane-associated protein MAP1LC3/LC3.",
+          "pmid": "39513197"
+        },
+        {
+          "paper_title": "Prohibitins, Phb1 and Phb2, function as Atg8 receptors to support yeast mitophagy and also play a negative regulatory role in Atg32 processing",
+          "doi": "10.1080/15548627.2024.2375881",
+          "authors": "García-Chávez D, Domínguez-Martín E, Kawasaki L, et al.",
+          "journal": "Autophagy",
+          "year": 2024,
+          "assay": "Co-immunoprecipitation",
+          "species": "Saccharomyces cerevisiae",
+          "relevant_quote": "In mammals, PHB2 regulates PINK1-PRKN mediated mitophagy by interacting with lipidated MAP1LC3B/LC3B.",
+          "pmid": "38964378"
+        }
+      ],
+      "_context": {
+        "type": "direct",
+        "query_protein": null,
+        "chain": null
+      },
+      "pmids": [
+        "28017329",
+        "36379251",
+        "39513197",
+        "38964378"
+      ]
+    }
+  ],
+  "arrow": "activates",
+  "intent": "regulation",
+  "mechanism": "Acts as an inner mitochondrial membrane receptor for mitophagy. Upon mitochondrial depolarization and subsequent rupture of the outer membrane (often Parkin-dependent), PHB2 becomes exposed to the cytosol and binds directly to LC3 via its LIR domain.",
+  "effect": "Recruits the autophagosome to damaged mitochondria, ensuring their selective clearance. This role is crucial for Parkin-mediated mitophagy and the removal of paternal mitochondria after fertilization.",
+  "summary": "LC3B activates PHB2 to modulate selective autophagy of mitochondria (mitophagy), ultimately affecting clearance of terminally damaged mitochondria.",
+  "evidence": [
+    {
+      "paper_title": "Prohibitin 2 Is an Inner Mitochondrial Membrane Mitophagy Receptor",
+      "doi": "10.1016/j.cell.2016.11.042",
+      "authors": "Wei Y, Chiang WC, Sumpter R Jr, et al.",
+      "journal": "Cell",
+      "year": 2017,
+      "assay": "Co-immunoprecipitation, GST pulldown",
+      "species": "human, C. elegans",
+      "relevant_quote": "Here, we identify the inner mitochondrial membrane protein, prohibitin 2 (PHB2), as a crucial mitophagy receptor... PHB2 binds the autophagosomal membrane-associated protein LC3 through an LC3-interaction region (LIR) domain."
+    },
+    {
+      "paper_title": "The interaction between E3 ubiquitin ligase Parkin and mitophagy receptor PHB2 links inner mitochondrial membrane ubiquitination to efficient mitophagy",
+      "doi": "10.1016/j.jbc.2022.102704",
+      "authors": "Sun S, Hou H, Ma G, et al.",
+      "journal": "The Journal of Biological Chemistry",
+      "year": 2022,
+      "assay": "Co-immunoprecipitation, Proximity Ligation Assay",
+      "species": "human",
+      "relevant_quote": "...we report that prohibitin 2 (PHB2), an essential IMM receptor for mitophagy, is ubiquitinated by Parkin and thereby gains higher affinity to the autophagosome... enhancing the interaction between PHB2 and MAP1LC3B/LC3B."
+    },
+    {
+      "paper_title": "Efficient PHB2 (prohibitin 2) exposure during mitophagy depends on VDAC1 (voltage dependent anion channel 1)",
+      "doi": "10.1080/15548627.2024.2426116",
+      "authors": "Puri R, Kumar M, Singh K, et al.",
+      "journal": "Autophagy",
+      "year": 2025,
+      "assay": "Immunoblotting, Co-immunoprecipitation",
+      "species": "human, Drosophila",
+      "relevant_quote": "Exposure of inner mitochondrial membrane resident protein PHB2 (prohibitin 2) during autophagic removal of depolarized mitochondria (mitophagy) depends on the ubiquitin-proteasome system. This uncovering facilitates the PHB2 interaction with phagophore membrane-associated protein MAP1LC3/LC3."
+    },
+    {
+      "paper_title": "Prohibitins, Phb1 and Phb2, function as Atg8 receptors to support yeast mitophagy and also play a negative regulatory role in Atg32 processing",
+      "doi": "10.1080/15548627.2024.2375881",
+      "authors": "García-Chávez D, Domínguez-Martín E, Kawasaki L, et al.",
+      "journal": "Autophagy",
+      "year": 2024,
+      "assay": "Co-immunoprecipitation",
+      "species": "Saccharomyces cerevisiae",
+      "relevant_quote": "In mammals, PHB2 regulates PINK1-PRKN mediated mitophagy by interacting with lipidated MAP1LC3B/LC3B."
+    }
+  ],
+  "arrow_notation": "LC3B --activates--> PHB2:",
+  "protein_a": "PHB2",
+  "protein_b": "LC3B",
+  "discovered_in_query": "LC3B",
+  "first_discovered": "2025-11-11T15:54:33.407904Z",
+  "last_updated": "2025-11-11T15:54:33.407904Z"
+}

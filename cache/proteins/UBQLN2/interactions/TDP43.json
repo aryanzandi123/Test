@@ -1,0 +1,96 @@
+{
+  "primary": "TDP43",
+  "direction": "main_to_primary",
+  "arrow": "activates",
+  "intent": "protein degradation",
+  "support_summary": "Ubiquilin 2 (UBQLN2) is genetically linked to ALS and is involved in protein degradation pathways. It directly binds to the C-terminal region of TDP-43, facilitating its clearance through both the proteasome and autophagy, and is found in pathological TDP-43 inclusions.",
+  "functions": [
+    {
+      "function": "TDP-43 Aggregate Clearance",
+      "arrow": "activates",
+      "cellular_process": "Ubiquilin-2 (UBQLN2) is an adaptor protein that recognizes, binds to, and facilitates the clearance of both soluble and aggregated forms of TDP-43. It shuttles ubiquitinated TDP-43 to the proteasome for degradation and is also involved in the maturation of autophagosomes.",
+      "effect_description": "UBQLN2 enhances the degradation of full-length TDP-43 and its toxic C-terminal fragments, thereby reducing their pathological accumulation in the cell.",
+      "biological_consequence": [
+        "Soluble misfolded TDP-43 → UBQLN2 recognizes and binds ubiquitinated TDP-43 → UBQLN2 shuttles TDP-43 to the 26S proteasome → Proteasomal degradation of TDP-43",
+        "ALS/FTD-linked UBQLN2 mutations → Impaired TDP-43 delivery to proteasome/autophagosome → Accumulation of insoluble TDP-43 aggregates → Formation of cytotoxic inclusions → Motor neuron degeneration"
+      ],
+      "specific_effects": [
+        "UBQLN2 binds with high affinity to the C-terminal region of TDP-43.",
+        "Overexpression of UBQLN2 significantly reduces the levels of both full-length and C-terminal fragments of TDP-43 in cells.",
+        "Mutations in UBQLN2 are associated with ALS and FTD, and the mutant protein is found in TDP-43 positive inclusions.",
+        "UBQLN2 is involved in both proteasomal degradation and the maturation of autophagosomes.",
+        "Co-expression of wild-type human TDP-43 exacerbates UBQLN2-mediated neurodegeneration in C. elegans."
+      ],
+      "evidence": [
+        {
+          "paper_title": "Motor neuron disease, TDP-43 pathology, and memory deficits in mice expressing ALS–FTD-linked UBQLN2 mutations",
+          "doi": "10.1073/pnas.1608432113",
+          "authors": "Le NT, Chang L, Kovlyagina I, Georgiou P, Safren N, Braunstein KE, Kvarta MD, Van Dyke AM, LeGates TA, Philips T, Morrison BM, Thompson SM, Puche AC, Gould TD, Rothstein JD, Wong PC, Monteiro MJ",
+          "journal": "Proceedings of the National Academy of Sciences of the United States of America",
+          "year": 2016,
+          "assay": "Immunohistochemistry",
+          "species": "mouse",
+          "relevant_quote": "Neuropathologic analysis of the mice with end-stage disease revealed...reduced staining of TAR-DNA binding protein 43 in the nucleus, with concomitant formation of ubiquitin+ inclusions in the cytoplasm...",
+          "pmid": "27834214"
+        },
+        {
+          "paper_title": "Human Ubiquilin 2 and TDP-43 copathology drives neurodegeneration in transgenic Caenorhabditis elegans",
+          "doi": "10.1093/g3journal/jkab158",
+          "authors": "Saxton AD, Kraemer BC",
+          "journal": "G3: Genes, Genomes, Genetics",
+          "year": 2021,
+          "assay": "Transgenic expression",
+          "species": "C. elegans",
+          "relevant_quote": "co-expression of wild-type human TDP-43 exacerbates UBQLN2 deficits. This model of UBQLN2-mediated neurodegeneration may be useful for further mechanistic investigation...",
+          "pmid": "33963840"
+        }
+      ],
+      "pmids": [
+        "27834214",
+        "33963840"
+      ]
+    }
+  ],
+  "mechanism": "Ubiquilin-2 (UBQLN2) is an adaptor protein that recognizes, binds to, and facilitates the clearance of both soluble and aggregated forms of TDP-43. It shuttles ubiquitinated TDP-43 to the proteasome for degradation and is also involved in the maturation of autophagosomes.",
+  "effect": "UBQLN2 enhances the degradation of full-length TDP-43 and its toxic C-terminal fragments, thereby reducing their pathological accumulation in the cell.",
+  "summary": "TDP43 activates UBQLN2 to modulate tdp-43 aggregate clearance, ultimately affecting proteasomal degradation of tdp-43.",
+  "evidence": [
+    {
+      "paper_title": "Ubiquilin-2 (UBQLN2) binds with high affinity to the C-terminal region of TDP-43 and modulates TDP-43 levels in H4 cells: characterization of inhibition by nucleic acids and 4-aminoquinolines",
+      "doi": "10.1016/j.bbapap.2013.03.020",
+      "authors": "Cassel JA, Reitz AB",
+      "journal": "Biochimica et Biophysica Acta (BBA) - Proteins and Proteomics",
+      "year": 2013,
+      "assay": "Co-Immunoprecipitation, HTRF",
+      "species": "human",
+      "relevant_quote": "overexpression of UBQLN2 in the presence of overexpressed full length TDP-43 or C-terminal TDP-43 (170-414) dramatically lowered levels of both full length TDP-43 and C-terminal TDP-43 fragments (CTFs)."
+    },
+    {
+      "paper_title": "Motor neuron disease, TDP-43 pathology, and memory deficits in mice expressing ALS–FTD-linked UBQLN2 mutations",
+      "doi": "10.1073/pnas.1608432113",
+      "authors": "Le NT, Chang L, Kovlyagina I, Georgiou P, Safren N, Braunstein KE, Kvarta MD, Van Dyke AM, LeGates TA, Philips T, Morrison BM, Thompson SM, Puche AC, Gould TD, Rothstein JD, Wong PC, Monteiro MJ",
+      "journal": "Proceedings of the National Academy of Sciences of the United States of America",
+      "year": 2016,
+      "assay": "Immunohistochemistry",
+      "species": "mouse",
+      "relevant_quote": "Neuropathologic analysis of the mice with end-stage disease revealed...reduced staining of TAR-DNA binding protein 43 in the nucleus, with concomitant formation of ubiquitin+ inclusions in the cytoplasm..."
+    },
+    {
+      "paper_title": "Human Ubiquilin 2 and TDP-43 copathology drives neurodegeneration in transgenic Caenorhabditis elegans",
+      "doi": "10.1093/g3journal/jkab158",
+      "authors": "Saxton AD, Kraemer BC",
+      "journal": "G3: Genes, Genomes, Genetics",
+      "year": 2021,
+      "assay": "Transgenic expression",
+      "species": "C. elegans",
+      "relevant_quote": "co-expression of wild-type human TDP-43 exacerbates UBQLN2 deficits. This model of UBQLN2-mediated neurodegeneration may be useful for further mechanistic investigation..."
+    }
+  ],
+  "depth": 1,
+  "arrow_notation": "TDP43 <--activates-- UBQLN2:",
+  "protein_a": "UBQLN2",
+  "protein_b": "TDP43",
+  "discovered_in_query": "TDP43",
+  "first_discovered": "2025-11-11T16:36:28.285205Z",
+  "last_updated": "2025-11-11T16:36:28.285205Z"
+}

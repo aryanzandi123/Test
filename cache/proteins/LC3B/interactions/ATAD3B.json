@@ -1,0 +1,62 @@
+{
+  "primary": "ATAD3B",
+  "direction": "primary_to_main",
+  "arrow": "activates",
+  "intent": "mitophagy receptor binding",
+  "support_summary": "ATAD3B is a primate-specific mitochondrial outer membrane protein that functions as a novel mitophagy receptor. It contains a C-terminal LIR motif that is exposed to the cytosol upon oxidative stress, allowing it to directly bind to LC3 proteins and recruit damaged mitochondria for clearance in a PINK1-independent manner.",
+  "functions": [
+    {
+      "function": "Selective Autophagy of Mitochondria (Mitophagy)",
+      "arrow": "activates",
+      "cellular_process": "ATAD3B is a mitochondrial protein that acts as a receptor for PINK1-independent mitophagy. Upon oxidative stress, its C-terminal LIR motif is exposed to the cytosol and directly binds to LC3 proteins, tethering the mitochondrion to the forming autophagosome.",
+      "effect_description": "Initiates the selective clearance of mitochondria containing damaged mtDNA in response to oxidative stress, thereby serving as a mitochondrial quality control mechanism.",
+      "biological_consequence": [
+        "Oxidative stress induces mitochondrial damage → ATAD3B-ATAD3A hetero-oligomerization decreases → The C-terminal LIR motif of ATAD3B is exposed to the cytosol → ATAD3B LIR motif directly binds LC3 on the phagophore → The damaged mitochondrion is tethered to the autophagosome → Selective engulfment of the mitochondrion (PINK1-independent mitophagy) → Lysosomal degradation of damaged mitochondria and mtDNA."
+      ],
+      "specific_effects": [
+        "Specifically promotes the clearance of damaged mitochondrial DNA",
+        "Functions in a PINK1/Parkin-independent manner",
+        "Its activity is regulated by hetero-oligomerization with ATAD3A",
+        "Specifically expressed in primates"
+      ],
+      "evidence": [
+        {
+          "paper_title": "ATAD3B is a mitophagy receptor mediating clearance of oxidative stress-induced damaged mitochondrial DNA",
+          "doi": "10.15252/embj.2020106283",
+          "authors": "Li Shu, Chao Hu, Meng Xu, Jianglong Yu, He He, Jie Lin, Hongying Sha, Bin Lu, Simone Engelender, Minxin Guan, Zhiyin Song",
+          "journal": "The EMBO Journal",
+          "year": 2021,
+          "assay": "Co-immunoprecipitation, GST pull-down",
+          "species": "human",
+          "relevant_quote": "Here, we identified a novel mitophagy receptor, ATAD3B, which is specifically expressed in primates. ATAD3B contains a LIR motif that binds to LC3 and promotes oxidative stress-induced mitophagy in a PINK1-independent manner...",
+          "pmid": "33665835"
+        }
+      ],
+      "pmids": [
+        "33665835"
+      ]
+    }
+  ],
+  "mechanism": "ATAD3B is a mitochondrial protein that acts as a receptor for PINK1-independent mitophagy. Upon oxidative stress, its C-terminal LIR motif is exposed to the cytosol and directly binds to LC3 proteins, tethering the mitochondrion to the forming autophagosome.",
+  "effect": "Initiates the selective clearance of mitochondria containing damaged mtDNA in response to oxidative stress, thereby serving as a mitochondrial quality control mechanism.",
+  "summary": "LC3B activates ATAD3B to modulate selective autophagy of mitochondria (mitophagy), ultimately affecting lysosomal degradation of damaged mitochondria and mtdna.",
+  "evidence": [
+    {
+      "paper_title": "ATAD3B is a mitophagy receptor mediating clearance of oxidative stress-induced damaged mitochondrial DNA",
+      "doi": "10.15252/embj.2020106283",
+      "authors": "Li Shu, Chao Hu, Meng Xu, Jianglong Yu, He He, Jie Lin, Hongying Sha, Bin Lu, Simone Engelender, Minxin Guan, Zhiyin Song",
+      "journal": "The EMBO Journal",
+      "year": 2021,
+      "assay": "Co-immunoprecipitation, GST pull-down",
+      "species": "human",
+      "relevant_quote": "Here, we identified a novel mitophagy receptor, ATAD3B, which is specifically expressed in primates. ATAD3B contains a LIR motif that binds to LC3 and promotes oxidative stress-induced mitophagy in a PINK1-independent manner..."
+    }
+  ],
+  "depth": 1,
+  "arrow_notation": "LC3B <--activates-- ATAD3B:",
+  "protein_a": "LC3B",
+  "protein_b": "ATAD3B",
+  "discovered_in_query": "LC3B",
+  "first_discovered": "2025-11-11T15:54:33.426137Z",
+  "last_updated": "2025-11-11T15:54:33.426137Z"
+}

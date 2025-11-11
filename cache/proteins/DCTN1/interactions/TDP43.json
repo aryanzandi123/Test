@@ -1,0 +1,88 @@
+{
+  "primary": "TDP43",
+  "interaction_type": "direct",
+  "upstream_interactor": null,
+  "mediator_chain": [],
+  "depth": 1,
+  "support_summary": "Dynactin subunit 1 (DCTN1) is a component of the dynein-dynactin motor complex that directly binds to TDP-43 to facilitate its retrograde transport towards the nucleus. Mutations in DCTN1 impair this interaction, leading to cytoplasmic mislocalization and aggregation of TDP-43.",
+  "functions": [
+    {
+      "function": "TDP-43 Nucleocytoplasmic Transport",
+      "arrow": "activates",
+      "cellular_process": "DCTN1, as a key component of the dynein-dynactin motor complex, is involved in the microtubule-based retrograde transport of cellular cargo, including TDP-43, from the cytoplasm towards the nucleus. DCTN1 deficiency also impairs the disassembly of stress granules, which can mature into pathological TDP-43 inclusions.",
+      "effect_description": "DCTN1, a subunit of the dynein-dynactin motor, facilitates the retrograde transport of TDP-43 to the nucleus, a process essential for preventing its cytoplasmic aggregation.",
+      "biological_consequence": [
+        "Perry disease-linked DCTN1 mutation → Impaired dynein-dynactin motor function → Defective retrograde transport of TDP-43 → Cytoplasmic TDP-43 accumulation → Formation of pathological TDP-43 inclusions → Neurodegeneration",
+        "DCTN1 deficiency → Impaired stress granule (SG) disassembly → Maturation of SGs into pathological TDP-43 inclusions → Sequestration of functional TDP-43 → Neurodegeneration in ALS/FTD"
+      ],
+      "specific_effects": [
+        "Perry disease-linked mutations in DCTN1, such as G71A, affect its ability to interact with TDP-43. [1, 3]",
+        "Overexpression of mutant DCTN1 is sufficient to induce the cytoplasmic mislocalization and aggregation of TDP-43 in neuronal cells. [1, 3]",
+        "DCTN1 knockdown promotes the formation of ubiquitin-positive TDP-43 inclusions in cells under stress. [14]",
+        "DCTN1 knockdown delays the disassembly of stress granules, leading to an increase in pathological TDP-43 inclusions. [14]"
+      ],
+      "evidence": [
+        {
+          "paper_title": "DCTN1 Binds to TDP-43 and Regulates TDP-43 Aggregation",
+          "doi": "10.3390/ijms22083982",
+          "authors": "Deshimaru M, Fujisawa T, Okuda S, Nagai T, Ishiura H, Mitsui J, Yoshimura J, Doi K, Morishita S, Tsuji S, Tamaoka A, Suzuki N",
+          "journal": "International Journal of Molecular Sciences",
+          "year": 2021,
+          "assay": "Co-IP, Pull-down assay",
+          "species": "human",
+          "relevant_quote": "We thus identified DCTN1 as a new player in TDP-43 cytoplasmic-nuclear transport, and showed that dysregulation of DCTN1-TDP-43 interactions triggers mislocalization and aggregation of TDP-43. [3]",
+          "pmid": "33924373"
+        },
+        {
+          "paper_title": "Dysregulation of stress granule dynamics by DCTN1 deficiency exacerbates TDP-43 pathology in Drosophila models of ALS/FTD",
+          "doi": "10.1186/s40478-024-01726-x",
+          "authors": "Ueda T, Nagai Y, Kondo T, Ueyama Y, Ishiguro M, Inoshita T, Shiba-Fukushima K, Ishikawa K, Hattori N, Imai Y",
+          "journal": "Acta Neuropathologica Communications",
+          "year": 2024,
+          "assay": "Drosophila model, Cell culture",
+          "species": "drosophila, human",
+          "relevant_quote": "DCTN1 knockdown delayed the disassembly of stress granules in stressed cells, leading to an increase in the formation of pathological cytoplasmic inclusions of TDP-43. [14]",
+          "pmid": "38311779"
+        }
+      ],
+      "pmids": [
+        "33924373",
+        "38311779"
+      ]
+    }
+  ],
+  "arrow": "activates",
+  "direction": "main_to_primary",
+  "intent": "nucleocytoplasmic_transport",
+  "mechanism": "DCTN1, as a key component of the dynein-dynactin motor complex, is involved in the microtubule-based retrograde transport of cellular cargo, including TDP-43, from the cytoplasm towards the nucleus. DCTN1 deficiency also impairs the disassembly of stress granules, which can mature into pathological TDP-43 inclusions.",
+  "effect": "DCTN1, a subunit of the dynein-dynactin motor, facilitates the retrograde transport of TDP-43 to the nucleus, a process essential for preventing its cytoplasmic aggregation.",
+  "summary": "TDP43 activates DCTN1 to modulate tdp-43 nucleocytoplasmic transport, ultimately affecting neurodegeneration.",
+  "evidence": [
+    {
+      "paper_title": "DCTN1 Binds to TDP-43 and Regulates TDP-43 Aggregation",
+      "doi": "10.3390/ijms22083982",
+      "authors": "Deshimaru M, Fujisawa T, Okuda S, Nagai T, Ishiura H, Mitsui J, Yoshimura J, Doi K, Morishita S, Tsuji S, Tamaoka A, Suzuki N",
+      "journal": "International Journal of Molecular Sciences",
+      "year": 2021,
+      "assay": "Co-IP, Pull-down assay",
+      "species": "human",
+      "relevant_quote": "We thus identified DCTN1 as a new player in TDP-43 cytoplasmic-nuclear transport, and showed that dysregulation of DCTN1-TDP-43 interactions triggers mislocalization and aggregation of TDP-43. [3]"
+    },
+    {
+      "paper_title": "Dysregulation of stress granule dynamics by DCTN1 deficiency exacerbates TDP-43 pathology in Drosophila models of ALS/FTD",
+      "doi": "10.1186/s40478-024-01726-x",
+      "authors": "Ueda T, Nagai Y, Kondo T, Ueyama Y, Ishiguro M, Inoshita T, Shiba-Fukushima K, Ishikawa K, Hattori N, Imai Y",
+      "journal": "Acta Neuropathologica Communications",
+      "year": 2024,
+      "assay": "Drosophila model, Cell culture",
+      "species": "drosophila, human",
+      "relevant_quote": "DCTN1 knockdown delayed the disassembly of stress granules in stressed cells, leading to an increase in the formation of pathological cytoplasmic inclusions of TDP-43. [14]"
+    }
+  ],
+  "arrow_notation": "TDP43 <--activates-- DCTN1:",
+  "protein_a": "DCTN1",
+  "protein_b": "TDP43",
+  "discovered_in_query": "TDP43",
+  "first_discovered": "2025-11-11T16:36:28.250043Z",
+  "last_updated": "2025-11-11T16:36:28.250043Z"
+}

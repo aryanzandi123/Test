@@ -1,0 +1,116 @@
+{
+  "primary": "Hsc70",
+  "interaction_type": "direct",
+  "upstream_interactor": null,
+  "mediator_chain": [],
+  "depth": 1,
+  "support_summary": "The chaperone Hsc70 (HSPA8) recognizes a KFERQ-like motif in TDP-43, targeting it for degradation via the chaperone-mediated autophagy (CMA) pathway. This interaction is crucial for maintaining TDP-43 homeostasis, and its disruption can lead to the accumulation of toxic TDP-43 species.",
+  "functions": [
+    {
+      "function": "TDP-43 Degradation (Chaperone-Mediated Autophagy)",
+      "arrow": "activates",
+      "cellular_process": "TDP-43 is a substrate for chaperone-mediated autophagy (CMA), a selective form of autophagy. The chaperone Hsc70 recognizes a KFERQ-like motif within TDP-43, targeting it to the lysosomal membrane receptor LAMP2A for translocation and degradation within the lysosome.",
+      "effect_description": "Hsc70-mediated recognition of TDP-43 initiates its clearance through the CMA pathway, thereby preventing its accumulation and potential aggregation.",
+      "biological_consequence": [
+        "Hsc70 recognizes KFERQ-like motif in soluble TDP-43 → Hsc70-TDP-43 complex binds to LAMP2A receptor on lysosome → TDP-43 is translocated into the lysosome → Lysosomal degradation of TDP-43 → Maintenance of TDP-43 homeostasis",
+        "Reduced Hsc70 expression or CMA dysfunction → Impaired recognition of TDP-43 → Failure to target TDP-43 to the lysosome → Cytoplasmic accumulation of TDP-43 → Formation of toxic aggregates → Neurodegeneration",
+        "Pathological TDP-43 aggregation → Upregulation of Hsc70 and LAMP2A expression (CMA stress response) → Overload of the CMA pathway → Lysosomal membrane permeabilization → Cellular toxicity"
+      ],
+      "specific_effects": [
+        "Both wild-type and an aggregate-prone form of TDP-43 are CMA substrates. [9, 10]",
+        "The aggregate-prone form of TDP-43 interacts with Hsc70 and can up-regulate the expression of CMA components, leading to increased CMA activity. [9, 10]",
+        "Reduced Hsc70 expression is observed in lymphomonocytes of sporadic ALS patients and is associated with increased insoluble TDP-43. [40]",
+        "Experimental silencing of Hsc70 leads to an increase in TDP-43 protein levels in human neuroblastoma cells. [40]"
+      ],
+      "evidence": [
+        {
+          "paper_title": "Chaperone Mediated Autophagy Degrades TDP-43 Protein and Is Affected by TDP-43 Aggregation",
+          "doi": "10.3389/fnmol.2020.00019",
+          "authors": "Ormeño F, Hormazabal J, Moreno J, Riquelme F, Rios J, Criollo A, Albornoz A, Alfaro IE, Budini M",
+          "journal": "Frontiers in Molecular Neuroscience",
+          "year": 2020,
+          "assay": "Co-Immunoprecipitation, Western Blot",
+          "species": "human, rat",
+          "relevant_quote": "Finally, we observed that the aggregate-prone form of TDP-43 is able to interact with Hsc70, to co-localize with Lamp2A, and to up-regulate the levels of these molecular components of CMA. [9]",
+          "pmid": "32132902"
+        },
+        {
+          "paper_title": "Chaperone-Mediated Autophagy in Neurodegenerative Diseases: Molecular Mechanisms and Pharmacological Opportunities",
+          "doi": "10.3390/cells11142250",
+          "authors": "Wang YT, Lu JH",
+          "journal": "Cells",
+          "year": 2022,
+          "assay": "Review",
+          "species": "human",
+          "relevant_quote": "For amyotrophic lateral sclerosis and frontotemporal lobar degeneration, TDP-43 is degraded by CMA. [26]",
+          "pmid": "35883693"
+        },
+        {
+          "paper_title": "HSC70 expression is reduced in lymphomonocytes of sporadic ALS patients and contributes to TDP-43 accumulation",
+          "doi": "10.1007/s00401-018-1833-y",
+          "authors": "Crippa V, Boncoraglio A, Galbiati M, Aggarwal T, Rusmini P, Giorgetti E, Cristofani R, Carra S, Pennuto M, Poletti A",
+          "journal": "Acta Neuropathologica",
+          "year": 2018,
+          "assay": "Western Blot, Silencing",
+          "species": "human",
+          "relevant_quote": "Lastly, we demonstrated that HSC70 silencing directly increases TDP-43 protein levels in human neuroblastoma cells. [40]",
+          "pmid": "31663379"
+        }
+      ],
+      "_context": {
+        "type": "direct",
+        "query_protein": null,
+        "chain": null
+      },
+      "pmids": [
+        "32132902",
+        "35883693",
+        "31663379"
+      ]
+    }
+  ],
+  "arrow": "activates",
+  "direction": "primary_to_main",
+  "intent": "degradation",
+  "mechanism": "TDP-43 is a substrate for chaperone-mediated autophagy (CMA), a selective form of autophagy. The chaperone Hsc70 recognizes a KFERQ-like motif within TDP-43, targeting it to the lysosomal membrane receptor LAMP2A for translocation and degradation within the lysosome.",
+  "effect": "Hsc70-mediated recognition of TDP-43 initiates its clearance through the CMA pathway, thereby preventing its accumulation and potential aggregation.",
+  "summary": "TDP43 activates Hsc70 to modulate tdp-43 degradation (chaperone-mediated autophagy), ultimately affecting maintenance of tdp-43 homeostasis.",
+  "evidence": [
+    {
+      "paper_title": "Chaperone Mediated Autophagy Degrades TDP-43 Protein and Is Affected by TDP-43 Aggregation",
+      "doi": "10.3389/fnmol.2020.00019",
+      "authors": "Ormeño F, Hormazabal J, Moreno J, Riquelme F, Rios J, Criollo A, Albornoz A, Alfaro IE, Budini M",
+      "journal": "Frontiers in Molecular Neuroscience",
+      "year": 2020,
+      "assay": "Co-Immunoprecipitation, Western Blot",
+      "species": "human, rat",
+      "relevant_quote": "Finally, we observed that the aggregate-prone form of TDP-43 is able to interact with Hsc70, to co-localize with Lamp2A, and to up-regulate the levels of these molecular components of CMA. [9]"
+    },
+    {
+      "paper_title": "Chaperone-Mediated Autophagy in Neurodegenerative Diseases: Molecular Mechanisms and Pharmacological Opportunities",
+      "doi": "10.3390/cells11142250",
+      "authors": "Wang YT, Lu JH",
+      "journal": "Cells",
+      "year": 2022,
+      "assay": "Review",
+      "species": "human",
+      "relevant_quote": "For amyotrophic lateral sclerosis and frontotemporal lobar degeneration, TDP-43 is degraded by CMA. [26]"
+    },
+    {
+      "paper_title": "HSC70 expression is reduced in lymphomonocytes of sporadic ALS patients and contributes to TDP-43 accumulation",
+      "doi": "10.1007/s00401-018-1833-y",
+      "authors": "Crippa V, Boncoraglio A, Galbiati M, Aggarwal T, Rusmini P, Giorgetti E, Cristofani R, Carra S, Pennuto M, Poletti A",
+      "journal": "Acta Neuropathologica",
+      "year": 2018,
+      "assay": "Western Blot, Silencing",
+      "species": "human",
+      "relevant_quote": "Lastly, we demonstrated that HSC70 silencing directly increases TDP-43 protein levels in human neuroblastoma cells. [40]"
+    }
+  ],
+  "arrow_notation": "TDP43 <--activates-- Hsc70:",
+  "protein_a": "TDP43",
+  "protein_b": "Hsc70",
+  "discovered_in_query": "TDP43",
+  "first_discovered": "2025-11-11T16:36:28.291815Z",
+  "last_updated": "2025-11-11T16:36:28.291815Z"
+}

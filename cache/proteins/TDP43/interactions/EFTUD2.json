@@ -1,0 +1,85 @@
+{
+  "primary": "EFTUD2",
+  "interaction_type": "direct",
+  "upstream_interactor": null,
+  "mediator_chain": [],
+  "depth": 1,
+  "support_summary": "Global proteomic analysis of FLAG-TDP-43 immunoprecipitates from HEK293T cells identified EFTUD2, a core component of the spliceosome, as a direct binding partner of TDP-43. [1, 12]",
+  "arrow": "binds",
+  "direction": "bidirectional",
+  "intent": "splicing regulation",
+  "functions": [
+    {
+      "function": "Pre-mRNA Splicing",
+      "arrow": "regulates",
+      "cellular_process": "TDP-43 and the core spliceosomal protein EFTUD2 interact within the U5 snRNP of the spliceosome complex to co-regulate the alternative splicing of target pre-mRNAs.",
+      "effect_description": "The interaction between TDP-43 and EFTUD2 within the spliceosome complex modulates splice site selection and the inclusion or exclusion of specific exons in target transcripts.",
+      "biological_consequence": [
+        "TDP-43 interacts with EFTUD2 within the U5 snRNP of the spliceosome → Co-regulation of alternative splicing for target pre-mRNAs → Altered production of specific mRNA isoforms → Dysregulation of cellular pathways due to altered protein function"
+      ],
+      "specific_effects": [
+        "EFTUD2 (also known as Snu114) is an essential GTPase component of the U5 small nuclear ribonucleoprotein (snRNP) particle within the spliceosome. [5, 14]",
+        "Proteomic analyses show TDP-43 interacts extensively with proteins of the nuclear splicing machinery, including EFTUD2. [1, 12]"
+      ],
+      "evidence": [
+        {
+          "paper_title": "Global analysis of TDP-43 interacting proteins reveals strong association with RNA splicing and translation machinery",
+          "doi": "10.1021/pr901076y",
+          "authors": "Freibaum BD, Chitta RK, High AA, Taylor JP",
+          "journal": "Journal of Proteome Research",
+          "year": 2010,
+          "assay": "Immunoprecipitation, Mass Spectrometry",
+          "species": "human",
+          "relevant_quote": "TDP-43 interacting proteins largely cluster into two distinct interaction networks, a nuclear/splicing cluster and a cytoplasmic/translation cluster... [1, 3]",
+          "pmid": "20020773"
+        },
+        {
+          "paper_title": "Spliceosome protein EFTUD2: A potential pathogenetic factor in tumorigenesis and some developmental defects (Review)",
+          "doi": "10.3892/mmr.2025.13499",
+          "authors": "Yin A, Zhu Q, Chen Y, Wang J",
+          "journal": "Molecular Medicine Reports",
+          "year": 2025,
+          "assay": "Review",
+          "species": "human",
+          "relevant_quote": "Elongation factor Tu GTP binding domain containing 2 (EFTUD2) is a component of spliceosome complex that is involved in the reorganization of the spliceosome complex... [2, 14]",
+          "pmid": "40116087"
+        }
+      ],
+      "pmids": [
+        "20020773",
+        "40116087"
+      ]
+    }
+  ],
+  "mechanism": "TDP-43 and the core spliceosomal protein EFTUD2 interact within the U5 snRNP of the spliceosome complex to co-regulate the alternative splicing of target pre-mRNAs.",
+  "effect": "The interaction between TDP-43 and EFTUD2 within the spliceosome complex modulates splice site selection and the inclusion or exclusion of specific exons in target transcripts.",
+  "summary": "TDP43 interacts with EFTUD2 to modulate pre-mrna splicing, ultimately affecting dysregulation of cellular pathways due to altered protein function.",
+  "evidence": [
+    {
+      "paper_title": "Global analysis of TDP-43 interacting proteins reveals strong association with RNA splicing and translation machinery",
+      "doi": "10.1021/pr901076y",
+      "authors": "Freibaum BD, Chitta RK, High AA, Taylor JP",
+      "journal": "Journal of Proteome Research",
+      "year": 2010,
+      "assay": "Immunoprecipitation, Mass Spectrometry",
+      "species": "human",
+      "relevant_quote": "TDP-43 interacting proteins largely cluster into two distinct interaction networks, a nuclear/splicing cluster and a cytoplasmic/translation cluster... [1, 3]"
+    },
+    {
+      "paper_title": "Spliceosome protein EFTUD2: A potential pathogenetic factor in tumorigenesis and some developmental defects (Review)",
+      "doi": "10.3892/mmr.2025.13499",
+      "authors": "Yin A, Zhu Q, Chen Y, Wang J",
+      "journal": "Molecular Medicine Reports",
+      "year": 2025,
+      "assay": "Review",
+      "species": "human",
+      "relevant_quote": "Elongation factor Tu GTP binding domain containing 2 (EFTUD2) is a component of spliceosome complex that is involved in the reorganization of the spliceosome complex... [2, 14]"
+    }
+  ],
+  "arrow_notation": "TDP43 <--binds--> EFTUD2:",
+  "protein_a": "TDP43",
+  "protein_b": "EFTUD2",
+  "discovered_in_query": "TDP43",
+  "first_discovered": "2025-11-11T16:36:28.256245Z",
+  "last_updated": "2025-11-11T16:36:28.256245Z"
+}

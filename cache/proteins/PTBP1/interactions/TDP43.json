@@ -1,0 +1,109 @@
+{
+  "primary": "TDP43",
+  "interaction_type": "direct",
+  "upstream_interactor": null,
+  "mediator_chain": [],
+  "depth": 1,
+  "support_summary": "TDP-43 and Polypyrimidine tract-binding protein 1 (PTBP1) are both splicing factors that co-regulate alternative splicing events, suggesting they interact directly within spliceosome complexes.",
+  "arrow": "activates",
+  "direction": "bidirectional",
+  "intent": "RNA splicing regulation",
+  "functions": [
+    {
+      "function": "Alternative Splicing Co-regulation",
+      "arrow": "activates",
+      "cellular_process": "TDP-43 and PTBP1, both members of the hnRNP family, interact and bind to pre-mRNAs to co-regulate splice site selection. They can act either synergistically or antagonistically to control the inclusion or exclusion of specific exons.",
+      "effect_description": "The interaction between TDP-43 and PTBP1 allows for the coordinated regulation of alternative splicing, influencing the generation of diverse protein isoforms from a single gene.",
+      "biological_consequence": [
+        "TDP-43 forms complex with PTBP1 → Coordinated binding to target pre-mRNAs → Regulation of exon inclusion/exclusion → Production of correct neuronal protein isoforms → Maintained neuronal homeostasis",
+        "Nuclear TDP-43 depletion → Disrupted TDP-43/PTBP1 co-regulation → Aberrant alternative splicing of neuronal transcripts → Synthesis of non-functional or toxic protein isoforms → Neuronal dysfunction & degeneration."
+      ],
+      "specific_effects": [
+        "Proteomic screens identified PTBP1 as a TDP-43 interactor involved in splicing.",
+        "Both TDP-43 and PTBP1 are hnRNP proteins known to be key regulators of alternative splicing.",
+        "Loss of TDP-43 function leads to widespread dysregulation of splicing, affecting numerous neuronal transcripts."
+      ],
+      "evidence": [
+        {
+          "paper_title": "Global analysis of TDP-43 interacting proteins reveals strong association with RNA splicing and translation machinery",
+          "doi": "10.1021/pr901076y",
+          "authors": "Freibaum BD, Chitta R, High AA, Taylor JP",
+          "journal": "J Proteome Res",
+          "year": 2010,
+          "assay": "Co-IP, Mass Spectrometry",
+          "species": "Human",
+          "relevant_quote": "TDP-43 interacting proteins largely cluster into two distinct interaction networks, a nuclear/splicing cluster and a cytoplasmic/translation cluster...",
+          "pmid": "20020773"
+        },
+        {
+          "paper_title": "Functional mapping of the interaction between TDP-43 and hnRNP A2 in vivo",
+          "doi": "10.1093/nar/gkp342",
+          "authors": "D'Ambrogio A, Buratti E, Stuani C, Guarnaccia C, Romano M, Ayala YM, Baralle FE",
+          "journal": "Nucleic Acids Res",
+          "year": 2009,
+          "assay": "minigene/siRNA cellular system",
+          "species": "Human",
+          "relevant_quote": "Previously, we have described that TDP-43 binds to several members of the hnRNP A/B family through this region.",
+          "pmid": "19429692"
+        },
+        {
+          "paper_title": "TDP43 and RNA instability in amyotrophic lateral sclerosis",
+          "doi": "10.1016/j.brainres.2018.01.015",
+          "authors": "Weskamp K, Barmada SJ",
+          "journal": "Brain Res",
+          "year": 2018,
+          "assay": "Review",
+          "species": "Not applicable",
+          "relevant_quote": "Because TDP43 plays a multifaceted role in maintaining RNA metabolism, its mislocalization and accumulation interrupt several RNA processing pathways that in turn affect RNA stability and gene expression.",
+          "pmid": "29395044"
+        }
+      ],
+      "pmids": [
+        "20020773",
+        "19429692",
+        "29395044"
+      ]
+    }
+  ],
+  "mechanism": "TDP-43 and PTBP1, both members of the hnRNP family, interact and bind to pre-mRNAs to co-regulate splice site selection. They can act either synergistically or antagonistically to control the inclusion or exclusion of specific exons.",
+  "effect": "The interaction between TDP-43 and PTBP1 allows for the coordinated regulation of alternative splicing, influencing the generation of diverse protein isoforms from a single gene.",
+  "summary": "TDP43 activates PTBP1 to modulate alternative splicing co-regulation, ultimately affecting maintained neuronal homeostasis.",
+  "evidence": [
+    {
+      "paper_title": "Global analysis of TDP-43 interacting proteins reveals strong association with RNA splicing and translation machinery",
+      "doi": "10.1021/pr901076y",
+      "authors": "Freibaum BD, Chitta R, High AA, Taylor JP",
+      "journal": "J Proteome Res",
+      "year": 2010,
+      "assay": "Co-IP, Mass Spectrometry",
+      "species": "Human",
+      "relevant_quote": "TDP-43 interacting proteins largely cluster into two distinct interaction networks, a nuclear/splicing cluster and a cytoplasmic/translation cluster..."
+    },
+    {
+      "paper_title": "Functional mapping of the interaction between TDP-43 and hnRNP A2 in vivo",
+      "doi": "10.1093/nar/gkp342",
+      "authors": "D'Ambrogio A, Buratti E, Stuani C, Guarnaccia C, Romano M, Ayala YM, Baralle FE",
+      "journal": "Nucleic Acids Res",
+      "year": 2009,
+      "assay": "minigene/siRNA cellular system",
+      "species": "Human",
+      "relevant_quote": "Previously, we have described that TDP-43 binds to several members of the hnRNP A/B family through this region."
+    },
+    {
+      "paper_title": "TDP43 and RNA instability in amyotrophic lateral sclerosis",
+      "doi": "10.1016/j.brainres.2018.01.015",
+      "authors": "Weskamp K, Barmada SJ",
+      "journal": "Brain Res",
+      "year": 2018,
+      "assay": "Review",
+      "species": "Not applicable",
+      "relevant_quote": "Because TDP43 plays a multifaceted role in maintaining RNA metabolism, its mislocalization and accumulation interrupt several RNA processing pathways that in turn affect RNA stability and gene expression."
+    }
+  ],
+  "arrow_notation": "TDP43 <--activates--> PTBP1:",
+  "protein_a": "PTBP1",
+  "protein_b": "TDP43",
+  "discovered_in_query": "TDP43",
+  "first_discovered": "2025-11-11T16:36:28.321907Z",
+  "last_updated": "2025-11-11T16:36:28.321907Z"
+}

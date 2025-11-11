@@ -1,0 +1,83 @@
+{
+  "primary": "LC3B",
+  "direction": "bidirectional",
+  "arrow": "activates",
+  "intent": "binding",
+  "support_summary": "A copper-transporting ATPase that contains a conserved LIR motif shown to directly interact with LC3B, suggesting a role in autophagy-mediated copper clearance. This interaction is enhanced under high copper conditions and is crucial for the fusion of autophagosomes with lysosomes to clear excess copper.",
+  "functions": [
+    {
+      "function": "Autophagy-Mediated Copper Clearance",
+      "arrow": "activates",
+      "cellular_process": "The copper-transporting ATPase ATP7B directly interacts with LC3B via a conserved C-terminal LIR motif. This interaction facilitates the sequestration of copper into autophagosomes for subsequent lysosomal degradation, playing a critical role in cellular copper homeostasis. The interaction is required for efficient autophagosome-lysosome fusion under elevated copper conditions.",
+      "effect_description": "Links the cellular machinery for copper transport directly to the autophagy pathway, providing a mechanism for clearing excess copper and maintaining cellular homeostasis.",
+      "biological_consequence": [
+        "Elevated intracellular copper → ATP7B interacts with LC3B on autophagosomes via LIR motif → Sequestration of copper into autophagosomes → Promotion of autophagosome-lysosome fusion → Lysosomal degradation and copper clearance → Maintenance of copper homeostasis"
+      ],
+      "specific_effects": [
+        "ATP7B contains a C-terminal LIR motif that directly binds LC3B.",
+        "Colocalization of ATP7B and LC3B on autophagosome membranes is enhanced under high copper conditions.",
+        "Deficiency of ATP7B leads to impaired autophagosome-lysosome fusion under elevated copper, a phenotype relevant to Wilson disease."
+      ],
+      "evidence": [
+        {
+          "paper_title": "Direct Interaction of ATP7B and LC3B Proteins Suggests a Cooperative Role of Copper Transportation and Autophagy",
+          "doi": "10.3390/cells10113118",
+          "authors": "Pantoom S, Pomorski A, Huth K, Hund C, Petters J, Krężel A, Hermann A, Lukas J",
+          "journal": "Cells",
+          "year": 2021,
+          "assay": "Fluorescence Polarization Assay, Co-Immunoprecipitation",
+          "species": "human",
+          "relevant_quote": "The conserved LIR3, located at the C-terminal end of ATP7B, was found to directly interact with LC3B in vitro... These findings suggest a cooperative role of ATP7B and LC3B in autophagy-mediated copper clearance.",
+          "pmid": "34831341"
+        },
+        {
+          "paper_title": "Activation of Autophagy, Observed in Liver Tissues From Patients With Wilson Disease and From ATP7B-Deficient Animals, Protects Hepatocytes From Copper-Induced Apoptosis",
+          "doi": "10.1016/j.jcmgh.2017.07.003",
+          "authors": "Polishchuk R, Polishchuk E",
+          "journal": "Cell Mol Gastroenterol Hepatol",
+          "year": 2017,
+          "assay": "Immunohistochemistry, Western Blot",
+          "species": "human, mouse",
+          "relevant_quote": null,
+          "pmid": "30452922"
+        }
+      ],
+      "pmids": [
+        "34831341",
+        "30452922"
+      ]
+    }
+  ],
+  "mechanism": "The copper-transporting ATPase ATP7B directly interacts with LC3B via a conserved C-terminal LIR motif. This interaction facilitates the sequestration of copper into autophagosomes for subsequent lysosomal degradation, playing a critical role in cellular copper homeostasis. The interaction is required for efficient autophagosome-lysosome fusion under elevated copper conditions.",
+  "effect": "Links the cellular machinery for copper transport directly to the autophagy pathway, providing a mechanism for clearing excess copper and maintaining cellular homeostasis.",
+  "summary": "LC3B activates ATP7B to modulate autophagy-mediated copper clearance, ultimately affecting maintenance of copper homeostasis.",
+  "evidence": [
+    {
+      "paper_title": "Direct Interaction of ATP7B and LC3B Proteins Suggests a Cooperative Role of Copper Transportation and Autophagy",
+      "doi": "10.3390/cells10113118",
+      "authors": "Pantoom S, Pomorski A, Huth K, Hund C, Petters J, Krężel A, Hermann A, Lukas J",
+      "journal": "Cells",
+      "year": 2021,
+      "assay": "Fluorescence Polarization Assay, Co-Immunoprecipitation",
+      "species": "human",
+      "relevant_quote": "The conserved LIR3, located at the C-terminal end of ATP7B, was found to directly interact with LC3B in vitro... These findings suggest a cooperative role of ATP7B and LC3B in autophagy-mediated copper clearance."
+    },
+    {
+      "paper_title": "Activation of Autophagy, Observed in Liver Tissues From Patients With Wilson Disease and From ATP7B-Deficient Animals, Protects Hepatocytes From Copper-Induced Apoptosis",
+      "doi": "10.1016/j.jcmgh.2017.07.003",
+      "authors": "Polishchuk R, Polishchuk E",
+      "journal": "Cell Mol Gastroenterol Hepatol",
+      "year": 2017,
+      "assay": "Immunohistochemistry, Western Blot",
+      "species": "human, mouse",
+      "relevant_quote": null
+    }
+  ],
+  "depth": 1,
+  "arrow_notation": "LC3B <--activates--> ATP7B:",
+  "protein_a": "ATP7B",
+  "protein_b": "LC3B",
+  "discovered_in_query": "LC3B",
+  "first_discovered": "2025-11-11T15:54:33.391614Z",
+  "last_updated": "2025-11-11T15:54:33.391614Z"
+}

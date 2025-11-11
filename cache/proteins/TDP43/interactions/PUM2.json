@@ -1,0 +1,64 @@
+{
+  "primary": "PUM2",
+  "interaction_type": "direct",
+  "upstream_interactor": null,
+  "mediator_chain": [],
+  "depth": 1,
+  "support_summary": "UV cross-linking immunoprecipitation (UV-CLIP) from developing mouse neocortex demonstrates that Pumilio RNA-binding family member 2 (PUM2) and TDP-43 directly interact with a shared set of target mRNAs to co-regulate their translation.",
+  "arrow": "binds",
+  "direction": "bidirectional",
+  "intent": "post-transcriptional regulation",
+  "functions": [
+    {
+      "function": "Co-regulation of mRNA Translation",
+      "arrow": "regulates",
+      "cellular_process": "TDP-43 and PUM2 are both RNA-binding proteins that bind to the 3' UTR of target mRNAs to regulate their translation. Their interaction suggests they form a functional complex that co-regulates a subset of transcripts, with competing effects on translation for key regulators of neuronal identity.",
+      "effect_description": "The interaction between TDP-43 and PUM2 results in collaborative and sometimes opposing effects on the translation of shared mRNA targets, refining area-specific neuronal identity.",
+      "biological_consequence": [
+        "TDP-43 and PUM2 form a complex on 3' UTR of target mRNAs → Competing regulation of translation → Fine-tuned expression of neuronal identity genes (e.g., Sox5, Bcl11b) → Establishment of area-specific neuronal connectivity in the neocortex"
+      ],
+      "specific_effects": [
+        "UV-CLIP experiments in developing mouse cortex confirmed that both TDP-43 and Pum2 bind to Sox5, Bcl11b, and Rorb mRNAs. [27]",
+        "Pum2 and TDP-43 have competing effects on the translation of these key regulators of neuronal identity. [28]",
+        "This post-transcriptional regulatory program contributes to the elaboration of area-specific neuronal identity and connectivity in the neocortex. [28]"
+      ],
+      "evidence": [
+        {
+          "paper_title": "Pum2 and TDP-43 refine area-specific cytoarchitecture post-mitotically and modulate translation of Sox5, Bcl11b, and Rorb mRNAs in developing mouse neocortex",
+          "doi": "10.7554/eLife.75782",
+          "authors": "Stelzer J, Hwa J, Wang Y, Zhou Y, Kwan KY",
+          "journal": "eLife",
+          "year": 2022,
+          "assay": "UV-CLIP, qRT-PCR, in utero electroporation",
+          "species": "mouse",
+          "relevant_quote": "Our data provide evidence that Pum2 and TDP-43 regulate neuronal identity post-mitotically in S1, and may do so at least partly through competing effects on translation of key regulators of neuronal identity. [27, 28]",
+          "pmid": "35262486"
+        }
+      ],
+      "pmids": [
+        "35262486"
+      ]
+    }
+  ],
+  "mechanism": "TDP-43 and PUM2 are both RNA-binding proteins that bind to the 3' UTR of target mRNAs to regulate their translation. Their interaction suggests they form a functional complex that co-regulates a subset of transcripts, with competing effects on translation for key regulators of neuronal identity.",
+  "effect": "The interaction between TDP-43 and PUM2 results in collaborative and sometimes opposing effects on the translation of shared mRNA targets, refining area-specific neuronal identity.",
+  "summary": "TDP43 interacts with PUM2 to modulate co-regulation of mrna translation, ultimately affecting establishment of area-specific neuronal connectivity in the neocortex.",
+  "evidence": [
+    {
+      "paper_title": "Pum2 and TDP-43 refine area-specific cytoarchitecture post-mitotically and modulate translation of Sox5, Bcl11b, and Rorb mRNAs in developing mouse neocortex",
+      "doi": "10.7554/eLife.75782",
+      "authors": "Stelzer J, Hwa J, Wang Y, Zhou Y, Kwan KY",
+      "journal": "eLife",
+      "year": 2022,
+      "assay": "UV-CLIP, qRT-PCR, in utero electroporation",
+      "species": "mouse",
+      "relevant_quote": "Our data provide evidence that Pum2 and TDP-43 regulate neuronal identity post-mitotically in S1, and may do so at least partly through competing effects on translation of key regulators of neuronal identity. [27, 28]"
+    }
+  ],
+  "arrow_notation": "TDP43 <--binds--> PUM2:",
+  "protein_a": "TDP43",
+  "protein_b": "PUM2",
+  "discovered_in_query": "TDP43",
+  "first_discovered": "2025-11-11T16:36:28.254092Z",
+  "last_updated": "2025-11-11T16:36:28.254092Z"
+}

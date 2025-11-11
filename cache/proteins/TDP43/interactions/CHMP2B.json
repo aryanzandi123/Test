@@ -1,0 +1,139 @@
+{
+  "primary": "CHMP2B",
+  "interaction_type": "direct",
+  "upstream_interactor": null,
+  "mediator_chain": [],
+  "depth": 1,
+  "support_summary": "CHMP2B, a core component of the ESCRT-III complex, directly interacts with TDP-43 and regulates its pathology through two main mechanisms. It promotes TDP-43 phosphorylation by stabilizing Casein Kinase 1 (CK1), and it is essential for endosomal trafficking, a process that is also influenced by TDP-43.",
+  "functions": [
+    {
+      "function": "TDP-43 Phosphorylation",
+      "arrow": "activates",
+      "cellular_process": "CHMP2B, an ESCRT-III component, regulates the phosphorylation of TDP-43 by modulating the protein stability of Casein Kinase 1 (CK1). CHMP2B suppresses the ubiquitination and subsequent proteasomal degradation of CK1, thereby increasing CK1 abundance and promoting TDP-43 phosphorylation.",
+      "effect_description": "CHMP2B promotes TDP-43 phosphorylation by stabilizing Casein Kinase 1 (CK1), the kinase responsible for phosphorylating TDP-43.",
+      "biological_consequence": [
+        "CHMP2B overexpression → Suppression of Casein Kinase 1 (CK1) ubiquitination → Reduced proteasomal degradation of CK1 → Increased CK1 protein abundance → Hyperphosphorylation of TDP-43 → Neurotoxicity",
+        "FTD-causing CHMP2B(Intron5) mutation → Enhanced stabilization of CK1 protein → TDP-43 hyperphosphorylation and insolubility → Cytoplasmic accumulation of TDP-43 → Neurodegeneration"
+      ],
+      "specific_effects": [
+        "Down-regulation of CHMP2B reduces TDP-43 phosphorylation and toxicity in both flies and mammalian cells. [9, 15]",
+        "The FTD-causing mutation CHMP2B(Intron5) promotes hyperphosphorylation, insolubility, and cytoplasmic accumulation of TDP-43. [21]",
+        "This regulatory function of CHMP2B on TDP-43 phosphorylation is independent of its role in autophagy. [9, 15]",
+        "CHMP2B regulates the abundance of CK1 via the ubiquitin-proteasome system. [9, 15]"
+      ],
+      "evidence": [
+        {
+          "paper_title": "CHMP2B regulates TDP-43 phosphorylation and cytotoxicity independent of autophagy via CK1",
+          "doi": "10.1083/jcb.202103033",
+          "authors": "Deng X, Sun X, Yue W, Duan Y, Hu R, Zhang K, Ni J, Cui J, Wang Q, Chen Y, Li A, Fang Y",
+          "journal": "Journal of Cell Biology",
+          "year": 2022,
+          "assay": "Drosophila model, siRNA, Western Blot",
+          "species": "drosophila, human",
+          "relevant_quote": "Down-regulation of CHMP2B reduces TDP-43 phosphorylation and toxicity in flies and mammalian cells. [9, 15]",
+          "pmid": "34726688"
+        }
+      ],
+      "pmids": [
+        "34726688"
+      ]
+    },
+    {
+      "function": "Endosomal Trafficking",
+      "arrow": "activates",
+      "cellular_process": "CHMP2B is a core component of the ESCRT-III complex, essential for multivesicular body (MVB) formation and endosome-lysosome fusion. TDP-43 loss of function also impairs this pathway by transcriptionally upregulating VPS4B, an ESCRT-disassembly protein that interacts with the complex.",
+      "effect_description": "As a core ESCRT-III component, CHMP2B is essential for endosomal trafficking; mutations impair this process, while TDP-43 loss of function also disrupts it via a different mechanism.",
+      "biological_consequence": [
+        "FTLD-causing CHMP2B mutation → Impaired ESCRT-III complex function → Defective multivesicular body (MVB) maturation → Failed endosome-lysosome fusion → Accumulation of aberrant endosomes → Neuronal dysfunction",
+        "TDP-43 loss of function → Transcriptional upregulation of VPS4B → Premature disassembly of the ESCRT-III complex → Impaired endosomal trafficking → Reduced neurotrophic signaling → Neurodegeneration"
+      ],
+      "specific_effects": [
+        "FTLD-causing mutations in CHMP2B disrupt endocytic trafficking and endosome-lysosome fusion. [18, 19]",
+        "Mutant CHMP2B can constitutively bind to MVBs, preventing the recruitment of proteins necessary for fusion with lysosomes, such as Rab7. [18, 19]",
+        "Loss of TDP-43 function inhibits endosomal trafficking by increasing the expression of VPS4B, a protein that disassembles the ESCRT complex. [4, 10]"
+      ],
+      "evidence": [
+        {
+          "paper_title": "TDP-43 loss of function inhibits endosomal trafficking and alters trophic signaling in neurons",
+          "doi": "10.15252/embj.201694221",
+          "authors": "Schwenk BM, Brendel P, Fussi N, Bultmann S, Lüningschrör P, Gsponer J, Schmidt B, D'Gama PP, Woo JA, Feneberg E, Kuffner R, Schömig-Markiefka B, Braune J, Strietz J, Piccinini F, Beyer G, Tully T, Grimmler M, Waffner P, Heisterkamp P, Wurst W, Leonhardt H, Famulok M, Tautz D, McLean C, Arzberger T, Edbauer D, Kretzschmar H, Haass C, Levin J, Walter J, Danzer KM",
+          "journal": "The EMBO Journal",
+          "year": 2016,
+          "assay": "siRNA, Proteomics, ChIP",
+          "species": "rat, human",
+          "relevant_quote": "TDP-43 knockdown inhibits motility of recycling endosomes in dendrites by inducing the expression of VPS4B, an ESCRT disassembly factor, and direct binding partner of ALS gene CHMP2B. [4, 10]",
+          "pmid": "27621269"
+        },
+        {
+          "paper_title": "Disruption of endocytic trafficking in frontotemporal dementia with CHMP2B mutations",
+          "doi": "10.1093/hmg/ddq100",
+          "authors": "Urwin H, Authier A, Nielsen JE, Metcalf D, Powell C, Froud K, Malcolm DS, Holm I, Johannsen P, Brown J, Fisher EMC, van der Zee J, Van Broeckhoven C, Collinge J, Isaacs AM",
+          "journal": "Human Molecular Genetics",
+          "year": 2010,
+          "assay": "Patient fibroblasts, Cell culture",
+          "species": "human",
+          "relevant_quote": "Functional studies demonstrate a specific disruption of endosome-lysosome fusion...whereby mutant CHMP2B constitutively binds to MVBs and prevents recruitment of proteins necessary for fusion to occur, such as Rab7. [18, 19]",
+          "pmid": "20223751"
+        }
+      ],
+      "pmids": [
+        "27621269",
+        "20223751"
+      ]
+    }
+  ],
+  "arrow": "activates",
+  "direction": "bidirectional",
+  "intent": "regulation",
+  "mechanism": "CHMP2B, an ESCRT-III component, regulates the phosphorylation of TDP-43 by modulating the protein st; CHMP2B is a core component of the ESCRT-III complex, essential for multivesicular body (MVB) formati",
+  "effect": "CHMP2B promotes TDP-43 phosphorylation by stabilizing Casein Kinase 1 (CK1), the kinase responsible for phosphorylating TDP-43.; As a core ESCRT-III component, CHMP2B is essential for endosomal trafficking; mutations impair this process, while TDP-43 loss of function also disrupts it via a different mechanism.",
+  "summary": "TDP43 activates CHMP2B to regulate tdp-43 phosphorylation and endosomal trafficking, ultimately affecting neurotoxicity.",
+  "evidence": [
+    {
+      "paper_title": "CHMP2B regulates TDP-43 phosphorylation and cytotoxicity independent of autophagy via CK1",
+      "doi": "10.1083/jcb.202103033",
+      "authors": "Deng X, Sun X, Yue W, Duan Y, Hu R, Zhang K, Ni J, Cui J, Wang Q, Chen Y, Li A, Fang Y",
+      "journal": "Journal of Cell Biology",
+      "year": 2022,
+      "assay": "Drosophila model, siRNA, Western Blot",
+      "species": "drosophila, human",
+      "relevant_quote": "Down-regulation of CHMP2B reduces TDP-43 phosphorylation and toxicity in flies and mammalian cells. [9, 15]"
+    },
+    {
+      "paper_title": "CHMP2B regulates TDP-43 phosphorylation and proteotoxicity via modulating CK1 turnover independent of the autophagy-lysosomal pathway",
+      "doi": "10.1101/2020.06.04.135215",
+      "authors": "Deng X, Sun X, Yue W, Duan Y, Hu R, Zhang K, Ni J, Cui J, Wang Q, Chen Y, Li A, Fang Y",
+      "journal": "bioRxiv",
+      "year": 2020,
+      "assay": "Drosophila model, Cell culture, Western Blot",
+      "species": "drosophila, human",
+      "relevant_quote": "CHMP2B...promotes TDP-43 hyperphosphorylation, insolubility and cytoplasmic mislocalization. This effect is independent of the autophagy-lysosomal pathway but rather relies on the...turnover of the kinase CK1. [21]"
+    },
+    {
+      "paper_title": "TDP-43 loss of function inhibits endosomal trafficking and alters trophic signaling in neurons",
+      "doi": "10.15252/embj.201694221",
+      "authors": "Schwenk BM, Brendel P, Fussi N, Bultmann S, Lüningschrör P, Gsponer J, Schmidt B, D'Gama PP, Woo JA, Feneberg E, Kuffner R, Schömig-Markiefka B, Braune J, Strietz J, Piccinini F, Beyer G, Tully T, Grimmler M, Waffner P, Heisterkamp P, Wurst W, Leonhardt H, Famulok M, Tautz D, McLean C, Arzberger T, Edbauer D, Kretzschmar H, Haass C, Levin J, Walter J, Danzer KM",
+      "journal": "The EMBO Journal",
+      "year": 2016,
+      "assay": "siRNA, Proteomics, ChIP",
+      "species": "rat, human",
+      "relevant_quote": "TDP-43 knockdown inhibits motility of recycling endosomes in dendrites by inducing the expression of VPS4B, an ESCRT disassembly factor, and direct binding partner of ALS gene CHMP2B. [4, 10]"
+    },
+    {
+      "paper_title": "Disruption of endocytic trafficking in frontotemporal dementia with CHMP2B mutations",
+      "doi": "10.1093/hmg/ddq100",
+      "authors": "Urwin H, Authier A, Nielsen JE, Metcalf D, Powell C, Froud K, Malcolm DS, Holm I, Johannsen P, Brown J, Fisher EMC, van der Zee J, Van Broeckhoven C, Collinge J, Isaacs AM",
+      "journal": "Human Molecular Genetics",
+      "year": 2010,
+      "assay": "Patient fibroblasts, Cell culture",
+      "species": "human",
+      "relevant_quote": "Functional studies demonstrate a specific disruption of endosome-lysosome fusion...whereby mutant CHMP2B constitutively binds to MVBs and prevents recruitment of proteins necessary for fusion to occur, such as Rab7. [18, 19]"
+    }
+  ],
+  "arrow_notation": "TDP43 <--activates--> CHMP2B:",
+  "protein_a": "TDP43",
+  "protein_b": "CHMP2B",
+  "discovered_in_query": "TDP43",
+  "first_discovered": "2025-11-11T16:36:28.247650Z",
+  "last_updated": "2025-11-11T16:36:28.247650Z"
+}

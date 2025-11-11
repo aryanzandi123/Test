@@ -1,0 +1,109 @@
+{
+  "primary": "PRKDC",
+  "interaction_type": "direct",
+  "upstream_interactor": null,
+  "mediator_chain": [],
+  "depth": 1,
+  "support_summary": "In response to DNA damage, TDP-43 is recruited to double-strand break sites and directly interacts with the DNA-dependent protein kinase catalytic subunit (DNA-PKcs, or PRKDC) as part of the non-homologous end joining (NHEJ) repair pathway.",
+  "functions": [
+    {
+      "function": "DNA Double-Strand Break Repair (NHEJ)",
+      "arrow": "activates",
+      "cellular_process": "TDP-43 is a key component of the non-homologous end joining (NHEJ) pathway, the primary mechanism for repairing DNA double-strand breaks (DSBs) in post-mitotic neurons. Upon DNA damage, TDP-43 is recruited to DSB sites where it interacts with core NHEJ factors, including the DNA-dependent protein kinase catalytic subunit (DNA-PKcs, or PRKDC).",
+      "effect_description": "TDP-43's interaction with PRKDC is essential for the proper execution of non-homologous end joining (NHEJ), and its loss impairs the repair of DNA double-strand breaks.",
+      "biological_consequence": [
+        "DNA double-strand break (DSB) occurs → TDP-43 is recruited to DSB site → TDP-43 interacts with PRKDC (DNA-PKcs) & other NHEJ factors → TDP-43 scaffolds XRCC4-Ligase 4 complex → Successful Non-Homologous End Joining (NHEJ) repair → Maintenance of genomic integrity.",
+        "Loss of nuclear TDP-43 → Impaired recruitment of XRCC4-Ligase 4 to DSBs → Defective Non-Homologous End Joining (NHEJ) → Accumulation of DNA damage → Neuronal apoptosis & genomic instability."
+      ],
+      "specific_effects": [
+        "TDP-43 is rapidly recruited to sites of DSBs and interacts with NHEJ factors including Ku proteins and DNA-PKcs (PRKDC).",
+        "TDP-43 acts as a scaffold to recruit the XRCC4-DNA ligase 4 complex to DSB sites, a critical final step in NHEJ.",
+        "Depletion of nuclear TDP-43 impairs NHEJ, leading to persistent accumulation of DNA damage in neurons and in ALS patient spinal cords."
+      ],
+      "evidence": [
+        {
+          "paper_title": "Motor neuron disease-associated loss of nuclear TDP-43 is linked to DNA double-strand break repair defects",
+          "doi": "10.1073/pnas.1818415116",
+          "authors": "Mitra J, Guerrero EN, Hegde PM, Liachko NF, Wang H, Vasquez V, Gao J, Pandey A, Taylor JP, Kraemer BC, Wu P, Boldogh I, Garruto RM, Mitra S, Rao KS, Hegde ML",
+          "journal": "Proc Natl Acad Sci U S A",
+          "year": 2019,
+          "assay": "Co-Immunoprecipitation, Immunofluorescence",
+          "species": "Human",
+          "relevant_quote": "TDP-43 is rapidly recruited at DSB sites to stably interact with DDR and NHEJ factors, specifically acting as a scaffold for the recruitment of break-sealing XRCC4-DNA ligase 4 complex...",
+          "pmid": "30770445"
+        },
+        {
+          "paper_title": "A Commentary on TDP-43 and DNA Damage Response in Amyotrophic Lateral Sclerosis",
+          "doi": "10.1177/1179069519880166",
+          "authors": "Mitra J, Hegde ML",
+          "journal": "J Exp Neurosci",
+          "year": 2019,
+          "assay": "Review",
+          "species": "Not applicable",
+          "relevant_quote": "We have also uncovered molecular insights into the role of TDP-43 in DSB repair and showed that TDP-43 acts as a scaffold in recruiting the XRCC4/DNA Ligase 4 complex at DSB damage sites...",
+          "pmid": "31656396"
+        },
+        {
+          "paper_title": "Loss of TDP-43 function contributes to genomic instability in amyotrophic lateral sclerosis",
+          "doi": "10.3389/fnins.2023.1251228",
+          "authors": "Fang M, Deibler SK, Nana AL, Vatsavayai SC, Banday S, Zhou Y, Almeida S, Weiss A, Brown RH, Seeley WW, Gao FB, Green MR",
+          "journal": "Front Neurosci",
+          "year": 2023,
+          "assay": "RNAi screen, Immunofluorescence",
+          "species": "Human",
+          "relevant_quote": "Collectively, our results demonstrate that ALS neurons with loss of nuclear TDP-43 function have elevated levels of DNA damage and contribute to the idea that genomic instability is a defining pathological feature...",
+          "pmid": "37849894"
+        }
+      ],
+      "pmids": [
+        "30770445",
+        "31656396",
+        "37849894"
+      ]
+    }
+  ],
+  "arrow": "activates",
+  "direction": "main_to_primary",
+  "intent": "DNA damage repair",
+  "mechanism": "TDP-43 is a key component of the non-homologous end joining (NHEJ) pathway, the primary mechanism for repairing DNA double-strand breaks (DSBs) in post-mitotic neurons. Upon DNA damage, TDP-43 is recruited to DSB sites where it interacts with core NHEJ factors, including the DNA-dependent protein kinase catalytic subunit (DNA-PKcs, or PRKDC).",
+  "effect": "TDP-43's interaction with PRKDC is essential for the proper execution of non-homologous end joining (NHEJ), and its loss impairs the repair of DNA double-strand breaks.",
+  "summary": "TDP43 activates PRKDC to modulate dna double-strand break repair (nhej), ultimately affecting maintenance of genomic integrity.",
+  "evidence": [
+    {
+      "paper_title": "Motor neuron disease-associated loss of nuclear TDP-43 is linked to DNA double-strand break repair defects",
+      "doi": "10.1073/pnas.1818415116",
+      "authors": "Mitra J, Guerrero EN, Hegde PM, Liachko NF, Wang H, Vasquez V, Gao J, Pandey A, Taylor JP, Kraemer BC, Wu P, Boldogh I, Garruto RM, Mitra S, Rao KS, Hegde ML",
+      "journal": "Proc Natl Acad Sci U S A",
+      "year": 2019,
+      "assay": "Co-Immunoprecipitation, Immunofluorescence",
+      "species": "Human",
+      "relevant_quote": "TDP-43 is rapidly recruited at DSB sites to stably interact with DDR and NHEJ factors, specifically acting as a scaffold for the recruitment of break-sealing XRCC4-DNA ligase 4 complex..."
+    },
+    {
+      "paper_title": "A Commentary on TDP-43 and DNA Damage Response in Amyotrophic Lateral Sclerosis",
+      "doi": "10.1177/1179069519880166",
+      "authors": "Mitra J, Hegde ML",
+      "journal": "J Exp Neurosci",
+      "year": 2019,
+      "assay": "Review",
+      "species": "Not applicable",
+      "relevant_quote": "We have also uncovered molecular insights into the role of TDP-43 in DSB repair and showed that TDP-43 acts as a scaffold in recruiting the XRCC4/DNA Ligase 4 complex at DSB damage sites..."
+    },
+    {
+      "paper_title": "Loss of TDP-43 function contributes to genomic instability in amyotrophic lateral sclerosis",
+      "doi": "10.3389/fnins.2023.1251228",
+      "authors": "Fang M, Deibler SK, Nana AL, Vatsavayai SC, Banday S, Zhou Y, Almeida S, Weiss A, Brown RH, Seeley WW, Gao FB, Green MR",
+      "journal": "Front Neurosci",
+      "year": 2023,
+      "assay": "RNAi screen, Immunofluorescence",
+      "species": "Human",
+      "relevant_quote": "Collectively, our results demonstrate that ALS neurons with loss of nuclear TDP-43 function have elevated levels of DNA damage and contribute to the idea that genomic instability is a defining pathological feature..."
+    }
+  ],
+  "arrow_notation": "TDP43 --activates--> PRKDC:",
+  "protein_a": "TDP43",
+  "protein_b": "PRKDC",
+  "discovered_in_query": "TDP43",
+  "first_discovered": "2025-11-11T16:36:28.319545Z",
+  "last_updated": "2025-11-11T16:36:28.319545Z"
+}

@@ -1,0 +1,115 @@
+{
+  "primary": "ATXN2",
+  "interaction_type": "direct",
+  "upstream_interactor": null,
+  "mediator_chain": [],
+  "depth": 1,
+  "support_summary": "ATXN2 directly interacts with TDP-43 and is a potent modifier of TDP-43 toxicity. It facilitates the recruitment of TDP-43 into stress granules, and reducing ATXN2 levels mitigates TDP-43 pathology in animal models of ALS. [3, 11]",
+  "functions": [
+    {
+      "function": "Stress Granule Assembly & Maturation",
+      "arrow": "activates",
+      "cellular_process": "Ataxin-2 is a key regulator of stress granule (SG) assembly. It physically interacts with TDP-43, promoting its recruitment and concentration within SGs during cellular stress.",
+      "effect_description": "Ataxin-2 facilitates the recruitment of TDP-43 into stress granules, which can act as a seed for the formation of pathological, insoluble TDP-43 aggregates. Reducing Ataxin-2 levels inhibits this process.",
+      "biological_consequence": [
+        "Cellular Stress → ATXN2 recruits TDP-43 to Stress Granules (SGs) → Increased local TDP-43 concentration → Seeding of persistent TDP-43 aggregates → Neurodegeneration",
+        "Intermediate polyQ expansion in ATXN2 → Enhanced sequestration of TDP-43 into SGs → Increased TDP-43 aggregation → Heightened ALS risk"
+      ],
+      "specific_effects": [
+        "Reducing Ataxin-2 levels decreases TDP-43 aggregation, improves motor function, and extends survival in TDP-43 mouse models. [3]",
+        "Intermediate-length polyglutamine expansions in Ataxin-2 increase the risk for ALS and enhance the sequestration of TDP-43. [7]",
+        "Lowering Ataxin-2 levels decreases the recruitment of TDP-43 into stress granules. [6]",
+        "The interaction between ATXN2 and TDP-43 is mediated by the RRM domains of TDP-43. [8]"
+      ],
+      "evidence": [
+        {
+          "paper_title": "Therapeutic reduction of ataxin 2 extends lifespan and reduces pathology in TDP-43 mice",
+          "doi": "10.1038/nature22038",
+          "authors": "Becker LA, Huang B, Bieri G, Ma R, Knowles DA, Jafar-Nejad P, Messing J, Kim HJ, Soriano A, Auburger G, Pulst SM, Taylor JP, Rigo F, Gitler AD",
+          "journal": "Nature",
+          "year": 2017,
+          "assay": "ASO treatment, Immunohistochemistry",
+          "species": "mouse",
+          "relevant_quote": "The decrease in ataxin-2 reduced aggregation of TDP-43, markedly increased survival and improved motor function.",
+          "pmid": "28405022"
+        },
+        {
+          "paper_title": "Ataxin-2 polyglutamine expansions aberrantly sequester TDP-43, drive ribonucleoprotein condensate transport dysfunction and suppress local translation",
+          "doi": "10.1101/2023.01.30.526372",
+          "authors": "Wijegunawardana D, Vishal SS, Venkatesh N, Gopal PP",
+          "journal": "bioRxiv",
+          "year": 2023,
+          "assay": "Live-cell imaging, FRAP",
+          "species": "rat",
+          "relevant_quote": "We show that Ataxin-2 polyQ expansions aberrantly sequester TDP-43 within ribonucleoprotein (RNP) condensates, and disrupt both its motility along the axon and liquid-like properties.",
+          "pmid": "36778347"
+        },
+        {
+          "paper_title": "TDP-43 aggregation in neurodegeneration: are stress granules the key?",
+          "doi": "10.1016/j.brainres.2012.02.032",
+          "authors": "Dewey CM, Cenik B, Sephton CF, Johnson BA, Herz J, Yu G",
+          "journal": "Brain Research",
+          "year": 2012,
+          "assay": "Review",
+          "species": "human",
+          "relevant_quote": "Several recent studies have documented that cytoplasmic TDP-43 aggregates co-localize with stress granule markers...several proteins implicated in neurodegeneration (i.e. Ataxin-2 and SMN) interact with stress granules.",
+          "pmid": "22405725"
+        }
+      ],
+      "_context": {
+        "type": "direct",
+        "query_protein": null,
+        "chain": null
+      },
+      "pmids": [
+        "28405022",
+        "36778347",
+        "22405725"
+      ]
+    }
+  ],
+  "arrow": "activates",
+  "direction": "primary_to_main",
+  "intent": "regulation",
+  "mechanism": "Ataxin-2 is a key regulator of stress granule (SG) assembly. It physically interacts with TDP-43, promoting its recruitment and concentration within SGs during cellular stress.",
+  "effect": "Ataxin-2 facilitates the recruitment of TDP-43 into stress granules, which can act as a seed for the formation of pathological, insoluble TDP-43 aggregates. Reducing Ataxin-2 levels inhibits this process.",
+  "summary": "TDP43 activates ATXN2 to modulate stress granule assembly & maturation, ultimately affecting neurodegeneration.",
+  "evidence": [
+    {
+      "paper_title": "Therapeutic reduction of ataxin 2 extends lifespan and reduces pathology in TDP-43 mice",
+      "doi": "10.1038/nature22038",
+      "authors": "Becker LA, Huang B, Bieri G, Ma R, Knowles DA, Jafar-Nejad P, Messing J, Kim HJ, Soriano A, Auburger G, Pulst SM, Taylor JP, Rigo F, Gitler AD",
+      "journal": "Nature",
+      "year": 2017,
+      "assay": "ASO treatment, Immunohistochemistry",
+      "species": "mouse",
+      "relevant_quote": "The decrease in ataxin-2 reduced aggregation of TDP-43, markedly increased survival and improved motor function."
+    },
+    {
+      "paper_title": "Ataxin-2 polyglutamine expansions aberrantly sequester TDP-43, drive ribonucleoprotein condensate transport dysfunction and suppress local translation",
+      "doi": "10.1101/2023.01.30.526372",
+      "authors": "Wijegunawardana D, Vishal SS, Venkatesh N, Gopal PP",
+      "journal": "bioRxiv",
+      "year": 2023,
+      "assay": "Live-cell imaging, FRAP",
+      "species": "rat",
+      "relevant_quote": "We show that Ataxin-2 polyQ expansions aberrantly sequester TDP-43 within ribonucleoprotein (RNP) condensates, and disrupt both its motility along the axon and liquid-like properties."
+    },
+    {
+      "paper_title": "TDP-43 aggregation in neurodegeneration: are stress granules the key?",
+      "doi": "10.1016/j.brainres.2012.02.032",
+      "authors": "Dewey CM, Cenik B, Sephton CF, Johnson BA, Herz J, Yu G",
+      "journal": "Brain Research",
+      "year": 2012,
+      "assay": "Review",
+      "species": "human",
+      "relevant_quote": "Several recent studies have documented that cytoplasmic TDP-43 aggregates co-localize with stress granule markers...several proteins implicated in neurodegeneration (i.e. Ataxin-2 and SMN) interact with stress granules."
+    }
+  ],
+  "arrow_notation": "TDP43 <--activates-- ATXN2:",
+  "protein_a": "TDP43",
+  "protein_b": "ATXN2",
+  "discovered_in_query": "TDP43",
+  "first_discovered": "2025-11-11T16:36:28.240949Z",
+  "last_updated": "2025-11-11T16:36:28.240949Z"
+}

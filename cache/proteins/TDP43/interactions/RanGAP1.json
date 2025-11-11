@@ -1,0 +1,91 @@
+{
+  "primary": "RanGAP1",
+  "interaction_type": "direct",
+  "upstream_interactor": null,
+  "mediator_chain": [],
+  "depth": 1,
+  "support_summary": "Proteomic analysis of pathological TDP-43 aggregates reveals they are enriched with key components of the nucleocytoplasmic transport machinery. Ran GTPase-activating protein 1 (RanGAP1) is among the transport factors found to be directly sequestered within these pathological complexes, leading to transport dysfunction.",
+  "functions": [
+    {
+      "function": "Nucleocytoplasmic Transport",
+      "arrow": "inhibits",
+      "cellular_process": "RanGAP1 is a key cytoplasmic regulator of the Ran GTPase cycle, which is essential for nucleocytoplasmic transport. Pathological, cytoplasmic TDP-43 aggregates sequester RanGAP1 and other transport factors, disrupting the Ran-GTP/GDP gradient that provides directionality for nuclear import and export.",
+      "effect_description": "Sequestration of RanGAP1 by pathological TDP-43 aggregates impairs the Ran cycle, leading to a global disruption of nucleocytoplasmic transport.",
+      "biological_consequence": [
+        "Cytoplasmic TDP-43 aggregation → Sequestration of RanGAP1 and nuclear transport machinery → Disruption of the Ran-GTP/GDP gradient across the nuclear envelope → Impaired nucleocytoplasmic transport (import and export) → Pathological accumulation of cytoplasmic and nuclear molecules → Cellular dysfunction."
+      ],
+      "specific_effects": [
+        "Proteomic analysis of detergent-insoluble TDP-43 aggregates found them enriched with nucleocytoplasmic transport machinery components, including RanGAP1. [4]",
+        "Aggregated TDP-43 interferes with both nuclear protein import and RNA export. [4, 16]",
+        "The C9ORF72 repeat expansion, another cause of ALS/FTD, also disrupts nucleocytoplasmic transport through aberrant interaction with RanGAP1. [35, 40]"
+      ],
+      "evidence": [
+        {
+          "paper_title": "TDP-43 pathology disrupts nuclear pore complexes and nucleocytoplasmic transport in ALS/FTD",
+          "doi": "10.1038/s41593-017-0047-3",
+          "authors": "Chou CC, Zhang Y, Umoh ME, et al.",
+          "journal": "Nature Neuroscience",
+          "year": 2018,
+          "assay": "Proximity-dependent biotin identification (BioID), Immunofluorescence",
+          "species": "human, mouse",
+          "relevant_quote": "Aggregated and disease-linked mutant TDP-43 triggered the sequestration and/or mislocalization of nucleoporins and transport factors, and interfered with nuclear protein import and RNA export...",
+          "pmid": "29311743"
+        },
+        {
+          "paper_title": "The C9ORF72 repeat expansion disrupts nucleocytoplasmic transport",
+          "doi": "10.1038/nature14973",
+          "authors": "Zhang K, Donnelly CJ, Haeusler AR, et al.",
+          "journal": "Nature",
+          "year": 2015,
+          "assay": "Genetic screen, Co-localization studies",
+          "species": "drosophila, human",
+          "relevant_quote": "A candidate-based genetic screen in Drosophila expressing 30 G4C2 repeats identified RanGAP... as a potent suppressor of neurodegeneration.",
+          "pmid": "26308891"
+        }
+      ],
+      "_context": {
+        "type": "direct",
+        "query_protein": null,
+        "chain": null
+      },
+      "pmids": [
+        "29311743",
+        "26308891"
+      ]
+    }
+  ],
+  "arrow": "inhibits",
+  "direction": "main_to_primary",
+  "intent": "sequestration",
+  "mechanism": "RanGAP1 is a key cytoplasmic regulator of the Ran GTPase cycle, which is essential for nucleocytoplasmic transport. Pathological, cytoplasmic TDP-43 aggregates sequester RanGAP1 and other transport factors, disrupting the Ran-GTP/GDP gradient that provides directionality for nuclear import and export.",
+  "effect": "Sequestration of RanGAP1 by pathological TDP-43 aggregates impairs the Ran cycle, leading to a global disruption of nucleocytoplasmic transport.",
+  "summary": "TDP43 inhibits RanGAP1 to modulate nucleocytoplasmic transport, ultimately affecting cellular dysfunction.",
+  "evidence": [
+    {
+      "paper_title": "TDP-43 pathology disrupts nuclear pore complexes and nucleocytoplasmic transport in ALS/FTD",
+      "doi": "10.1038/s41593-017-0047-3",
+      "authors": "Chou CC, Zhang Y, Umoh ME, et al.",
+      "journal": "Nature Neuroscience",
+      "year": 2018,
+      "assay": "Proximity-dependent biotin identification (BioID), Immunofluorescence",
+      "species": "human, mouse",
+      "relevant_quote": "Aggregated and disease-linked mutant TDP-43 triggered the sequestration and/or mislocalization of nucleoporins and transport factors, and interfered with nuclear protein import and RNA export..."
+    },
+    {
+      "paper_title": "The C9ORF72 repeat expansion disrupts nucleocytoplasmic transport",
+      "doi": "10.1038/nature14973",
+      "authors": "Zhang K, Donnelly CJ, Haeusler AR, et al.",
+      "journal": "Nature",
+      "year": 2015,
+      "assay": "Genetic screen, Co-localization studies",
+      "species": "drosophila, human",
+      "relevant_quote": "A candidate-based genetic screen in Drosophila expressing 30 G4C2 repeats identified RanGAP... as a potent suppressor of neurodegeneration."
+    }
+  ],
+  "arrow_notation": "TDP43 --inhibits--> RanGAP1:",
+  "protein_a": "TDP43",
+  "protein_b": "RanGAP1",
+  "discovered_in_query": "TDP43",
+  "first_discovered": "2025-11-11T16:36:28.309935Z",
+  "last_updated": "2025-11-11T16:36:28.309935Z"
+}

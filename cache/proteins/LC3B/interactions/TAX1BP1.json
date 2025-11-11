@@ -1,0 +1,85 @@
+{
+  "primary": "TAX1BP1",
+  "direction": "primary_to_main",
+  "arrow": "activates",
+  "intent": "ubiquitination",
+  "support_summary": "A selective autophagy receptor that binds to LC3 family proteins via a LIR motif to mediate the degradation of specific cargo. It also recruits motor proteins to facilitate autophagosome maturation.",
+  "functions": [
+    {
+      "function": "Selective Autophagy Cargo Recognition",
+      "arrow": "activates",
+      "cellular_process": "Functions as a selective autophagy receptor that targets ubiquitinated cargo, such as invading bacteria (xenophagy) or protein aggregates (aggrephagy), to the autophagosome. It binds ubiquitin via its zinc finger domains and LC3/GABARAP proteins via its LIR motifs.",
+      "effect_description": "TAX1BP1 binding to LC3B tethers ubiquitinated cargo to the phagophore, activating its engulfment and subsequent degradation by autophagy.",
+      "biological_consequence": [
+        "Ubiquitination of intracellular pathogens (e.g., Salmonella) → TAX1BP1 binds ubiquitin chains on bacteria → TAX1BP1 LIR motif interacts with LC3B on the phagophore → Engulfment into autophagosome (xenophagy) → Pathogen clearance and innate immune defense",
+        "Accumulation of ubiquitinated protein aggregates → TAX1BP1 binds aggregates via zinc finger domains → TAX1BP1 recruits the phagophore via LC3B interaction → Sequestration into autophagosome (aggrephagy) → Degradation and maintenance of cellular proteostasis",
+        "Viral infection triggers MAVS aggregation on mitochondria → TAX1BP1 recognizes and binds aggregated MAVS → TAX1BP1-LC3B interaction mediates autophagic engulfment → Degradation of MAVS signaling complexes → Attenuation of the type I interferon response"
+      ],
+      "specific_effects": [
+        "Contains LIR motifs for direct interaction with LC3 family proteins",
+        "Mediates xenophagic clearance of pathogens like Salmonella typhimurium",
+        "Targets signaling adaptors like MAVS for autophagic degradation to regulate innate immunity"
+      ],
+      "evidence": [
+        {
+          "paper_title": "Mechanistic insights into the interactions of TAX1BP1 with RB1CC1 and mammalian ATG8 family proteins",
+          "doi": "10.1073/pnas.2315550121",
+          "authors": "Gu Y, Zhang X, Wang Y, Li Y, Liu J, Fu T, Pan L",
+          "journal": "Proceedings of the National Academy of Sciences of the United States of America",
+          "year": 2024,
+          "assay": "Crystallography, ITC",
+          "species": "human",
+          "relevant_quote": "...we elucidate the molecular mechanism governing the selective interactions of TAX1BP1 with ATG8 family members by solving the structure of GABARAP in complex with the non-canonical LIR...motif of TAX1BP1...",
+          "pmid": "38437556"
+        },
+        {
+          "paper_title": "Multifaceted roles of TAX1BP1 in autophagy",
+          "doi": "10.1080/15548627.2022.2070331",
+          "authors": "White J, Suklabaidya S, Vo MT, Choi YB, Harhaj EW",
+          "journal": "Autophagy",
+          "year": 2022,
+          "assay": "Review",
+          "species": "human, mouse",
+          "relevant_quote": "TAX1BP1 is a selective macroautophagy/autophagy receptor that plays a central role in host defense to pathogens...TAX1BP1 facilitates the xenophagic clearance of pathogenic bacteria such as Salmonella typhimurium...",
+          "pmid": "35470757"
+        }
+      ],
+      "pmids": [
+        "38437556",
+        "35470757"
+      ]
+    }
+  ],
+  "mechanism": "Functions as a selective autophagy receptor that targets ubiquitinated cargo, such as invading bacteria (xenophagy) or protein aggregates (aggrephagy), to the autophagosome. It binds ubiquitin via its zinc finger domains and LC3/GABARAP proteins via its LIR motifs.",
+  "effect": "TAX1BP1 binding to LC3B tethers ubiquitinated cargo to the phagophore, activating its engulfment and subsequent degradation by autophagy.",
+  "summary": "LC3B activates TAX1BP1 to modulate selective autophagy cargo recognition, ultimately affecting pathogen clearance and innate immune defense.",
+  "evidence": [
+    {
+      "paper_title": "Mechanistic insights into the interactions of TAX1BP1 with RB1CC1 and mammalian ATG8 family proteins",
+      "doi": "10.1073/pnas.2315550121",
+      "authors": "Gu Y, Zhang X, Wang Y, Li Y, Liu J, Fu T, Pan L",
+      "journal": "Proceedings of the National Academy of Sciences of the United States of America",
+      "year": 2024,
+      "assay": "Crystallography, ITC",
+      "species": "human",
+      "relevant_quote": "...we elucidate the molecular mechanism governing the selective interactions of TAX1BP1 with ATG8 family members by solving the structure of GABARAP in complex with the non-canonical LIR...motif of TAX1BP1..."
+    },
+    {
+      "paper_title": "Multifaceted roles of TAX1BP1 in autophagy",
+      "doi": "10.1080/15548627.2022.2070331",
+      "authors": "White J, Suklabaidya S, Vo MT, Choi YB, Harhaj EW",
+      "journal": "Autophagy",
+      "year": 2022,
+      "assay": "Review",
+      "species": "human, mouse",
+      "relevant_quote": "TAX1BP1 is a selective macroautophagy/autophagy receptor that plays a central role in host defense to pathogens...TAX1BP1 facilitates the xenophagic clearance of pathogenic bacteria such as Salmonella typhimurium..."
+    }
+  ],
+  "depth": 1,
+  "arrow_notation": "LC3B <--activates-- TAX1BP1:",
+  "protein_a": "LC3B",
+  "protein_b": "TAX1BP1",
+  "discovered_in_query": "LC3B",
+  "first_discovered": "2025-11-11T15:54:33.402299Z",
+  "last_updated": "2025-11-11T15:54:33.402299Z"
+}

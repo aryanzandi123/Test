@@ -1,0 +1,208 @@
+{
+  "primary": "LC3B",
+  "direction": "main_to_primary",
+  "arrow": "activates",
+  "intent": "binding",
+  "support_summary": "NDP52 (also known as CALCOCO2) is a versatile selective autophagy receptor that directly binds LC3 family proteins to activate distinct autophagic processes. It uses a non-canonical LIR to bind LC3C for xenophagy initiation, a separate LIR-like motif to bind LC3B for autophagosome maturation, and also functions as a key receptor in mitophagy.",
+  "functions": [
+    {
+      "function": "Selective Autophagy Cargo Recognition (Xenophagy)",
+      "arrow": "activates",
+      "cellular_process": "Acts as a selective autophagy receptor that targets intracellular pathogens, such as Salmonella Typhimurium, to the autophagosome. It recognizes bacteria by binding galectin-8 on damaged vacuoles and links them to the phagophore by interacting with LC3C.",
+      "effect_description": "Initiates xenophagy by recruiting the ULK1 autophagy initiation complex to cytosol-invading bacteria, ensuring they are recognized and engulfed by the forming autophagosome.",
+      "biological_consequence": [
+        "Damaged pathogen vacuole is recognized by Galectin-8 → NDP52 binds Galectin-8 and ubiquitinated bacterial proteins → NDP52 recruits the ULK1 complex via FIP200 → Phagophore initiation at the cargo site → Engulfment of pathogen into a xenophagosome"
+      ],
+      "specific_effects": [
+        "Recognizes ubiquitinated cytosolic bacteria",
+        "Binds galectin-8 on damaged pathogen-containing vacuoles",
+        "Utilizes a non-canonical LIR (CLIR) to bind LC3C for initial cargo targeting",
+        "Recruits the FIP200 subunit of the ULK1 complex to initiate phagophore formation at the cargo site"
+      ],
+      "evidence": [
+        {
+          "paper_title": "The Cargo Receptor NDP52 Initiates Selective Autophagy by Recruiting the ULK Complex to Cytosol-Invading Bacteria",
+          "doi": "10.1016/j.molcel.2019.01.041",
+          "authors": "Ravenhill BJ, Boyle KB, von Muhlinen N, Ellison CJ, Masson GR, Otten EG, Foeglein A, Williams R, Randow F",
+          "journal": "Mol Cell",
+          "year": 2019,
+          "assay": "LUMIER assay, Co-IP",
+          "species": "human",
+          "relevant_quote": "essential for anti-bacterial autophagy, the cargo receptor NDP52 forms a trimeric complex with FIP200 and SINTBAD/NAP1, which are subunits of the autophagy-initiating ULK and the TBK1 kinase complex...",
+          "pmid": "30853402"
+        },
+        {
+          "paper_title": "LC3C, bound selectively by a noncanonical LIR motif in NDP52, is required for antibacterial autophagy",
+          "doi": "10.1016/j.molcel.2012.08.024",
+          "authors": "von Muhlinen N, Akutsu M, Ravenhill BJ, Foeglein Á, Bloor S, Rutherford TJ, Freund SM, Komander D, Randow F",
+          "journal": "Mol Cell",
+          "year": 2012,
+          "assay": "ITC, GST pull-down, Co-IP",
+          "species": "human",
+          "relevant_quote": "Here, we identify a noncanonical LIR in the autophagy receptor NDP52 that is required for selective binding of LC3C, but not other LC3/GABARAP family members.",
+          "pmid": "23022382"
+        }
+      ],
+      "pmids": [
+        "30853402",
+        "23022382"
+      ]
+    },
+    {
+      "function": "Autophagosome Maturation",
+      "arrow": "activates",
+      "cellular_process": "Following cargo engulfment, NDP52 promotes the fusion of pathogen-containing autophagosomes with lysosomes. This function is mediated through a distinct LIR-like motif that interacts with LC3A and LC3B, and by recruiting the motor protein MYOSIN VI.",
+      "effect_description": "Facilitates the final degradative step of xenophagy by ensuring that the autophagosome containing the pathogen successfully fuses with the lysosome to form a degradative autolysosome.",
+      "biological_consequence": [
+        "NDP52 on the outer autophagosome membrane binds LC3A/B → NDP52 recruits the motor protein MYOSIN VI → MYOSIN VI facilitates autophagosome transport along actin filaments → Autophagosome fuses with a lysosome → Pathogen degradation within the autolysosome"
+      ],
+      "specific_effects": [
+        "Promotes autophagosome-lysosome fusion specifically for pathogen-containing vesicles",
+        "Interacts with LC3A/B and MYOSIN VI to mediate maturation, a function separate from its LC3C-dependent targeting role",
+        "Plays a dual role in both targeting and maturation steps of xenophagy"
+      ],
+      "evidence": [
+        {
+          "paper_title": "Autophagy Receptor NDP52 Regulates Pathogen-Containing Autophagosome Maturation",
+          "doi": "10.1016/j.chom.2015.02.008",
+          "authors": "Verlhac P, Grégoire IP, Azocar O, Petkova DS, Baguet J, Viret C, Faure M",
+          "journal": "Cell Host Microbe",
+          "year": 2015,
+          "assay": "Co-IP, GST pull-down",
+          "species": "human, mouse",
+          "relevant_quote": "Here, we show that NDP52 also promotes the maturation of autophagosomes via its interaction with LC3A, LC3B, and/or GABARAPL2 through a distinct LC3-interacting region, and with MYOSIN VI.",
+          "pmid": "25771791"
+        },
+        {
+          "paper_title": "Dual function of CALCOCO2/NDP52 during xenophagy",
+          "doi": "10.1080/15548627.2015.1046672",
+          "authors": "Verlhac P, Viret C, Faure M",
+          "journal": "Autophagy",
+          "year": 2015,
+          "assay": "Review",
+          "species": "human",
+          "relevant_quote": "to mediate autophagosome maturation CALCOCO2 binds on the one hand to LC3A, LC3B, or GABARAPL2, and on the other hand to MYO6/MYOSIN VI, whereas the interaction with LC3C is dispensable.",
+          "pmid": "25998689"
+        }
+      ],
+      "pmids": [
+        "25771791",
+        "25998689"
+      ]
+    },
+    {
+      "function": "Mitophagy",
+      "arrow": "activates",
+      "cellular_process": "Acts as a primary receptor in PINK1/Parkin-mediated mitophagy. Upon mitochondrial damage, NDP52 is recruited to the mitochondrial surface where it is oxidized by ROS, leading to oligomerization. This enhances the recruitment of autophagy machinery to eliminate the damaged organelle.",
+      "effect_description": "Facilitates the efficient removal of damaged mitochondria by acting as a redox sensor, linking oxidative stress directly to the autophagic clearance of the damaged organelle.",
+      "biological_consequence": [
+        "Mitochondrial damage triggers PINK1/Parkin-mediated ubiquitination → NDP52 is recruited to the damaged mitochondrion → ROS-induced oxidation promotes NDP52 oligomerization → Oligomerized NDP52 enhances recruitment of autophagy machinery → Engulfment of the mitochondrion into a mitophagosome → Degradation and mitochondrial quality control"
+      ],
+      "specific_effects": [
+        "Oxidation of specific cysteine residues acts as a signal for efficient mitophagy",
+        "Interacts with mitochondrial RNA poly(A) polymerase (MTPAP) to form a receptor complex that enhances LC3 recruitment",
+        "Required for the autophagic engulfment of mitochondria after treatment with uncouplers"
+      ],
+      "evidence": [
+        {
+          "paper_title": "NDP52 acts as a redox sensor in PINK1/Parkin-mediated mitophagy",
+          "doi": "10.15252/embj.2022111372",
+          "authors": "Kataura T, Otten EG, Rabanal-Ruiz Y, Adriaenssens E, Urselli F, Scialo F, Fan L, Smith GR, Dawson WM, Chen X, Yue WW, Bronowska AK, Carroll B, Martens S, Lazarou M, Korolchuk VI",
+          "journal": "EMBO J",
+          "year": 2022,
+          "assay": "Immunofluorescence, Western Blot",
+          "species": "human, mouse",
+          "relevant_quote": "Here we found that oxidation of NDP52 is essential for the efficient PINK1/Parkin-dependent mitophagy.",
+          "pmid": "36514953"
+        },
+        {
+          "paper_title": "NDP52 interacts with mitochondrial RNA poly(A) polymerase to promote mitophagy",
+          "doi": "10.15252/embr.201846363",
+          "authors": "Furuya N, Kakuta S, Sumiyoshi K, Iwashita S, Fujimaki M, Hatae T, Saiki S, Hattori N",
+          "journal": "EMBO Rep",
+          "year": 2018,
+          "assay": "Co-IP, Mass Spectrometry",
+          "species": "human",
+          "relevant_quote": "Loss of MTPAP reduces NDP52-mediated mitophagy, and the NDP52-MTPAP complex attracts more LC3 than NDP52 alone.",
+          "pmid": "30309841"
+        }
+      ],
+      "pmids": [
+        "36514953",
+        "30309841"
+      ]
+    }
+  ],
+  "mechanism": "Acts as a selective autophagy receptor that targets intracellular pathogens, such as Salmonella Typh; Following cargo engulfment, NDP52 promotes the fusion of pathogen-containing autophagosomes with lys; Acts as a primary receptor in PINK1/Parkin-mediated mitophagy",
+  "effect": "Initiates xenophagy by recruiting the ULK1 autophagy initiation complex to cytosol-invading bacteria, ensuring they are recognized and engulfed by the forming autophagosome.; Facilitates the final degradative step of xenophagy by ensuring that the autophagosome containing the pathogen successfully fuses with the lysosome to form a degradative autolysosome.; ...",
+  "summary": "LC3B activates NDP52 to control multiple cellular processes including selective autophagy cargo recognition (xenophagy), autophagosome maturation, and mitophagy, ultimately affecting engulfment of pathogen into a xenophagosome.",
+  "evidence": [
+    {
+      "paper_title": "The Cargo Receptor NDP52 Initiates Selective Autophagy by Recruiting the ULK Complex to Cytosol-Invading Bacteria",
+      "doi": "10.1016/j.molcel.2019.01.041",
+      "authors": "Ravenhill BJ, Boyle KB, von Muhlinen N, Ellison CJ, Masson GR, Otten EG, Foeglein A, Williams R, Randow F",
+      "journal": "Mol Cell",
+      "year": 2019,
+      "assay": "LUMIER assay, Co-IP",
+      "species": "human",
+      "relevant_quote": "essential for anti-bacterial autophagy, the cargo receptor NDP52 forms a trimeric complex with FIP200 and SINTBAD/NAP1, which are subunits of the autophagy-initiating ULK and the TBK1 kinase complex..."
+    },
+    {
+      "paper_title": "LC3C, bound selectively by a noncanonical LIR motif in NDP52, is required for antibacterial autophagy",
+      "doi": "10.1016/j.molcel.2012.08.024",
+      "authors": "von Muhlinen N, Akutsu M, Ravenhill BJ, Foeglein Á, Bloor S, Rutherford TJ, Freund SM, Komander D, Randow F",
+      "journal": "Mol Cell",
+      "year": 2012,
+      "assay": "ITC, GST pull-down, Co-IP",
+      "species": "human",
+      "relevant_quote": "Here, we identify a noncanonical LIR in the autophagy receptor NDP52 that is required for selective binding of LC3C, but not other LC3/GABARAP family members."
+    },
+    {
+      "paper_title": "Autophagy Receptor NDP52 Regulates Pathogen-Containing Autophagosome Maturation",
+      "doi": "10.1016/j.chom.2015.02.008",
+      "authors": "Verlhac P, Grégoire IP, Azocar O, Petkova DS, Baguet J, Viret C, Faure M",
+      "journal": "Cell Host Microbe",
+      "year": 2015,
+      "assay": "Co-IP, GST pull-down",
+      "species": "human, mouse",
+      "relevant_quote": "Here, we show that NDP52 also promotes the maturation of autophagosomes via its interaction with LC3A, LC3B, and/or GABARAPL2 through a distinct LC3-interacting region, and with MYOSIN VI."
+    },
+    {
+      "paper_title": "Dual function of CALCOCO2/NDP52 during xenophagy",
+      "doi": "10.1080/15548627.2015.1046672",
+      "authors": "Verlhac P, Viret C, Faure M",
+      "journal": "Autophagy",
+      "year": 2015,
+      "assay": "Review",
+      "species": "human",
+      "relevant_quote": "to mediate autophagosome maturation CALCOCO2 binds on the one hand to LC3A, LC3B, or GABARAPL2, and on the other hand to MYO6/MYOSIN VI, whereas the interaction with LC3C is dispensable."
+    },
+    {
+      "paper_title": "NDP52 acts as a redox sensor in PINK1/Parkin-mediated mitophagy",
+      "doi": "10.15252/embj.2022111372",
+      "authors": "Kataura T, Otten EG, Rabanal-Ruiz Y, Adriaenssens E, Urselli F, Scialo F, Fan L, Smith GR, Dawson WM, Chen X, Yue WW, Bronowska AK, Carroll B, Martens S, Lazarou M, Korolchuk VI",
+      "journal": "EMBO J",
+      "year": 2022,
+      "assay": "Immunofluorescence, Western Blot",
+      "species": "human, mouse",
+      "relevant_quote": "Here we found that oxidation of NDP52 is essential for the efficient PINK1/Parkin-dependent mitophagy."
+    },
+    {
+      "paper_title": "NDP52 interacts with mitochondrial RNA poly(A) polymerase to promote mitophagy",
+      "doi": "10.15252/embr.201846363",
+      "authors": "Furuya N, Kakuta S, Sumiyoshi K, Iwashita S, Fujimaki M, Hatae T, Saiki S, Hattori N",
+      "journal": "EMBO Rep",
+      "year": 2018,
+      "assay": "Co-IP, Mass Spectrometry",
+      "species": "human",
+      "relevant_quote": "Loss of MTPAP reduces NDP52-mediated mitophagy, and the NDP52-MTPAP complex attracts more LC3 than NDP52 alone."
+    }
+  ],
+  "depth": 1,
+  "arrow_notation": "LC3B <--activates-- NDP52:",
+  "protein_a": "NDP52",
+  "protein_b": "LC3B",
+  "discovered_in_query": "LC3B",
+  "first_discovered": "2025-11-11T15:54:33.383629Z",
+  "last_updated": "2025-11-11T15:54:33.383629Z"
+}

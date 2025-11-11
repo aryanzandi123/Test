@@ -1,0 +1,85 @@
+{
+  "primary": "LC3B",
+  "direction": "main_to_primary",
+  "arrow": "activates",
+  "intent": "binding",
+  "support_summary": "CCPG1 is an ER-phagy receptor that is induced by ER stress. It directly interacts with LC3/GABARAP proteins via a LIR motif to mediate the autophagic degradation of the ER, thereby helping to maintain ER protein homeostasis.",
+  "functions": [
+    {
+      "function": "Selective Autophagy of Endoplasmic Reticulum (ER-phagy)",
+      "arrow": "activates",
+      "cellular_process": "CCPG1 is a single-pass transmembrane protein in the ER that functions as a receptor for ER-phagy. In response to the unfolded protein response (UPR), its expression is upregulated. Its cytosolic tail contains a LIR motif that directly binds to LC3/GABARAP proteins, linking the stressed ER to the autophagic machinery.",
+      "effect_description": "The binding of CCPG1 to LC3B facilitates the clearance of stressed or excess ER fragments, which helps to alleviate ER stress and maintain ER proteostasis.",
+      "biological_consequence": [
+        "ER stress triggers the Unfolded Protein Response (UPR) → UPR signaling upregulates CCPG1 expression → CCPG1 LIR motif binds to LC3/GABARAP on the phagophore → CCPG1 also recruits the FIP200 initiation complex → The stressed ER is selectively engulfed by the autophagosome → Lysosomal degradation alleviates ER stress and restores proteostasis.",
+        "High secretory load in pancreatic cells induces ER stress → CCPG1-mediated ER-phagy is activated → Aggregation-prone luminal proteins are cleared from the ER → The UPR is dampened, preventing hyperactivation → Pancreatic tissue injury is prevented."
+      ],
+      "specific_effects": [
+        "CCPG1 expression is inducible by the unfolded protein response (UPR).",
+        "Directly binds to mammalian ATG8 proteins via a LIR motif.",
+        "Also interacts independently with FIP200, a component of the autophagy initiation complex.",
+        "Plays a crucial role in maintaining ER homeostasis in secretory tissues like the pancreas."
+      ],
+      "evidence": [
+        {
+          "paper_title": "CCPG1 Is a Non-canonical Autophagy Cargo Receptor Essential for ER-Phagy and Pancreatic ER Proteostasis",
+          "doi": "10.1016/j.devcel.2017.11.024",
+          "authors": "Mark D Smith, Rebecca E C Harley, Andrew J D Stewart, Simon Wilkinson",
+          "journal": "Developmental Cell",
+          "year": 2018,
+          "assay": "Affinity-purification mass spectrometry, Co-immunoprecipitation, Yeast two-hybrid",
+          "species": "human, mouse",
+          "relevant_quote": "...we identify cell-cycle progression gene 1 (CCPG1), an ER-resident protein with no known physiological role, as a non-canonical cargo receptor that directly binds to core autophagy proteins via an LIR motif to mammalian ATG8 proteins...",
+          "pmid": "29290589"
+        },
+        {
+          "paper_title": "CCPG1 recognizes endoplasmic reticulum luminal proteins for selective ER-phagy",
+          "doi": "10.1091/mbc.E22-09-0432",
+          "authors": "Yong-Ri Kim, Min-Jung Lee, Su-Hyeon Kim, Bo-Hye Kim, Yong-Keun Jung",
+          "journal": "Molecular Biology of the Cell",
+          "year": 2023,
+          "assay": "Co-immunoprecipitation",
+          "species": "human",
+          "relevant_quote": "CCPG1 promotes peripheral ER degradation during ER stress.",
+          "pmid": "36735498"
+        }
+      ],
+      "pmids": [
+        "29290589",
+        "36735498"
+      ]
+    }
+  ],
+  "mechanism": "CCPG1 is a single-pass transmembrane protein in the ER that functions as a receptor for ER-phagy. In response to the unfolded protein response (UPR), its expression is upregulated. Its cytosolic tail contains a LIR motif that directly binds to LC3/GABARAP proteins, linking the stressed ER to the autophagic machinery.",
+  "effect": "The binding of CCPG1 to LC3B facilitates the clearance of stressed or excess ER fragments, which helps to alleviate ER stress and maintain ER proteostasis.",
+  "summary": "LC3B activates CCPG1 to modulate selective autophagy of endoplasmic reticulum (er-phagy), ultimately affecting lysosomal degradation alleviates er stress and restores proteostasis.",
+  "evidence": [
+    {
+      "paper_title": "CCPG1 Is a Non-canonical Autophagy Cargo Receptor Essential for ER-Phagy and Pancreatic ER Proteostasis",
+      "doi": "10.1016/j.devcel.2017.11.024",
+      "authors": "Mark D Smith, Rebecca E C Harley, Andrew J D Stewart, Simon Wilkinson",
+      "journal": "Developmental Cell",
+      "year": 2018,
+      "assay": "Affinity-purification mass spectrometry, Co-immunoprecipitation, Yeast two-hybrid",
+      "species": "human, mouse",
+      "relevant_quote": "...we identify cell-cycle progression gene 1 (CCPG1), an ER-resident protein with no known physiological role, as a non-canonical cargo receptor that directly binds to core autophagy proteins via an LIR motif to mammalian ATG8 proteins..."
+    },
+    {
+      "paper_title": "CCPG1 recognizes endoplasmic reticulum luminal proteins for selective ER-phagy",
+      "doi": "10.1091/mbc.E22-09-0432",
+      "authors": "Yong-Ri Kim, Min-Jung Lee, Su-Hyeon Kim, Bo-Hye Kim, Yong-Keun Jung",
+      "journal": "Molecular Biology of the Cell",
+      "year": 2023,
+      "assay": "Co-immunoprecipitation",
+      "species": "human",
+      "relevant_quote": "CCPG1 promotes peripheral ER degradation during ER stress."
+    }
+  ],
+  "depth": 1,
+  "arrow_notation": "LC3B <--activates-- CCPG1:",
+  "protein_a": "CCPG1",
+  "protein_b": "LC3B",
+  "discovered_in_query": "LC3B",
+  "first_discovered": "2025-11-11T15:54:33.430240Z",
+  "last_updated": "2025-11-11T15:54:33.430240Z"
+}

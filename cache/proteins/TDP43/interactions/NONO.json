@@ -1,0 +1,101 @@
+{
+  "primary": "NONO",
+  "interaction_type": "direct",
+  "upstream_interactor": null,
+  "mediator_chain": [],
+  "depth": 1,
+  "support_summary": "TDP-43 and NONO are both components of paraspeckles, nuclear bodies scaffolded by the lncRNA NEAT1. TDP-43 is located in the shell, while NONO is a core structural protein. Their functional relationship is complex, with loss of nuclear TDP-43 leading to paraspeckle hyper-assembly, a potential stress response.",
+  "functions": [
+    {
+      "function": "Paraspeckle Assembly",
+      "arrow": "inhibits",
+      "cellular_process": "TDP-43 is a component of the paraspeckle shell and normally suppresses the hyper-assembly of these nuclear bodies. Loss of nuclear TDP-43 function, a hallmark of ALS, leads to an upregulation of the NEAT1_2 transcript, which scaffolds paraspeckles. This results in the hyper-assembly of paraspeckles containing the core protein NONO.",
+      "effect_description": "Loss of nuclear TDP-43 function removes its inhibitory effect, leading to an increase in the number and size of NONO-containing paraspeckles.",
+      "biological_consequence": [
+        "Loss of nuclear TDP-43 function → Upregulation of NEAT1_2 lncRNA transcript → Hyper-assembly of paraspeckle nuclear bodies → Sequestration of core paraspeckle proteins (e.g., NONO) → Altered gene expression and cellular stress."
+      ],
+      "specific_effects": [
+        "TDP-43 is found in the shell of paraspeckles, while NONO is a core component essential for their structural integrity. [3]",
+        "Depletion of TDP-43 upregulates the NEAT1_2 lncRNA, leading to increased paraspeckle formation. [11, 14]",
+        "Silencing the Drosophila homolog of NONO (NonA) worsens locomotor defects and increases nuclear TDP-43 bodies, suggesting NONO plays a role in mitigating TDP-43 toxicity. [6]"
+      ],
+      "evidence": [
+        {
+          "paper_title": "Protective paraspeckle hyper-assembly downstream of TDP-43 loss of function in amyotrophic lateral sclerosis",
+          "doi": "10.1186/s13024-018-0263-7",
+          "authors": "Shelkovnikova TA, Kukharsky MS, An H, et al.",
+          "journal": "Molecular Neurodegeneration",
+          "year": 2018,
+          "assay": "siRNA knockdown, RNA-FISH",
+          "species": "human, mouse",
+          "relevant_quote": "Mechanistically, loss of TDP-43 but not its cytoplasmic accumulation or aggregation augments paraspeckle assembly in cultured cells.",
+          "pmid": "29859124"
+        },
+        {
+          "paper_title": "Examining the potential involvement of NONO in TDP-43 proteinopathy in Drosophila",
+          "doi": "10.1111/ejn.16632",
+          "authors": "Godfrey RK, Alsop E, Bjork RT, et al.",
+          "journal": "European Journal of Neuroscience",
+          "year": 2025,
+          "assay": "Genetic interaction screen (RNAi)",
+          "species": "drosophila",
+          "relevant_quote": "Here, we demonstrate that loss of function in the Drosophila homolog of NONO, no on or off transient A (NonA), exacerbates pathological phenotypes caused by TDP-43 gain of function.",
+          "pmid": "39690447"
+        }
+      ],
+      "_context": {
+        "type": "direct",
+        "query_protein": null,
+        "chain": null
+      },
+      "pmids": [
+        "29859124",
+        "39690447"
+      ]
+    }
+  ],
+  "arrow": "inhibits",
+  "direction": "bidirectional",
+  "intent": "regulation",
+  "mechanism": "TDP-43 is a component of the paraspeckle shell and normally suppresses the hyper-assembly of these nuclear bodies. Loss of nuclear TDP-43 function, a hallmark of ALS, leads to an upregulation of the NEAT1_2 transcript, which scaffolds paraspeckles. This results in the hyper-assembly of paraspeckles containing the core protein NONO.",
+  "effect": "Loss of nuclear TDP-43 function removes its inhibitory effect, leading to an increase in the number and size of NONO-containing paraspeckles.",
+  "summary": "TDP43 inhibits NONO to modulate paraspeckle assembly, ultimately affecting altered gene expression and cellular stress.",
+  "evidence": [
+    {
+      "paper_title": "Protective paraspeckle hyper-assembly downstream of TDP-43 loss of function in amyotrophic lateral sclerosis",
+      "doi": "10.1186/s13024-018-0263-7",
+      "authors": "Shelkovnikova TA, Kukharsky MS, An H, et al.",
+      "journal": "Molecular Neurodegeneration",
+      "year": 2018,
+      "assay": "siRNA knockdown, RNA-FISH",
+      "species": "human, mouse",
+      "relevant_quote": "Mechanistically, loss of TDP-43 but not its cytoplasmic accumulation or aggregation augments paraspeckle assembly in cultured cells."
+    },
+    {
+      "paper_title": "Examining the potential involvement of NONO in TDP-43 proteinopathy in Drosophila",
+      "doi": "10.1111/ejn.16632",
+      "authors": "Godfrey RK, Alsop E, Bjork RT, et al.",
+      "journal": "European Journal of Neuroscience",
+      "year": 2025,
+      "assay": "Genetic interaction screen (RNAi)",
+      "species": "drosophila",
+      "relevant_quote": "Here, we demonstrate that loss of function in the Drosophila homolog of NONO, no on or off transient A (NonA), exacerbates pathological phenotypes caused by TDP-43 gain of function."
+    },
+    {
+      "paper_title": "Paraspeckle components NONO and PSPC1 are not mislocalized from motor neuron nuclei in sporadic ALS",
+      "doi": "10.1093/brain/awaa205",
+      "authors": "Tyzack GE, Manferrari G, Newcombe J, Luscombe NM, Luisier R, Patani R",
+      "journal": "Brain",
+      "year": 2020,
+      "assay": "Immunohistochemistry",
+      "species": "human",
+      "relevant_quote": "RBPs in the core are fundamental for the structural integrity of paraspeckles and include FUS and the DBHS family members SFPQ, NONO and PSPC1, while TDP-43 is found in the shell."
+    }
+  ],
+  "arrow_notation": "TDP43 <--inhibits--> NONO:",
+  "protein_a": "TDP43",
+  "protein_b": "NONO",
+  "discovered_in_query": "TDP43",
+  "first_discovered": "2025-11-11T16:36:28.307822Z",
+  "last_updated": "2025-11-11T16:36:28.307822Z"
+}

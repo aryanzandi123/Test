@@ -1,0 +1,84 @@
+{
+  "primary": "LMX1B",
+  "direction": "bidirectional",
+  "arrow": "activates",
+  "intent": "transcriptional regulation",
+  "support_summary": "LMX1B is a nuclear transcription factor that directly binds to nuclear LC3B. In this context, LC3B functions as a transcriptional cofactor, enhancing LMX1B's ability to activate the transcription of key autophagy-related genes, thus forming a positive feedback loop.",
+  "functions": [
+    {
+      "function": "Autophagy-Related Gene Transcription",
+      "arrow": "activates",
+      "cellular_process": "Within the nucleus, LC3B acts as a transcriptional cofactor by directly binding to the transcription factor LMX1B. This interaction, which depends on the de-acetylated state of nuclear LC3B, enhances the binding of LMX1B to promoter regions of autophagy-related genes, thereby boosting their transcription.",
+      "effect_description": "The interaction between nuclear LC3B and LMX1B co-activates the transcription of autophagy genes, which increases the cell's capacity for autophagy and enhances cellular stress protection.",
+      "biological_consequence": [
+        "De-acetylated nuclear LC3B binds LMX1B → LMX1B transcriptional activity is enhanced → Transcription of autophagy-related genes (e.g., ULK1, ATG7) increases → Cellular autophagy capacity is enhanced → Survival of midbrain dopaminergic neurons is promoted"
+      ],
+      "specific_effects": [
+        "Nuclear LC3B functions as a transcriptional co-activator for LMX1B.",
+        "The interaction is dependent on a LIR-like motif in LMX1B.",
+        "Binding requires de-acetylation of LC3B at lysines 49 and 51.",
+        "This regulatory axis is crucial for the maintenance and survival of midbrain dopaminergic neurons."
+      ],
+      "evidence": [
+        {
+          "paper_title": "ATG8-dependent LMX1B-autophagy crosstalk shapes human midbrain dopaminergic neuronal resilience",
+          "doi": "10.1083/jcb.201910133",
+          "authors": "Natalia Jiménez-Moreno, Madhu Kollareddy, Petros Stathakos, et al.",
+          "journal": "Journal of Cell Biology",
+          "year": 2023,
+          "assay": "Co-immunoprecipitation (Co-IP), GFP-TRAP",
+          "species": "human",
+          "relevant_quote": "LMX1B interacting with LC3B in the nucleus under basal conditions... Crucially, ATG8 binding stimulates LMX1B-mediated transcription for efficient autophagy and cell stress protection...",
+          "pmid": "37014324"
+        },
+        {
+          "paper_title": "LC3B is a cofactor for LMX1B-mediated transcription of autophagy genes in dopaminergic neurons",
+          "doi": "10.1083/jcb.202303008",
+          "authors": "Athanasios Kournoutis, Terje Johansen",
+          "journal": "Journal of Cell Biology",
+          "year": 2023,
+          "assay": "Review/Commentary",
+          "species": "human",
+          "relevant_quote": "...nuclear LC3B binds to the LIM homeodomain transcription factor LMX1B and acts as a cofactor for LMX1B-mediated transcription of autophagy genes, providing stress protection...",
+          "pmid": "37036692"
+        }
+      ],
+      "pmids": [
+        "37014324",
+        "37036692"
+      ]
+    }
+  ],
+  "mechanism": "Within the nucleus, LC3B acts as a transcriptional cofactor by directly binding to the transcription factor LMX1B. This interaction, which depends on the de-acetylated state of nuclear LC3B, enhances the binding of LMX1B to promoter regions of autophagy-related genes, thereby boosting their transcription.",
+  "effect": "The interaction between nuclear LC3B and LMX1B co-activates the transcription of autophagy genes, which increases the cell's capacity for autophagy and enhances cellular stress protection.",
+  "summary": "LC3B activates LMX1B to modulate autophagy-related gene transcription, ultimately affecting survival of midbrain dopaminergic neurons is promoted.",
+  "evidence": [
+    {
+      "paper_title": "ATG8-dependent LMX1B-autophagy crosstalk shapes human midbrain dopaminergic neuronal resilience",
+      "doi": "10.1083/jcb.201910133",
+      "authors": "Natalia Jiménez-Moreno, Madhu Kollareddy, Petros Stathakos, et al.",
+      "journal": "Journal of Cell Biology",
+      "year": 2023,
+      "assay": "Co-immunoprecipitation (Co-IP), GFP-TRAP",
+      "species": "human",
+      "relevant_quote": "LMX1B interacting with LC3B in the nucleus under basal conditions... Crucially, ATG8 binding stimulates LMX1B-mediated transcription for efficient autophagy and cell stress protection..."
+    },
+    {
+      "paper_title": "LC3B is a cofactor for LMX1B-mediated transcription of autophagy genes in dopaminergic neurons",
+      "doi": "10.1083/jcb.202303008",
+      "authors": "Athanasios Kournoutis, Terje Johansen",
+      "journal": "Journal of Cell Biology",
+      "year": 2023,
+      "assay": "Review/Commentary",
+      "species": "human",
+      "relevant_quote": "...nuclear LC3B binds to the LIM homeodomain transcription factor LMX1B and acts as a cofactor for LMX1B-mediated transcription of autophagy genes, providing stress protection..."
+    }
+  ],
+  "depth": 1,
+  "arrow_notation": "LC3B <--activates--> LMX1B:",
+  "protein_a": "LC3B",
+  "protein_b": "LMX1B",
+  "discovered_in_query": "LC3B",
+  "first_discovered": "2025-11-11T15:54:33.431877Z",
+  "last_updated": "2025-11-11T15:54:33.431877Z"
+}

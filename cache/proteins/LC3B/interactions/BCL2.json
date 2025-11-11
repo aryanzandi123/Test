@@ -1,0 +1,75 @@
+{
+  "primary": "BCL2",
+  "interaction_type": "indirect",
+  "upstream_interactor": "BECLIN1",
+  "mediator_chain": [
+    "BECLIN1"
+  ],
+  "depth": 3,
+  "support_summary": "An anti-apoptotic protein that is a major negative regulator of autophagy. It directly binds to the BH3 domain of BECLIN1, sequestering it and preventing the activation of the PI3KC3 complex.",
+  "functions": [
+    {
+      "function": "Autophagy Initiation",
+      "arrow": "inhibits",
+      "cellular_process": "B-cell lymphoma 2 (BCL2) directly binds to the BH3 domain of BECLIN1. This interaction prevents BECLIN1 from assembling with VPS34 and other components to form the active PI3KC3 complex, which is required for the initiation of autophagy.",
+      "effect_description": "Acts as a critical checkpoint to suppress autophagy by sequestering the essential initiation factor BECLIN1, thereby preventing the production of PI3P necessary for phagophore formation.",
+      "biological_consequence": [
+        "BCL2 binds the BH3 domain of BECLIN1 → Formation of the PI3KC3-Class III/Vps34 complex is blocked → PI3P synthesis on the phagophore membrane is prevented → Recruitment of PI3P-effector proteins (e.g., WIPIs) fails → LC3B lipidation to form LC3-II is inhibited → Autophagosome formation is blocked."
+      ],
+      "specific_effects": [
+        "ER-localized BCL2 is particularly effective at inhibiting autophagy",
+        "The BCL2-BECLIN1 interaction is a convergence point for multiple signaling pathways that regulate autophagy",
+        "Disruption of the BCL2-BECLIN1 complex is a key step for autophagy induction by various stimuli"
+      ],
+      "evidence": [
+        {
+          "paper_title": "Bcl-2 antiapoptotic proteins inhibit Beclin 1-dependent autophagy",
+          "doi": "10.1016/j.cell.2005.07.002",
+          "authors": "Pattingre S, Tassa A, Qu X, Garuti R, Liang XH, Mizushima N, Packer M, Schneider MD, Levine B",
+          "journal": "Cell",
+          "year": 2005,
+          "assay": "Co-immunoprecipitation, Yeast two-hybrid",
+          "species": "Human, Mouse, Yeast",
+          "relevant_quote": "Bcl-2 not only functions as an antiapoptotic protein, but also as an antiautophagy protein via its inhibitory interaction with Beclin 1.",
+          "pmid": "16179260"
+        }
+      ],
+      "pmids": [
+        "16179260"
+      ]
+    }
+  ],
+  "arrow": "inhibits",
+  "intent": "regulation",
+  "mechanism": "B-cell lymphoma 2 (BCL2) directly binds to the BH3 domain of BECLIN1. This interaction prevents BECLIN1 from assembling with VPS34 and other components to form the active PI3KC3 complex, which is required for the initiation of autophagy.",
+  "effect": "Acts as a critical checkpoint to suppress autophagy by sequestering the essential initiation factor BECLIN1, thereby preventing the production of PI3P necessary for phagophore formation.",
+  "summary": "LC3B inhibits BCL2 to modulate autophagy initiation, ultimately affecting autophagosome formation is blocked.",
+  "evidence": [
+    {
+      "paper_title": "Bcl-2 antiapoptotic proteins inhibit Beclin 1-dependent autophagy",
+      "doi": "10.1016/j.cell.2005.07.002",
+      "authors": "Pattingre S, Tassa A, Qu X, Garuti R, Liang XH, Mizushima N, Packer M, Schneider MD, Levine B",
+      "journal": "Cell",
+      "year": 2005,
+      "assay": "Co-immunoprecipitation, Yeast two-hybrid",
+      "species": "Human, Mouse, Yeast",
+      "relevant_quote": "Bcl-2 not only functions as an antiapoptotic protein, but also as an antiautophagy protein via its inhibitory interaction with Beclin 1."
+    },
+    {
+      "paper_title": "Disruption of the beclin 1/Bcl-2 autophagy regulatory complex promotes longevity in mice",
+      "doi": "10.1038/s41586-018-0162-7",
+      "authors": "Fernández ÁF, Sebti S, Wei Y, Zou Z, Shi M, McMillan KL, He C, Ting T, Liu Y, Chiang WC, Marciano DK, Schiattarella GG, Bhagat G, Moe OW, Hu MC, Levine B",
+      "journal": "Nature",
+      "year": 2018,
+      "assay": "Knock-in mouse model, Immunoblotting",
+      "species": "Mouse",
+      "relevant_quote": "disruption of the beclin 1-BCL2 complex is an effective mechanism to increase autophagy, prevent premature ageing, improve healthspan and promote longevity in mammals."
+    }
+  ],
+  "arrow_notation": "BECLIN1 --inhibits--> BCL2:",
+  "protein_a": "LC3B",
+  "protein_b": "BCL2",
+  "discovered_in_query": "LC3B",
+  "first_discovered": "2025-11-11T15:54:33.446328Z",
+  "last_updated": "2025-11-11T15:54:33.446328Z"
+}

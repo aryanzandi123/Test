@@ -1,0 +1,136 @@
+{
+  "primary": "VCP",
+  "interaction_type": "direct",
+  "upstream_interactor": null,
+  "mediator_chain": [],
+  "depth": 1,
+  "support_summary": "VCP/p97, an ATPase involved in protein homeostasis, directly interacts with TDP-43 to regulate its clearance and subcellular localization. Pathogenic mutations in VCP impair these functions, leading to TDP-43 pathology. [2, 8]",
+  "functions": [
+    {
+      "function": "TDP-43 Aggregate Clearance",
+      "arrow": "activates",
+      "cellular_process": "VCP, an ATPase associated with diverse cellular activities, plays a crucial role in protein quality control by recognizing and processing ubiquitinated proteins for degradation. It physically interacts with TDP-43 aggregates to promote their clearance.",
+      "effect_description": "VCP facilitates the clearance of toxic, insoluble TDP-43 aggregates from both the nucleus and cytoplasm. Mutations in VCP impair this clearance function, leading to the accumulation of pathological TDP-43 inclusions.",
+      "biological_consequence": [
+        "VCP mutation or inhibition → Impaired recognition of ubiquitinated TDP-43 → Decreased clearance of TDP-43 aggregates → Accumulation of cytoplasmic & nuclear TDP-43 inclusions → Neurodegeneration",
+        "Pharmacological activation of VCP D2 ATPase → Enhanced processing of ubiquitinated TDP-43 → Increased clearance of intranuclear TDP-43 aggregates → Reduced cellular toxicity"
+      ],
+      "specific_effects": [
+        "VCP physically interacts and colocalizes with TDP-43 aggregates in ALS patient tissue. [2]",
+        "Inhibition or mutation of VCP leads to decreased clearance of insoluble cytoplasmic and intranuclear TDP-43 aggregates. [2, 4]",
+        "Pharmacological activation of VCP's D2 ATPase activity enhances the clearance of intranuclear TDP-43 aggregates. [4, 5]"
+      ],
+      "evidence": [
+        {
+          "paper_title": "Cdc48/VCP and Endocytosis Regulate TDP-43 and FUS Toxicity and Turnover",
+          "doi": "10.1128/MCB.00256-19",
+          "authors": "Liu G, Byrd A, Warner AN, Pei F, Basha E, Buchanan A, Buchan JR",
+          "journal": "Molecular and Cellular Biology",
+          "year": 2020,
+          "assay": "Co-immunoprecipitation, Microscopy",
+          "species": "human, yeast",
+          "relevant_quote": "Additionally, Cdc48 physically interacts with and colocalizes with TDP-43. Finally, TDP-43 cytoplasmic aggregates colocalize with VCP in ALS patient tissue.",
+          "pmid": "31767634"
+        },
+        {
+          "paper_title": "VCP activator reverses nuclear proteostasis defects and enhances TDP-43 aggregate clearance in multisystem proteinopathy models",
+          "doi": "10.1172/JCI169039",
+          "authors": "Phan JM, Creekmore BC, Nguyen AT, Bershadskaya DD, Darwich NF, Mann CN, Lee EB",
+          "journal": "Journal of Clinical Investigation",
+          "year": 2024,
+          "assay": "Cell culture, high-content imaging",
+          "species": "human",
+          "relevant_quote": "...pharmacologic VCP activation appears to enhance clearance of insoluble intranuclear TDP-43 aggregate.",
+          "pmid": "38787785"
+        }
+      ],
+      "_context": {
+        "type": "direct",
+        "query_protein": null,
+        "chain": null
+      },
+      "pmids": [
+        "31767634",
+        "38787785"
+      ]
+    },
+    {
+      "function": "TDP-43 Nucleocytoplasmic Transport",
+      "arrow": "regulates",
+      "cellular_process": "VCP is involved in maintaining the proper subcellular localization of RNA-binding proteins. Specific pathogenic VCP mutations are associated with a gain-of-function in its D2 ATPase domain, which drives the mislocalization of TDP-43 from the nucleus to the cytoplasm.",
+      "effect_description": "Mutations in VCP disrupt the normal nuclear localization of TDP-43, leading to its depletion from the nucleus and subsequent accumulation in the cytoplasm of motor neurons.",
+      "biological_consequence": [
+        "VCP mutation (D2 ATPase gain-of-function) → Aberrant TDP-43 cytoplasmic mislocalization → Depletion of nuclear TDP-43 & accumulation of cytoplasmic TDP-43 → Loss of nuclear function & gain of cytoplasmic toxicity → Neurodegeneration"
+      ],
+      "specific_effects": [
+        "Motor neurons with VCP mutations show reduced nuclear-to-cytoplasmic ratios of TDP-43. [8]",
+        "Pharmacological inhibition of the VCP D2 ATPase domain reverses the mislocalization of TDP-43 in VCP mutant motor neurons. [8]"
+      ],
+      "evidence": [
+        {
+          "paper_title": "TDP-43 and FUS mislocalization in VCP mutant motor neurons is reversed by pharmacological inhibition of the VCP D2 ATPase domain",
+          "doi": "10.1093/braincomms/fcab166",
+          "authors": "Harley J, Hagemann C, Serio A, Patani R",
+          "journal": "Brain Communications",
+          "year": 2021,
+          "assay": "iPSC-derived motor neurons, Immunocytochemistry",
+          "species": "human",
+          "relevant_quote": "Importantly, we find that in VCP mutant MNs the nuclear-to-cytoplasmic mislocalization of both TDP-43 and FUS...are reversible by treatment with a pharmacological inhibitor of the VCP D2 ATPase domain.",
+          "pmid": "34396115"
+        }
+      ],
+      "_context": {
+        "type": "direct",
+        "query_protein": null,
+        "chain": null
+      },
+      "pmids": [
+        "34396115"
+      ]
+    }
+  ],
+  "arrow": "activates",
+  "direction": "primary_to_main",
+  "intent": "regulation",
+  "mechanism": "VCP, an ATPase associated with diverse cellular activities, plays a crucial role in protein quality ; VCP is involved in maintaining the proper subcellular localization of RNA-binding proteins",
+  "effect": "VCP facilitates the clearance of toxic, insoluble TDP-43 aggregates from both the nucleus and cytoplasm. Mutations in VCP impair this clearance function, leading to the accumulation of pathological TDP-43 inclusions.; Mutations in VCP disrupt the normal nuclear localization of TDP-43, leading to its depletion from the nucleus and subsequent accumulation in the cytoplasm of motor neurons.",
+  "summary": "TDP43 activates VCP to regulate tdp-43 aggregate clearance and tdp-43 nucleocytoplasmic transport, ultimately affecting neurodegeneration.",
+  "evidence": [
+    {
+      "paper_title": "Cdc48/VCP and Endocytosis Regulate TDP-43 and FUS Toxicity and Turnover",
+      "doi": "10.1128/MCB.00256-19",
+      "authors": "Liu G, Byrd A, Warner AN, Pei F, Basha E, Buchanan A, Buchan JR",
+      "journal": "Molecular and Cellular Biology",
+      "year": 2020,
+      "assay": "Co-immunoprecipitation, Microscopy",
+      "species": "human, yeast",
+      "relevant_quote": "Additionally, Cdc48 physically interacts with and colocalizes with TDP-43. Finally, TDP-43 cytoplasmic aggregates colocalize with VCP in ALS patient tissue."
+    },
+    {
+      "paper_title": "VCP activator reverses nuclear proteostasis defects and enhances TDP-43 aggregate clearance in multisystem proteinopathy models",
+      "doi": "10.1172/JCI169039",
+      "authors": "Phan JM, Creekmore BC, Nguyen AT, Bershadskaya DD, Darwich NF, Mann CN, Lee EB",
+      "journal": "Journal of Clinical Investigation",
+      "year": 2024,
+      "assay": "Cell culture, high-content imaging",
+      "species": "human",
+      "relevant_quote": "...pharmacologic VCP activation appears to enhance clearance of insoluble intranuclear TDP-43 aggregate."
+    },
+    {
+      "paper_title": "TDP-43 and FUS mislocalization in VCP mutant motor neurons is reversed by pharmacological inhibition of the VCP D2 ATPase domain",
+      "doi": "10.1093/braincomms/fcab166",
+      "authors": "Harley J, Hagemann C, Serio A, Patani R",
+      "journal": "Brain Communications",
+      "year": 2021,
+      "assay": "iPSC-derived motor neurons, Immunocytochemistry",
+      "species": "human",
+      "relevant_quote": "Importantly, we find that in VCP mutant MNs the nuclear-to-cytoplasmic mislocalization of both TDP-43 and FUS...are reversible by treatment with a pharmacological inhibitor of the VCP D2 ATPase domain."
+    }
+  ],
+  "arrow_notation": "TDP43 <--activates-- VCP:",
+  "protein_a": "TDP43",
+  "protein_b": "VCP",
+  "discovered_in_query": "TDP43",
+  "first_discovered": "2025-11-11T16:36:28.243300Z",
+  "last_updated": "2025-11-11T16:36:28.243300Z"
+}

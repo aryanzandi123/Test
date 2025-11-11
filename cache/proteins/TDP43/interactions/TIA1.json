@@ -1,0 +1,181 @@
+{
+  "primary": "TIA1",
+  "interaction_type": "direct",
+  "upstream_interactor": null,
+  "mediator_chain": [],
+  "depth": 1,
+  "support_summary": "TDP-43 and TIA1 are both key components of stress granules (SGs). They directly interact, and this interaction is crucial for modulating SG assembly and dynamics. Pathologically, the concentration of TDP-43 within TIA1-nucleated SGs can serve as a seed for the formation of irreversible, disease-associated TDP-43 aggregates.",
+  "functions": [
+    {
+      "function": "Stress Granule Assembly",
+      "arrow": "activates",
+      "cellular_process": "TIA1 is a core nucleating protein required for the assembly of cytoplasmic stress granules (SGs) in response to cellular stress. TDP-43 is recruited to these structures where it interacts with TIA1 and contributes to the overall dynamics of SG formation and maintenance.",
+      "effect_description": "The interaction between TDP-43 and TIA1 modulates the assembly and composition of stress granules, which are crucial for regulating mRNA translation and storage during cellular stress.",
+      "biological_consequence": [
+        "Cellular Stress (e.g., oxidative stress) → TIA1 undergoes liquid-liquid phase separation → TIA1 nucleates core stress granule assembly → TDP-43 is recruited to nascent stress granules → Mature stress granule formation with sequestered mRNA"
+      ],
+      "specific_effects": [
+        "Depletion of TDP-43 slows the formation of TIA1-positive stress granules. [12]",
+        "TDP-43 is not an obligatory component for SG formation but is recruited in response to specific stressors like oxidative stress. [41]",
+        "The controlled aggregation of TIA1 is disrupted in the absence of TDP-43."
+      ],
+      "evidence": [
+        {
+          "paper_title": "TAR DNA-binding protein 43 (TDP-43) regulates stress granule dynamics via differential regulation of G3BP and TIA-1",
+          "doi": "10.1093/hmg/ddr004",
+          "authors": "McDonald KK, Aulas A, Destroismaisons L, Pickles S, Beleac E, Camu W, Rouleau GA, Vande Velde C",
+          "journal": "Human Molecular Genetics",
+          "year": 2011,
+          "assay": "Immunofluorescence, Western blot",
+          "species": "Human",
+          "relevant_quote": "Here, we report that TDP-43 is required for proper SG dynamics, especially SG assembly as marked by the secondary aggregation of TIA-1.",
+          "pmid": "21257637"
+        },
+        {
+          "paper_title": "TDP-43 aggregation in neurodegeneration: are stress granules the key?",
+          "doi": "10.1016/j.brainres.2012.02.032",
+          "authors": "Dewey CM, Cenik B, Sephton CF, Johnson BA, Herz J, Yu G",
+          "journal": "Brain Research",
+          "year": 2012,
+          "assay": "Review",
+          "species": "N/A",
+          "relevant_quote": "Several recent studies have documented that cytoplasmic TDP-43 aggregates co-localize with stress granule markers. [20]",
+          "pmid": "22405725"
+        }
+      ],
+      "_context": {
+        "type": "direct",
+        "query_protein": null,
+        "chain": null
+      },
+      "pmids": [
+        "21257637",
+        "22405725"
+      ]
+    },
+    {
+      "function": "TDP-43 Aggregation",
+      "arrow": "activates",
+      "cellular_process": "Stress granules, which are dynamic structures nucleated by TIA1, are hypothesized to serve as a crucible for the pathological aggregation of TDP-43. The high local concentration of TDP-43 within SGs promotes its conversion from a soluble to an insoluble, aggregated state.",
+      "effect_description": "The interaction between TDP-43 and TIA1 within stress granules can facilitate the seeding of persistent, pathological TDP-43 aggregates, a key feature of ALS and FTLD.",
+      "biological_consequence": [
+        "Chronic cellular stress → Persistent TIA1-nucleated stress granules → High local concentration of TDP-43 → TDP-43 misfolding and aggregation → Formation of insoluble, ubiquitinated TDP-43 inclusions → Neurotoxicity",
+        "ALS-associated TIA1 mutations → Impaired stress granule disassembly → Prolonged sequestration and concentration of TDP-43 → Seeding of pathological TDP-43 aggregates → Cytoplasmic inclusion formation → Motor neuron degeneration"
+      ],
+      "specific_effects": [
+        "Mutations in the TIA1 gene are a causative factor for familial ALS with TDP-43 aggregation pathology. [1, 2]",
+        "Stress granules are considered a potential initial site for the formation of pathogenic ubiquitinated TDP-43 aggregates. [9]",
+        "ALS-associated TIA1 mutations prevent stress granule disassembly, potentially trapping TDP-43. [2]"
+      ],
+      "evidence": [
+        {
+          "paper_title": "The optineurin/TIA1 pathway inhibits aberrant stress granule formation and reduces ubiquitinated TDP-43",
+          "doi": "10.1016/j.isci.2021.102733",
+          "authors": "Kakihana T, Takahashi M, Katsuragi Y, Yamashita SI, Sango J, Kanki T, Onodera O, Fujii M",
+          "journal": "iScience",
+          "year": 2021,
+          "assay": "Cell culture, Immunofluorescence, Western blot",
+          "species": "Human",
+          "relevant_quote": "Our study suggests that ALS-associated loss-of-function mutants of OPTN increase the amount of ubiquitinated TDP-43 in neurons by increasing the expression of TIA1, thereby promoting the aggregation... [9]",
+          "pmid": "34258561"
+        },
+        {
+          "paper_title": "Stress Granule Assembly Can Facilitate but Is Not Required for TDP-43 Cytoplasmic Aggregation",
+          "doi": "10.3390/biom10101367",
+          "authors": "Fernandes N, Nero L, Lyons SM, Ivanov P, Mittelmeier TM, Bolger TA, Buchan JR",
+          "journal": "Biomolecules",
+          "year": 2020,
+          "assay": "Yeast models, Microscopy",
+          "species": "Yeast, Human",
+          "relevant_quote": "Collectively, our data suggest that SG and PB assembly may facilitate TDP-43 cytoplasmic localization and aggregation but are likely not essential for these events. [4]",
+          "pmid": "32992901"
+        },
+        {
+          "paper_title": "TIA1 mutations in amyotrophic lateral sclerosis and frontotemporal dementia promote phase separation and alter stress granule dynamics",
+          "doi": "10.1016/j.neuron.2017.07.025",
+          "authors": "Mackenzie IR, Nicholson AM, Sarkar M, et al.",
+          "journal": "Neuron",
+          "year": 2017,
+          "assay": "Genetic analysis, Cell culture, Microscopy",
+          "species": "Human",
+          "relevant_quote": "In live cells, TIA1 mutations delayed stress granule (SG) disassembly and promoted the accumulation of non-dynamic SGs that harbored TDP-43. [2]",
+          "pmid": "28817800"
+        }
+      ],
+      "_context": {
+        "type": "direct",
+        "query_protein": null,
+        "chain": null
+      },
+      "pmids": [
+        "34258561",
+        "32992901",
+        "28817800"
+      ]
+    }
+  ],
+  "arrow": "activates",
+  "direction": "bidirectional",
+  "intent": "regulation",
+  "mechanism": "TIA1 is a core nucleating protein required for the assembly of cytoplasmic stress granules (SGs) in ; Stress granules, which are dynamic structures nucleated by TIA1, are hypothesized to serve as a cruc",
+  "effect": "The interaction between TDP-43 and TIA1 modulates the assembly and composition of stress granules, which are crucial for regulating mRNA translation and storage during cellular stress.; The interaction between TDP-43 and TIA1 within stress granules can facilitate the seeding of persistent, pathological TDP-43 aggregates, a key feature of ALS and FTLD.",
+  "summary": "TDP43 activates TIA1 to regulate stress granule assembly and tdp-43 aggregation, ultimately affecting mature stress granule formation with sequestered mrna.",
+  "evidence": [
+    {
+      "paper_title": "TAR DNA-binding protein 43 (TDP-43) regulates stress granule dynamics via differential regulation of G3BP and TIA-1",
+      "doi": "10.1093/hmg/ddr004",
+      "authors": "McDonald KK, Aulas A, Destroismaisons L, Pickles S, Beleac E, Camu W, Rouleau GA, Vande Velde C",
+      "journal": "Human Molecular Genetics",
+      "year": 2011,
+      "assay": "Immunofluorescence, Western blot",
+      "species": "Human",
+      "relevant_quote": "Here, we report that TDP-43 is required for proper SG dynamics, especially SG assembly as marked by the secondary aggregation of TIA-1."
+    },
+    {
+      "paper_title": "TDP-43 aggregation in neurodegeneration: are stress granules the key?",
+      "doi": "10.1016/j.brainres.2012.02.032",
+      "authors": "Dewey CM, Cenik B, Sephton CF, Johnson BA, Herz J, Yu G",
+      "journal": "Brain Research",
+      "year": 2012,
+      "assay": "Review",
+      "species": "N/A",
+      "relevant_quote": "Several recent studies have documented that cytoplasmic TDP-43 aggregates co-localize with stress granule markers. [20]"
+    },
+    {
+      "paper_title": "The optineurin/TIA1 pathway inhibits aberrant stress granule formation and reduces ubiquitinated TDP-43",
+      "doi": "10.1016/j.isci.2021.102733",
+      "authors": "Kakihana T, Takahashi M, Katsuragi Y, Yamashita SI, Sango J, Kanki T, Onodera O, Fujii M",
+      "journal": "iScience",
+      "year": 2021,
+      "assay": "Cell culture, Immunofluorescence, Western blot",
+      "species": "Human",
+      "relevant_quote": "Our study suggests that ALS-associated loss-of-function mutants of OPTN increase the amount of ubiquitinated TDP-43 in neurons by increasing the expression of TIA1, thereby promoting the aggregation... [9]"
+    },
+    {
+      "paper_title": "Stress Granule Assembly Can Facilitate but Is Not Required for TDP-43 Cytoplasmic Aggregation",
+      "doi": "10.3390/biom10101367",
+      "authors": "Fernandes N, Nero L, Lyons SM, Ivanov P, Mittelmeier TM, Bolger TA, Buchan JR",
+      "journal": "Biomolecules",
+      "year": 2020,
+      "assay": "Yeast models, Microscopy",
+      "species": "Yeast, Human",
+      "relevant_quote": "Collectively, our data suggest that SG and PB assembly may facilitate TDP-43 cytoplasmic localization and aggregation but are likely not essential for these events. [4]"
+    },
+    {
+      "paper_title": "TIA1 mutations in amyotrophic lateral sclerosis and frontotemporal dementia promote phase separation and alter stress granule dynamics",
+      "doi": "10.1016/j.neuron.2017.07.025",
+      "authors": "Mackenzie IR, Nicholson AM, Sarkar M, et al.",
+      "journal": "Neuron",
+      "year": 2017,
+      "assay": "Genetic analysis, Cell culture, Microscopy",
+      "species": "Human",
+      "relevant_quote": "In live cells, TIA1 mutations delayed stress granule (SG) disassembly and promoted the accumulation of non-dynamic SGs that harbored TDP-43. [2]"
+    }
+  ],
+  "arrow_notation": "TDP43 <--activates--> TIA1:",
+  "protein_a": "TDP43",
+  "protein_b": "TIA1",
+  "discovered_in_query": "TDP43",
+  "first_discovered": "2025-11-11T16:36:28.280448Z",
+  "last_updated": "2025-11-11T16:36:28.280448Z"
+}

@@ -1,0 +1,109 @@
+{
+  "primary": "PFN1",
+  "interaction_type": "direct",
+  "upstream_interactor": null,
+  "mediator_chain": [],
+  "depth": 1,
+  "support_summary": "Profilin 1 (PFN1) is a protein that directly interacts with TDP-43. ALS-associated mutations in PFN1 (e.g., C71G) cause it to form insoluble aggregates which sequester TDP-43, inducing its hyperphosphorylation and promoting the formation of prion-like, toxic TDP-43 inclusions.",
+  "functions": [
+    {
+      "function": "TDP-43 Aggregation",
+      "arrow": "activates",
+      "cellular_process": "Mutant Profilin 1 (PFN1), specifically variants associated with ALS, forms cytoplasmic aggregates that sequester endogenous TDP-43. This interaction facilitates the conversion of soluble TDP-43 into a prion-like, insoluble, and hyperphosphorylated state, seeding further aggregation.",
+      "effect_description": "Mutant PFN1 acts as a seed to induce the aggregation and hyperphosphorylation of endogenous TDP-43, leading to the formation of toxic cytoplasmic inclusions.",
+      "biological_consequence": [
+        "Expression of mutant PFN1 (e.g., C71G) → PFN1 forms cytoplasmic aggregates → Sequestration of endogenous TDP-43 → TDP-43 hyperphosphorylation & conversion to an insoluble, prion-like state → Seeding of further TDP-43 aggregation → Neurodegeneration"
+      ],
+      "specific_effects": [
+        "Transgenic expression of PFN1(C71G) in mice induces early and progressive hyperphosphorylation of endogenous TDP-43 in the spinal cord. [8]",
+        "TDP-43 pathology precedes the onset of muscle denervation and motor deficits in PFN1(C71G) mice. [8]",
+        "Mutant PFN1 aggregates sequester endogenous TDP-43 in the cytoplasm. [6, 7]",
+        "Insoluble fractions from cells with mutant PFN1 can seed TDP-43 aggregation in recipient cells. [5, 6]"
+      ],
+      "evidence": [
+        {
+          "paper_title": "Viral-mediated knockdown of Atxn2 attenuates TDP-43 pathology and muscle dysfunction in the PFN1C71G ALS mouse model",
+          "doi": "10.1186/s40478-025-02005-z",
+          "authors": "Hawley ZCE, Li X, Bodnar D, Gu Y, Luo Y, Ferretti D, Sheehy A, Driscoll R, Zavodszky MI, Cao S, Isaza I, Wang L, Petrucelli L, Zhang YJ",
+          "journal": "Acta Neuropathologica Communications",
+          "year": 2024,
+          "assay": "Transgenic mouse model, Western Blot",
+          "species": "mouse",
+          "relevant_quote": "We show that transgenic neuronal expression of PFN1(C71G) induces early hyperphosphorylation of endogenous TDP-43 in the spinal cord that augments over time, preceding accumulation of insoluble non-phosphorylated TDP-43...",
+          "pmid": "40413526"
+        },
+        {
+          "paper_title": "Profilin 1 mutants form aggregates that induce accumulation of prion-like TDP-43",
+          "doi": "10.1080/19336896.2016.1207033",
+          "authors": "Tanaka Y, Nonaka T, Suzuki G, Kametani F, Hasegawa M",
+          "journal": "Prion",
+          "year": 2016,
+          "assay": "Cell culture, Co-IP, Western Blot",
+          "species": "human",
+          "relevant_quote": "Expression of PFN1 with pathogenic mutations resulted in the formation of cytoplasmic aggregates positive for p62 and ubiquitin, and these aggregates sequestered endogenous TDP-43. [6]",
+          "pmid": "27432186"
+        },
+        {
+          "paper_title": "Gain-of-function profilin 1 mutations linked to familial amyotrophic lateral sclerosis cause seed-dependent intracellular TDP-43 aggregation",
+          "doi": "10.1093/hmg/ddw024",
+          "authors": "Tanaka Y, Nonaka T, Suzuki G, Kametani F, Hasegawa M",
+          "journal": "Human Molecular Genetics",
+          "year": 2016,
+          "assay": "Cell culture, Western Blot, Seeding assay",
+          "species": "human",
+          "relevant_quote": "insoluble fractions prepared from cells expressing ALS-linked mutant PFN1 functioned as a seed to induce accumulation and phosphorylation of TDP-43, indicating that TDP-43...is converted to prion-like species. [7]",
+          "pmid": "26908597"
+        }
+      ],
+      "pmids": [
+        "40413526",
+        "27432186",
+        "26908597"
+      ]
+    }
+  ],
+  "arrow": "activates",
+  "direction": "primary_to_main",
+  "intent": "aggregation",
+  "mechanism": "Mutant Profilin 1 (PFN1), specifically variants associated with ALS, forms cytoplasmic aggregates that sequester endogenous TDP-43. This interaction facilitates the conversion of soluble TDP-43 into a prion-like, insoluble, and hyperphosphorylated state, seeding further aggregation.",
+  "effect": "Mutant PFN1 acts as a seed to induce the aggregation and hyperphosphorylation of endogenous TDP-43, leading to the formation of toxic cytoplasmic inclusions.",
+  "summary": "TDP43 activates PFN1 to modulate tdp-43 aggregation, ultimately affecting neurodegeneration.",
+  "evidence": [
+    {
+      "paper_title": "Viral-mediated knockdown of Atxn2 attenuates TDP-43 pathology and muscle dysfunction in the PFN1C71G ALS mouse model",
+      "doi": "10.1186/s40478-025-02005-z",
+      "authors": "Hawley ZCE, Li X, Bodnar D, Gu Y, Luo Y, Ferretti D, Sheehy A, Driscoll R, Zavodszky MI, Cao S, Isaza I, Wang L, Petrucelli L, Zhang YJ",
+      "journal": "Acta Neuropathologica Communications",
+      "year": 2024,
+      "assay": "Transgenic mouse model, Western Blot",
+      "species": "mouse",
+      "relevant_quote": "We show that transgenic neuronal expression of PFN1(C71G) induces early hyperphosphorylation of endogenous TDP-43 in the spinal cord that augments over time, preceding accumulation of insoluble non-phosphorylated TDP-43..."
+    },
+    {
+      "paper_title": "Profilin 1 mutants form aggregates that induce accumulation of prion-like TDP-43",
+      "doi": "10.1080/19336896.2016.1207033",
+      "authors": "Tanaka Y, Nonaka T, Suzuki G, Kametani F, Hasegawa M",
+      "journal": "Prion",
+      "year": 2016,
+      "assay": "Cell culture, Co-IP, Western Blot",
+      "species": "human",
+      "relevant_quote": "Expression of PFN1 with pathogenic mutations resulted in the formation of cytoplasmic aggregates positive for p62 and ubiquitin, and these aggregates sequestered endogenous TDP-43. [6]"
+    },
+    {
+      "paper_title": "Gain-of-function profilin 1 mutations linked to familial amyotrophic lateral sclerosis cause seed-dependent intracellular TDP-43 aggregation",
+      "doi": "10.1093/hmg/ddw024",
+      "authors": "Tanaka Y, Nonaka T, Suzuki G, Kametani F, Hasegawa M",
+      "journal": "Human Molecular Genetics",
+      "year": 2016,
+      "assay": "Cell culture, Western Blot, Seeding assay",
+      "species": "human",
+      "relevant_quote": "insoluble fractions prepared from cells expressing ALS-linked mutant PFN1 functioned as a seed to induce accumulation and phosphorylation of TDP-43, indicating that TDP-43...is converted to prion-like species. [7]"
+    }
+  ],
+  "arrow_notation": "TDP43 <--activates-- PFN1:",
+  "protein_a": "TDP43",
+  "protein_b": "PFN1",
+  "discovered_in_query": "TDP43",
+  "first_discovered": "2025-11-11T16:36:28.245700Z",
+  "last_updated": "2025-11-11T16:36:28.245700Z"
+}

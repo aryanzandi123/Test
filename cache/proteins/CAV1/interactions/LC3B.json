@@ -1,0 +1,86 @@
+{
+  "primary": "LC3B",
+  "interaction_type": "direct",
+  "upstream_interactor": null,
+  "mediator_chain": [],
+  "depth": 1,
+  "direction": "main_to_primary",
+  "arrow": "activates",
+  "intent": "scaffolding",
+  "support_summary": "Acts as a scaffolding protein that facilitates the direct interaction between LC3B and the death receptor FAS in a shared protein complex, thereby enabling the pro-apoptotic function of LC3B.",
+  "functions": [
+    {
+      "function": "FAS-Mediated Apoptosis Scaffolding",
+      "arrow": "activates",
+      "cellular_process": "Acts as a scaffolding protein that facilitates the formation of a complex between LC3B and the FAS death receptor in lipid rafts. This scaffolding function is crucial for LC3B to positively regulate FAS-mediated apoptosis in response to cellular stress.",
+      "effect_description": "Enables the pro-apoptotic interaction between LC3B and FAS, thereby regulating the cellular decision between survival (autophagy) and death (apoptosis).",
+      "biological_consequence": [
+        "Phosphorylation of CAV1 on Tyr14 → CAV1 acts as a scaffold in lipid rafts → Facilitates interaction between LC3B and FAS receptor → Stabilization of the pro-apoptotic LC3B-CAV1-FAS complex → Enhanced DISC assembly → Activation of FAS-mediated apoptosis"
+      ],
+      "specific_effects": [
+        "Mediates the physical interaction between LC3B and FAS",
+        "Knockdown of Caveolin-1 sensitizes cells to stress-induced apoptosis by disrupting the complex",
+        "Phosphorylation of Caveolin-1 on Tyr14 is involved in mediating the interaction"
+      ],
+      "evidence": [
+        {
+          "paper_title": "Autophagy protein microtubule-associated protein 1 light chain-3B (LC3B) activates extrinsic apoptosis during cigarette smoke-induced emphysema",
+          "doi": "10.1073/pnas.1303223110",
+          "authors": "Chen ZH, Kim HP, Sciurba FC, Lee SJ, Feghali-Bostwick C, Stolz DB, Dhir R, Landreneau RJ, Schuchert MJ, Yousem SA, Nakahira K, Pilewski JM, Lee JS, Zhang Y, Ryter SW, Choi AM",
+          "journal": "Proceedings of the National Academy of Sciences of the United States of America",
+          "year": 2013,
+          "assay": "Co-Immunoprecipitation, siRNA knockdown",
+          "species": "Mouse, Human",
+          "relevant_quote": "This study also introduces a mechanism by which LC3B, through interactions with Cav-1 and Fas, can regulate apoptosis.",
+          "pmid": "20956295"
+        },
+        {
+          "paper_title": "Hyperoxia-Induced LC3B Interacts with the Fas Apoptotic Pathway in Epithelial Cell Death",
+          "doi": "10.1165/rcmb.2009-0415OC",
+          "authors": "Zhang X, Wang Y, Raed A, He G, Lee J, Ryter SW, Choi AM, Jin Y",
+          "journal": "American Journal of Respiratory Cell and Molecular Biology",
+          "year": 2012,
+          "assay": "Co-Immunoprecipitation",
+          "species": "Mouse, Human",
+          "relevant_quote": "The interaction of LC3B and Fas pathways requires cav-1.",
+          "pmid": "22095627"
+        }
+      ],
+      "pmids": [
+        "20956295",
+        "22095627"
+      ]
+    }
+  ],
+  "mechanism": "Acts as a scaffolding protein that facilitates the formation of a complex between LC3B and the FAS death receptor in lipid rafts. This scaffolding function is crucial for LC3B to positively regulate FAS-mediated apoptosis in response to cellular stress.",
+  "effect": "Enables the pro-apoptotic interaction between LC3B and FAS, thereby regulating the cellular decision between survival (autophagy) and death (apoptosis).",
+  "summary": "LC3B activates CAV1 to modulate fas-mediated apoptosis scaffolding, ultimately affecting activation of fas-mediated apoptosis.",
+  "evidence": [
+    {
+      "paper_title": "Autophagy protein microtubule-associated protein 1 light chain-3B (LC3B) activates extrinsic apoptosis during cigarette smoke-induced emphysema",
+      "doi": "10.1073/pnas.1303223110",
+      "authors": "Chen ZH, Kim HP, Sciurba FC, Lee SJ, Feghali-Bostwick C, Stolz DB, Dhir R, Landreneau RJ, Schuchert MJ, Yousem SA, Nakahira K, Pilewski JM, Lee JS, Zhang Y, Ryter SW, Choi AM",
+      "journal": "Proceedings of the National Academy of Sciences of the United States of America",
+      "year": 2013,
+      "assay": "Co-Immunoprecipitation, siRNA knockdown",
+      "species": "Mouse, Human",
+      "relevant_quote": "This study also introduces a mechanism by which LC3B, through interactions with Cav-1 and Fas, can regulate apoptosis."
+    },
+    {
+      "paper_title": "Hyperoxia-Induced LC3B Interacts with the Fas Apoptotic Pathway in Epithelial Cell Death",
+      "doi": "10.1165/rcmb.2009-0415OC",
+      "authors": "Zhang X, Wang Y, Raed A, He G, Lee J, Ryter SW, Choi AM, Jin Y",
+      "journal": "American Journal of Respiratory Cell and Molecular Biology",
+      "year": 2012,
+      "assay": "Co-Immunoprecipitation",
+      "species": "Mouse, Human",
+      "relevant_quote": "The interaction of LC3B and Fas pathways requires cav-1."
+    }
+  ],
+  "arrow_notation": "LC3B <--activates-- CAV1:",
+  "protein_a": "CAV1",
+  "protein_b": "LC3B",
+  "discovered_in_query": "LC3B",
+  "first_discovered": "2025-11-11T15:54:33.389769Z",
+  "last_updated": "2025-11-11T15:54:33.389769Z"
+}

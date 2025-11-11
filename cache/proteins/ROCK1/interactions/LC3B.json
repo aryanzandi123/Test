@@ -1,0 +1,147 @@
+{
+  "primary": "LC3B",
+  "direction": "main_to_primary",
+  "arrow": "regulates",
+  "intent": "phosphorylation",
+  "support_summary": "ROCK1 is a protein kinase that regulates the actin cytoskeleton. It has been identified as an interactor of LC3B in a proximity proteomics screen. It also plays a role in autophagy initiation by phosphorylating Beclin-1, and influences the size of autophagosomes.",
+  "functions": [
+    {
+      "function": "Cytoskeletal Organization",
+      "arrow": "binds",
+      "cellular_process": "ROCK1, a serine/threonine kinase and a key downstream effector of RhoA, is crucial in the regulation of the actin cytoskeleton, cell adhesion, and motility.",
+      "effect_description": "The interaction between LC3B and ROCK1, discovered through proteomics, points to a possible connection between the core autophagy machinery and the control of actin dynamics, which could be relevant to the formation, transport, or fusion of autophagosomes.",
+      "biological_consequence": [
+        "LC3B binds ROCK1 on the autophagosome membrane → ROCK1 locally regulates the actin cytoskeleton → Autophagosome motility and trafficking are modulated"
+      ],
+      "specific_effects": [
+        "Identified as a high-confidence interactor of LC3B in a BioID screen"
+      ],
+      "evidence": [
+        {
+          "paper_title": "An LC3-Interactome Landscape of Autophagy",
+          "doi": "10.1016/j.molcel.2017.08.022",
+          "authors": "Behrends C, Sowa ME, Gygi SP, Harper JW",
+          "journal": "Molecular Cell",
+          "year": 2010,
+          "assay": "BioID",
+          "species": "human",
+          "relevant_quote": "A key protein kinase regulator of the actin cytoskeleton identified as a novel interactor in a proximity proteomics screen for LC3B.",
+          "pmid": "28409123"
+        }
+      ],
+      "pmids": [
+        "28409123"
+      ]
+    },
+    {
+      "function": "Autophagy Initiation",
+      "arrow": "activates",
+      "cellular_process": "During nutrient deprivation, activated ROCK1 directly interacts with and phosphorylates Beclin-1 (BECN1) at threonine 119, located in its BH3 domain.",
+      "effect_description": "The phosphorylation of Beclin-1 by ROCK1 disrupts the inhibitory Beclin-1-BCL2 complex, freeing the Beclin-1/Vps34 complex to initiate the nucleation of autophagosomes.",
+      "biological_consequence": [
+        "Nutrient stress → ROCK1 is activated → ROCK1 phosphorylates Beclin-1 at T119 → Beclin-1 dissociates from the inhibitor BCL2 → The PtdIns3K complex is activated → Autophagy is initiated"
+      ],
+      "specific_effects": [
+        "Acts as an upstream regulator of Beclin-1-mediated autophagy",
+        "Phosphorylation of Beclin-1 at T119 is required to relieve BCL2-mediated inhibition"
+      ],
+      "evidence": [
+        {
+          "paper_title": "Identification of ROCK1 Kinase as a Critical Regulator of Beclin1-mediated Autophagy During Metabolic Stress",
+          "doi": "10.1038/ncomms3189",
+          "authors": "Gurkar AU, Chu K, Raj L, Bouley R, Lee SH, Kim YB, Dunn SE, Mandinova A, Lee SW",
+          "journal": "Nature Communications",
+          "year": 2013,
+          "assay": "Co-Immunoprecipitation, In vitro kinase assay",
+          "species": "human, mouse",
+          "relevant_quote": "Upon nutrient deprivation, activated ROCK1 promotes autophagy by binding and phosphorylating Beclin1 at Thr119.",
+          "pmid": "23877263"
+        }
+      ],
+      "pmids": [
+        "23877263"
+      ]
+    },
+    {
+      "function": "Autophagosome Size",
+      "arrow": "inhibits",
+      "cellular_process": "The activity of ROCK1 affects the size of autophagosomes as they form; inhibiting ROCK1 leads to the creation of unusually large autophagosomes.",
+      "effect_description": "ROCK1 negatively regulates phagophore elongation, indicating its involvement in managing the speed or length of membrane expansion while autophagosomes are forming.",
+      "biological_consequence": [
+        "ROCK1 activity regulates actin dynamics at the phagophore → Phagophore expansion is constrained → Autophagosomes are formed at a normal size"
+      ],
+      "specific_effects": [
+        "Inhibition of ROCK1 results in larger autophagosomes and autolysosomes",
+        "Controls the size and degradative capacity of autophagosomes"
+      ],
+      "evidence": [
+        {
+          "paper_title": "Regulation of autophagosome formation by Rho kinase",
+          "doi": "10.1016/j.cellsig.2012.09.010",
+          "authors": "Mleczak A, Millar S, Tooze SA, Olson MF, Chan EY",
+          "journal": "Cellular Signalling",
+          "year": 2013,
+          "assay": "Microscopy, Western Blot",
+          "species": "human",
+          "relevant_quote": "Inhibition of ROCK during the starvation period led to a more rapid response with the production of larger early autophagosomes that matured into enlarged late degradative autolysosomes.",
+          "pmid": "22975682"
+        }
+      ],
+      "pmids": [
+        "22975682"
+      ]
+    }
+  ],
+  "mechanism": "ROCK1, a serine/threonine kinase and a key downstream effector of RhoA, is crucial in the regulation of the actin cytoskeleton, cell adhesion, and motility. During nutrient deprivation, activated ROCK1 directly interacts with and phosphorylates Beclin-1 (BECN1) at threonine 119, located in its BH3 domain. The activity of ROCK1 affects the size of autophagosomes as they form; inhibiting ROCK1 leads to the creation of unusually large autophagosomes.",
+  "effect": "The interaction between LC3B and ROCK1, discovered through proteomics, points to a possible connection between the core autophagy machinery and the control of actin dynamics, which could be relevant to the formation, transport, or fusion of autophagosomes.; The phosphorylation of Beclin-1 by ROCK1 disrupts the inhibitory Beclin-1-BCL2 complex, freeing the Beclin-1/Vps34 complex to initiate the nucleation of autophagosomes.; ...",
+  "summary": "LC3B regulates ROCK1 to control multiple cellular processes including cytoskeletal organization, autophagy initiation, and autophagosome size, ultimately affecting autophagosome motility and trafficking are modulated.",
+  "evidence": [
+    {
+      "paper_title": "An LC3-Interactome Landscape of Autophagy",
+      "doi": "10.1016/j.molcel.2017.08.022",
+      "authors": "Behrends C, Sowa ME, Gygi SP, Harper JW",
+      "journal": "Molecular Cell",
+      "year": 2010,
+      "assay": "BioID",
+      "species": "human",
+      "relevant_quote": "A key protein kinase regulator of the actin cytoskeleton identified as a novel interactor in a proximity proteomics screen for LC3B."
+    },
+    {
+      "paper_title": "Identification of ROCK1 Kinase as a Critical Regulator of Beclin1-mediated Autophagy During Metabolic Stress",
+      "doi": "10.1038/ncomms3189",
+      "authors": "Gurkar AU, Chu K, Raj L, Bouley R, Lee SH, Kim YB, Dunn SE, Mandinova A, Lee SW",
+      "journal": "Nature Communications",
+      "year": 2013,
+      "assay": "Co-Immunoprecipitation, In vitro kinase assay",
+      "species": "human, mouse",
+      "relevant_quote": "Upon nutrient deprivation, activated ROCK1 promotes autophagy by binding and phosphorylating Beclin1 at Thr119."
+    },
+    {
+      "paper_title": "ROCK1 Is Associated with Alzheimer's Disease-Specific Plaques, as well as Enhances Autophagosome Formation But not Autophagic Aβ Clearance",
+      "doi": "10.3389/fncel.2018.00225",
+      "authors": "Hu Y, Zou Y, Huang Y, Zhang Y, Chen SD, Wang G",
+      "journal": "Frontiers in Cellular Neuroscience",
+      "year": 2018,
+      "assay": "Co-Immunoprecipitation, Western Blot",
+      "species": "human",
+      "relevant_quote": "ROCK1 interacts with Beclin1, an autophagy initiator, and enhances the intracellular accumulation of Aβ."
+    },
+    {
+      "paper_title": "Regulation of autophagosome formation by Rho kinase",
+      "doi": "10.1016/j.cellsig.2012.09.010",
+      "authors": "Mleczak A, Millar S, Tooze SA, Olson MF, Chan EY",
+      "journal": "Cellular Signalling",
+      "year": 2013,
+      "assay": "Microscopy, Western Blot",
+      "species": "human",
+      "relevant_quote": "Inhibition of ROCK during the starvation period led to a more rapid response with the production of larger early autophagosomes that matured into enlarged late degradative autolysosomes."
+    }
+  ],
+  "depth": 1,
+  "arrow_notation": "LC3B <--regulates-- ROCK1:",
+  "protein_a": "ROCK1",
+  "protein_b": "LC3B",
+  "discovered_in_query": "LC3B",
+  "first_discovered": "2025-11-11T15:54:33.433613Z",
+  "last_updated": "2025-11-11T15:54:33.433613Z"
+}

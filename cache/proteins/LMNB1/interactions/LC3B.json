@@ -1,0 +1,84 @@
+{
+  "primary": "LC3B",
+  "direction": "main_to_primary",
+  "arrow": "activates",
+  "intent": "binding",
+  "support_summary": "Directly interacts with the nuclear pool of LC3B, participating in the selective autophagic degradation of the nuclear lamina (nucleophagy). This process is specifically triggered by oncogenic or genotoxic stress and contributes to cellular senescence.",
+  "functions": [
+    {
+      "function": "Selective Autophagy of Nuclear Lamina (Nucleophagy)",
+      "arrow": "activates",
+      "cellular_process": "The nuclear pool of LC3 directly interacts with Lamin B1, a major component of the nuclear lamina. This interaction is specifically induced by oncogenic or genotoxic stress, not by starvation, and mediates the degradation of the nuclear lamina.",
+      "effect_description": "Triggers the selective degradation of the nuclear lamina (laminophagy/nucleophagy), a process that contributes to the induction of cellular senescence and acts as a barrier to tumorigenesis.",
+      "biological_consequence": [
+        "Oncogenic/genotoxic stress → Nuclear LC3B binds LMNB1 → Transport of LC3B-LMNB1 complex to cytoplasm → Sequestration into autophagosomes → Lysosomal degradation of LMNB1 → Induction of oncogene-induced senescence"
+      ],
+      "specific_effects": [
+        "Nuclear LC3B directly binds Lamin B1.",
+        "This interaction is required for the degradation of Lamin B1 during oncogene-induced senescence.",
+        "Inhibiting the LC3-Lamin B1 interaction prevents Lamin B1 loss and attenuates senescence.",
+        "The LC3-Lamin B1 interaction does not mediate Lamin B1 degradation during starvation."
+      ],
+      "evidence": [
+        {
+          "paper_title": "Autophagy mediates degradation of nuclear lamina",
+          "doi": "10.1038/nature15548",
+          "authors": "Dou Z, Xu C, Donahue G, Shimi T, Pan JA, Zhu J, Ivanov A, Capell BC, Drake AM, Shah PP, Catanzaro JM, Ricketts MD, Lamark T, Adam SA, Marmorstein R, Zong WX, Johansen T, Goldman RD, Adams PD, Berger SL",
+          "journal": "Nature",
+          "year": 2015,
+          "assay": "Co-Immunoprecipitation, GST pull-down",
+          "species": "human",
+          "relevant_quote": "The autophagy protein LC3/Atg8, which is involved in autophagy membrane trafficking and substrate delivery, is present in the nucleus and directly interacts with the nuclear lamina protein lamin B1...",
+          "pmid": "26524528"
+        },
+        {
+          "paper_title": "Mammalian autophagy degrades nuclear constituents in response to tumorigenic stress",
+          "doi": "10.1080/15548627.2015.1127465",
+          "authors": "Dou Z, Ivanov A, Adams PD, Berger SL",
+          "journal": "Autophagy",
+          "year": 2016,
+          "assay": "Review",
+          "species": "mammalian",
+          "relevant_quote": "We reveal that the autophagy protein LC3/Atg8 directly interacts with the nuclear lamina protein LMNB1 (lamin B1)... Through these interactions, autophagy specifically mediates destruction of nuclear lamina during tumorigenic stress...",
+          "pmid": "26654219"
+        }
+      ],
+      "pmids": [
+        "26524528",
+        "26654219"
+      ]
+    }
+  ],
+  "mechanism": "The nuclear pool of LC3 directly interacts with Lamin B1, a major component of the nuclear lamina. This interaction is specifically induced by oncogenic or genotoxic stress, not by starvation, and mediates the degradation of the nuclear lamina.",
+  "effect": "Triggers the selective degradation of the nuclear lamina (laminophagy/nucleophagy), a process that contributes to the induction of cellular senescence and acts as a barrier to tumorigenesis.",
+  "summary": "LC3B activates LMNB1 to modulate selective autophagy of nuclear lamina (nucleophagy), ultimately affecting induction of oncogene-induced senescence.",
+  "evidence": [
+    {
+      "paper_title": "Autophagy mediates degradation of nuclear lamina",
+      "doi": "10.1038/nature15548",
+      "authors": "Dou Z, Xu C, Donahue G, Shimi T, Pan JA, Zhu J, Ivanov A, Capell BC, Drake AM, Shah PP, Catanzaro JM, Ricketts MD, Lamark T, Adam SA, Marmorstein R, Zong WX, Johansen T, Goldman RD, Adams PD, Berger SL",
+      "journal": "Nature",
+      "year": 2015,
+      "assay": "Co-Immunoprecipitation, GST pull-down",
+      "species": "human",
+      "relevant_quote": "The autophagy protein LC3/Atg8, which is involved in autophagy membrane trafficking and substrate delivery, is present in the nucleus and directly interacts with the nuclear lamina protein lamin B1..."
+    },
+    {
+      "paper_title": "Mammalian autophagy degrades nuclear constituents in response to tumorigenic stress",
+      "doi": "10.1080/15548627.2015.1127465",
+      "authors": "Dou Z, Ivanov A, Adams PD, Berger SL",
+      "journal": "Autophagy",
+      "year": 2016,
+      "assay": "Review",
+      "species": "mammalian",
+      "relevant_quote": "We reveal that the autophagy protein LC3/Atg8 directly interacts with the nuclear lamina protein LMNB1 (lamin B1)... Through these interactions, autophagy specifically mediates destruction of nuclear lamina during tumorigenic stress..."
+    }
+  ],
+  "depth": 1,
+  "arrow_notation": "LC3B <--activates-- LMNB1:",
+  "protein_a": "LMNB1",
+  "protein_b": "LC3B",
+  "discovered_in_query": "LC3B",
+  "first_discovered": "2025-11-11T15:54:33.395462Z",
+  "last_updated": "2025-11-11T15:54:33.395462Z"
+}

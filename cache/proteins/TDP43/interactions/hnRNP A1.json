@@ -1,0 +1,84 @@
+{
+  "primary": "hnRNP A1",
+  "direction": "main_to_primary",
+  "arrow": "inhibits",
+  "intent": "splicing regulation",
+  "support_summary": "The C-terminal glycine-rich domain of TDP-43 has been shown to mediate direct interaction with several hnRNP proteins, including hnRNP A1. This interaction is critical for the regulation of hnRNP A1 pre-mRNA splicing.",
+  "functions": [
+    {
+      "function": "hnRNP A1 Pre-mRNA Splicing",
+      "arrow": "inhibits",
+      "cellular_process": "Nuclear TDP-43 binds to the pre-mRNA of hnRNP A1 and modulates its alternative splicing, specifically preventing the inclusion of a cryptic cassette exon (exon 7B).",
+      "effect_description": "Loss of nuclear TDP-43 function leads to the inclusion of exon 7B in the HNRNPA1 transcript, producing an aggregation-prone isoform called hnRNP A1B.",
+      "biological_consequence": [
+        "Loss of nuclear TDP-43 → Aberrant splicing of hnRNP A1 pre-mRNA → Increased inclusion of cryptic exon 7B → Translation of aggregation-prone hnRNP A1B isoform → Formation of toxic cytoplasmic aggregates → Motor neuron death"
+      ],
+      "specific_effects": [
+        "Nuclear depletion of TDP-43 results in elevated protein levels of the hnRNP A1B isoform, which has an elongated prion-like domain.",
+        "The hnRNP A1B isoform has a greater propensity for fibrillization and aggregation, which is toxic to cells.",
+        "In ALS patients with TDP-43 pathology, hnRNP A1B accumulates in the cytoplasm of neurons.",
+        "Some studies suggest that TDP-43 gain-of-function mutations can also increase the inclusion of exon 7B."
+      ],
+      "evidence": [
+        {
+          "paper_title": "TDP-43 regulates the alternative splicing of hnRNP A1 to yield an aggregation-prone variant in amyotrophic lateral sclerosis",
+          "doi": "10.1093/brain/awy062",
+          "authors": "Deshaies JE, Shkreta L, Moszczynski AJ, Sidibé H, Semmler S, Fouillen A, Bennet E, Bekenstein U, Destroismaisons L, Toutant J, Delmotte Q, Volkening K, Stabile S, Aulas A, Khalfallah Y, Soreq H, Nanci A, Strong MJ, Chabot B, Vande Velde C",
+          "journal": "Brain",
+          "year": 2018,
+          "assay": "RT-PCR, Immunoprecipitation",
+          "species": "human, mouse",
+          "relevant_quote": "Here, we report that TDP-43 binds HNRNPA1 pre-mRNA and modulates its splicing, and that depletion of nuclear TDP-43 results in increased inclusion of a cassette exon in the HNRNPA1 transcript...",
+          "pmid": "29562314"
+        },
+        {
+          "paper_title": "TDP-43 mutations increase HNRNP A1-7B through gain of splicing function",
+          "doi": "10.1093/brain/awy260",
+          "authors": "Sivakumar P, Fratta P, Isaacs AM",
+          "journal": "Brain",
+          "year": 2018,
+          "assay": "RNA-seq, iCLIP",
+          "species": "human, mouse",
+          "relevant_quote": "We show that TDP-43 gain-of-function, but not loss-of-function, leads to the increased inclusion of exon 7B.",
+          "pmid": "30364928"
+        }
+      ],
+      "pmids": [
+        "29562314",
+        "30364928"
+      ]
+    }
+  ],
+  "mechanism": "Nuclear TDP-43 binds to the pre-mRNA of hnRNP A1 and modulates its alternative splicing, specifically preventing the inclusion of a cryptic cassette exon (exon 7B).",
+  "effect": "Loss of nuclear TDP-43 function leads to the inclusion of exon 7B in the HNRNPA1 transcript, producing an aggregation-prone isoform called hnRNP A1B.",
+  "summary": "TDP43 inhibits hnRNP A1 to modulate hnrnp a1 pre-mrna splicing, ultimately affecting motor neuron death.",
+  "evidence": [
+    {
+      "paper_title": "TDP-43 regulates the alternative splicing of hnRNP A1 to yield an aggregation-prone variant in amyotrophic lateral sclerosis",
+      "doi": "10.1093/brain/awy062",
+      "authors": "Deshaies JE, Shkreta L, Moszczynski AJ, Sidibé H, Semmler S, Fouillen A, Bennet E, Bekenstein U, Destroismaisons L, Toutant J, Delmotte Q, Volkening K, Stabile S, Aulas A, Khalfallah Y, Soreq H, Nanci A, Strong MJ, Chabot B, Vande Velde C",
+      "journal": "Brain",
+      "year": 2018,
+      "assay": "RT-PCR, Immunoprecipitation",
+      "species": "human, mouse",
+      "relevant_quote": "Here, we report that TDP-43 binds HNRNPA1 pre-mRNA and modulates its splicing, and that depletion of nuclear TDP-43 results in increased inclusion of a cassette exon in the HNRNPA1 transcript..."
+    },
+    {
+      "paper_title": "TDP-43 mutations increase HNRNP A1-7B through gain of splicing function",
+      "doi": "10.1093/brain/awy260",
+      "authors": "Sivakumar P, Fratta P, Isaacs AM",
+      "journal": "Brain",
+      "year": 2018,
+      "assay": "RNA-seq, iCLIP",
+      "species": "human, mouse",
+      "relevant_quote": "We show that TDP-43 gain-of-function, but not loss-of-function, leads to the increased inclusion of exon 7B."
+    }
+  ],
+  "depth": 1,
+  "arrow_notation": "TDP43 --inhibits--> hnRNP A1:",
+  "protein_a": "TDP43",
+  "protein_b": "hnRNP A1",
+  "discovered_in_query": "TDP43",
+  "first_discovered": "2025-11-11T16:36:28.231297Z",
+  "last_updated": "2025-11-11T16:36:28.231297Z"
+}

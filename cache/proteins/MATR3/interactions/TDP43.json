@@ -1,0 +1,114 @@
+{
+  "primary": "TDP43",
+  "interaction_type": "direct",
+  "upstream_interactor": null,
+  "mediator_chain": [],
+  "depth": 1,
+  "support_summary": "Proteomics and co-immunoprecipitation studies have identified Matrin 3 (MATR3) as a direct, RNA-dependent interactor of TDP-43. This interaction is significant as mutations in both proteins are linked to ALS, and pathological inclusions in patients often contain both proteins.",
+  "functions": [
+    {
+      "function": "TDP-43 Aggregation",
+      "arrow": "activates",
+      "cellular_process": "Matrin 3 (MATR3), a nuclear matrix and RNA-binding protein, directly interacts with TDP-43. Certain ALS-associated mutations in MATR3, such as S85C, enhance the pathological aggregation of TDP-43, suggesting a common pathogenic pathway where mutant MATR3 can seed or promote TDP-43 misfolding.",
+      "effect_description": "The expression of mutant MATR3 (e.g., S85C) significantly increases the formation of cytoplasmic TDP-43 aggregates in cellular models.",
+      "biological_consequence": [
+        "Expression of ALS-linked MATR3 (e.g., S85C mutant) → Altered RNA-dependent interaction with TDP-43 → Pathological misfolding and seeding of TDP-43 → Formation of cytoplasmic MATR3/TDP-43 co-aggregates → Contribution to neurodegeneration."
+      ],
+      "specific_effects": [
+        "The ALS-linked S85C mutation in MATR3 significantly promotes the aggregation of aggregation-prone forms of TDP-43. [1]",
+        "MATR3 and TDP-43 interact in an RNA-dependent manner. [13]",
+        "Cytoplasmic inclusions containing MATR3 in ALS patient neurons are also positive for TDP-43. [12]",
+        "The S85C MATR3 mutation alters the interaction with TDP-43, unlike other variants. [13]"
+      ],
+      "evidence": [
+        {
+          "paper_title": "The Impact of ALS-Associated Genes hnRNPA1, MATR3, VCP and UBQLN2 on the Severity of TDP-43 Aggregation",
+          "doi": "10.3390/cells9081791",
+          "authors": "Bajc Česnik A, Motaln H, Rogelj B",
+          "journal": "Cells",
+          "year": 2020,
+          "assay": "Co-transfection in SH-SY5Y cells, Fluorescence Microscopy",
+          "species": "human",
+          "relevant_quote": "Our results confirm the unique influence of these genes and their ALS-related mutants on TDP-43 aggregation behavior... MATR3 S85C Mutation Promotes TDP-43 Aggregation.",
+          "pmid": "32731393"
+        },
+        {
+          "paper_title": "Mutations in the Matrin 3 gene cause familial amyotrophic lateral sclerosis",
+          "doi": "10.1038/nn.3688",
+          "authors": "Johnson JO, Pioro EP, Boehringer A, et al.",
+          "journal": "Nature Neuroscience",
+          "year": 2014,
+          "assay": "Co-immunoprecipitation",
+          "species": "human",
+          "relevant_quote": "MATR3 is an RNA- and DNA-binding protein that interacts with TDP-43, a disease protein linked to amyotrophic lateral sclerosis (ALS) and frontotemporal dementia.",
+          "pmid": "24686783"
+        },
+        {
+          "paper_title": "The role of Matrin-3 in physiology and its dysregulation in disease",
+          "doi": "10.1042/CS20230141",
+          "authors": "van Bruggen D, Malik AM, Barmada SJ",
+          "journal": "Clinical Science (London, England: 1979)",
+          "year": 2024,
+          "assay": "Review",
+          "species": "human",
+          "relevant_quote": "MATR3 cytoplasmic inclusions are also positive for TDP-43, and the two proteins are known to interact in an RNA-dependent fashion.",
+          "pmid": "38813817"
+        }
+      ],
+      "_context": {
+        "type": "direct",
+        "query_protein": null,
+        "chain": null
+      },
+      "pmids": [
+        "32731393",
+        "24686783",
+        "38813817"
+      ]
+    }
+  ],
+  "arrow": "activates",
+  "direction": "main_to_primary",
+  "intent": "protein aggregation",
+  "mechanism": "Matrin 3 (MATR3), a nuclear matrix and RNA-binding protein, directly interacts with TDP-43. Certain ALS-associated mutations in MATR3, such as S85C, enhance the pathological aggregation of TDP-43, suggesting a common pathogenic pathway where mutant MATR3 can seed or promote TDP-43 misfolding.",
+  "effect": "The expression of mutant MATR3 (e.g., S85C) significantly increases the formation of cytoplasmic TDP-43 aggregates in cellular models.",
+  "summary": "TDP43 activates MATR3 to modulate tdp-43 aggregation, ultimately affecting contribution to neurodegeneration.",
+  "evidence": [
+    {
+      "paper_title": "The Impact of ALS-Associated Genes hnRNPA1, MATR3, VCP and UBQLN2 on the Severity of TDP-43 Aggregation",
+      "doi": "10.3390/cells9081791",
+      "authors": "Bajc Česnik A, Motaln H, Rogelj B",
+      "journal": "Cells",
+      "year": 2020,
+      "assay": "Co-transfection in SH-SY5Y cells, Fluorescence Microscopy",
+      "species": "human",
+      "relevant_quote": "Our results confirm the unique influence of these genes and their ALS-related mutants on TDP-43 aggregation behavior... MATR3 S85C Mutation Promotes TDP-43 Aggregation."
+    },
+    {
+      "paper_title": "Mutations in the Matrin 3 gene cause familial amyotrophic lateral sclerosis",
+      "doi": "10.1038/nn.3688",
+      "authors": "Johnson JO, Pioro EP, Boehringer A, et al.",
+      "journal": "Nature Neuroscience",
+      "year": 2014,
+      "assay": "Co-immunoprecipitation",
+      "species": "human",
+      "relevant_quote": "MATR3 is an RNA- and DNA-binding protein that interacts with TDP-43, a disease protein linked to amyotrophic lateral sclerosis (ALS) and frontotemporal dementia."
+    },
+    {
+      "paper_title": "The role of Matrin-3 in physiology and its dysregulation in disease",
+      "doi": "10.1042/CS20230141",
+      "authors": "van Bruggen D, Malik AM, Barmada SJ",
+      "journal": "Clinical Science (London, England: 1979)",
+      "year": 2024,
+      "assay": "Review",
+      "species": "human",
+      "relevant_quote": "MATR3 cytoplasmic inclusions are also positive for TDP-43, and the two proteins are known to interact in an RNA-dependent fashion."
+    }
+  ],
+  "arrow_notation": "TDP43 <--activates-- MATR3:",
+  "protein_a": "MATR3",
+  "protein_b": "TDP43",
+  "discovered_in_query": "TDP43",
+  "first_discovered": "2025-11-11T16:36:28.305700Z",
+  "last_updated": "2025-11-11T16:36:28.305700Z"
+}

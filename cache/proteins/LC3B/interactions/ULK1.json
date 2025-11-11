@@ -1,0 +1,145 @@
+{
+  "primary": "ULK1",
+  "direction": "bidirectional",
+  "arrow": "inhibits",
+  "intent": "regulatory binding",
+  "support_summary": "A core autophagy-initiating kinase that contains a LIR motif and directly interacts with LC3B. This interaction is part of a regulatory feedback loop where it can recruit ULK1 to the phagophore and LC3B can also negatively regulate ULK1 activity.",
+  "functions": [
+    {
+      "function": "Negative ULK1 Kinase Activity",
+      "arrow": "inhibits",
+      "cellular_process": "The direct binding of LC3B to the LC3-interacting region (LIR) motif within ULK1 serves as a negative feedback mechanism. As autophagosomes form and LC3B-II accumulates, this interaction suppresses the kinase activity of the ULK1 complex.",
+      "effect_description": "The kinase activity of ULK1 is suppressed, providing a negative feedback mechanism to control the rate of autophagy initiation and prevent excessive autophagy.",
+      "biological_consequence": [
+        "LC3B-II accumulates on mature autophagosomes → LC3B-II binds to the LIR motif within the ULK1 complex → ULK1 kinase activity is allosterically inhibited → Suppression of new autophagy initiation events → Negative feedback loop terminates the autophagy response"
+      ],
+      "specific_effects": [
+        "LC3B acts as a negative regulator of ULK1 activity",
+        "The interaction is mediated by the LIR motif in ULK1",
+        "This feedback loop helps to terminate the autophagy response once it has been initiated"
+      ],
+      "evidence": [
+        {
+          "paper_title": "GABARAPs and LC3s have opposite roles in regulating ULK1 for autophagy induction",
+          "doi": "10.1080/15548627.2020.1853091",
+          "authors": "Grunwald J, Nguyen T, Shim J, Lee D, Lickwar CR, Yueh A, Youle RJ, Kuhlman B, Oh S",
+          "journal": "Autophagy",
+          "year": 2021,
+          "assay": "In vitro kinase assay, Cellular assays",
+          "species": "human",
+          "relevant_quote": "By reconstituting ATG8-depleted cells with individual ATG8 members, we identified GABARAP and GABARAPL1 as positive and LC3B and LC3C as negative regulators of ULK1 activity.",
+          "pmid": "31208283"
+        },
+        {
+          "paper_title": "Molecular determinants regulating selective binding of autophagy adapters and receptors to ATG8 proteins",
+          "doi": "10.1038/s41467-018-03445-x",
+          "authors": "Wirth M, Zhang W, Laly AC, Wipf P, Brodsky JL, Schurdak M, Galli P, Joosten RP, Alemu EA, Waguri S, Mizushima N, Tooze SA, Perlmutter DH, Gibert M, Proikas-Cezanne T, Eskelinen EL, Johansen T, Reggiori F, Behrends C",
+          "journal": "Nat Commun",
+          "year": 2018,
+          "assay": "Peptide array, GST pulldown",
+          "species": "human",
+          "relevant_quote": "The C-terminal region is critical for ULK1 LC3-interacting region (LIR) binding specificity... peptide array of 24-mer ULK1 peptide covering LIR motif incubated with... GST-LC3B...",
+          "pmid": "31053714"
+        }
+      ],
+      "pmids": [
+        "31208283",
+        "31053714"
+      ]
+    },
+    {
+      "function": "ULK1 Recruitment to Phagophore",
+      "arrow": "binds",
+      "cellular_process": "The interaction between the LIR motif in ULK1 and lipidated LC3B (LC3-II) on the forming autophagosome membrane helps to recruit and tether the ULK1 initiation complex to the site of autophagosome formation.",
+      "effect_description": "The ULK1 initiation complex is localized to the growing autophagosome membrane, concentrating its kinase activity at the site of action to promote efficient phagophore elongation.",
+      "biological_consequence": [
+        "Autophagy induction (e.g., mTORC1 inhibition) → ULK1 complex activation → Initial LC3B lipidation on the nascent phagophore → ULK1 binds to lipidated LC3B via its LIR motif → ULK1 complex is tethered to the site of autophagosome formation → Spatial regulation of autophagy initiation"
+      ],
+      "specific_effects": [
+        "Facilitates the association of the ULK1 complex with forming autophagosomes",
+        "Depends on the LIR motif within ULK1 and lipidated LC3B",
+        "Contributes to the spatial regulation of autophagy initiation"
+      ],
+      "evidence": [
+        {
+          "paper_title": "The LIR motif – crucial for selective autophagy",
+          "doi": "10.1242/jcs.126128",
+          "authors": "Johansen T, Lamark T",
+          "journal": "J Cell Sci",
+          "year": 2013,
+          "assay": "Review",
+          "species": "human, mouse, yeast",
+          "relevant_quote": "We identified that the same LIR motif in ULK1 is required for its starvation-induced association with autophagosomes.",
+          "pmid": "23908376"
+        },
+        {
+          "paper_title": "A Mammalian Mitophagy Receptor, Bcl2-L-13, Recruits the ULK1 Complex to Induce Mitophagy",
+          "doi": "10.1016/j.celrep.2020.108062",
+          "authors": "Murakawa T, Yamaguchi O, Hashimoto A, Hikoso S, Takeda T, Oka T, Yasui H, Taneike M, Nakayama H, Nishida K, Takeda K, Mizushima N, Sakata Y, Otsu K",
+          "journal": "Cell Rep",
+          "year": 2020,
+          "assay": "Co-Immunoprecipitation, Immunoblotting",
+          "species": "human",
+          "relevant_quote": "...immunoprecipitated with anti-HA antibody. Co-precipitated endogenous ULK1 and LC3B were detected by immunoblotting.",
+          "pmid": "30625316"
+        }
+      ],
+      "pmids": [
+        "23908376",
+        "30625316"
+      ]
+    }
+  ],
+  "mechanism": "The direct binding of LC3B to the LC3-interacting region (LIR) motif within ULK1 serves as a negative feedback mechanism. As autophagosomes form and LC3B-II accumulates, this interaction suppresses the kinase activity of the ULK1 complex. The interaction between the LIR motif in ULK1 and lipidated LC3B (LC3-II) on the forming autophagosome membrane helps to recruit and tether the ULK1 initiation complex to the site of autophagosome formation.",
+  "effect": "The kinase activity of ULK1 is suppressed, providing a negative feedback mechanism to control the rate of autophagy initiation and prevent excessive autophagy.; The ULK1 initiation complex is localized to the growing autophagosome membrane, concentrating its kinase activity at the site of action to promote efficient phagophore elongation.",
+  "summary": "LC3B inhibits ULK1 to regulate negative regulation of ulk1 kinase activity and ulk1 recruitment to phagophore, ultimately affecting negative feedback loop terminates the autophagy response.",
+  "evidence": [
+    {
+      "paper_title": "GABARAPs and LC3s have opposite roles in regulating ULK1 for autophagy induction",
+      "doi": "10.1080/15548627.2020.1853091",
+      "authors": "Grunwald J, Nguyen T, Shim J, Lee D, Lickwar CR, Yueh A, Youle RJ, Kuhlman B, Oh S",
+      "journal": "Autophagy",
+      "year": 2021,
+      "assay": "In vitro kinase assay, Cellular assays",
+      "species": "human",
+      "relevant_quote": "By reconstituting ATG8-depleted cells with individual ATG8 members, we identified GABARAP and GABARAPL1 as positive and LC3B and LC3C as negative regulators of ULK1 activity."
+    },
+    {
+      "paper_title": "Molecular determinants regulating selective binding of autophagy adapters and receptors to ATG8 proteins",
+      "doi": "10.1038/s41467-018-03445-x",
+      "authors": "Wirth M, Zhang W, Laly AC, Wipf P, Brodsky JL, Schurdak M, Galli P, Joosten RP, Alemu EA, Waguri S, Mizushima N, Tooze SA, Perlmutter DH, Gibert M, Proikas-Cezanne T, Eskelinen EL, Johansen T, Reggiori F, Behrends C",
+      "journal": "Nat Commun",
+      "year": 2018,
+      "assay": "Peptide array, GST pulldown",
+      "species": "human",
+      "relevant_quote": "The C-terminal region is critical for ULK1 LC3-interacting region (LIR) binding specificity... peptide array of 24-mer ULK1 peptide covering LIR motif incubated with... GST-LC3B..."
+    },
+    {
+      "paper_title": "The LIR motif – crucial for selective autophagy",
+      "doi": "10.1242/jcs.126128",
+      "authors": "Johansen T, Lamark T",
+      "journal": "J Cell Sci",
+      "year": 2013,
+      "assay": "Review",
+      "species": "human, mouse, yeast",
+      "relevant_quote": "We identified that the same LIR motif in ULK1 is required for its starvation-induced association with autophagosomes."
+    },
+    {
+      "paper_title": "A Mammalian Mitophagy Receptor, Bcl2-L-13, Recruits the ULK1 Complex to Induce Mitophagy",
+      "doi": "10.1016/j.celrep.2020.108062",
+      "authors": "Murakawa T, Yamaguchi O, Hashimoto A, Hikoso S, Takeda T, Oka T, Yasui H, Taneike M, Nakayama H, Nishida K, Takeda K, Mizushima N, Sakata Y, Otsu K",
+      "journal": "Cell Rep",
+      "year": 2020,
+      "assay": "Co-Immunoprecipitation, Immunoblotting",
+      "species": "human",
+      "relevant_quote": "...immunoprecipitated with anti-HA antibody. Co-precipitated endogenous ULK1 and LC3B were detected by immunoblotting."
+    }
+  ],
+  "depth": 1,
+  "arrow_notation": "LC3B <--inhibits--> ULK1:",
+  "protein_a": "LC3B",
+  "protein_b": "ULK1",
+  "discovered_in_query": "LC3B",
+  "first_discovered": "2025-11-11T15:54:33.377956Z",
+  "last_updated": "2025-11-11T15:54:33.377956Z"
+}

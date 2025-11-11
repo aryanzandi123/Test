@@ -1,0 +1,116 @@
+{
+  "primary": "TDP43",
+  "interaction_type": "direct",
+  "upstream_interactor": null,
+  "mediator_chain": [],
+  "depth": 1,
+  "support_summary": "As a key component of the nuclear import machinery, Importin-beta-1 (KPNB1) is directly involved in the transport of TDP-43 into the nucleus. A functional KPNB1-mediated import pathway is essential for maintaining the predominantly nuclear localization of TDP-43. Pathologically, KPNB1 can be sequestered into TDP-43 aggregates, exacerbating transport defects, but can also act as a molecular chaperone to reverse aggregation.",
+  "functions": [
+    {
+      "function": "TDP-43 Nuclear Import",
+      "arrow": "activates",
+      "cellular_process": "KPNB1 (Importin β1) is a primary nuclear import receptor. It binds to a complex formed between a Karyopherin-α (KPNA) protein and the nuclear localization signal (NLS) of TDP-43, and mediates the translocation of this entire complex through the nuclear pore into the nucleus.",
+      "effect_description": "The nuclear import of TDP-43 is facilitated, maintaining its proper subcellular localization which is critical for its function in RNA processing and preventing cytoplasmic toxicity.",
+      "biological_consequence": [
+        "KPNB1 sequestration into aggregates → Impaired KPNB1-mediated nuclear import → Nuclear depletion of TDP-43 → Dysregulation of splicing & transcription → Loss of neuronal function & neurodegeneration",
+        "KPNB1 dysfunction → Failed nuclear import of TDP-43 → Cytoplasmic mislocalization and accumulation → Formation of toxic TDP-43 aggregates → Cellular stress & apoptosis",
+        "KPNB1 overexpression → Chaperone-like activity reverses TDP-43 aggregation → Restored nuclear import of TDP-43 → Rescue of TDP-43 pathology."
+      ],
+      "specific_effects": [
+        "The classical nuclear import pathway for TDP-43 involves KPNA binding to the NLS, followed by KPNB1 binding to KPNA for transport into the nucleus. [6]",
+        "Knockdown of KPNB1 in cultured cells leads to significant cytoplasmic accumulation and aggregation of TDP-43. [8, 11]",
+        "KPNB1 is sequestered into pathological TDP-43 aggregates in ALS/FTD postmortem tissue. [1, 39]",
+        "Overexpression of KPNB1 can rescue TDP-43 pathology by acting as a molecular chaperone that reverses the aberrant aggregation of TDP-43 and nucleoporins. [1, 40]"
+      ],
+      "evidence": [
+        {
+          "paper_title": "Nuclear import impairment causes cytoplasmic trans-activation response DNA-binding protein accumulation and is associated with frontotemporal lobar degeneration",
+          "doi": "10.1093/brain/awq111",
+          "authors": "Agnes L Nishimura, Vera Zupunski, Claire Troakes, Claudia Kathe, Paolo Fratta, Martin Howell, Jonathan D Rohrer, Jason D Warren, Martin N Rossor, John Powell, Ian P Mackenzie, Manuela Neumann, Christopher E Shaw",
+          "journal": "Brain",
+          "year": 2010,
+          "assay": "siRNA knockdown, GST pull-down",
+          "species": "human",
+          "relevant_quote": "In order to explore the factors that regulate the nuclear import of TDP-43, we used a small interfering RNA library...and found that knockdowns of karyopherin-β1...resulted in marked cytoplasmic accumulation of TDP-43.",
+          "pmid": "20472655"
+        },
+        {
+          "paper_title": "Nuclear import receptors are recruited by FG-nucleoporins to rescue hallmarks of TDP-43 proteinopathy",
+          "doi": "10.1186/s13024-022-00585-1",
+          "authors": "Bilal Khalil, Deepak Chhangani, Melissa C Wren, Courtney L Smith, Jannifer H Lee, Xingli Li, Christian Puttinger, Chih-Wei Tsai, Gael Fortin, Dmytro Morderer, Junli Gao, Feilin Liu, Chun Kim Lim, Jingjiao Chen, Ching-Chieh Chou, Cara L Croft, Amanda M Gleixner, Christopher J Donnelly, Todd E Golde, Leonard Petrucelli, Björn Oskarsson, Dennis W Dickson, Ke Zhang, James Shorter, Shige H Yoshimura, Sami J Barmada, Diego E Rincon-Limas, Wilfried Rossoll",
+          "journal": "Molecular Neurodegeneration",
+          "year": 2022,
+          "assay": "Immunostaining, Co-IP, Turbidity assays",
+          "species": "human, mouse, drosophila",
+          "relevant_quote": "KPNB1 is recruited into these co-aggregates where it acts as a molecular chaperone that reverses aberrant phase transition of Nup62 and TDP-43. [1, 39]",
+          "pmid": "36482422"
+        },
+        {
+          "paper_title": "Nuclear trafficking in amyotrophic lateral sclerosis and frontotemporal lobar degeneration",
+          "doi": "10.1093/brain/aww197",
+          "authors": "Sonja Prpar Mihevc, Simona Darovic, Anja Kovanda, Ana Bajc Česnik, Vera Župunski, Boris Rogelj, Metka Ravnik-Glavač, Damjan Glavač",
+          "journal": "Brain",
+          "year": 2017,
+          "assay": "Review",
+          "species": "human",
+          "relevant_quote": "TDP-43 is translocated into the nucleus by the classical import pathway. KPNAs bind the NLS of TDP-43... KPNB1 then binds KPNA-TDP-43 complex in the cytoplasm and the tripartite complex is carried through nuclear pore into the nucleus.",
+          "pmid": "27497493"
+        }
+      ],
+      "_context": {
+        "type": "direct",
+        "query_protein": null,
+        "chain": null
+      },
+      "pmids": [
+        "20472655",
+        "36482422",
+        "27497493"
+      ]
+    }
+  ],
+  "arrow": "activates",
+  "direction": "bidirectional",
+  "intent": "protein transport",
+  "mechanism": "KPNB1 (Importin β1) is a primary nuclear import receptor. It binds to a complex formed between a Karyopherin-α (KPNA) protein and the nuclear localization signal (NLS) of TDP-43, and mediates the translocation of this entire complex through the nuclear pore into the nucleus.",
+  "effect": "The nuclear import of TDP-43 is facilitated, maintaining its proper subcellular localization which is critical for its function in RNA processing and preventing cytoplasmic toxicity.",
+  "summary": "TDP43 activates KPNB1 to modulate tdp-43 nuclear import, ultimately affecting loss of neuronal function & neurodegeneration.",
+  "evidence": [
+    {
+      "paper_title": "Nuclear import impairment causes cytoplasmic trans-activation response DNA-binding protein accumulation and is associated with frontotemporal lobar degeneration",
+      "doi": "10.1093/brain/awq111",
+      "authors": "Agnes L Nishimura, Vera Zupunski, Claire Troakes, Claudia Kathe, Paolo Fratta, Martin Howell, Jonathan D Rohrer, Jason D Warren, Martin N Rossor, John Powell, Ian P Mackenzie, Manuela Neumann, Christopher E Shaw",
+      "journal": "Brain",
+      "year": 2010,
+      "assay": "siRNA knockdown, GST pull-down",
+      "species": "human",
+      "relevant_quote": "In order to explore the factors that regulate the nuclear import of TDP-43, we used a small interfering RNA library...and found that knockdowns of karyopherin-β1...resulted in marked cytoplasmic accumulation of TDP-43."
+    },
+    {
+      "paper_title": "Nuclear import receptors are recruited by FG-nucleoporins to rescue hallmarks of TDP-43 proteinopathy",
+      "doi": "10.1186/s13024-022-00585-1",
+      "authors": "Bilal Khalil, Deepak Chhangani, Melissa C Wren, Courtney L Smith, Jannifer H Lee, Xingli Li, Christian Puttinger, Chih-Wei Tsai, Gael Fortin, Dmytro Morderer, Junli Gao, Feilin Liu, Chun Kim Lim, Jingjiao Chen, Ching-Chieh Chou, Cara L Croft, Amanda M Gleixner, Christopher J Donnelly, Todd E Golde, Leonard Petrucelli, Björn Oskarsson, Dennis W Dickson, Ke Zhang, James Shorter, Shige H Yoshimura, Sami J Barmada, Diego E Rincon-Limas, Wilfried Rossoll",
+      "journal": "Molecular Neurodegeneration",
+      "year": 2022,
+      "assay": "Immunostaining, Co-IP, Turbidity assays",
+      "species": "human, mouse, drosophila",
+      "relevant_quote": "KPNB1 is recruited into these co-aggregates where it acts as a molecular chaperone that reverses aberrant phase transition of Nup62 and TDP-43. [1, 39]"
+    },
+    {
+      "paper_title": "Nuclear trafficking in amyotrophic lateral sclerosis and frontotemporal lobar degeneration",
+      "doi": "10.1093/brain/aww197",
+      "authors": "Sonja Prpar Mihevc, Simona Darovic, Anja Kovanda, Ana Bajc Česnik, Vera Župunski, Boris Rogelj, Metka Ravnik-Glavač, Damjan Glavač",
+      "journal": "Brain",
+      "year": 2017,
+      "assay": "Review",
+      "species": "human",
+      "relevant_quote": "TDP-43 is translocated into the nucleus by the classical import pathway. KPNAs bind the NLS of TDP-43... KPNB1 then binds KPNA-TDP-43 complex in the cytoplasm and the tripartite complex is carried through nuclear pore into the nucleus."
+    }
+  ],
+  "arrow_notation": "TDP43 <--activates--> KPNB1:",
+  "protein_a": "KPNB1",
+  "protein_b": "TDP43",
+  "discovered_in_query": "TDP43",
+  "first_discovered": "2025-11-11T16:36:28.312224Z",
+  "last_updated": "2025-11-11T16:36:28.312224Z"
+}

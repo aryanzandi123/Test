@@ -1,0 +1,59 @@
+{
+  "primary": "LC3B",
+  "direction": "bidirectional",
+  "arrow": "binds",
+  "intent": "binding",
+  "support_summary": "Alpha-actinin-4 (ACTN4) is an actin-binding protein that is involved in organizing the cytoskeleton. It has been identified as a new interactor for LC3B in a proximity proteomics screen.",
+  "functions": [
+    {
+      "function": "Cytoskeletal Organization",
+      "arrow": "binds",
+      "cellular_process": "Alpha-actinin-4 (ACTN4) is a protein that binds to actin and crosslinks actin filaments, which is important for cell movement, sticking to surfaces, and maintaining the shape of the cytoskeleton.",
+      "effect_description": "The discovery of its role as an LC3B interactor points to a direct connection between autophagosomes and the actin cytoskeleton, which could be vital for supporting the structure during phagophore elongation or for moving mature autophagosomes.",
+      "biological_consequence": [
+        "LC3B on the autophagosome membrane binds ACTN4 → ACTN4 crosslinks the autophagosome to the actin cytoskeleton → Autophagosome motility and positioning are regulated"
+      ],
+      "specific_effects": [
+        "Identified as a high-confidence interactor of LC3B in a BioID screen"
+      ],
+      "evidence": [
+        {
+          "paper_title": "An LC3-Interactome Landscape of Autophagy",
+          "doi": "10.1016/j.molcel.2017.08.022",
+          "authors": "Behrends C, Sowa ME, Gygi SP, Harper JW",
+          "journal": "Molecular Cell",
+          "year": 2010,
+          "assay": "BioID",
+          "species": "human",
+          "relevant_quote": "Among these, two proteins of the alpha-actinin family (ACTN1 and ACTN4) are cytoskeletal actin-binding proteins with an important role in the structure and regulation of cytoskeleton organization",
+          "pmid": "28409123"
+        }
+      ],
+      "pmids": [
+        "28409123"
+      ]
+    }
+  ],
+  "mechanism": "Alpha-actinin-4 (ACTN4) is a protein that binds to actin and crosslinks actin filaments, which is important for cell movement, sticking to surfaces, and maintaining the shape of the cytoskeleton.",
+  "effect": "The discovery of its role as an LC3B interactor points to a direct connection between autophagosomes and the actin cytoskeleton, which could be vital for supporting the structure during phagophore elongation or for moving mature autophagosomes.",
+  "summary": "LC3B interacts with ACTN4 to modulate cytoskeletal organization, ultimately affecting autophagosome motility and positioning are regulated.",
+  "evidence": [
+    {
+      "paper_title": "An LC3-Interactome Landscape of Autophagy",
+      "doi": "10.1016/j.molcel.2017.08.022",
+      "authors": "Behrends C, Sowa ME, Gygi SP, Harper JW",
+      "journal": "Molecular Cell",
+      "year": 2010,
+      "assay": "BioID",
+      "species": "human",
+      "relevant_quote": "Among these, two proteins of the alpha-actinin family (ACTN1 and ACTN4) are cytoskeletal actin-binding proteins with an important role in the structure and regulation of cytoskeleton organization"
+    }
+  ],
+  "depth": 1,
+  "arrow_notation": "LC3B <--binds--> ACTN4:",
+  "protein_a": "ACTN4",
+  "protein_b": "LC3B",
+  "discovered_in_query": "LC3B",
+  "first_discovered": "2025-11-11T15:54:33.435673Z",
+  "last_updated": "2025-11-11T15:54:33.435673Z"
+}

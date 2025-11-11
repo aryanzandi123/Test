@@ -1,0 +1,105 @@
+{
+  "primary": "BCL2L13",
+  "direction": "primary_to_main",
+  "arrow": "activates",
+  "intent": "recruitment",
+  "support_summary": "BCL2L13 is a protein located on the outer membrane of mitochondria that serves as a receptor for mitophagy. It directly recruits LC3/GABARAP proteins to facilitate the breakdown of mitochondria.",
+  "functions": [
+    {
+      "function": "Selective Autophagy of Mitochondria (Mitophagy)",
+      "arrow": "activates",
+      "cellular_process": "BCL2L13, a protein on the outer mitochondrial membrane, functions as a receptor for Parkin-independent mitophagy. It has a WXXI-like LIR motif that directly interacts with LC3 proteins, bringing damaged mitochondria to the autophagosome.",
+      "effect_description": "BCL2L13 triggers the targeted breakdown of mitochondria, frequently working with the promotion of mitochondrial fission, to uphold cellular balance.",
+      "biological_consequence": [
+        "Mitochondrial damage → BCL2L13 on the outer mitochondrial membrane functions as a mitophagy receptor → Direct binding of BCL2L13 LIR motif to phagophore-associated LC3B → Recruitment and engulfment of the damaged mitochondrion by the autophagosome → Lysosomal degradation maintains mitochondrial quality control"
+      ],
+      "specific_effects": [
+        "Functions as a mammalian homolog of the yeast mitophagy receptor Atg32",
+        "Induces both mitochondrial fission and mitophagy",
+        "Its mitophagic activity is dependent on its LIR motif"
+      ],
+      "evidence": [
+        {
+          "paper_title": "BCL2L13 is a mammalian homolog of the yeast mitophagy receptor Atg32",
+          "doi": "10.1038/ncomms8527",
+          "authors": "Murakawa T, Yamaguchi O, Hashimoto A, Hikoso S, Takeda T, Oka T, Yasui H, Hoshii T, Nakada K, Nishida K, Taneike M, Omiya S, Sakata Y, Suna S, Czibik G, Nakanishi T, Akazawa Y, Kimura T, Sadoshima J, Mochizuki N, Otsu K",
+          "journal": "Nature Communications",
+          "year": 2015,
+          "assay": "Yeast two-hybrid, GST pull-down",
+          "species": "human, yeast",
+          "relevant_quote": "Bcl2-L-13 binds to LC3 through the WXXI motif and induces mitochondrial fragmentation and mitophagy in HEK293 cells.",
+          "pmid": "26506896"
+        },
+        {
+          "paper_title": "BCL2L13 promotes mitophagy through DNM1L-mediated mitochondrial fission in glioblastoma",
+          "doi": "10.1038/s41419-023-06112-4",
+          "authors": "Wang J, Chen A, Xue Z, Liu J, He Y, Liu G, Zhao Z, Li W, Zhang Q, Chen A, Huang B",
+          "journal": "Cell Death & Disease",
+          "year": 2023,
+          "assay": "Co-Immunoprecipitation, Western Blot",
+          "species": "human",
+          "relevant_quote": "BCL2L13 promotes mitophagy in GBM by promoting mitochondrial fission mediated by dynamin-1-like protein (DNM1L).",
+          "pmid": "37660127"
+        },
+        {
+          "paper_title": "AMPK regulates Bcl2-L-13-mediated mitophagy induction for cardioprotection",
+          "doi": "10.1016/j.celrep.2024.115001",
+          "authors": "Murakawa T, Ito J, Rusu MC, Taneike M, Omiya S, Moncayo-Arlandi J, Nakanishi C, Sugihara R, Nishida H, Mine K, Fleck R, Zhang M, Nishida K, Shah AM, Yamaguchi O, Sakata Y, Otsu K",
+          "journal": "Cell Reports",
+          "year": 2024,
+          "assay": "Western Blot, Microscopy",
+          "species": "mouse",
+          "relevant_quote": "AMPK, specifically the α2 subunit, has been implicated in the induction of Bcl2-like protein 13-mediated mitophagy, resulting in cardioprotective effects.",
+          "pmid": "39580803"
+        }
+      ],
+      "pmids": [
+        "26506896",
+        "37660127",
+        "39580803"
+      ]
+    }
+  ],
+  "mechanism": "BCL2L13, a protein on the outer mitochondrial membrane, functions as a receptor for Parkin-independent mitophagy. It has a WXXI-like LIR motif that directly interacts with LC3 proteins, bringing damaged mitochondria to the autophagosome.",
+  "effect": "BCL2L13 triggers the targeted breakdown of mitochondria, frequently working with the promotion of mitochondrial fission, to uphold cellular balance.",
+  "summary": "LC3B activates BCL2L13 to modulate selective autophagy of mitochondria (mitophagy), ultimately affecting lysosomal degradation maintains mitochondrial quality control.",
+  "evidence": [
+    {
+      "paper_title": "BCL2L13 is a mammalian homolog of the yeast mitophagy receptor Atg32",
+      "doi": "10.1038/ncomms8527",
+      "authors": "Murakawa T, Yamaguchi O, Hashimoto A, Hikoso S, Takeda T, Oka T, Yasui H, Hoshii T, Nakada K, Nishida K, Taneike M, Omiya S, Sakata Y, Suna S, Czibik G, Nakanishi T, Akazawa Y, Kimura T, Sadoshima J, Mochizuki N, Otsu K",
+      "journal": "Nature Communications",
+      "year": 2015,
+      "assay": "Yeast two-hybrid, GST pull-down",
+      "species": "human, yeast",
+      "relevant_quote": "Bcl2-L-13 binds to LC3 through the WXXI motif and induces mitochondrial fragmentation and mitophagy in HEK293 cells."
+    },
+    {
+      "paper_title": "BCL2L13 promotes mitophagy through DNM1L-mediated mitochondrial fission in glioblastoma",
+      "doi": "10.1038/s41419-023-06112-4",
+      "authors": "Wang J, Chen A, Xue Z, Liu J, He Y, Liu G, Zhao Z, Li W, Zhang Q, Chen A, Huang B",
+      "journal": "Cell Death & Disease",
+      "year": 2023,
+      "assay": "Co-Immunoprecipitation, Western Blot",
+      "species": "human",
+      "relevant_quote": "BCL2L13 promotes mitophagy in GBM by promoting mitochondrial fission mediated by dynamin-1-like protein (DNM1L)."
+    },
+    {
+      "paper_title": "AMPK regulates Bcl2-L-13-mediated mitophagy induction for cardioprotection",
+      "doi": "10.1016/j.celrep.2024.115001",
+      "authors": "Murakawa T, Ito J, Rusu MC, Taneike M, Omiya S, Moncayo-Arlandi J, Nakanishi C, Sugihara R, Nishida H, Mine K, Fleck R, Zhang M, Nishida K, Shah AM, Yamaguchi O, Sakata Y, Otsu K",
+      "journal": "Cell Reports",
+      "year": 2024,
+      "assay": "Western Blot, Microscopy",
+      "species": "mouse",
+      "relevant_quote": "AMPK, specifically the α2 subunit, has been implicated in the induction of Bcl2-like protein 13-mediated mitophagy, resulting in cardioprotective effects."
+    }
+  ],
+  "depth": 1,
+  "arrow_notation": "LC3B <--activates-- BCL2L13:",
+  "protein_a": "LC3B",
+  "protein_b": "BCL2L13",
+  "discovered_in_query": "LC3B",
+  "first_discovered": "2025-11-11T15:54:33.437187Z",
+  "last_updated": "2025-11-11T15:54:33.437187Z"
+}

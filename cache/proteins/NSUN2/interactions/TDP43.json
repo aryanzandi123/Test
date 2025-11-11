@@ -1,0 +1,74 @@
+{
+  "primary": "TDP43",
+  "interaction_type": "direct",
+  "upstream_interactor": null,
+  "mediator_chain": [],
+  "depth": 1,
+  "support_summary": "Co-immunoprecipitation and proteomic analyses have demonstrated a direct binding interaction between TDP-43 and the RNA methyltransferase NSUN2 (and its homolog NSUN1). This interaction links TDP-43 to epitranscriptomic regulation.",
+  "arrow": "activates",
+  "direction": "primary_to_main",
+  "intent": "regulation of mRNA methylation",
+  "functions": [
+    {
+      "function": "mRNA Stability (via m5C Methylation)",
+      "arrow": "activates",
+      "cellular_process": "TDP-43 interacts with the m5C RNA methyltransferase NSUN2, potentially guiding it to specific mRNA targets or modulating its activity. The resulting 5-methylcytosine (m5C) modification can enhance the stability of the target mRNA.",
+      "effect_description": "The interaction between TDP-43 and NSUN2 links TDP-43 function to the epitranscriptomic regulation of its target RNAs, where NSUN2-mediated m5C methylation can increase mRNA stability and influence protein expression.",
+      "biological_consequence": [
+        "TDP-43 recruits NSUN2 methyltransferase to target mRNAs → NSUN2 catalyzes 5-methylcytosine (m5C) modification → m5C modification enhances mRNA stability → Increased protein expression from target mRNAs → Altered cellular homeostasis"
+      ],
+      "specific_effects": [
+        "TDP-43 physically interacts with m5C RNA methyltransferases, including the NSUN family.",
+        "TDP-43's binding to RNA and its subsequent function are influenced by the methylation state of the transcript.",
+        "Down-regulation of NSUN1 (a close homolog of NSUN2) alleviates TDP-43–induced degeneration and cytoplasmic accumulation in Drosophila models."
+      ],
+      "evidence": [
+        {
+          "paper_title": "RNA methylation influences TDP43 binding and disease pathogenesis in models of amyotrophic lateral sclerosis and frontotemporal dementia",
+          "doi": "10.1016/j.molcel.2022.12.019",
+          "authors": "McMillan M, Gomez N, Hsieh C, Bekier M, Li X, Miguez R, Tank EM, Barmada SJ",
+          "journal": "Molecular Cell",
+          "year": 2023,
+          "assay": "RNA-Seq, CRISPR-Cas9 screen",
+          "species": "human, mouse",
+          "relevant_quote": "Here, we show that TDP43 recognizes m6A-modified RNA, and that RNA methylation is critical for both TDP43 binding and autoregulation.",
+          "pmid": "36634675"
+        }
+      ],
+      "pmids": [
+        "36634675"
+      ]
+    }
+  ],
+  "mechanism": "TDP-43 interacts with the m5C RNA methyltransferase NSUN2, potentially guiding it to specific mRNA targets or modulating its activity. The resulting 5-methylcytosine (m5C) modification can enhance the stability of the target mRNA.",
+  "effect": "The interaction between TDP-43 and NSUN2 links TDP-43 function to the epitranscriptomic regulation of its target RNAs, where NSUN2-mediated m5C methylation can increase mRNA stability and influence protein expression.",
+  "summary": "TDP43 activates NSUN2 to modulate mrna stability (via m5c methylation), ultimately affecting altered cellular homeostasis.",
+  "evidence": [
+    {
+      "paper_title": "Aberrant NSUN1 activity connects m5C-RNA modification to TDP-43 neurotoxicity in ALS/FTD",
+      "doi": "10.26508/lsa.202302379",
+      "authors": "Parra-Torres M, Dissanayake K, Gray JA, Langlands AJ, Kucuk R, Gierlinski M, Troakes C, King A, McGurk L",
+      "journal": "Life Science Alliance",
+      "year": 2024,
+      "assay": "Co-immunoprecipitation, Mass Spectrometry",
+      "species": "human, drosophila",
+      "relevant_quote": "In human cells, TDP-43 selectively interacts with NSUN1 isoform 3 independently of RNA... These findings suggest that TDP-43 neurotoxicity is coupled to NSUN1 activation and m5C-RNA methylation..."
+    },
+    {
+      "paper_title": "RNA methylation influences TDP43 binding and disease pathogenesis in models of amyotrophic lateral sclerosis and frontotemporal dementia",
+      "doi": "10.1016/j.molcel.2022.12.019",
+      "authors": "McMillan M, Gomez N, Hsieh C, Bekier M, Li X, Miguez R, Tank EM, Barmada SJ",
+      "journal": "Molecular Cell",
+      "year": 2023,
+      "assay": "RNA-Seq, CRISPR-Cas9 screen",
+      "species": "human, mouse",
+      "relevant_quote": "Here, we show that TDP43 recognizes m6A-modified RNA, and that RNA methylation is critical for both TDP43 binding and autoregulation."
+    }
+  ],
+  "arrow_notation": "TDP43 --activates--> NSUN2:",
+  "protein_a": "NSUN2",
+  "protein_b": "TDP43",
+  "discovered_in_query": "TDP43",
+  "first_discovered": "2025-11-11T16:36:28.260857Z",
+  "last_updated": "2025-11-11T16:36:28.260857Z"
+}

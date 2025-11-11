@@ -1,0 +1,85 @@
+{
+  "primary": "TDP43",
+  "direction": "main_to_primary",
+  "arrow": "activates",
+  "intent": "autophagic clearance",
+  "support_summary": "The autophagy receptor p62/SQSTM1 recognizes and binds to ubiquitinated TDP-43 inclusions, targeting them for degradation via the autophagy-lysosome pathway. It is a common component of TDP-43 aggregates in ALS and FTLD.",
+  "functions": [
+    {
+      "function": "TDP-43 Aggregate Clearance (Autophagy)",
+      "arrow": "activates",
+      "cellular_process": "p62/SQSTM1 is a selective autophagy receptor that recognizes and binds to ubiquitinated protein aggregates, including those of TDP-43, and targets them to autophagosomes for degradation.",
+      "effect_description": "p62/SQSTM1 facilitates the clearance of toxic TDP-43 aggregates through the autophagy-lysosome pathway, thereby reducing TDP-43 pathology.",
+      "biological_consequence": [
+        "Ubiquitinated TDP-43 aggregates form → p62/SQSTM1 binds ubiquitin chains on TDP-43 → p62/SQSTM1 binds LC3 on autophagosome membrane → Sequestration of TDP-43 aggregates into autophagosomes → Autolysosome fusion and degradation of TDP-43",
+        "ALS-linked SQSTM1 mutations → Impaired binding to KEAP1 → Failure to activate NFE2L2/NRF2 antioxidant response → Increased cellular oxidative stress → Enhanced stress granule formation and TDP-43 aggregation"
+      ],
+      "specific_effects": [
+        "TDP-43 aggregates co-localize with the autophagy adaptor protein p62/SQSTM1.",
+        "Overexpression of p62/SQSTM1 reduces TDP-43 aggregation in a manner dependent on both autophagy and the proteasome.",
+        "ALS-FTLD-linked mutations in SQSTM1 can disrupt selective autophagy and increase TDP-43-associated stress granule formation.",
+        "Overexpression of p62 can cause the mislocalization of TDP-43 to the cytoplasm, leading to aggregation."
+      ],
+      "evidence": [
+        {
+          "paper_title": "Regulation of TDP-43 aggregation by phosphorylation and p62/SQSTM1",
+          "doi": "10.1111/j.1471-4159.2010.07098.x",
+          "authors": "Brady OA, Meng P, Zheng Y, Mao Y, Hu F",
+          "journal": "Journal of Neurochemistry",
+          "year": 2011,
+          "assay": "Immunofluorescence, Western Blot",
+          "species": "human (cell culture)",
+          "relevant_quote": "Over-expression of p62/SQSTM1 reduces TDP-43 aggregation in an autophagy and proteasome-dependent manner.",
+          "pmid": "21062285"
+        },
+        {
+          "paper_title": "ALS-FTLD-linked mutations of SQSTM1/p62 disrupt selective autophagy and NFE2L2/NRF2 anti-oxidative stress pathway",
+          "doi": "10.1080/15548627.2019.1644076",
+          "authors": "Deng Z, Lim J, Wang Q, Purtell K, Wu S, Palomo GM, Tan H, Manfredi G, Zhao Y, Peng J, Yue Z",
+          "journal": "Autophagy",
+          "year": 2020,
+          "assay": "Cell culture studies",
+          "species": "human, mouse",
+          "relevant_quote": "disease mutation SQSTM1G427R...[increases] TARDBP/TDP-43 associated stress granule formation under oxidative stress.",
+          "pmid": "31362587"
+        }
+      ],
+      "pmids": [
+        "21062285",
+        "31362587"
+      ]
+    }
+  ],
+  "mechanism": "p62/SQSTM1 is a selective autophagy receptor that recognizes and binds to ubiquitinated protein aggregates, including those of TDP-43, and targets them to autophagosomes for degradation.",
+  "effect": "p62/SQSTM1 facilitates the clearance of toxic TDP-43 aggregates through the autophagy-lysosome pathway, thereby reducing TDP-43 pathology.",
+  "summary": "TDP43 activates SQSTM1 to modulate tdp-43 aggregate clearance (autophagy), ultimately affecting autolysosome fusion and degradation of tdp-43.",
+  "evidence": [
+    {
+      "paper_title": "Regulation of TDP-43 aggregation by phosphorylation and p62/SQSTM1",
+      "doi": "10.1111/j.1471-4159.2010.07098.x",
+      "authors": "Brady OA, Meng P, Zheng Y, Mao Y, Hu F",
+      "journal": "Journal of Neurochemistry",
+      "year": 2011,
+      "assay": "Immunofluorescence, Western Blot",
+      "species": "human (cell culture)",
+      "relevant_quote": "Over-expression of p62/SQSTM1 reduces TDP-43 aggregation in an autophagy and proteasome-dependent manner."
+    },
+    {
+      "paper_title": "ALS-FTLD-linked mutations of SQSTM1/p62 disrupt selective autophagy and NFE2L2/NRF2 anti-oxidative stress pathway",
+      "doi": "10.1080/15548627.2019.1644076",
+      "authors": "Deng Z, Lim J, Wang Q, Purtell K, Wu S, Palomo GM, Tan H, Manfredi G, Zhao Y, Peng J, Yue Z",
+      "journal": "Autophagy",
+      "year": 2020,
+      "assay": "Cell culture studies",
+      "species": "human, mouse",
+      "relevant_quote": "disease mutation SQSTM1G427R...[increases] TARDBP/TDP-43 associated stress granule formation under oxidative stress."
+    }
+  ],
+  "depth": 1,
+  "arrow_notation": "TDP43 <--activates-- SQSTM1:",
+  "protein_a": "SQSTM1",
+  "protein_b": "TDP43",
+  "discovered_in_query": "TDP43",
+  "first_discovered": "2025-11-11T16:36:28.287182Z",
+  "last_updated": "2025-11-11T16:36:28.287182Z"
+}

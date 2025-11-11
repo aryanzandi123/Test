@@ -1,0 +1,103 @@
+{
+  "primary": "TDP43",
+  "interaction_type": "direct",
+  "upstream_interactor": null,
+  "mediator_chain": [],
+  "depth": 1,
+  "support_summary": "The deubiquitinase USP10 interacts with TDP-43 and facilitates the disassembly of TDP-43-positive stress granules (SGs). This function is critical for preventing the transition of transient SGs into persistent, pathological cytoplasmic aggregates of TDP-43, a hallmark of TDP-43 proteinopathies.",
+  "functions": [
+    {
+      "function": "Stress Granule Clearance",
+      "arrow": "activates",
+      "cellular_process": "USP10, a deubiquitinase that localizes to stress granules (SGs), interacts with TDP-43 and the core SG protein G3BP1. It facilitates the timely clearance and disassembly of TDP-43-positive SGs following the removal of cellular stress.",
+      "effect_description": "USP10 promotes the resolution of TDP-43-positive stress granules, thereby inhibiting the formation of stable, pathological cytoplasmic TDP-43 aggregates.",
+      "biological_consequence": [
+        "Cellular stress → TDP-43 is recruited to cytoplasmic Stress Granules (SGs) → USP10 deubiquitinates SG components (e.g., G3BP1) → Timely disassembly of SGs upon stress removal → TDP-43 returns to the nucleus → Restoration of cellular homeostasis",
+        "USP10 dysfunction or depletion → Impaired SG disassembly → Prolonged cytoplasmic retention of TDP-43 in SGs → Liquid-to-solid phase transition of TDP-43 → Formation of insoluble, pathological aggregates → Neurodegeneration"
+      ],
+      "specific_effects": [
+        "USP10 promotes the clearance of TDP-43-positive SGs, thereby inhibiting the formation of aberrant cytoplasmic TDP-43 aggregates. [3, 4]",
+        "Depletion of USP10 increases the amount of insoluble TDP-35, a toxic C-terminal fragment of TDP-43. [3, 4]",
+        "USP10 controls multiple aspects of TDP-43 biology, including its aggregation, expression, and splicing functionality. [2, 17]",
+        "USP10 protein levels are inversely correlated with the pathological burden of TDP-43 in postmortem human motor neurons. [2]"
+      ],
+      "evidence": [
+        {
+          "paper_title": "USP10 Inhibits Aberrant Cytoplasmic Aggregation of TDP-43 by Promoting Stress Granule Clearance",
+          "doi": "10.1128/MCB.00393-21",
+          "authors": "Takahashi M, Kitaura H, Kakita A, Kakihana T, Katsuragi Y, Onodera O, Iwakura Y, Nawa H, Komatsu M, Fujii M",
+          "journal": "Molecular and Cellular Biology",
+          "year": 2022,
+          "assay": "Immunoprecipitation, Western Blot",
+          "species": "human",
+          "relevant_quote": "Our findings suggest that USP10 inhibits aberrant aggregation of TDP-43/TDP-35 in the cytoplasm of neuronal cells by promoting the clearance of TDP-43/TDP-35-positive SGs... [3]",
+          "pmid": "35007165"
+        },
+        {
+          "paper_title": "Functional implication of ubiquitinating and deubiquitinating mechanisms in TDP-43 proteinopathies",
+          "doi": "10.3389/fcell.2022.931968",
+          "authors": "Tran NN, Lee BH",
+          "journal": "Frontiers in Cell and Developmental Biology",
+          "year": 2022,
+          "assay": "Review",
+          "species": "human",
+          "relevant_quote": "E3 ubiquitin ligases coupled with deubiquitinating enzymes may influence the TDP-43-associated proteotoxicity through diverse events, such as protein stability, translocation, and stress granule or inclusion formation. [14]",
+          "pmid": "36158183"
+        }
+      ],
+      "_context": {
+        "type": "direct",
+        "query_protein": null,
+        "chain": null
+      },
+      "pmids": [
+        "35007165",
+        "36158183"
+      ]
+    }
+  ],
+  "arrow": "activates",
+  "direction": "main_to_primary",
+  "intent": "stress granule disassembly",
+  "mechanism": "USP10, a deubiquitinase that localizes to stress granules (SGs), interacts with TDP-43 and the core SG protein G3BP1. It facilitates the timely clearance and disassembly of TDP-43-positive SGs following the removal of cellular stress.",
+  "effect": "USP10 promotes the resolution of TDP-43-positive stress granules, thereby inhibiting the formation of stable, pathological cytoplasmic TDP-43 aggregates.",
+  "summary": "TDP43 activates USP10 to modulate stress granule clearance, ultimately affecting restoration of cellular homeostasis.",
+  "evidence": [
+    {
+      "paper_title": "USP10 Inhibits Aberrant Cytoplasmic Aggregation of TDP-43 by Promoting Stress Granule Clearance",
+      "doi": "10.1128/MCB.00393-21",
+      "authors": "Takahashi M, Kitaura H, Kakita A, Kakihana T, Katsuragi Y, Onodera O, Iwakura Y, Nawa H, Komatsu M, Fujii M",
+      "journal": "Molecular and Cellular Biology",
+      "year": 2022,
+      "assay": "Immunoprecipitation, Western Blot",
+      "species": "human",
+      "relevant_quote": "Our findings suggest that USP10 inhibits aberrant aggregation of TDP-43/TDP-35 in the cytoplasm of neuronal cells by promoting the clearance of TDP-43/TDP-35-positive SGs... [3]"
+    },
+    {
+      "paper_title": "A functional interaction between TDP-43 and USP10 reveals USP10 dysfunction in TDP-43 proteinopathies",
+      "doi": "10.1101/2024.01.23.576828",
+      "authors": "Marrero-Gagliardi A, Noda J, Zanovello M, Brito Armas JM, Bampton A, Torres P, Pérez Hernández C, Fumagallo F, Taoro L, Muñoz de Bustillo Alfaro R, Brown AL, Quinet G, Andrés-Benito P, Ferrer I, Acebes A, Freire R, Smits VAJ, Keuss M, Portero-Otin M, Lashley T, Fratta P, Acevedo-Arozena A",
+      "journal": "bioRxiv",
+      "year": 2024,
+      "assay": "Co-Immunoprecipitation",
+      "species": "human",
+      "relevant_quote": "Here, we identified a new functional interaction between TDP-43 and USP10, in which USP10 can control multiple aspects of TDP-43 biology... such as its cytoplasmic and nuclear aggregation, expression and splicing functionality. [17]"
+    },
+    {
+      "paper_title": "Functional implication of ubiquitinating and deubiquitinating mechanisms in TDP-43 proteinopathies",
+      "doi": "10.3389/fcell.2022.931968",
+      "authors": "Tran NN, Lee BH",
+      "journal": "Frontiers in Cell and Developmental Biology",
+      "year": 2022,
+      "assay": "Review",
+      "species": "human",
+      "relevant_quote": "E3 ubiquitin ligases coupled with deubiquitinating enzymes may influence the TDP-43-associated proteotoxicity through diverse events, such as protein stability, translocation, and stress granule or inclusion formation. [14]"
+    }
+  ],
+  "arrow_notation": "TDP43 <--activates-- USP10:",
+  "protein_a": "USP10",
+  "protein_b": "TDP43",
+  "discovered_in_query": "TDP43",
+  "first_discovered": "2025-11-11T16:36:28.294053Z",
+  "last_updated": "2025-11-11T16:36:28.294053Z"
+}

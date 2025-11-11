@@ -1,0 +1,191 @@
+{
+  "primary": "LC3B",
+  "direction": "main_to_primary",
+  "arrow": "activates",
+  "intent": "autophagy_regulation",
+  "support_summary": "AMBRA1 (Activating molecule in Beclin-1 regulated autophagy) functions as a dual-role autophagy regulator. It is a core component of the BECLIN1-PI3KC3 complex, which acts upstream of LC3B to initiate autophagosome formation. Additionally, AMBRA1 functions as a direct mitophagy receptor by binding LC3B via a LIR motif to tether damaged mitochondria to the autophagosome for clearance.",
+  "functions": [
+    {
+      "function": "PI3KC3 Complex Activation and Localization",
+      "arrow": "activates",
+      "cellular_process": "AMBRA1 is a core component of the BECLIN1-VPS34 (PI3KC3) complex. Upon autophagy induction (e.g., by ULK1 phosphorylation), AMBRA1 promotes the translocation of the complex from the cytoskeleton to the endoplasmic reticulum, the site of autophagosome nucleation. It also mediates the K63-linked ubiquitination of BECLIN1, which enhances the kinase activity of the complex.",
+      "effect_description": "Acts as a key positive regulator by controlling the subcellular localization and activity of the PI3KC3 complex, which is essential for the production of PI3P and the initiation of autophagosome formation, a process upstream of LC3B lipidation.",
+      "biological_consequence": [
+        "Autophagy induction signal activates ULK1 kinase → ULK1 phosphorylates AMBRA1 within the PI3KC3 complex → The PI3KC3 complex dissociates from the dynein motor on microtubules → The active complex translocates to the ER, the site of nucleation → Localized PI3P synthesis initiates autophagosome formation.",
+        "AMBRA1 functions as a substrate receptor for the CUL4-DDB1 E3 ligase → BECLIN1 is modified with K63-linked ubiquitin chains → Vps34 kinase activity within the PI3KC3 complex is enhanced → PI3P production is amplified at the nucleation site → Autophagosome biogenesis is accelerated."
+      ],
+      "specific_effects": [
+        "Under basal conditions, anchors the BECLIN1-PI3KC3 complex to the dynein motor complex on microtubules.",
+        "Mediates K63-linked ubiquitination of BECLIN1, enhancing Vps34 kinase activity.",
+        "Is a positive regulator of the BECLIN1-dependent autophagy program."
+      ],
+      "evidence": [
+        {
+          "paper_title": "Ambra1 regulates autophagy and development of the nervous system",
+          "doi": "10.1038/nature05925",
+          "authors": "Fimia GM, Stoykova A, Romagnoli A, Giunta L, Di Bartolomeo S, Nardacci R, Corazzari M, Fuoco C, Ucar A, Schwartz P, Grinberg A, Piacentini M, Fesus L, Cecconi F",
+          "journal": "Nature",
+          "year": 2007,
+          "assay": "RNA interference",
+          "species": "mouse",
+          "relevant_quote": "Here we show that Ambra1 (activating molecule in Beclin1-regulated autophagy)... is a positive regulator of the Becn1-dependent programme of autophagy, as revealed by its overexpression and by RNA interference experiments in vitro.",
+          "pmid": "17589504"
+        },
+        {
+          "paper_title": "Connecting autophagy: AMBRA1 and its network of regulation",
+          "doi": "10.4161/mco.2.1.970059",
+          "authors": "Cianfanelli V, Nazio F, Cecconi F",
+          "journal": "Molecular & Cellular Oncology",
+          "year": 2015,
+          "assay": "Review",
+          "species": "human",
+          "relevant_quote": "AMBRA1 acts as a substrate receptor for the DDB1–Cullin 4 E3 ubiquitin ligase complex mediating Lys63-linked ubiquitylation of BECLIN 1. This modification on BECLIN 1 has been proven to be important in augmenting mVPS34 activity.",
+          "pmid": "27308402"
+        },
+        {
+          "paper_title": "The dynamic interaction of AMBRA1 with the dynein motor complex regulates mammalian autophagy",
+          "doi": "10.1083/jcb.201002100",
+          "authors": "Di Bartolomeo S, Corazzari M, Nazio F, Oliverio S, Lisi G, Antonioli M, Pagliarini V, Piacentini M, Fimia GM, Cecconi F",
+          "journal": "The Journal of Cell Biology",
+          "year": 2010,
+          "assay": "Co-IP, Immunofluorescence",
+          "species": "human",
+          "relevant_quote": "ULK1-dependent phosphorylation of AMBRA1 is a key event in the regulation of AMBRA1 release from dynein motors, which allows the BECLIN 1/VPS34 complex to relocalize to the endoplasmic reticulum for autophagosome nucleation.",
+          "pmid": "20921139"
+        }
+      ],
+      "pmids": [
+        "17589504",
+        "27308402",
+        "20921139"
+      ]
+    },
+    {
+      "function": "Selective Autophagy of Mitochondria (Mitophagy)",
+      "arrow": "activates",
+      "cellular_process": "Acts as a mitophagy receptor that directly binds to LC3 proteins on the phagophore via a conserved LC3-interacting region (LIR) motif. This interaction is crucial for tethering damaged mitochondria to the autophagosome for clearance in both PARKIN-dependent and -independent pathways.",
+      "effect_description": "Mediates the selective engulfment and degradation of mitochondria, thereby playing a key role in mitochondrial quality control.",
+      "biological_consequence": [
+        "Mitochondrial damage triggers mitophagy signals → AMBRA1 accumulates on the outer mitochondrial membrane → AMBRA1's LIR motif directly binds to LC3B on the phagophore → The damaged mitochondrion is tethered to the growing autophagosome → The autophagosome closes, engulfing the mitochondrion for lysosomal degradation.",
+        "Mitochondrial stress activates IKKα kinase → IKKα phosphorylates AMBRA1 adjacent to its LIR motif → Phosphorylation enhances the binding affinity between AMBRA1 and LC3B → Recruitment of damaged mitochondria to the phagophore is stabilized → Selective mitochondrial clearance via mitophagy is promoted."
+      ],
+      "specific_effects": [
+        "Contains a LIR motif that directly binds LC3 family proteins.",
+        "The interaction is enhanced by IKKα-mediated phosphorylation of AMBRA1 at Ser1014, adjacent to the LIR motif.",
+        "Is involved in both canonical (PARKIN-dependent) and non-canonical (PARKIN-independent) mitophagy."
+      ],
+      "evidence": [
+        {
+          "paper_title": "AMBRA1 is able to induce mitophagy via LC3 binding, regardless of PARKIN and p62/SQSTM1",
+          "doi": "10.1038/cdd.2014.139",
+          "authors": "Strappazzon F, Nazio F, Corrado M, Cianfanelli V, Romagnoli A, Fimia GM, Campello S, Nardacci R, Piacentini M, Campanella M, Cecconi F",
+          "journal": "Cell Death & Differentiation",
+          "year": 2015,
+          "assay": "Co-IP, Immunofluorescence",
+          "species": "human",
+          "relevant_quote": "upon mitophagy induction, AMBRA1 binds the autophagosome adapter LC3 through a LIR (LC3 interacting region) motif, this interaction being crucial for regulating both canonical PARKIN-dependent and -independent mitochondrial clearance.",
+          "pmid": "25215947"
+        },
+        {
+          "paper_title": "HUWE1 E3 ligase promotes PINK1/PARKIN-independent mitophagy by regulating AMBRA1 activation via IKKα",
+          "doi": "10.1038/s41467-018-06172-1",
+          "authors": "Di Rita A, Peschiaroli A, D'Acunzo P, Strobbe D, Hu Z, Gruber J, Nygaard M, Lambrughi M, Melino G, Papaleo E, Dengjel J, Fimia GM, Campanella M, Dötsch V, Rogov VV, Strappazzon F, Cecconi F",
+          "journal": "Nature Communications",
+          "year": 2018,
+          "assay": "In vitro kinase assay, Co-IP",
+          "species": "human",
+          "relevant_quote": "IKKα-mediated phosphorylation of AMBRA1 at S1014 promotes AMBRA1 binding to LC3 and GABARAP and serves as a positive regulator of AMBRA1-mediated mitophagy.",
+          "pmid": "30217973"
+        },
+        {
+          "paper_title": "Parkin interacts with Ambra1 to induce mitophagy",
+          "doi": "10.1523/JNEUROSCI.5824-10.2011",
+          "authors": "Van Humbeeck C, Cornelissen T, Hofkens H, Mandemakers W, Gevaert K, De Strooper B, Vandenberghe W",
+          "journal": "The Journal of Neuroscience",
+          "year": 2011,
+          "assay": "Co-IP, Yeast two-hybrid",
+          "species": "human",
+          "relevant_quote": "We demonstrate that Ambra1 is a novel Parkin-interacting protein. Upon induction of mitophagy, both proteins are recruited to depolarized mitochondria, and Ambra1 is required for efficient mitochondrial clearance.",
+          "pmid": "21753002"
+        }
+      ],
+      "pmids": [
+        "25215947",
+        "30217973",
+        "21753002"
+      ]
+    }
+  ],
+  "mechanism": "AMBRA1 is a core component of the BECLIN1-VPS34 (PI3KC3) complex; Acts as a mitophagy receptor that directly binds to LC3 proteins on the phagophore via a conserved L",
+  "effect": "Acts as a key positive regulator by controlling the subcellular localization and activity of the PI3KC3 complex, which is essential for the production of PI3P and the initiation of autophagosome formation, a process upstream of LC3B lipidation.; Mediates the selective engulfment and degradation of mitochondria, thereby playing a key role in mitochondrial quality control.",
+  "summary": "LC3B activates AMBRA1 to regulate pi3kc3 complex activation and localization and selective autophagy of mitochondria (mitophagy), ultimately affecting localized pi3p synthesis initiates autophagosome formation.",
+  "evidence": [
+    {
+      "paper_title": "Ambra1 regulates autophagy and development of the nervous system",
+      "doi": "10.1038/nature05925",
+      "authors": "Fimia GM, Stoykova A, Romagnoli A, Giunta L, Di Bartolomeo S, Nardacci R, Corazzari M, Fuoco C, Ucar A, Schwartz P, Grinberg A, Piacentini M, Fesus L, Cecconi F",
+      "journal": "Nature",
+      "year": 2007,
+      "assay": "RNA interference",
+      "species": "mouse",
+      "relevant_quote": "Here we show that Ambra1 (activating molecule in Beclin1-regulated autophagy)... is a positive regulator of the Becn1-dependent programme of autophagy, as revealed by its overexpression and by RNA interference experiments in vitro."
+    },
+    {
+      "paper_title": "Connecting autophagy: AMBRA1 and its network of regulation",
+      "doi": "10.4161/mco.2.1.970059",
+      "authors": "Cianfanelli V, Nazio F, Cecconi F",
+      "journal": "Molecular & Cellular Oncology",
+      "year": 2015,
+      "assay": "Review",
+      "species": "human",
+      "relevant_quote": "AMBRA1 acts as a substrate receptor for the DDB1–Cullin 4 E3 ubiquitin ligase complex mediating Lys63-linked ubiquitylation of BECLIN 1. This modification on BECLIN 1 has been proven to be important in augmenting mVPS34 activity."
+    },
+    {
+      "paper_title": "The dynamic interaction of AMBRA1 with the dynein motor complex regulates mammalian autophagy",
+      "doi": "10.1083/jcb.201002100",
+      "authors": "Di Bartolomeo S, Corazzari M, Nazio F, Oliverio S, Lisi G, Antonioli M, Pagliarini V, Piacentini M, Fimia GM, Cecconi F",
+      "journal": "The Journal of Cell Biology",
+      "year": 2010,
+      "assay": "Co-IP, Immunofluorescence",
+      "species": "human",
+      "relevant_quote": "ULK1-dependent phosphorylation of AMBRA1 is a key event in the regulation of AMBRA1 release from dynein motors, which allows the BECLIN 1/VPS34 complex to relocalize to the endoplasmic reticulum for autophagosome nucleation."
+    },
+    {
+      "paper_title": "AMBRA1 is able to induce mitophagy via LC3 binding, regardless of PARKIN and p62/SQSTM1",
+      "doi": "10.1038/cdd.2014.139",
+      "authors": "Strappazzon F, Nazio F, Corrado M, Cianfanelli V, Romagnoli A, Fimia GM, Campello S, Nardacci R, Piacentini M, Campanella M, Cecconi F",
+      "journal": "Cell Death & Differentiation",
+      "year": 2015,
+      "assay": "Co-IP, Immunofluorescence",
+      "species": "human",
+      "relevant_quote": "upon mitophagy induction, AMBRA1 binds the autophagosome adapter LC3 through a LIR (LC3 interacting region) motif, this interaction being crucial for regulating both canonical PARKIN-dependent and -independent mitochondrial clearance."
+    },
+    {
+      "paper_title": "HUWE1 E3 ligase promotes PINK1/PARKIN-independent mitophagy by regulating AMBRA1 activation via IKKα",
+      "doi": "10.1038/s41467-018-06172-1",
+      "authors": "Di Rita A, Peschiaroli A, D'Acunzo P, Strobbe D, Hu Z, Gruber J, Nygaard M, Lambrughi M, Melino G, Papaleo E, Dengjel J, Fimia GM, Campanella M, Dötsch V, Rogov VV, Strappazzon F, Cecconi F",
+      "journal": "Nature Communications",
+      "year": 2018,
+      "assay": "In vitro kinase assay, Co-IP",
+      "species": "human",
+      "relevant_quote": "IKKα-mediated phosphorylation of AMBRA1 at S1014 promotes AMBRA1 binding to LC3 and GABARAP and serves as a positive regulator of AMBRA1-mediated mitophagy."
+    },
+    {
+      "paper_title": "Parkin interacts with Ambra1 to induce mitophagy",
+      "doi": "10.1523/JNEUROSCI.5824-10.2011",
+      "authors": "Van Humbeeck C, Cornelissen T, Hofkens H, Mandemakers W, Gevaert K, De Strooper B, Vandenberghe W",
+      "journal": "The Journal of Neuroscience",
+      "year": 2011,
+      "assay": "Co-IP, Yeast two-hybrid",
+      "species": "human",
+      "relevant_quote": "We demonstrate that Ambra1 is a novel Parkin-interacting protein. Upon induction of mitophagy, both proteins are recruited to depolarized mitochondria, and Ambra1 is required for efficient mitochondrial clearance."
+    }
+  ],
+  "depth": 1,
+  "arrow_notation": "LC3B <--activates-- AMBRA1:",
+  "protein_a": "AMBRA1",
+  "protein_b": "LC3B",
+  "discovered_in_query": "LC3B",
+  "first_discovered": "2025-11-11T15:54:33.448056Z",
+  "last_updated": "2025-11-11T15:54:33.448056Z"
+}

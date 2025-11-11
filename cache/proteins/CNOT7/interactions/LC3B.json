@@ -1,0 +1,83 @@
+{
+  "primary": "LC3B",
+  "direction": "primary_to_main",
+  "arrow": "activates",
+  "intent": "deadenylation",
+  "support_summary": "As a key catalytic subunit of the CCR4-NOT complex, CNOT7 is brought into proximity with target mRNAs by LC3B. This recruitment is essential for the deadenylase activity that drives LC3-dependent mRNA degradation (LMD).",
+  "functions": [
+    {
+      "function": "LC3-Dependent mRNA Decay (LMD)",
+      "arrow": "activates",
+      "cellular_process": "During autophagy, LC3B binds to target mRNAs and recruits the CCR4-NOT complex. CNOT7, a catalytic subunit of this complex, is thereby positioned to execute its deadenylase function, shortening the poly(A) tails of the target mRNAs and marking them for degradation.",
+      "effect_description": "Provides the catalytic deadenylase activity for the degradation of mRNAs targeted by LC3B, facilitating the removal of transcripts that may impede the autophagy process.",
+      "biological_consequence": [
+        "Autophagic activation → LC3B-mRNA complex recruits CCR4-NOT → CNOT7-mediated deadenylation of mRNA poly(A) tails → Target mRNA degradation → Enhanced autophagic flux"
+      ],
+      "specific_effects": [
+        "CNOT7 is a catalytic subunit of the CCR4-NOT deadenylase complex",
+        "The interaction between LC3B and CNOT7 increases upon autophagic activation",
+        "Contributes to the degradation of mRNAs encoding negative regulators of autophagy"
+      ],
+      "evidence": [
+        {
+          "paper_title": "LC3B is an RNA-binding protein to trigger rapid mRNA degradation during autophagy",
+          "doi": "10.1038/s41467-022-29139-1",
+          "authors": "Hwang HJ, Ha H, Lee BS, Kim BH, Song HK, Kim YK",
+          "journal": "Nature Communications",
+          "year": 2022,
+          "assay": "Co-Immunoprecipitation, Proximity Ligation Assay (PLA)",
+          "species": "human",
+          "relevant_quote": "...we observed distinct PLA spots (PLA signals) between endogenous LC3B and CNOT1 and between endogenous LC3B and CNOT7. The number of PLA spots increased upon treatment with Rapa + CQ.",
+          "pmid": "35302060"
+        },
+        {
+          "paper_title": "Canonical and non-canonical roles for ATG8 proteins in autophagy and beyond",
+          "doi": "10.3389/fcell.2022.1072202",
+          "authors": "Delorme-Axford E, Klionsky DJ",
+          "journal": "Frontiers in Cell and Developmental Biology",
+          "year": 2022,
+          "assay": "Review",
+          "species": "human",
+          "relevant_quote": "LC3B and additional proteins of the lipidation machinery...were found to colocalize and interact with CNOT1 and CNOT7 from the CCR4-NOT complex upon induction of autophagy...",
+          "pmid": "36601581"
+        }
+      ],
+      "pmids": [
+        "35302060",
+        "36601581"
+      ]
+    }
+  ],
+  "mechanism": "During autophagy, LC3B binds to target mRNAs and recruits the CCR4-NOT complex. CNOT7, a catalytic subunit of this complex, is thereby positioned to execute its deadenylase function, shortening the poly(A) tails of the target mRNAs and marking them for degradation.",
+  "effect": "Provides the catalytic deadenylase activity for the degradation of mRNAs targeted by LC3B, facilitating the removal of transcripts that may impede the autophagy process.",
+  "summary": "LC3B activates CNOT7 to modulate lc3-dependent mrna decay (lmd), ultimately affecting enhanced autophagic flux.",
+  "evidence": [
+    {
+      "paper_title": "LC3B is an RNA-binding protein to trigger rapid mRNA degradation during autophagy",
+      "doi": "10.1038/s41467-022-29139-1",
+      "authors": "Hwang HJ, Ha H, Lee BS, Kim BH, Song HK, Kim YK",
+      "journal": "Nature Communications",
+      "year": 2022,
+      "assay": "Co-Immunoprecipitation, Proximity Ligation Assay (PLA)",
+      "species": "human",
+      "relevant_quote": "...we observed distinct PLA spots (PLA signals) between endogenous LC3B and CNOT1 and between endogenous LC3B and CNOT7. The number of PLA spots increased upon treatment with Rapa + CQ."
+    },
+    {
+      "paper_title": "Canonical and non-canonical roles for ATG8 proteins in autophagy and beyond",
+      "doi": "10.3389/fcell.2022.1072202",
+      "authors": "Delorme-Axford E, Klionsky DJ",
+      "journal": "Frontiers in Cell and Developmental Biology",
+      "year": 2022,
+      "assay": "Review",
+      "species": "human",
+      "relevant_quote": "LC3B and additional proteins of the lipidation machinery...were found to colocalize and interact with CNOT1 and CNOT7 from the CCR4-NOT complex upon induction of autophagy..."
+    }
+  ],
+  "depth": 1,
+  "arrow_notation": "LC3B --activates--> CNOT7:",
+  "protein_a": "CNOT7",
+  "protein_b": "LC3B",
+  "discovered_in_query": "LC3B",
+  "first_discovered": "2025-11-11T15:54:33.398670Z",
+  "last_updated": "2025-11-11T15:54:33.398670Z"
+}

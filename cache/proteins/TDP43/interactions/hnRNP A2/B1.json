@@ -1,0 +1,105 @@
+{
+  "primary": "hnRNP A2/B1",
+  "direction": "bidirectional",
+  "arrow": "inhibits",
+  "intent": "splicing regulation",
+  "support_summary": "TDP-43's C-terminal region directly binds to several members of the heterogeneous nuclear ribonucleoprotein (hnRNP) family, including hnRNP A2/B1. This interaction is crucial for the co-regulation of alternative splicing for various target pre-mRNAs.",
+  "functions": [
+    {
+      "function": "UNC13A Pre-mRNA Splicing",
+      "arrow": "inhibits",
+      "cellular_process": "TDP-43 and hnRNP A2/B1 are part of a larger protein network that regulates the alternative splicing of target pre-mRNAs. Together, they suppress a cryptic splicing event in the UNC13A transcript.",
+      "effect_description": "The loss of nuclear TDP-43 disrupts this regulation, leading to the inclusion of a cryptic exon in the UNC13A transcript.",
+      "biological_consequence": [
+        "Loss of nuclear TDP-43 → Failure to suppress cryptic exon in UNC13A pre-mRNA → Aberrant splicing and nonsense-mediated decay → Production of truncated UNC13A protein → Impaired neurotransmitter release and synaptic dysfunction → Neurodegeneration"
+      ],
+      "specific_effects": [
+        "hnRNP A2/B1 interacts directly with TDP-43 through its C-terminal domain.",
+        "TDP-43 and hnRNP A2/B1 co-regulate a significant number of biological processes and molecular functions.",
+        "Mutations in both HNRNPA2B1 and TARDBP (the gene for TDP-43) are linked to ALS and multisystem proteinopathy."
+      ],
+      "evidence": [
+        {
+          "paper_title": "Abnormal Splicing Events due to Loss of Nuclear Function of TDP-43: Pathophysiology and Perspectives",
+          "doi": "10.31662/jmaj.2024-0038",
+          "authors": "Koike Y",
+          "journal": "JMA Journal",
+          "year": 2024,
+          "assay": "Review",
+          "species": "human",
+          "relevant_quote": "Several critical cryptic splicing targets of TDP-43 have recently emerged, such as STMN2, UNC13A, and others.",
+          "pmid": "39114608"
+        },
+        {
+          "paper_title": "Major hnRNP proteins act as general TDP-43 functional modifiers both in Drosophila and human neuronal cells",
+          "doi": "10.1093/nar/gkx506",
+          "authors": "Appocher C, Mohagheghi F, Cappelli S, Stuani C, Romano M, Feiguin F, Buratti E",
+          "journal": "Nucleic Acids Research",
+          "year": 2017,
+          "assay": "RNA sequencing",
+          "species": "human, drosophila",
+          "relevant_quote": "...we show that DAZAP1 and TDP-43 can co-regulate an extensive number of biological processes and molecular functions potentially important for the neuron/motor neuron pathophysiology.",
+          "pmid": "28575377"
+        },
+        {
+          "paper_title": "TDP-43 suppresses CGG repeat-induced neurotoxicity through interactions with HnRNP A2/B1",
+          "doi": "10.1093/hmg/ddu214",
+          "authors": "Hefferon DS, Custer SK, Rigo F, Bennett CF, Lersch RA, Frazier JA, Raskin J, Tatomer DC, Coyne AN, Zarnescu DC",
+          "journal": "Human Molecular Genetics",
+          "year": 2014,
+          "assay": "Co-immunoprecipitation",
+          "species": "drosophila",
+          "relevant_quote": "HnRNP A2/B1 interacts directly with TDP-43 through the C-terminal domain and this interaction is critical to many aspects of TDP-43 function, including its roles in splicing.",
+          "pmid": "24920338"
+        }
+      ],
+      "pmids": [
+        "39114608",
+        "28575377",
+        "24920338"
+      ]
+    }
+  ],
+  "mechanism": "TDP-43 and hnRNP A2/B1 are part of a larger protein network that regulates the alternative splicing of target pre-mRNAs. Together, they suppress a cryptic splicing event in the UNC13A transcript.",
+  "effect": "The loss of nuclear TDP-43 disrupts this regulation, leading to the inclusion of a cryptic exon in the UNC13A transcript.",
+  "summary": "TDP43 inhibits hnRNP A2/B1 to modulate unc13a pre-mrna splicing, ultimately affecting neurodegeneration.",
+  "evidence": [
+    {
+      "paper_title": "Abnormal Splicing Events due to Loss of Nuclear Function of TDP-43: Pathophysiology and Perspectives",
+      "doi": "10.31662/jmaj.2024-0038",
+      "authors": "Koike Y",
+      "journal": "JMA Journal",
+      "year": 2024,
+      "assay": "Review",
+      "species": "human",
+      "relevant_quote": "Several critical cryptic splicing targets of TDP-43 have recently emerged, such as STMN2, UNC13A, and others."
+    },
+    {
+      "paper_title": "Major hnRNP proteins act as general TDP-43 functional modifiers both in Drosophila and human neuronal cells",
+      "doi": "10.1093/nar/gkx506",
+      "authors": "Appocher C, Mohagheghi F, Cappelli S, Stuani C, Romano M, Feiguin F, Buratti E",
+      "journal": "Nucleic Acids Research",
+      "year": 2017,
+      "assay": "RNA sequencing",
+      "species": "human, drosophila",
+      "relevant_quote": "...we show that DAZAP1 and TDP-43 can co-regulate an extensive number of biological processes and molecular functions potentially important for the neuron/motor neuron pathophysiology."
+    },
+    {
+      "paper_title": "TDP-43 suppresses CGG repeat-induced neurotoxicity through interactions with HnRNP A2/B1",
+      "doi": "10.1093/hmg/ddu214",
+      "authors": "Hefferon DS, Custer SK, Rigo F, Bennett CF, Lersch RA, Frazier JA, Raskin J, Tatomer DC, Coyne AN, Zarnescu DC",
+      "journal": "Human Molecular Genetics",
+      "year": 2014,
+      "assay": "Co-immunoprecipitation",
+      "species": "drosophila",
+      "relevant_quote": "HnRNP A2/B1 interacts directly with TDP-43 through the C-terminal domain and this interaction is critical to many aspects of TDP-43 function, including its roles in splicing."
+    }
+  ],
+  "depth": 1,
+  "arrow_notation": "TDP43 <--inhibits--> hnRNP A2/B1:",
+  "protein_a": "TDP43",
+  "protein_b": "hnRNP A2/B1",
+  "discovered_in_query": "TDP43",
+  "first_discovered": "2025-11-11T16:36:28.233732Z",
+  "last_updated": "2025-11-11T16:36:28.233732Z"
+}
