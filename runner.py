@@ -1396,6 +1396,7 @@ def _run_main_pipeline_for_web(
     validated_steps = validate_steps(pipeline_steps)
     current_payload: Optional[Dict[str, Any]] = None
     arrow_steps_executed = False  # Track if we've already done arrow determination
+    arrow_trigger_ready = False   # Becomes True once Step 2b3 (or later) has run
 
     for step_idx, step in enumerate(validated_steps, start=1):
         # Check for cancellation before each step
@@ -1436,23 +1437,23 @@ def _run_main_pipeline_for_web(
             previous_payload=current_payload,
         )
 
-        # ===================================================================
-        # NEW: ARROW DETERMINATION PHASE (AFTER Step 2b2 completes)
-        # ===================================================================
-        if (step.name == "step2b2_indirect_functions" and
-            not arrow_steps_executed and
-            not skip_arrow_determination and
-            create_arrow_determination_step is not None and
-            current_payload and "ctx_json" in current_payload):
+        should_prepare_arrows = (
+            step.name == "step2b2_indirect_functions"
+            and not arrow_steps_executed
+            and not skip_arrow_determination
+            and create_arrow_determination_step is not None
+            and current_payload and "ctx_json" in current_payload
+        )
 
-            arrow_steps_executed = True
+        if should_prepare_arrows:
+            print("\n[ARROW DETERMINATION] Preparing arrow determination payload", file=sys.stderr)
 
             # Extract interactor_history
             ctx_json = current_payload.get("ctx_json", {})
             interactor_history = ctx_json.get("interactor_history", [])
 
             if interactor_history:
-                print(f"\n[ARROW DETERMINATION] Starting arrow determination for {len(interactor_history)} interactors", file=sys.stderr)
+                print(f"[ARROW DETERMINATION] Found {len(interactor_history)} interactors in history", file=sys.stderr)
 
                 # ═══════════════════════════════════════════════════════════
                 # VALIDATION GATE: Check Phase 2 completeness before arrow determination
@@ -1569,9 +1570,32 @@ def _run_main_pipeline_for_web(
 
                 # Final warning if still have missing functions
                 if missing_interactors:
-                    print(f"\n[VALIDATION] [WARN] Proceeding with arrow determination despite {len(missing_interactors)} still missing functions", file=sys.stderr)
+                    print(f"\n[VALIDATION] [WARN] Proceeding toward arrow determination despite {len(missing_interactors)} still missing functions", file=sys.stderr)
                     print(f"[VALIDATION] These will default to arrow='binds', direction='undirected'", file=sys.stderr)
                     print(f"[VALIDATION] Affected interactors: {', '.join([m['name'] for m in missing_interactors[:10]])}", file=sys.stderr)
+
+            else:
+                print(f"[ARROW DETERMINATION] No interactor history found during preparation", file=sys.stderr)
+
+        if step.name == "step2b3_rescue_direct_functions":
+            arrow_trigger_ready = True
+
+        should_run_arrow_determination = (
+            arrow_trigger_ready
+            and not arrow_steps_executed
+            and not skip_arrow_determination
+            and create_arrow_determination_step is not None
+            and current_payload and "ctx_json" in current_payload
+        )
+
+        if should_run_arrow_determination:
+            arrow_steps_executed = True
+
+            ctx_json = current_payload.get("ctx_json", {})
+            interactor_history = ctx_json.get("interactor_history", [])
+
+            if interactor_history:
+                print(f"\n[ARROW DETERMINATION] Starting arrow determination for {len(interactor_history)} interactors", file=sys.stderr)
 
                 # ==============================================================================
                 # PARALLEL ARROW DETERMINATION: Process up to 3 interactors concurrently
@@ -1705,7 +1729,7 @@ def _run_main_pipeline_for_web(
         # ===================================================================
         # HEURISTIC ARROW DETERMINATION (when skipped)
         # ===================================================================
-        if (step.name == "step2b2_indirect_functions" and
+        if (arrow_trigger_ready and
             not arrow_steps_executed and
             skip_arrow_determination and
             current_payload and "ctx_json" in current_payload):
