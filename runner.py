@@ -373,6 +373,70 @@ def aggregate_function_arrows(interactor: Dict[str, Any]) -> Dict[str, Any]:
     return interactor
 
 
+def merge_payloads(
+    existing_payload: Optional[Dict[str, Any]],
+    update_fragment: Optional[Dict[str, Any]],
+) -> Dict[str, Any]:
+    """Merge ``update_fragment`` into ``existing_payload`` using pipeline semantics.
+
+    This utility centralizes the differential merge behaviour that keeps context lists,
+    interactor collections, and history tracking structures in sync across concurrent
+    updates. It mirrors the logic previously embedded in :func:`parse_json_output` so
+    that other call sites (e.g., the parallel arrow merge loop) can safely compose
+    partial payload fragments without losing data.
+    """
+
+    base: Dict[str, Any] = deepcopy(existing_payload) if existing_payload else {}
+
+    if not update_fragment:
+        return base
+
+    fragment = deepcopy(update_fragment)
+
+    if "ctx_json" in fragment:
+        new_ctx = fragment.get("ctx_json") or {}
+        existing_ctx = deepcopy(base.get("ctx_json", {}))
+
+        if "main" in new_ctx:
+            existing_ctx["main"] = new_ctx["main"]
+
+        if "interactors" in new_ctx:
+            existing_interactors = existing_ctx.get("interactors", [])
+            new_interactors = new_ctx["interactors"]
+            existing_ctx["interactors"] = deep_merge_interactors(
+                existing_interactors,
+                new_interactors,
+            )
+
+        for list_key in ["interactor_history", "function_batches", "search_history"]:
+            if list_key in new_ctx:
+                existing_list = existing_ctx.get(list_key, [])
+                new_items = new_ctx[list_key]
+                existing_ctx[list_key] = existing_list + [
+                    item for item in new_items if item not in existing_list
+                ]
+
+        if "function_history" in new_ctx:
+            existing_func_hist = existing_ctx.get("function_history", {})
+            new_func_hist = new_ctx["function_history"]
+            for protein, funcs in new_func_hist.items():
+                func_list = list(funcs)
+                if protein in existing_func_hist:
+                    existing_func_hist[protein].extend(func_list)
+                else:
+                    existing_func_hist[protein] = func_list
+            existing_ctx["function_history"] = existing_func_hist
+
+        base["ctx_json"] = existing_ctx
+
+    for key, value in fragment.items():
+        if key == "ctx_json":
+            continue
+        base[key] = value
+
+    return base
+
+
 def parse_json_output(
     text: str,
     expected_fields: List[str],
@@ -433,55 +497,10 @@ def parse_json_output(
             else:
                 step_output[key] = value
 
-    # DIFFERENTIAL MERGE with previous payload
     if previous_payload:
-        merged: Dict[str, Any] = deepcopy(previous_payload)
-
-        # Handle ctx_json specially (intelligent merge)
-        if "ctx_json" in step_output:
-            new_ctx = step_output["ctx_json"]
-            existing_ctx = merged.get("ctx_json", {})
-
-            # Always use new 'main' if provided
-            if "main" in new_ctx:
-                existing_ctx["main"] = new_ctx["main"]
-
-            # Merge interactors intelligently
-            if "interactors" in new_ctx:
-                existing_interactors = existing_ctx.get("interactors", [])
-                new_interactors = new_ctx["interactors"]
-                existing_ctx["interactors"] = deep_merge_interactors(existing_interactors, new_interactors)
-
-            # Append to tracking lists
-            for list_key in ["interactor_history", "function_batches", "search_history"]:
-                if list_key in new_ctx:
-                    existing_list = existing_ctx.get(list_key, [])
-                    new_items = new_ctx[list_key]
-                    # Append unique items
-                    existing_ctx[list_key] = existing_list + [x for x in new_items if x not in existing_list]
-
-            # Merge function_history (dict of lists)
-            if "function_history" in new_ctx:
-                existing_func_hist = existing_ctx.get("function_history", {})
-                new_func_hist = new_ctx["function_history"]
-                for protein, funcs in new_func_hist.items():
-                    if protein in existing_func_hist:
-                        existing_func_hist[protein].extend(funcs)
-                    else:
-                        existing_func_hist[protein] = funcs
-                existing_ctx["function_history"] = existing_func_hist
-
-            merged["ctx_json"] = existing_ctx
-
-        # Merge other top-level fields
-        for key, value in step_output.items():
-            if key == "ctx_json":
-                continue  # Already handled
-            merged[key] = value
-
-        result = merged
+        result = merge_payloads(previous_payload, step_output)
     else:
-        result = step_output
+        result = merge_payloads({}, step_output)
 
     # Validate required fields
     missing = [field for field in required if field not in result]
@@ -1686,8 +1705,9 @@ def _run_main_pipeline_for_web(
 
                 # Merge all arrow determination results into current_payload
                 for result in arrow_results:
-                    if result.get('payload_update'):
-                        current_payload = result['payload_update']
+                    payload_update = result.get('payload_update')
+                    if payload_update:
+                        current_payload = merge_payloads(current_payload, payload_update)
                     else:
                         # Apply default arrow assignment
                         interactor_name = result['interactor_name']
