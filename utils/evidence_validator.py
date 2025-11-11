@@ -7,17 +7,18 @@ Uses Gemini 2.5 Pro with Google Search for maximum accuracy.
 
 from __future__ import annotations
 
+import io
 import json
 import os
 import sys
 import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from copy import deepcopy
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Set
+from typing import Any, Callable, Dict, List, Optional, Set
 
 # Fix Windows console encoding for Greek letters and special characters
 if sys.stdout.encoding != 'utf-8':
-    import io
     sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
     sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8', errors='replace')
 
@@ -59,7 +60,8 @@ def call_gemini_with_search(
     prompt: str,
     api_key: str,
     system_message: Optional[str] = None,
-    verbose: bool = False
+    verbose: bool = False,
+    log_sink: Optional[Callable[[str], None]] = None,
 ) -> str:
     """
     Call Gemini 2.5 Pro with maximum thinking budget and Google Search enabled.
@@ -69,6 +71,7 @@ def call_gemini_with_search(
         api_key: Google API key
         system_message: Optional system message (prepended to contents)
         verbose: Print detailed output
+        log_sink: Optional callable to capture log messages instead of printing
 
     Returns:
         Model response text
@@ -89,15 +92,21 @@ def call_gemini_with_search(
         top_p=0.90,
     )
 
+    def emit(message: str) -> None:
+        if log_sink is not None:
+            log_sink(message)
+        else:
+            print(message)
+
     if verbose:
-        print(f"\n{'='*80}")
-        print("CALLING GEMINI 2.5 PRO WITH EVIDENCE VALIDATION")
-        print(f"{'='*80}")
-        print(f"Thinking Budget: {MAX_THINKING_TOKENS:,} tokens")
-        print(f"Output Limit: {MAX_OUTPUT_TOKENS:,} tokens")
-        print(f"Google Search: ENABLED")
+        emit(f"\n{'='*80}")
+        emit("CALLING GEMINI 2.5 PRO WITH EVIDENCE VALIDATION")
+        emit(f"{'='*80}")
+        emit(f"Thinking Budget: {MAX_THINKING_TOKENS:,} tokens")
+        emit(f"Output Limit: {MAX_OUTPUT_TOKENS:,} tokens")
+        emit(f"Google Search: ENABLED")
         if system_message:
-            print(f"System Message: {len(system_message)} chars")
+            emit(f"System Message: {len(system_message)} chars")
 
     max_retries = 5
     base_delay = 2.0
@@ -105,7 +114,7 @@ def call_gemini_with_search(
     for attempt in range(1, max_retries + 1):
         try:
             if verbose and attempt > 1:
-                print(f"\nRetry attempt {attempt}/{max_retries}...")
+                emit(f"\nRetry attempt {attempt}/{max_retries}...")
 
             # Prepend system message to prompt if provided (same pattern as claim_fact_checker)
             full_prompt = prompt
@@ -155,20 +164,26 @@ def call_gemini_with_search(
                 output_cost = (output_tokens / 1_000_000) * 10.00
                 total_cost = input_cost + thinking_cost + output_cost
 
-                print(f"    → Tokens: input={input_tokens:,}, thinking={thinking_tokens:,}, output={output_tokens:,}, total={total_tokens:,}")
-                print(f"    → Cost: ${total_cost:.4f} (input: ${input_cost:.4f}, thinking: ${thinking_cost:.4f}, output: ${output_cost:.4f})")
+                emit(
+                    f"    → Tokens: input={input_tokens:,}, thinking={thinking_tokens:,}, "
+                    f"output={output_tokens:,}, total={total_tokens:,}"
+                )
+                emit(
+                    f"    → Cost: ${total_cost:.4f} (input: ${input_cost:.4f}, thinking: ${thinking_cost:.4f}, "
+                    f"output: ${output_cost:.4f})"
+                )
 
             if verbose:
-                print(f"\n[OK]Response received ({len(output)} chars)")
+                emit(f"\n[OK]Response received ({len(output)} chars)")
 
             return output.strip()
-            
+
         except Exception as e:
             error_msg = str(e)
             delay = base_delay * (2 ** (attempt - 1))
-            
+
             if attempt < max_retries:
-                print(f"[WARN]Error: {error_msg}. Retrying in {delay:.1f}s...")
+                emit(f"[WARN]Error: {error_msg}. Retrying in {delay:.1f}s...")
                 time.sleep(delay)
             else:
                 raise EvidenceValidatorError(f"Failed after {max_retries} attempts: {error_msg}")
@@ -252,39 +267,54 @@ def validate_and_enrich_evidence(
     
     # Process interactors in batches
     validated_interactors = []
-    
+
+    batch_jobs = []
+
     for batch_start in range(0, len(interactors), batch_size):
         batch_end = min(batch_start + batch_size, len(interactors))
+        batch_index = batch_start // batch_size
         batch = interactors[batch_start:batch_end]
-
-        batch_start_time = time.time()
-        print(f"\n--- Processing batch {batch_start//batch_size + 1} "
-              f"(interactors {batch_start+1}-{batch_end}) ---")
 
         # Create validation prompt for this batch
         prompt = create_validation_prompt(main_protein, batch, batch_start, batch_end, len(interactors))
 
-        # Call Gemini with search
-        response_text = call_gemini_with_search(prompt, api_key, verbose)
+        print(
+            f"\n--- Processing batch {batch_index + 1} "
+            f"(interactors {batch_start + 1}-{batch_end}) ---"
+        )
+        batch_jobs.append((batch_index, batch_start, batch_end, batch, prompt))
 
-        # Parse response
-        try:
-            validated_batch = extract_json_from_response(response_text)
+    futures = {}
+    cpu_workers = os.cpu_count() or 1
+    max_workers = max(1, min(len(batch_jobs), cpu_workers, 4))
 
-            if 'interactors' in validated_batch:
-                validated_interactors.extend(validated_batch['interactors'])
-                print(f"[OK]Validated {len(validated_batch['interactors'])} interactors in this batch")
-            else:
-                print(f"[WARN]No interactors in response, keeping original batch")
-                validated_interactors.extend(batch)
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        for batch_index, batch_start, batch_end, batch, prompt in batch_jobs:
+            future = executor.submit(
+                _process_single_batch,
+                batch_index,
+                batch_start,
+                batch_end,
+                batch,
+                prompt,
+                api_key,
+                verbose,
+            )
+            futures[future] = batch_index
 
-        except Exception as e:
-            print(f"[WARN]Error parsing batch response: {e}")
-            print("Keeping original batch")
-            validated_interactors.extend(batch)
+        pending_results: Dict[int, Any] = {}
+        next_index = 0
 
-        batch_elapsed = time.time() - batch_start_time
-        print(f"    [TIME] Batch time: {batch_elapsed:.1f}s")
+        for future in as_completed(futures):
+            batch_index = futures[future]
+            pending_results[batch_index] = future.result()
+
+            while next_index in pending_results:
+                batch_result, logs = pending_results.pop(next_index)
+                for log_line in logs:
+                    print(log_line)
+                validated_interactors.extend(batch_result)
+                next_index += 1
     
     # Update the JSON data
     ctx_json['interactors'] = validated_interactors
@@ -338,6 +368,54 @@ def validate_and_enrich_evidence(
     json_data = format_biological_cascades(json_data, api_key, verbose=verbose, step_logger=step_logger)
 
     return json_data
+
+
+def _process_single_batch(
+    batch_index: int,
+    batch_start: int,
+    batch_end: int,
+    batch: List[Dict[str, Any]],
+    prompt: str,
+    api_key: str,
+    verbose: bool,
+):
+    """Validate a single batch and return logs for deterministic output."""
+
+    logs: List[str] = []
+
+    batch_start_time = time.time()
+
+    # Call Gemini with search
+    call_logs: List[str] = []
+    response_text = call_gemini_with_search(
+        prompt,
+        api_key,
+        verbose=verbose,
+        log_sink=call_logs.append,
+    )
+    logs.extend(call_logs)
+
+    try:
+        validated_batch = extract_json_from_response(response_text)
+
+        if 'interactors' in validated_batch:
+            logs.append(
+                f"[OK]Validated {len(validated_batch['interactors'])} interactors in this batch"
+            )
+            batch_result = validated_batch['interactors']
+        else:
+            logs.append(f"[WARN]No interactors in response, keeping original batch")
+            batch_result = batch
+
+    except Exception as e:
+        logs.append(f"[WARN]Error parsing batch response: {e}")
+        logs.append("Keeping original batch")
+        batch_result = batch
+
+    batch_elapsed = time.time() - batch_start_time
+    logs.append(f"    [TIME] Batch time: {batch_elapsed:.1f}s")
+
+    return batch_result, logs
 
 
 def create_validation_prompt(
