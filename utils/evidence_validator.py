@@ -11,6 +11,7 @@ import json
 import os
 import sys
 import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from copy import deepcopy
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Set
@@ -250,41 +251,87 @@ def validate_and_enrich_evidence(
         step_logger.log_terminal_output(f"{'='*80}")
         step_logger.log_terminal_output(f"Total interactors to process: {len(interactors)}")
     
-    # Process interactors in batches
+    # Process interactors in batches (in parallel for throughput)
     validated_interactors = []
-    
-    for batch_start in range(0, len(interactors), batch_size):
+    batch_jobs: List[Dict[str, Any]] = []
+
+    for batch_index, batch_start in enumerate(range(0, len(interactors), batch_size), start=1):
         batch_end = min(batch_start + batch_size, len(interactors))
         batch = interactors[batch_start:batch_end]
+        batch_jobs.append({
+            'index': batch_index,
+            'start': batch_start,
+            'end': batch_end,
+            'data': batch,
+        })
 
+    def _run_validation_batch(job: Dict[str, Any]):
+        idx = job['index']
+        start = job['start']
+        end = job['end']
+        batch = job['data']
+        log_lines: List[str] = []
+
+        def log(message: str) -> None:
+            print(message)
+            log_lines.append(message)
+
+        log(f"\n--- Processing batch {idx} (interactors {start+1}-{end}) ---")
         batch_start_time = time.time()
-        print(f"\n--- Processing batch {batch_start//batch_size + 1} "
-              f"(interactors {batch_start+1}-{batch_end}) ---")
 
-        # Create validation prompt for this batch
-        prompt = create_validation_prompt(main_protein, batch, batch_start, batch_end, len(interactors))
-
-        # Call Gemini with search
+        prompt = create_validation_prompt(main_protein, batch, start, end, len(interactors))
         response_text = call_gemini_with_search(prompt, api_key, verbose)
 
-        # Parse response
         try:
             validated_batch = extract_json_from_response(response_text)
-
             if 'interactors' in validated_batch:
-                validated_interactors.extend(validated_batch['interactors'])
-                print(f"[OK]Validated {len(validated_batch['interactors'])} interactors in this batch")
+                result = validated_batch['interactors']
+                log(f"[OK]Validated {len(result)} interactors in this batch")
             else:
-                print(f"[WARN]No interactors in response, keeping original batch")
-                validated_interactors.extend(batch)
-
+                log(f"[WARN]No interactors in response, keeping original batch")
+                result = batch
         except Exception as e:
-            print(f"[WARN]Error parsing batch response: {e}")
-            print("Keeping original batch")
-            validated_interactors.extend(batch)
+            log(f"[WARN]Error parsing batch response: {e}")
+            log("Keeping original batch")
+            result = batch
 
         batch_elapsed = time.time() - batch_start_time
-        print(f"    [TIME] Batch time: {batch_elapsed:.1f}s")
+        log(f"    [TIME] Batch time: {batch_elapsed:.1f}s")
+
+        return idx, result, log_lines
+
+    batch_results: Dict[int, List[Dict[str, Any]]] = {}
+    batch_logs: Dict[int, List[str]] = {}
+
+    max_workers = min(4, len(batch_jobs)) or 1
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        future_to_job = {
+            executor.submit(_run_validation_batch, job): (job['index'], job['data'])
+            for job in batch_jobs
+        }
+
+        for future in as_completed(future_to_job):
+            batch_idx, original_batch = future_to_job[future]
+            try:
+                idx, result_batch, log_lines = future.result()
+                batch_results[idx] = result_batch
+                batch_logs[idx] = log_lines
+            except Exception as exc:
+                warning_messages = [
+                    f"[WARN]Batch {batch_idx} failed: {exc}",
+                    "Keeping original batch"
+                ]
+                for message in warning_messages:
+                    print(message)
+                batch_results[batch_idx] = original_batch
+                batch_logs[batch_idx] = warning_messages
+
+    for job in batch_jobs:
+        idx = job['index']
+        validated_interactors.extend(batch_results.get(idx, job['data']))
+        if step_logger:
+            for line in batch_logs.get(idx, []):
+                step_logger.log_terminal_output(line)
     
     # Update the JSON data
     ctx_json['interactors'] = validated_interactors
