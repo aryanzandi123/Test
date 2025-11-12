@@ -1025,6 +1025,10 @@ def run_pipeline(
     validated_steps = validate_steps(pipeline_steps)
     current_payload: Optional[Dict[str, Any]] = None
 
+    # Determine where arrow determination should run.
+    has_rescue_step = any(step.name == "step2b3_rescue_direct_functions" for step in validated_steps)
+    arrow_trigger_step_name = "step2b3_rescue_direct_functions" if has_rescue_step else "step2b2_indirect_functions"
+
     # Token tracking with cost estimates
     # Gemini 2.5 Pro pricing (as of 2025):
     # Input: $1.25 per 1M tokens
@@ -1437,9 +1441,9 @@ def _run_main_pipeline_for_web(
         )
 
         # ===================================================================
-        # NEW: ARROW DETERMINATION PHASE (AFTER Step 2b2 completes)
+        # NEW: ARROW DETERMINATION PHASE (runs after final function rescue pass)
         # ===================================================================
-        if (step.name == "step2b2_indirect_functions" and
+        if (step.name == arrow_trigger_step_name and
             not arrow_steps_executed and
             not skip_arrow_determination and
             create_arrow_determination_step is not None and
@@ -1457,7 +1461,7 @@ def _run_main_pipeline_for_web(
                 # ═══════════════════════════════════════════════════════════
                 # VALIDATION GATE: Check Phase 2 completeness before arrow determination
                 # ═══════════════════════════════════════════════════════════
-                log_missing_functions_diagnostic(ctx_json, interactor_history, "step2b3_rescue_direct_functions")
+                log_missing_functions_diagnostic(ctx_json, interactor_history, step.name)
 
                 # Find interactors without functions for detailed tracking
                 missing_interactors = find_interactors_without_functions(ctx_json)
@@ -1608,6 +1612,7 @@ def _run_main_pipeline_for_web(
                             # Return default arrow assignment
                             return {
                                 'interactor_name': interactor_name,
+                                'interactor_index': interactor_idx,
                                 'arrow': 'binds',
                                 'direction': 'undirected',
                                 'intent': 'binding',
@@ -1643,9 +1648,18 @@ def _run_main_pipeline_for_web(
 
                         print(f"[ARROW] Completed arrow determination for {interactor_name}", file=sys.stderr)
 
+                        interactor_update = None
+                        arrow_ctx = arrow_payload.get("ctx_json", {})
+                        for candidate in arrow_ctx.get("interactors", []):
+                            if candidate.get("primary") == interactor_name:
+                                interactor_update = candidate
+                                break
+
                         return {
                             'interactor_name': interactor_name,
-                            'payload_update': arrow_payload
+                            'interactor_index': interactor_idx,
+                            'payload_update': arrow_payload,
+                            'interactor_update': interactor_update
                         }
 
                     except Exception as exc:
@@ -1656,7 +1670,6 @@ def _run_main_pipeline_for_web(
 
                 # Process arrows in parallel using ThreadPoolExecutor
                 arrow_results = []
-                arrow_lock = threading.Lock()
 
                 with ThreadPoolExecutor(max_workers=3) as executor:
                     # Submit all arrow determination tasks
@@ -1685,9 +1698,68 @@ def _run_main_pipeline_for_web(
                             print(f"[ARROW ERROR] Exception for {interactor_name}: {exc}", file=sys.stderr)
 
                 # Merge all arrow determination results into current_payload
+                def _merge_arrow_payload(
+                    base_payload: Dict[str, Any],
+                    payload_update: Dict[str, Any],
+                ) -> Dict[str, Any]:
+                    if not payload_update:
+                        return base_payload
+
+                    if not base_payload:
+                        return payload_update
+
+                    merged_payload = base_payload
+
+                    update_ctx = payload_update.get("ctx_json")
+                    if update_ctx:
+                        merged_ctx = merged_payload.setdefault("ctx_json", {})
+
+                        # Update non-interactor metadata first
+                        for key, value in update_ctx.items():
+                            if key == "interactors":
+                                continue
+                            merged_ctx[key] = value
+
+                        # Merge interactors by primary key
+                        updated_interactors = update_ctx.get("interactors", [])
+                        if updated_interactors:
+                            merged_interactors = merged_ctx.setdefault("interactors", [])
+                            by_primary = {
+                                interactor.get("primary"): interactor
+                                for interactor in merged_interactors
+                                if interactor.get("primary")
+                            }
+
+                            for updated in updated_interactors:
+                                primary = updated.get("primary")
+                                if not primary:
+                                    continue
+                                if primary in by_primary:
+                                    by_primary[primary].update(updated)
+                                else:
+                                    merged_interactors.append(updated)
+                                    by_primary[primary] = updated
+
+                    # Copy over any additional top-level keys that may have been updated
+                    for key, value in payload_update.items():
+                        if key == "ctx_json":
+                            continue
+                        merged_payload[key] = value
+
+                    return merged_payload
+
+                arrow_results.sort(key=lambda r: r.get('interactor_index', 0))
+
                 for result in arrow_results:
                     if result.get('payload_update'):
-                        current_payload = result['payload_update']
+                        current_payload = _merge_arrow_payload(current_payload, result['payload_update'])
+                    elif result.get('interactor_update'):
+                        interactor_update = result['interactor_update']
+                        interactor_name = result.get('interactor_name')
+                        for i in current_payload.get("ctx_json", {}).get("interactors", []):
+                            if i.get("primary") == interactor_name:
+                                i.update(interactor_update)
+                                break
                     else:
                         # Apply default arrow assignment
                         interactor_name = result['interactor_name']
@@ -1705,7 +1777,7 @@ def _run_main_pipeline_for_web(
         # ===================================================================
         # HEURISTIC ARROW DETERMINATION (when skipped)
         # ===================================================================
-        if (step.name == "step2b2_indirect_functions" and
+        if (step.name == arrow_trigger_step_name and
             not arrow_steps_executed and
             skip_arrow_determination and
             current_payload and "ctx_json" in current_payload):

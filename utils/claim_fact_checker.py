@@ -1498,70 +1498,67 @@ def _process_single_interactor(
     if not functions:
         return {'interactor': interactor, 'stats': stats}
 
+    total_functions = len(functions)
+
     print(f"\n[{int_idx}/{total_interactors}] Fact-checking {main_protein}-{primary} interactions...")
-    print(f"  Total functions to check: {len(functions)}")
-    print(f"  Strategy: BATCHED - One API call for ALL functions from this interactor")
+    print(f"  Total functions to check: {total_functions}")
+    print(f"  Strategy: BATCHED + PARALLEL CHUNKS (max {max_functions} per call)")
     print(f"  Gemini config: thinking budget {MAX_THINKING_TOKENS:,} tokens, max_output=65536, temp=0.2")
 
-    # Process ALL functions in a single batch call
     updated_functions = []
+    chunk_size = max(1, max_functions)
+    num_chunks = max(1, (total_functions + chunk_size - 1) // chunk_size)
 
-    # Safety: limit iterations to prevent infinite loops
-    max_funcs = min(len(functions), max_functions)
-    if len(functions) > max_funcs:
-        print(f"  [WARN]WARNING: Limiting to first {max_funcs} functions (found {len(functions)})")
+    stats['claims'] = total_functions
 
-    # BATCHED APPROACH: Call API once for all functions from this interactor
-    batch_start_time = time_module.time()
-    functions_to_check = functions[:max_funcs]
-    stats['claims'] = len(functions_to_check)
+    for chunk_index, chunk_start in enumerate(range(0, total_functions, chunk_size), 1):
+        chunk_end = min(chunk_start + chunk_size, total_functions)
+        chunk = functions[chunk_start:chunk_end]
+        batch_label = f"{chunk_index}/{num_chunks}"
 
-    try:
-        print(f"  [BATCH] Validating {len(functions_to_check)} functions in single API call...")
-        batch_result = call_gemini_for_claim_validation(
-            main_protein, primary, functions_to_check, api_key
-        )
-        validations = batch_result.get('validations', []) if isinstance(batch_result, dict) else []
-        batch_time = time_module.time() - batch_start_time
-        print(f"  [BATCH] Completed in {batch_time:.1f}s ({len(validations)} validations returned)")
-    except Exception as batch_err:
-        print(f"  [WARN]Batch validation failed: {batch_err}")
-        print(f"  [FALLBACK] Switching to one-by-one processing...")
-        validations = []
+        batch_start_time = time_module.time()
+        print(f"  [BATCH {batch_label}] Validating {len(chunk)} functions in single API call...")
 
-    # If batch failed, fall back to one-by-one processing
-    if not validations:
-        print(f"  [FALLBACK] Processing {len(functions_to_check)} functions individually...")
-        for func_idx, function in enumerate(functions_to_check, 1):
+        try:
+            batch_result = call_gemini_for_claim_validation(
+                main_protein, primary, chunk, api_key
+            )
+            chunk_validations = batch_result.get('validations', []) if isinstance(batch_result, dict) else []
+            batch_time = time_module.time() - batch_start_time
+            print(f"  [BATCH {batch_label}] Completed in {batch_time:.1f}s ({len(chunk_validations)} validations returned)")
+        except Exception as batch_err:
+            print(f"  [WARN]Batch {batch_label} validation failed: {batch_err}")
+            print(f"  [FALLBACK {batch_label}] Switching to one-by-one processing...")
+            chunk_validations = []
+
+        if not chunk_validations:
+            print(f"  [FALLBACK {batch_label}] Processing {len(chunk)} functions individually...")
+            for function in chunk:
+                func_name = function.get('function', 'unnamed')
+                try:
+                    single_result = call_gemini_for_claim_validation(
+                        main_protein, primary, [function], api_key
+                    )
+                    func_validations = single_result.get('validations', []) if isinstance(single_result, dict) else []
+                    chunk_validations.extend(func_validations)
+                except Exception as single_err:
+                    print(f"    [WARN]Function validation failed for '{func_name}': {single_err}")
+
+        for local_idx, function in enumerate(chunk, 1):
             func_start_time = time_module.time()
             func_name = function.get('function', 'unnamed')
+            global_idx = chunk_start + local_idx
 
-            try:
-                single_result = call_gemini_for_claim_validation(
-                    main_protein, primary, [function], api_key
-                )
-                func_validations = single_result.get('validations', []) if isinstance(single_result, dict) else []
-                validations.extend(func_validations)
-            except Exception as single_err:
-                print(f"    [WARN]Function validation failed for '{func_name}': {single_err}")
+            validation = None
+            for v in chunk_validations:
+                if not isinstance(v, dict):
+                    print(f"      [WARN]Invalid validation format (not a dict): {type(v)}")
+                    continue
 
-    # Process validation results and update functions
-    # (This is the large block from lines 1573-1871, moved here)
-    for func_idx, function in enumerate(functions_to_check, 1):
-        func_start_time = time_module.time()
-        func_name = function.get('function', 'unnamed')
-
-        # Find corresponding validation by index or function name
-        validation = None
-        for v in validations:
-            if not isinstance(v, dict):
-                print(f"      [WARN]Invalid validation format (not a dict): {type(v)}")
-                continue
-
-            if (v.get('claim_number') == func_idx or
-                v.get('function_name') == func_name):
-                validation = v
-                break
+                if (v.get('claim_number') == local_idx or
+                        v.get('function_name') == func_name):
+                    validation = v
+                    break
 
         if not validation or not isinstance(validation, dict):
             # Recovery retry
@@ -1581,13 +1578,13 @@ def _process_single_interactor(
                     print(f"      [WARN]Recovery attempt failed for '{func_name}': {_rec_err}")
 
         if not validation or not isinstance(validation, dict):
-            print(f"    [WARN][{func_idx}/{len(functions)}] No validation for '{func_name}' - marking for manual review")
+            print(f"    [WARN][{global_idx}/{total_functions}] No validation for '{func_name}' - marking for manual review")
             function['needs_manual_review'] = True
             updated_functions.append(function)
             time.sleep(1.0)
             continue
 
-        print(f"    [{func_idx}/{len(functions)}] Processing: {func_name}")
+        print(f"    [{global_idx}/{total_functions}] Processing: {func_name}")
 
         validity = normalize_validity(validation.get('validity'))
         note = validation.get('validation_note', '')
@@ -1668,9 +1665,12 @@ def _process_single_interactor(
                 print(f"      Action: DELETING from {primary} (will be re-discovered in future query for {corrected_interactor})")
 
                 # Mark entire interactor for deletion if this is the only function
-                if len(functions) == 1:
+                if total_functions == 1:
                     interactor['_delete_interactor_completely'] = True
                 # Don't add to updated_functions
+                func_elapsed = time_module.time() - func_start_time
+                print(f"      [TIME] Time: {func_elapsed:.1f}s")
+                time.sleep(1.0)
                 continue
 
             # Valid CORRECTED case: same interactor, wrong function
@@ -1754,8 +1754,22 @@ def _process_single_interactor(
                 print(f"      → REMOVED from output (entire interaction is fabricated)")
 
                 # Mark interactor for deletion if this is the only function
-                if len(functions) == 1:
+                if total_functions == 1:
                     interactor['_delete_interactor_completely'] = True
+
+        elif validity == 'DELETED':
+            stats['deleted'] += 1
+            stats['removed'] += 1
+            print(f"    [DELETE]DELETED: {func_name}")
+            print(f"      Reason: {note}")
+
+            if total_functions == 1:
+                interactor['_delete_interactor_completely'] = True
+
+            func_elapsed = time_module.time() - func_start_time
+            print(f"      [TIME] Time: {func_elapsed:.1f}s")
+            time.sleep(1.0)
+            continue
 
         elif validity == 'CONFLICTING':
             stats['conflicting'] += 1
