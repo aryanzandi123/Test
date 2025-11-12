@@ -15,7 +15,7 @@ import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from copy import deepcopy
 from pathlib import Path
-from typing import Any, Callable, Dict, List, Optional, Set
+from typing import Any, Dict, List, Optional, Set
 
 # Fix Windows console encoding for Greek letters and special characters
 if sys.stdout.encoding != 'utf-8':
@@ -265,42 +265,91 @@ def validate_and_enrich_evidence(
         step_logger.log_terminal_output(f"{'='*80}")
         step_logger.log_terminal_output(f"Total interactors to process: {len(interactors)}")
     
-    # Process interactors in batches (in parallel for throughput)
+    # Process interactors in batches
     validated_interactors = []
     
     for batch_start in range(0, len(interactors), batch_size):
         batch_end = min(batch_start + batch_size, len(interactors))
         batch_index = batch_start // batch_size
         batch = interactors[batch_start:batch_end]
+        prompt = create_validation_prompt(
+            main_protein,
+            batch,
+            batch_start,
+            batch_end,
+            len(interactors)
+        )
+        batch_payloads.append(
+            {
+                'index': batch_index,
+                'batch': batch,
+                'prompt': prompt,
+                'start': batch_start,
+                'end': batch_end,
+            }
+        )
+
+    def process_batch(payload: Dict[str, Any]) -> Dict[str, Any]:
+        batch_index = payload['index']
+        batch_start_idx = payload['start']
+        batch_end_idx = payload['end']
+        batch = payload['batch']
+        prompt = payload['prompt']
 
         batch_start_time = time.time()
-        print(f"\n--- Processing batch {batch_start//batch_size + 1} "
-              f"(interactors {batch_start+1}-{batch_end}) ---")
+        print(
+            f"\n--- Processing batch {batch_index + 1} "
+            f"(interactors {batch_start_idx + 1}-{batch_end_idx}) ---"
+        )
 
-        # Create validation prompt for this batch
-        prompt = create_validation_prompt(main_protein, batch, batch_start, batch_end, len(interactors))
-
-        # Call Gemini with search
         response_text = call_gemini_with_search(prompt, api_key, verbose)
 
-        # Parse response
+        batch_result: List[Dict[str, Any]]
         try:
             validated_batch = extract_json_from_response(response_text)
 
             if 'interactors' in validated_batch:
-                validated_interactors.extend(validated_batch['interactors'])
-                print(f"[OK]Validated {len(validated_batch['interactors'])} interactors in this batch")
+                batch_result = validated_batch['interactors']
+                print(
+                    f"[OK]Validated {len(validated_batch['interactors'])} "
+                    f"interactors in this batch"
+                )
             else:
                 print(f"[WARN]No interactors in response, keeping original batch")
-                validated_interactors.extend(batch)
+                batch_result = batch
 
         except Exception as e:
             print(f"[WARN]Error parsing batch response: {e}")
             print("Keeping original batch")
-            validated_interactors.extend(batch)
+            batch_result = batch
 
         batch_elapsed = time.time() - batch_start_time
         print(f"    [TIME] Batch time: {batch_elapsed:.1f}s")
+
+        return {
+            'index': batch_index,
+            'interactors': batch_result,
+        }
+
+    max_workers = min(len(batch_payloads), max(1, os.cpu_count() or 1))
+    if max_workers == 0:
+        max_workers = 1
+
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        future_to_index = {
+            executor.submit(process_batch, payload): payload['index']
+            for payload in batch_payloads
+        }
+
+        ordered_results: List[Optional[Dict[str, Any]]] = [None] * len(batch_payloads)
+        for future in as_completed(future_to_index):
+            result = future.result()
+            ordered_results[result['index']] = result
+
+    for result in ordered_results:
+        if result is None:
+            continue
+        validated_interactors.extend(result['interactors'])
     
     # Update the JSON data
     ctx_json['interactors'] = validated_interactors
