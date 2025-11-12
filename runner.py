@@ -1848,9 +1848,9 @@ def _run_main_pipeline_for_web(
                 arrow_results.sort(key=lambda r: r.get('interactor_index', 0))
 
                 for result in arrow_results:
-<<<<<<< HEAD
-                    if result.get('payload_update'):
-                        current_payload = result['payload_update']
+                    payload_update = result.get('payload_update')
+                    if payload_update:
+                        current_payload = _merge_arrow_payload(current_payload, payload_update)
                     else:
                         # Apply default arrow assignment
                         interactor_name = result['interactor_name']
