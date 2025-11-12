@@ -1419,7 +1419,6 @@ def _run_main_pipeline_for_web(
     validated_steps = validate_steps(pipeline_steps)
     current_payload: Optional[Dict[str, Any]] = None
     arrow_steps_executed = False  # Track if we've already done arrow determination
-    arrow_trigger_ready = False   # Becomes True once Step 2b3 (or later) has run
 
     for step_idx, step in enumerate(validated_steps, start=1):
         # Check for cancellation before each step
@@ -1460,10 +1459,21 @@ def _run_main_pipeline_for_web(
             previous_payload=current_payload,
         )
 
+        # Unlock arrow determination after Step 2b3 completes (or later)
+        if not arrow_trigger_ready:
+            if step.name == "step2b3_rescue_direct_functions":
+                arrow_trigger_ready = True
+            elif (step.name.startswith("step2c_") or
+                  step.name.startswith("step3_") or
+                  step.name.startswith("step4_") or
+                  step.name.startswith("step5_")):
+                # Fallback: ensure arrow determination still runs if Step 2b3 was skipped
+                arrow_trigger_ready = True
+
         # ===================================================================
-        # NEW: ARROW DETERMINATION PHASE (AFTER Step 2b2 completes)
+        # NEW: ARROW DETERMINATION PHASE (AFTER Step 2b3 completes)
         # ===================================================================
-        if (step.name == "step2b2_indirect_functions" and
+        if (arrow_trigger_ready and
             not arrow_steps_executed and
             not skip_arrow_determination and
             create_arrow_determination_step is not None and
