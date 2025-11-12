@@ -1503,274 +1503,290 @@ def _process_single_interactor(
     print(f"  Strategy: BATCHED - One API call for ALL functions from this interactor")
     print(f"  Gemini config: thinking budget {MAX_THINKING_TOKENS:,} tokens, max_output=65536, temp=0.2")
 
-    # Process ALL functions in a single batch call
+    # Process ALL functions, respecting max_functions per batch call
     updated_functions = []
 
-    # Safety: limit iterations to prevent infinite loops
-    max_funcs = min(len(functions), max_functions)
-    if len(functions) > max_funcs:
-        print(f"  [WARN]WARNING: Limiting to first {max_funcs} functions (found {len(functions)})")
+    if max_functions <= 0:
+        max_functions = len(functions) or 1
 
-    # BATCHED APPROACH: Call API once for all functions from this interactor
-    batch_start_time = time_module.time()
-    functions_to_check = functions[:max_funcs]
-    stats['claims'] = len(functions_to_check)
+    total_functions = len(functions)
+    total_chunks = (total_functions + max_functions - 1) // max_functions
+    if total_chunks > 1:
+        print(f"  [INFO] Processing functions in {total_chunks} chunks of up to {max_functions} each")
 
-    try:
-        print(f"  [BATCH] Validating {len(functions_to_check)} functions in single API call...")
-        batch_result = call_gemini_for_claim_validation(
-            main_protein, primary, functions_to_check, api_key
-        )
-        validations = batch_result.get('validations', []) if isinstance(batch_result, dict) else []
-        batch_time = time_module.time() - batch_start_time
-        print(f"  [BATCH] Completed in {batch_time:.1f}s ({len(validations)} validations returned)")
-    except Exception as batch_err:
-        print(f"  [WARN]Batch validation failed: {batch_err}")
-        print(f"  [FALLBACK] Switching to one-by-one processing...")
-        validations = []
+    chunk_start = 0
+    chunk_number = 0
 
-    # If batch failed, fall back to one-by-one processing
-    if not validations:
-        print(f"  [FALLBACK] Processing {len(functions_to_check)} functions individually...")
-        for func_idx, function in enumerate(functions_to_check, 1):
+    while chunk_start < total_functions:
+        chunk_number += 1
+        chunk_end = min(chunk_start + max_functions, total_functions)
+        functions_to_check = functions[chunk_start:chunk_end]
+
+        # Track statistics for this chunk
+        stats['claims'] += len(functions_to_check)
+
+        # BATCHED APPROACH: Call API for this chunk of functions
+        batch_start_time = time_module.time()
+        try:
+            chunk_label = f" chunk {chunk_number}/{total_chunks}" if total_chunks > 1 else ''
+            print(f"  [BATCH]{chunk_label} Validating {len(functions_to_check)} functions in single API call...")
+            batch_result = call_gemini_for_claim_validation(
+                main_protein, primary, functions_to_check, api_key
+            )
+            validations = batch_result.get('validations', []) if isinstance(batch_result, dict) else []
+            batch_time = time_module.time() - batch_start_time
+            print(f"  [BATCH]{chunk_label} Completed in {batch_time:.1f}s ({len(validations)} validations returned)")
+        except Exception as batch_err:
+            print(f"  [WARN]Batch validation failed: {batch_err}")
+            print(f"  [FALLBACK] Switching to one-by-one processing...")
+            validations = []
+
+        # If batch failed, fall back to one-by-one processing for this chunk
+        if not validations:
+            print(f"  [FALLBACK] Processing {len(functions_to_check)} functions individually...")
+            validations = []
+            for func_idx, function in enumerate(functions_to_check, 1):
+                func_start_time = time_module.time()
+                func_name = function.get('function', 'unnamed')
+
+                try:
+                    single_result = call_gemini_for_claim_validation(
+                        main_protein, primary, [function], api_key
+                    )
+                    func_validations = single_result.get('validations', []) if isinstance(single_result, dict) else []
+                    validations.extend(func_validations)
+                except Exception as single_err:
+                    print(f"    [WARN]Function validation failed for '{func_name}': {single_err}")
+
+        # Process validation results and update functions
+        for local_idx, function in enumerate(functions_to_check, 1):
             func_start_time = time_module.time()
             func_name = function.get('function', 'unnamed')
+            global_idx = chunk_start + local_idx
 
-            try:
-                single_result = call_gemini_for_claim_validation(
-                    main_protein, primary, [function], api_key
-                )
-                func_validations = single_result.get('validations', []) if isinstance(single_result, dict) else []
-                validations.extend(func_validations)
-            except Exception as single_err:
-                print(f"    [WARN]Function validation failed for '{func_name}': {single_err}")
+            # Find corresponding validation by index or function name
+            validation = None
+            for v in validations:
+                if not isinstance(v, dict):
+                    print(f"      [WARN]Invalid validation format (not a dict): {type(v)}")
+                    continue
 
-    # Process validation results and update functions
-    # (This is the large block from lines 1573-1871, moved here)
-    for func_idx, function in enumerate(functions_to_check, 1):
-        func_start_time = time_module.time()
-        func_name = function.get('function', 'unnamed')
+                if (v.get('claim_number') == local_idx or
+                    v.get('claim_number') == global_idx or
+                    v.get('function_name') == func_name):
+                    validation = v
+                    break
 
-        # Find corresponding validation by index or function name
-        validation = None
-        for v in validations:
-            if not isinstance(v, dict):
-                print(f"      [WARN]Invalid validation format (not a dict): {type(v)}")
+            if not validation or not isinstance(validation, dict):
+                # Recovery retry
+                if not function.get('_validation_recovery_attempted'):
+                    function['_validation_recovery_attempted'] = True
+                    try:
+                        recovery = call_gemini_for_claim_validation(
+                            main_protein, primary, [function], api_key,
+                            recovery_hint="No validation returned; re-search and validate this single function strictly"
+                        )
+                        vlist = recovery.get('validations', []) if isinstance(recovery, dict) else []
+                        for v in vlist:
+                            if isinstance(v, dict):
+                                validation = v
+                                break
+                    except Exception as _rec_err:
+                        print(f"      [WARN]Recovery attempt failed for '{func_name}': {_rec_err}")
+
+            if not validation or not isinstance(validation, dict):
+                print(f"    [WARN][{global_idx}/{len(functions)}] No validation for '{func_name}' - marking for manual review")
+                function['needs_manual_review'] = True
+                updated_functions.append(function)
+                time.sleep(1.0)
                 continue
 
-            if (v.get('claim_number') == func_idx or
-                v.get('function_name') == func_name):
-                validation = v
-                break
+            print(f"    [{global_idx}/{len(functions)}] Processing: {func_name}")
 
-        if not validation or not isinstance(validation, dict):
-            # Recovery retry
-            if not function.get('_validation_recovery_attempted'):
-                function['_validation_recovery_attempted'] = True
+            validity = normalize_validity(validation.get('validity'))
+            note = validation.get('validation_note', '')
+
+            # Check PMID verification
+            pmid_verification = validation.get('pmid_verification', {})
+            pmid_invalid = False
+            if pmid_verification and isinstance(pmid_verification, dict):
+                if not pmid_verification.get('exists_on_pubmed', True):
+                    pmid_invalid = True
+                    print(f"      [WARN]PMID cited is invalid or not found on PubMed — will search for correct evidence instead of deleting")
+                    note = f"PMID verification failed: {note}"
+
+            # Add validation metadata
+            function['validity'] = validity
+            function['validation_note'] = note
+
+            # Recovery for TRUE with invalid PMID
+            if validity == 'TRUE' and pmid_invalid and not function.get('_pmid_recovery_attempted'):
+                function['_pmid_recovery_attempted'] = True
                 try:
                     recovery = call_gemini_for_claim_validation(
                         main_protein, primary, [function], api_key,
-                        recovery_hint="No validation returned; re-search and validate this single function strictly"
+                        recovery_hint="Cited PMID invalid; find a valid paper and re-validate this claim"
                     )
                     vlist = recovery.get('validations', []) if isinstance(recovery, dict) else []
                     for v in vlist:
                         if isinstance(v, dict):
                             validation = v
+                            validity = normalize_validity(validation.get('validity'))
                             break
                 except Exception as _rec_err:
-                    print(f"      [WARN]Recovery attempt failed for '{func_name}': {_rec_err}")
+                    print(f"      [WARN]Recovery attempt (TRUE w/ invalid PMID) failed: {_rec_err}")
 
-        if not validation or not isinstance(validation, dict):
-            print(f"    [WARN][{func_idx}/{len(functions)}] No validation for '{func_name}' - marking for manual review")
-            function['needs_manual_review'] = True
-            updated_functions.append(function)
-            time.sleep(1.0)
-            continue
+            if validity == 'TRUE':
+                stats['validated_true'] += 1
 
-        print(f"    [{func_idx}/{len(functions)}] Processing: {func_name}")
+                # Update with correct evidence if provided
+                correct_paper = get_normalized_correct_paper(validation, func_name)
 
-        validity = normalize_validity(validation.get('validity'))
-        note = validation.get('validation_note', '')
-
-        # Check PMID verification
-        pmid_verification = validation.get('pmid_verification', {})
-        pmid_invalid = False
-        if pmid_verification and isinstance(pmid_verification, dict):
-            if not pmid_verification.get('exists_on_pubmed', True):
-                pmid_invalid = True
-                print(f"      [WARN]PMID cited is invalid or not found on PubMed — will search for correct evidence instead of deleting")
-                note = f"PMID verification failed: {note}"
-
-        # Add validation metadata
-        function['validity'] = validity
-        function['validation_note'] = note
-
-        # Recovery for TRUE with invalid PMID
-        if validity == 'TRUE' and pmid_invalid and not function.get('_pmid_recovery_attempted'):
-            function['_pmid_recovery_attempted'] = True
-            try:
-                recovery = call_gemini_for_claim_validation(
-                    main_protein, primary, [function], api_key,
-                    recovery_hint="Cited PMID invalid; find a valid paper and re-validate this claim"
-                )
-                vlist = recovery.get('validations', []) if isinstance(recovery, dict) else []
-                for v in vlist:
-                    if isinstance(v, dict):
-                        validation = v
-                        validity = normalize_validity(validation.get('validity'))
-                        break
-            except Exception as _rec_err:
-                print(f"      [WARN]Recovery attempt (TRUE w/ invalid PMID) failed: {_rec_err}")
-
-        if validity == 'TRUE':
-            stats['validated_true'] += 1
-
-            # Update with correct evidence if provided
-            correct_paper = get_normalized_correct_paper(validation, func_name)
-
-            if correct_paper and isinstance(correct_paper, dict):
-                # Update evidence with paper title (PMID added later by update_cache_pmids.py)
-                if 'evidence' in function:
-                    if isinstance(function['evidence'], list):
-                        function['evidence'].append(correct_paper)
+                if correct_paper and isinstance(correct_paper, dict):
+                    # Update evidence with paper title (PMID added later by update_cache_pmids.py)
+                    if 'evidence' in function:
+                        if isinstance(function['evidence'], list):
+                            function['evidence'].append(correct_paper)
+                        else:
+                            function['evidence'] = [correct_paper]
                     else:
                         function['evidence'] = [correct_paper]
+
+                    function['evidence_source'] = 'fact_checker_verified'
+
+                    paper_title = correct_paper.get('paper_title', '')
+                    if paper_title:
+                        truncated_title = paper_title if len(paper_title) <= 100 else paper_title[:97] + "..."
+                        print(f"      ✓ TRUE - Verified with evidence: {truncated_title}")
+                        print(f"      Note: PMID will be extracted from title later")
+                    else:
+                        print(f"      ✓ TRUE - Verified")
                 else:
-                    function['evidence'] = [correct_paper]
-
-                function['evidence_source'] = 'fact_checker_verified'
-
-                paper_title = correct_paper.get('paper_title', '')
-                if paper_title:
-                    truncated_title = paper_title if len(paper_title) <= 100 else paper_title[:97] + "..."
-                    print(f"      ✓ TRUE - Verified with evidence: {truncated_title}")
-                    print(f"      Note: PMID will be extracted from title later")
-                else:
-                    print(f"      ✓ TRUE - Verified")
-            else:
-                print(f"      ✓ TRUE")
-
-            updated_functions.append(function)
-
-        elif validity == 'CORRECTED':
-            # Check if this is an interactor mismatch (CANNOT BE CORRECTED)
-            corrected_func = select_best_corrected_function(validation.get('corrected_function')) or {}
-            correct_paper = get_normalized_correct_paper(validation, func_name)
-
-            # Check if corrected interactor differs from current
-            corrected_interactor = corrected_func.get('interactor')
-            if corrected_interactor and corrected_interactor != primary:
-                stats['deleted'] += 1
-                stats['validated_false'] += 1
-                print(f"    ✖ WRONG INTERACTOR: {func_name}")
-                print(f"      Reason: Function applies to {corrected_interactor}, not {primary}")
-                print(f"      Action: DELETING from {primary} (will be re-discovered in future query for {corrected_interactor})")
-
-                # Mark entire interactor for deletion if this is the only function
-                if len(functions) == 1:
-                    interactor['_delete_interactor_completely'] = True
-                # Don't add to updated_functions
-                continue
-
-            # Valid CORRECTED case: same interactor, wrong function
-            stats['corrected'] += 1
-            print(f"    🔧 CORRECTED: {func_name}")
-            print(f"      Reason: {note}")
-
-            if corrected_func and correct_paper:
-                # Update function with corrected data
-                function['function'] = corrected_func.get('function_name', func_name)
-                function['arrow'] = corrected_func.get('arrow', function.get('arrow', 'activates'))
-                function['cellular_process'] = corrected_func.get('cellular_process', function.get('cellular_process', ''))
-                function['effect_description'] = corrected_func.get('effect_description', '')
-                function['biological_consequence'] = corrected_func.get('biological_consequence', [])
-                function['specific_effects'] = corrected_func.get('specific_effects', [])
-                function['effect_type'] = corrected_func.get('effect_type', '')
-                function['mechanism'] = corrected_func.get('mechanism', '')
-
-                function['evidence'] = [correct_paper]
-                function['pmids'] = []
-                function['evidence_source'] = 'fact_checker_corrected'
-                function['original_function_name'] = func_name
-
-                print(f"      → Updated to: {function['function']}")
-                paper_title = correct_paper.get('paper_title', '')
-                if paper_title:
-                    truncated_title = paper_title if len(paper_title) <= 100 else paper_title[:97] + "..."
-                    print(f"      Evidence Paper: {truncated_title}")
-                    print(f"      Note: PMID will be extracted from title later")
+                    print(f"      ✓ TRUE")
 
                 updated_functions.append(function)
-            else:
-                print(f"      [WARN]Correction missing data - keeping original")
-                function['needs_manual_review'] = True
-                updated_functions.append(function)
 
-        elif validity == 'FALSE':
-            # Check if Gemini provided a corrected function for this FALSE case
-            corrected_func = select_best_corrected_function(validation.get('corrected_function')) or {}
-            correct_paper = get_normalized_correct_paper(validation, func_name)
+            elif validity == 'CORRECTED':
+                # Check if this is an interactor mismatch (CANNOT BE CORRECTED)
+                corrected_func = select_best_corrected_function(validation.get('corrected_function')) or {}
+                correct_paper = get_normalized_correct_paper(validation, func_name)
 
-            if corrected_func and correct_paper:
-                # Valid correction - proceed with FALSE→CORRECTED
+                # Check if corrected interactor differs from current
+                corrected_interactor = corrected_func.get('interactor')
+                if corrected_interactor and corrected_interactor != primary:
+                    stats['deleted'] += 1
+                    stats['validated_false'] += 1
+                    print(f"    ✖ WRONG INTERACTOR: {func_name}")
+                    print(f"      Reason: Function applies to {corrected_interactor}, not {primary}")
+                    print(f"      Action: DELETING from {primary} (will be re-discovered in future query for {corrected_interactor})")
+
+                    # Mark entire interactor for deletion if this is the only function
+                    if len(functions) == 1:
+                        interactor['_delete_interactor_completely'] = True
+                    # Don't add to updated_functions
+                    continue
+
+                # Valid CORRECTED case: same interactor, wrong function
                 stats['corrected'] += 1
-                stats['corrected_from_false'] += 1
-                print(f"    🔧 FALSE→CORRECTED: {func_name}")
-                print(f"      Original claim was FALSE, but found actual function for this interaction")
+                print(f"    🔧 CORRECTED: {func_name}")
                 print(f"      Reason: {note}")
 
-                # Update function with corrected data
-                function['function'] = corrected_func.get('function_name', func_name)
-                function['arrow'] = corrected_func.get('arrow', function.get('arrow', 'activates'))
-                function['cellular_process'] = corrected_func.get('cellular_process', function.get('cellular_process', ''))
-                function['effect_description'] = corrected_func.get('effect_description', '')
-                function['biological_consequence'] = corrected_func.get('biological_consequence', [])
-                function['specific_effects'] = corrected_func.get('specific_effects', [])
-                function['effect_type'] = corrected_func.get('effect_type', '')
-                function['mechanism'] = corrected_func.get('mechanism', '')
+                if corrected_func and correct_paper:
+                    # Update function with corrected data
+                    function['function'] = corrected_func.get('function_name', func_name)
+                    function['arrow'] = corrected_func.get('arrow', function.get('arrow', 'activates'))
+                    function['cellular_process'] = corrected_func.get('cellular_process', function.get('cellular_process', ''))
+                    function['effect_description'] = corrected_func.get('effect_description', '')
+                    function['biological_consequence'] = corrected_func.get('biological_consequence', [])
+                    function['specific_effects'] = corrected_func.get('specific_effects', [])
+                    function['effect_type'] = corrected_func.get('effect_type', '')
+                    function['mechanism'] = corrected_func.get('mechanism', '')
 
-                function['evidence'] = [correct_paper]
-                function['pmids'] = []
-                function['evidence_source'] = 'fact_checker_salvaged_from_false'
-                function['original_function_name'] = func_name
-                function['_was_false_but_corrected'] = True
+                    function['evidence'] = [correct_paper]
+                    function['pmids'] = []
+                    function['evidence_source'] = 'fact_checker_corrected'
+                    function['original_function_name'] = func_name
 
-                print(f"      → Salvaged as: {function['function']}")
-                paper_title = correct_paper.get('paper_title', '')
-                if paper_title:
-                    truncated_title = paper_title if len(paper_title) <= 100 else paper_title[:97] + "..."
-                    print(f"      Evidence Paper: {truncated_title}")
-                    print(f"      Note: PMID will be extracted from title later")
+                    print(f"      → Updated to: {function['function']}")
+                    paper_title = correct_paper.get('paper_title', '')
+                    if paper_title:
+                        truncated_title = paper_title if len(paper_title) <= 100 else paper_title[:97] + "..."
+                        print(f"      Evidence Paper: {truncated_title}")
+                        print(f"      Note: PMID will be extracted from title later")
 
+                    updated_functions.append(function)
+                else:
+                    print(f"      [WARN]Correction missing data - keeping original")
+                    function['needs_manual_review'] = True
+                    updated_functions.append(function)
+
+            elif validity == 'FALSE':
+                # Check if Gemini provided a corrected function for this FALSE case
+                corrected_func = select_best_corrected_function(validation.get('corrected_function')) or {}
+                correct_paper = get_normalized_correct_paper(validation, func_name)
+
+                if corrected_func and correct_paper:
+                    # Valid correction - proceed with FALSE→CORRECTED
+                    stats['corrected'] += 1
+                    stats['corrected_from_false'] += 1
+                    print(f"    🔧 FALSE→CORRECTED: {func_name}")
+                    print(f"      Original claim was FALSE, but found actual function for this interaction")
+                    print(f"      Reason: {note}")
+
+                    # Update function with corrected data
+                    function['function'] = corrected_func.get('function_name', func_name)
+                    function['arrow'] = corrected_func.get('arrow', function.get('arrow', 'activates'))
+                    function['cellular_process'] = corrected_func.get('cellular_process', function.get('cellular_process', ''))
+                    function['effect_description'] = corrected_func.get('effect_description', '')
+                    function['biological_consequence'] = corrected_func.get('biological_consequence', [])
+                    function['specific_effects'] = corrected_func.get('specific_effects', [])
+                    function['effect_type'] = corrected_func.get('effect_type', '')
+                    function['mechanism'] = corrected_func.get('mechanism', '')
+
+                    function['evidence'] = [correct_paper]
+                    function['pmids'] = []
+                    function['evidence_source'] = 'fact_checker_salvaged_from_false'
+                    function['original_function_name'] = func_name
+                    function['_was_false_but_corrected'] = True
+
+                    print(f"      → Salvaged as: {function['function']}")
+                    paper_title = correct_paper.get('paper_title', '')
+                    if paper_title:
+                        truncated_title = paper_title if len(paper_title) <= 100 else paper_title[:97] + "..."
+                        print(f"      Evidence Paper: {truncated_title}")
+                        print(f"      Note: PMID will be extracted from title later")
+
+                    updated_functions.append(function)
+                else:
+                    # No correction available - mark as FALSE and DELETE
+                    stats['validated_false'] += 1
+                    stats['deleted'] += 1
+                    print(f"    ✖ FALSE: {func_name}")
+                    print(f"      Reason: {note}")
+                    print(f"      → REMOVED from output (entire interaction is fabricated)")
+
+                    # Mark interactor for deletion if this is the only function
+                    if len(functions) == 1:
+                        interactor['_delete_interactor_completely'] = True
+
+            elif validity == 'CONFLICTING':
+                stats['conflicting'] += 1
+                print(f"    [WARN]CONFLICTING: {func_name}")
+                print(f"      Note: {note}")
                 updated_functions.append(function)
+
             else:
-                # No correction available - mark as FALSE and DELETE
-                stats['validated_false'] += 1
-                stats['deleted'] += 1
-                print(f"    ✖ FALSE: {func_name}")
-                print(f"      Reason: {note}")
-                print(f"      → REMOVED from output (entire interaction is fabricated)")
+                print(f"    ? UNKNOWN: {func_name} (keeping as-is)")
+                updated_functions.append(function)
 
-                # Mark interactor for deletion if this is the only function
-                if len(functions) == 1:
-                    interactor['_delete_interactor_completely'] = True
+            # Print timing for this function
+            func_elapsed = time_module.time() - func_start_time
+            print(f"      [TIME] Time: {func_elapsed:.1f}s")
 
-        elif validity == 'CONFLICTING':
-            stats['conflicting'] += 1
-            print(f"    [WARN]CONFLICTING: {func_name}")
-            print(f"      Note: {note}")
-            updated_functions.append(function)
+            # Short delay between function calls to respect rate limits
+            time.sleep(1.0)
 
-        else:
-            print(f"    ? UNKNOWN: {func_name} (keeping as-is)")
-            updated_functions.append(function)
-
-        # Print timing for this function
-        func_elapsed = time_module.time() - func_start_time
-        print(f"      [TIME] Time: {func_elapsed:.1f}s")
-
-        # Short delay between function calls to respect rate limits
-        time.sleep(1.0)
+        chunk_start = chunk_end
 
     # Update interactor with fact-checked functions
     interactor['functions'] = updated_functions
