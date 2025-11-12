@@ -1662,6 +1662,7 @@ def _process_single_interactor(
             if corrected_interactor and corrected_interactor != primary:
                 stats['deleted'] += 1
                 stats['validated_false'] += 1
+                stats['removed'] += 1
                 print(f"    ✖ WRONG INTERACTOR: {func_name}")
                 print(f"      Reason: Function applies to {corrected_interactor}, not {primary}")
                 print(f"      Action: DELETING from {primary} (will be re-discovered in future query for {corrected_interactor})")
@@ -1747,6 +1748,7 @@ def _process_single_interactor(
                 # No correction available - mark as FALSE and DELETE
                 stats['validated_false'] += 1
                 stats['deleted'] += 1
+                stats['removed'] += 1
                 print(f"    ✖ FALSE: {func_name}")
                 print(f"      Reason: {note}")
                 print(f"      → REMOVED from output (entire interaction is fabricated)")
@@ -1975,6 +1977,8 @@ def fact_check_json(
     print(f"\n{'='*80}")
     print("FACT-CHECKING SUMMARY")
     print(f"{'='*80}")
+    # Ensure removal summary reflects actual deletions
+    claims_removed = max(claims_removed, claims_deleted)
     print(f"Total claims checked: {total_claims}")
     print(f"  [OK]Validated TRUE: {claims_validated_true} (exact claim correct)")
     print(f"  🔧 CORRECTED: {claims_corrected} (wrong claim fixed)")
